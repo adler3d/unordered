@@ -1,0 +1,14 @@
+3:05 - /ZI
+2:45 - /Z7 /MP
+/Zi /Zm180 = fail
+/Zi /Zm256 = fail
+/Zi /Zm768 = fail
+
+
+3:14 /Z7 ט /Z7 הכÿ stdafx
+
+3:14 /Zi /Zm190 ט /Zi הכÿ stdafx  ; obj פאיכמג = 220Mb ;  pdb = 61mb
+
+/Zi /MP = fail
+
+02:35.98   /Z7 /MP ט /Z7 הכÿ stdafx    ; obj פאיכמג = 247Mb ;  pdb = םוע   ; ilk = 51mb

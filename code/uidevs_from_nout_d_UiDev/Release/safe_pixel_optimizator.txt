@@ -1,0 +1,71 @@
+Тема: Такой оптимизатор не возможно сделать.
+
+#include <stdio.h>
+
+struct t_dest_mem{
+  const static int w=10;
+  const static int h=10;
+  int arr[w*h];
+  template<class FUNC>
+  void foreach(FUNC func){for(int y=0;y<h;y++)for(int x=0;x<w;x++)func(x,y);}
+};
+
+struct t_src_mem{
+  static const int w=4;
+  static const int h=4;
+  int arr[w*h];
+  template<class FUNC>
+  void foreach(FUNC func){for(int y=0;y<h;y++)for(int x=0;x<w;x++)func(x,y);}
+};
+
+struct t_safe_value{
+  bool ok;
+  int value;
+};
+
+t_safe_value fail={false,0};
+t_safe_value ok(int value){t_safe_value tmp={true,value};return tmp;};
+
+template<class TYPE>
+t_safe_value safe_get_pixel(TYPE&mem,int x,int y){
+  if(x<0||y<0)return fail;
+  if(x>=mem.w||y>=mem.h)return fail;
+  return ok(mem.arr[x+y*mem.w]);
+}
+
+template<class TYPE>
+bool safe_set_pixel(TYPE&mem,int x,int y,t_safe_value value){
+  if(!value.ok)return false;
+  if(x<0||y<0)return false;
+  if(x>=mem.w||y>=mem.h)return false;
+  mem.arr[x+y*mem.w]=value.value;
+  return true;
+}
+
+struct t_foo{
+  t_dest_mem dest;
+  t_src_mem src;
+  void copy(int dx,int dy)
+  {
+    src.foreach(
+      [&](int x,int y){
+        safe_set_pixel(dest,x+dx,y+dy,safe_get_pixel(src,x,y));
+      }
+    );
+  }
+};
+
+int main()
+{
+  t_foo f;
+  f.dest.foreach([&f](int x,int y){safe_set_pixel(f.dest,x,y,ok(0));});
+  f.src.foreach([&f](int x,int y){safe_set_pixel(f.src,x,y,ok(1));});
+  f.copy(-1,3);
+  f.dest.foreach(
+    [&f](int x,int y){
+      if(!x)if(y)printf("\n");
+      printf("%i",safe_get_pixel(f.dest,x,y).value);
+    }
+  );
+  return 0;
+}

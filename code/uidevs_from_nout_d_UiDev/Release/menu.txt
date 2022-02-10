@@ -1,0 +1,59 @@
+//main
+MAIN MENU
+netserver;netserver
+play;play
+settings;settings
+about;about
+quit;(exit;)
+
+//netserver
+#netserver;(netserver;)
+back;main
+
+//about
+ABOUT;about
+Короче хз зачем я это сделал.
+Ну вот сделал я меню и чего? Нафиг оно надо?
+           ***          
+Автор: adler3d          
+Почта: adler3d@gmail.com
+back;main
+
+//settings
+SETTINGS
+editor;(editor;)
+scroll;(scroll;)
+books;(books;)
+back;main
+
+//play
+PLAY
+1;off1
+2;off12
+3;
+line;(line;)
+back;main
+
+//off1
+OFF1
+1
+2;off12
+3
+line;(line;)
+back;main
+
+//off12
+OFF12
+1
+2
+3;on2
+line;(line;)
+back;main
+
+//on2
+ON2
+1
+2;play
+3;off12
+line;(line;)
+back;main

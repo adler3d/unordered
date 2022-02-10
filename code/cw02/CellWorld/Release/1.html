@@ -1,0 +1,93 @@
+<html>
+  <head>
+<script type='text/javascript'>
+  cur_id=0;
+  function pad(number,length)
+  {
+    var my_string = '' + number;
+    while (my_string.length < length){
+      my_string = '0' + my_string;
+    }
+    return my_string;
+  }
+  function myFunction(evt)
+  {
+    evt=evt||window.event;
+    if(evt.keyCode==107)// plus
+    {
+      var frame=document.getElementById('frame');frame.height+=10;
+      return false;
+    }
+    if(evt.keyCode==109)// minus
+    {
+      var frame=document.getElementById('frame');frame.height-=10;
+      return false;
+    }
+    if(evt.keyCode==39)//VK_RIGHT
+    {
+      cur_id++;if(cur_id>99999)cur_id=99999;var frame=document.getElementById('frame');frame.src="frame"+pad(cur_id,5)+".png"
+      return false;
+    }
+    if(evt.keyCode==37)//VK_LEFT
+    {
+      cur_id--;if(cur_id<00000)cur_id=00000;var frame=document.getElementById('frame');frame.src="frame"+pad(cur_id,5)+".png"
+      return false;
+    }
+    if(evt.keyCode==33)//VK_PGUP
+    {
+      cur_id+=128;if(cur_id>99999)cur_id=99999;var frame=document.getElementById('frame');frame.src="frame"+pad(cur_id,5)+".png"
+      return false;
+    }
+    if(evt.keyCode==34)//VK_PGDOWN
+    {
+      cur_id-=128;if(cur_id<00000)cur_id=00000;var frame=document.getElementById('frame');frame.src="frame"+pad(cur_id,5)+".png"
+      return false;
+    }
+    if(evt.keyCode==106)//VK_SLASH
+    {
+      var frame=document.getElementById('frame');frame.height=frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==50)//2
+    {
+      var frame=document.getElementById('frame');frame.height=2*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==51)//3
+    {
+      var frame=document.getElementById('frame');frame.height=3*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==52)//4
+    {
+      var frame=document.getElementById('frame');frame.height=4*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==53)//5
+    {
+      var frame=document.getElementById('frame');frame.height=5*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==54)//6
+    {
+      var frame=document.getElementById('frame');frame.height=6*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==55)//7
+    {
+      var frame=document.getElementById('frame');frame.height=7*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==56)//8
+    {
+      var frame=document.getElementById('frame');frame.height=8*frame.naturalHeight;
+      return false;
+    }
+  };
+  document.onkeydown=myFunction;
+</script>
+  </head>
+  <body>
+    <img id="frame" style="image-rendering: -moz-crisp-edges;" src="frame00000.png" height="60%" border="1"/>
+  </body>
+</html>

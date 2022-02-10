@@ -1,0 +1,1 @@
+copy ..\Debug\Demo.exe ..\Release

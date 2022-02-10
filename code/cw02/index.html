@@ -1,0 +1,338 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CellWorld 2013_08_11</title>
+    <style>
+    div.bg{
+      background: #ffffff url(background.png) repeat;
+    }
+    .x{
+      box-shadow: 0 0 4px rgba(0,0,0,0.7);
+      border-radius: 16px;
+    }
+    div.emphasize-inset{
+      box-shadow: inset 0 0 7px 4px rgba(255,255,255,0.5);
+      display:none
+    }
+    canvas, img {
+      image-rendering: optimizeSpeed;             /* Older versions of FF*/
+      image-rendering: -moz-crisp-edges;          /* FF 6.0+*/
+      image-rendering: -webkit-optimize-contrast; /* Webkit*/
+                                                  /*  (Safari now, Chrome soon)*/
+      image-rendering: -o-crisp-edges;            /*OS X & Windows Opera (12.02+)*/
+      image-rendering: optimize-contrast;         /* Possible future browsers.*/
+      -ms-interpolation-mode: nearest-neighbor;   /* IE*/
+      image-rendering: pixelated;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    </style>
+    <script type='text/javascript' src="cellworld_core.js"></script>
+<script type='text/javascript'>
+  var RgbaToUint=function(r,g,b,a){var m=1;var tmp=a;tmp*=0x100;tmp+=b;tmp*=0x100;tmp+=g;tmp*=0x100;tmp+=r;return tmp;}
+  var g_cellsize=8;
+  var maxelem=arr=>Math.max.apply(null,arr);
+  function byid(id){return document.getElementById(id);}
+  function sync_canvas_size(z){
+    var w=g_field.w;var h=g_field.h;
+    var canvas=byid('canvas');
+    canvas.width=w*z;canvas.height=h*z;
+  }
+  function map2data(){byid('data').value=field_to_text(g_field);}
+  function data2map(){data2map_impl(byid('data').value);}
+  function data2map_impl(str){//return;
+    var data=str.split("\r").join("").split("\n");
+    var m=makemap_celltype2color();
+    g_field.w=maxelem(data.map(e=>e.length));
+    g_field.h=data.length;
+    g_field.arr=[];
+    data.map(s=>{for(var i=0;i<g_field.w;i++)g_field.arr.push(m[i<s.length?s[i]:' ']);});
+    sync_canvas_size(g_cellsize);
+    field_draw_to_canvas(g_field);
+    unfreeze();
+    console.log("data2map::end");
+  }
+  function load_bmp()
+  {
+    var s="img id='img' src='source.bmp' onload='mapimg_onload(this);' crossOrigin='anonymous' ".split("'").join('"');
+    byid('div_with_img').innerHTML="<"+s+"/"+">";
+  }
+  function mapimg_onload()
+  {
+    //console.log("g_func_onload - ignored. ");return;
+    byid('img').crossOrigin='anonymous';byid('canvas').crossOrigin='anonymous';
+    console.log("mapimg_onload::beg");
+    var img=byid('img');
+    img.height=g_cellsize*img.naturalHeight;
+    var w=img.naturalWidth;var h=img.naturalHeight;
+    g_field.w=w;g_field.h=h;g_field.arr=[];
+    sync_canvas_size(g_cellsize);
+    //canvas.style.width=w*z;canvas.style.height=h*z;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    var data=canvas.getContext('2d').getImageData(0,0,w,h).data;
+    var f=function(arr,id){return RgbaToUint(arr[id+0],arr[id+1],arr[id+2],arr[id+3]);}
+    for(var i=0;i<data.length;i+=4)g_field.arr.push(f(data,i));//console.log([g_field.arr]);
+    field_draw_to_canvas(g_field);
+    unfreeze();
+    console.log("mapimg_onload::end");
+    //return false;
+  };
+  function field_draw_to_canvas(field)
+  {
+    var canvas=byid('canvas');
+    var ctx=canvas.getContext("2d");
+    var w=field.w;var h=field.h;var z=g_cellsize;
+    var imgData=ctx.getImageData(0,0,w*z,h*z);
+    var f=function(data)
+    {
+      var out=[];
+      for(var i in data)
+      {
+        var tmp=safe_UintToRGBA(data[i]);
+        for(var j=0;j<4;j++)out.push(tmp[j]);
+      }
+      return out;
+    }
+    var wd=f(field.arr);
+    var data=imgData.data;
+    var set=function(data,wd,x,y,w,h,dx,dy,z,i){
+      var id=(x*z+dx+(y*z+dy)*w*z)*4+i;
+      data[id]=wd[(x+y*w)*4+i];
+    };
+    for(var y=0;y<h;y++)for(var dy=0;dy<z;dy++)for(var x=0;x<w;x++)for(var dx=0;dx<z;dx++)for(var i=0;i<4;i++){
+      set(data,wd,x,y,w,h,dx,dy,z,i);
+    }
+    ctx.putImageData(imgData,0,0);
+  }
+  function show(id){byid(id).style="";}
+  function hide(id){byid(id).style="display:none";}
+  function get_node_parent_arr(e){return Array.from(e.parentElement.children);}
+  function find_div_with_id_in_parent_or_ta_with_id(e){
+    var f=(tag,prop)=>e=>(e.tagName==tag)&&(prop in e);
+    var arr=get_node_parent_arr(e);
+    var div=arr.filter(f('DIV','id'));
+    var ta=arr.filter(f('TEXTAREA','id'));
+    return div.length?div[0]:ta[0];
+  }
+  function show_v2(e){find_div_with_id_in_parent_or_ta_with_id(e).style="";}
+  function hide_v2(e){find_div_with_id_in_parent_or_ta_with_id(e).style="display:none";}
+  function toggle_v2(elem){
+    var e=find_div_with_id_in_parent_or_ta_with_id(elem);
+    e.style.display=e.style.display?"":"none";
+  }
+  setTimeout("/*show('data');*/step();",512);
+</script>
+  </head>
+  <body onload="data2map();">
+    <div class="bg" align="center" id="head"><br>
+      <canvas id="canvas" nestyle="display:none" width="768" height="512"></canvas><br><br>
+    </div>
+    <div align="center">
+      <button onclick="start();">start</button>
+      <button onclick="step();">step</button>
+      <button onclick="stop();">stop</button>
+      <button onclick="gen();">gen</button>
+      <button onclick="unfreeze();">unfreeze</button>
+      <button onclick="data2map();">data2map</button>
+      <button onclick="map2data();">map2data</button>
+      <button onclick="load_bmp();">load_bmp</button>
+      <button onclick="show_rules();">show_rules</button>
+    </div>
+    <div align="center" id="info">loading...<br>...</div>
+    <div align="center" style="display:none" id="div_with_img"></div>
+    <hr>
+    <div align="center">
+      (&nbsp;<button onclick="toggle_v2(this);">&nbsp; data &nbsp;</button>&nbsp;)<br>
+      <textarea spellcheck="false" style="display:none" rows="50" cols="150" id="data">
+                                                                          B                  
+           ##########                                                     O                  
+           #B   OB  #                                                                        
+           #G###### #                  # #          # #                                      
+           #     BO #                  # #          # #                   B                  
+       # # ##########              ##### ###    #####+####                G  #####           
+         #    #Y+# BO    BO            +++           +                       #+YY#           
+       ###    #######              ##### ###    #####+####                   #####           
+       #                               # # B        # #                                      
+       # #   #####                     # # G        # #                                      
+             #GYY+#                       # #                                                
+             #######                    ##+ ###                                              
+             #GYYY+#  BG               BO + +        OB  +  OB           # #                 
+             #######                    ##+ ###                        ##+ ###               
+                                          # #                        BG  + +        OB  +  OB
+                                                                       ##+ ###               
+                                                                         # #  
+</textarea>
+    </div>
+    <hr>
+    <div align="center">
+      (&nbsp;<button onclick="toggle_v2(this);">&nbsp; code &nbsp;</button>&nbsp;)<br>
+      <textarea spellcheck="false" style="display:none" rows="15" cols="150" id="code">
+//add_rule(0x50,"B\n"," \n");
+var use=()=>true;
+
+transfer_light(0x0f,"+1.2");
+transfer_light(0x05,"212");
+transfer_light(0x04,"111\n2#2\n222");
+
+//add_two(0xef,"+ \n+ +1B\n+ ","#+\n +   \n#+");
+add_two(0xf9,"+.\n+ +1B\n+.","#.\n+++  \n#.");  // cross mid close by ctrl
+add_two(0xf9,"..#\n+++1B\n..#","..+\n+ +  \n..+"); // cross mid open by ctrl
+
+if(1==use("cross mid killer(+++)")){
+  add_two(0xef, "+++\n.1.\n.B.","+++\n.B.\n. .");
+  add_rule(0xef,"+++\n.B.","+++\n. .");
+}
+
+if(1==use("stream killer(YY)")){
+  add_two(0xef,"YY+#1B","YY+#B ");
+  add_rule(0xef,"YY+#B","YY+# ");
+}
+
+add_two(0xf0,".1\n.#\nY+#B ",".1\n.#\nY+#B1");
+add_rule(0xf0,"#Y+#  ","#Y+#B ");
+
+if(0==="with_fixed_delay"){
+add_rule(0x50,"GY+# ","GY+#G");
+add_rule(0x50,"GY+#G ","GY+#BG");
+add_rule(0x50,"GYY+#  ","GYY+#G ");
+add_rule(0x50,"GYY+#G  ","GYY+#BG ");
+add_rule(0x50,"GYYY+#   ","GYYY+#G  ");
+add_rule(0x50,"GYYY+#G   ","GYYY+#BG  ");
+}
+if(1){
+add_rule(0x50,"BG \n"," BG\n");
+add_rule(0x50,"BO \n"," BO\n");
+add_rule
+(
+  0x20,
+  ".#\n"+
+  "BO\n"+
+  ". \n"
+  ,
+  ".#\n"+
+  " B\n"+
+  ".O\n"
+);
+add_rule
+(
+  0x20,
+  ".#\n"+
+  "BG\n"+
+  ". \n"
+  ,
+  ".#\n"+
+  " B\n"+
+  ".G\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  " G\n"+
+  ".#\n"+
+  "GY\n"
+  ,
+  ". \n"+
+  "GB\n"+
+  ".#\n"+
+  "GY\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  " O\n"+
+  ".#\n"+
+  "OY\n"
+  ,
+  ". \n"+
+  "OB\n"+
+  ".#\n"+
+  "OY\n"
+); 
+add_rule
+(
+  0x10,
+  "BG \n"+
+  ".#.\n"+
+  ".YG\n"
+  ,
+  " BG\n"+
+  ".#.\n"+
+  ".YG\n"
+);
+add_rule
+(
+  0x10,
+  "BO \n"+
+  ".#.\n"+
+  ".YO\n"
+  ,
+  " BO\n"+
+  ".#.\n"+
+  ".YO\n"
+);
+add_rule(0x1a,"#GY#O","#OY#O");
+add_rule(0x1a,"#OY#G","#GY#G");
+add_rule(0x1d,"G#OY#","O#OY#");
+add_rule(0x1d,"O#GY#","G#GY#");
+add_rule(0x2a,"G#GY#O","O#OY#O");
+add_rule(0x2a,"O#OY#G","G#GY#G");
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "G#BB# \n"
+  ,
+  "B.....\n"+
+  "G#BB# \n"
+);
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "O#BB# \n"
+  ,
+  "B.....\n"+
+  "O#BB# \n"
+);
+var add_full_sync=function(A,B)
+{
+  var f=function(str,from,to){return str.split(from).join(to);};
+  var g=function(s){var str=s;str=f(str,'1',A);str=f(str,'2',B);return str;};
+  var add=function(level,from,to){
+    var stra=g(from);
+    var strb=g(to);
+    add_rule(level,stra,strb);
+  };
+  add
+  (
+    0x30,
+    ".....B\n"+
+    "B....2\n"+
+    "1#BB# \n"
+    ,
+    "..... \n"+
+    "B....B\n"+
+    "1#BB#2\n"
+  );
+};
+add_full_sync('O','O');
+add_full_sync('O','G');
+add_full_sync('G','O');
+add_full_sync('G','G');}
+      
+      
+      
+      </textarea>
+    </div>
+    <hr>
+    <div align="center">
+      (&nbsp;<button onclick="toggle_v2(this);">&nbsp; rules &nbsp;</button>&nbsp;)<br>
+      <div style="display:none" id="div_rules"><br>
+        <button onclick="data2map_impl(byid('rules').value)">rules2map</button><br>
+        <textarea spellcheck="false" rows="42" cols="42" id="rules"></textarea>
+      </div>
+    </div>
+    <hr>
+  </body>
+</html>

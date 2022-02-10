@@ -1,0 +1,1693 @@
+
+D:\Adler\My Doc\Code\CellWorld>call del_frame.bat 
+
+D:\Adler\My Doc\Code\CellWorld>del Release\frame?????.png 
+
+D:\Adler\My Doc\Code\CellWorld>del Release\timeinfo?????.png 
+
+D:\Adler\My Doc\Code\CellWorld>cd Release\ 
+
+D:\Adler\My Doc\Code\CellWorld\Release>CellWorld.exe
+fail
+frame = 0
+
+-----=====[0]=====-----
+BGX
+
+===
+
+XBG
+
+-----=====[1]=====-----
+BEX
+
+===
+
+XBE
+
+-----=====[2]=====-----
+.O
+BE
+.X
+
+==
+
+.O
+XB
+.E
+
+-----=====[3]=====-----
+.O
+BG
+.X
+
+==
+
+.O
+XB
+.G
+
+-----=====[4]=====-----
+.B
+XG
+.O
+GY
+
+==
+
+.X
+GB
+.O
+GY
+
+-----=====[5]=====-----
+.B
+XE
+.O
+EY
+
+==
+
+.X
+EB
+.O
+EY
+
+-----=====[6]=====-----
+BGX
+.O.
+.YG
+
+===
+
+XBG
+.O.
+.YG
+
+-----=====[7]=====-----
+BEX
+.O.
+.YE
+
+===
+
+XBE
+.O.
+.YE
+
+-----=====[8]=====-----
+OGYOE
+
+=====
+
+OEYOE
+
+-----=====[9]=====-----
+OEYOG
+
+=====
+
+OGYOG
+
+-----=====[10]=====-----
+GOEYO
+
+=====
+
+EOEYO
+
+-----=====[11]=====-----
+EOGYO
+
+=====
+
+GOGYO
+
+-----=====[12]=====-----
+GOGYOE
+
+======
+
+EOEYOE
+
+-----=====[13]=====-----
+EOEYOG
+
+======
+
+GOGYOG
+
+-----=====[14]=====-----
+B.....
+GOBBOX
+
+======
+
+B.....
+GOBBOX
+
+-----=====[15]=====-----
+B.....
+EOBBOX
+
+======
+
+B.....
+EOBBOX
+
+-----=====[16]=====-----
+.....B
+B....E
+EOBBOX
+
+======
+
+.....X
+B....B
+EOBBOE
+
+-----=====[17]=====-----
+.....B
+B....G
+EOBBOX
+
+======
+
+.....X
+B....B
+EOBBOG
+
+-----=====[18]=====-----
+.....B
+B....E
+GOBBOX
+
+======
+
+.....X
+B....B
+GOBBOE
+
+-----=====[19]=====-----
+.....B
+B....G
+GOBBOX
+
+======
+
+.....X
+B....B
+GOBBOG
+
+-----=====[end]=====-----
+calc_time = 239.167ms        cell_alive=    1886
+frame = 1
+calc_time = 18.874ms        cell_alive=     137
+frame = 2
+calc_time = 19.145ms        cell_alive=     139
+frame = 3
+calc_time = 19.232ms        cell_alive=     139
+frame = 4
+calc_time = 18.710ms        cell_alive=     139
+frame = 5
+calc_time = 23.350ms        cell_alive=     157
+frame = 6
+calc_time = 19.206ms        cell_alive=     137
+frame = 7
+calc_time = 18.243ms        cell_alive=     134
+frame = 8
+calc_time = 21.004ms        cell_alive=     154
+frame = 9
+calc_time = 19.708ms        cell_alive=     142
+frame = 10
+calc_time = 19.869ms        cell_alive=     144
+frame = 11
+calc_time = 18.316ms        cell_alive=     132
+frame = 12
+calc_time = 15.048ms        cell_alive=     114
+frame = 13
+calc_time = 13.110ms        cell_alive=      99
+frame = 14
+calc_time = 11.073ms        cell_alive=      84
+frame = 15
+calc_time = 9.048ms        cell_alive=      69
+frame = 16
+calc_time = 6.204ms        cell_alive=      46
+frame = 17
+calc_time = 6.201ms        cell_alive=      46
+frame = 18
+calc_time = 6.430ms        cell_alive=      48
+frame = 19
+calc_time = 6.463ms        cell_alive=      48
+frame = 20
+calc_time = 6.430ms        cell_alive=      48
+frame = 21
+calc_time = 6.245ms        cell_alive=      46
+frame = 22
+calc_time = 6.199ms        cell_alive=      46
+frame = 23
+calc_time = 6.010ms        cell_alive=      46
+frame = 24
+calc_time = 6.175ms        cell_alive=      46
+frame = 25
+calc_time = 7.027ms        cell_alive=      46
+frame = 26
+calc_time = 6.440ms        cell_alive=      36
+frame = 27
+calc_time = 6.803ms        cell_alive=      46
+frame = 28
+calc_time = 5.992ms        cell_alive=      44
+frame = 29
+calc_time = 6.201ms        cell_alive=      46
+frame = 30
+calc_time = 4.686ms        cell_alive=      36
+frame = 31
+calc_time = 6.017ms        cell_alive=      44
+frame = 32
+calc_time = 5.972ms        cell_alive=      46
+frame = 33
+calc_time = 3.140ms        cell_alive=      23
+frame = 34
+calc_time = 3.125ms        cell_alive=      23
+frame = 35
+calc_time = 2.868ms        cell_alive=      23
+frame = 36
+calc_time = 2.965ms        cell_alive=      21
+frame = 37
+calc_time = 2.844ms        cell_alive=      23
+frame = 38
+calc_time = 2.967ms        cell_alive=      21
+frame = 39
+calc_time = 2.901ms        cell_alive=      21
+frame = 40
+calc_time = 3.133ms        cell_alive=      23
+frame = 41
+calc_time = 3.127ms        cell_alive=      23
+frame = 42
+calc_time = 3.117ms        cell_alive=      23
+frame = 43
+calc_time = 3.110ms        cell_alive=      23
+frame = 44
+calc_time = 2.897ms        cell_alive=      23
+frame = 45
+calc_time = 2.864ms        cell_alive=      21
+frame = 46
+calc_time = 3.133ms        cell_alive=      23
+frame = 47
+calc_time = 3.203ms        cell_alive=      23
+frame = 48
+calc_time = 3.126ms        cell_alive=      23
+frame = 49
+calc_time = 2.835ms        cell_alive=      23
+frame = 50
+calc_time = 3.127ms        cell_alive=      22
+frame = 51
+calc_time = 2.017ms        cell_alive=      16
+frame = 52
+calc_time = 3.015ms        cell_alive=      22
+frame = 53
+calc_time = 3.255ms        cell_alive=      24
+frame = 54
+calc_time = 3.110ms        cell_alive=      23
+frame = 55
+calc_time = 3.122ms        cell_alive=      23
+frame = 56
+calc_time = 3.016ms        cell_alive=      23
+frame = 57
+calc_time = 3.136ms        cell_alive=      23
+frame = 58
+calc_time = 3.188ms        cell_alive=      23
+frame = 59
+calc_time = 3.113ms        cell_alive=      23
+frame = 60
+calc_time = 2.903ms        cell_alive=      23
+frame = 61
+calc_time = 2.869ms        cell_alive=      21
+frame = 62
+calc_time = 3.109ms        cell_alive=      23
+frame = 63
+calc_time = 3.157ms        cell_alive=      23
+frame = 64
+calc_time = 3.128ms        cell_alive=      23
+frame = 65
+calc_time = 3.117ms        cell_alive=      23
+frame = 66
+calc_time = 3.112ms        cell_alive=      23
+frame = 67
+calc_time = 2.954ms        cell_alive=      23
+frame = 68
+calc_time = 3.135ms        cell_alive=      23
+frame = 69
+calc_time = 3.116ms        cell_alive=      23
+frame = 70
+calc_time = 3.124ms        cell_alive=      23
+frame = 71
+calc_time = 3.122ms        cell_alive=      23
+frame = 72
+calc_time = 3.163ms        cell_alive=      23
+frame = 73
+calc_time = 3.121ms        cell_alive=      23
+frame = 74
+calc_time = 3.132ms        cell_alive=      23
+frame = 75
+calc_time = 3.107ms        cell_alive=      23
+frame = 76
+calc_time = 3.248ms        cell_alive=      23
+frame = 77
+calc_time = 3.356ms        cell_alive=      24
+frame = 78
+calc_time = 2.020ms        cell_alive=      16
+frame = 79
+calc_time = 3.057ms        cell_alive=      22
+frame = 80
+calc_time = 3.299ms        cell_alive=      24
+frame = 81
+calc_time = 2.846ms        cell_alive=      23
+frame = 82
+calc_time = 2.896ms        cell_alive=      21
+frame = 83
+calc_time = 2.830ms        cell_alive=      23
+frame = 84
+calc_time = 2.920ms        cell_alive=      21
+frame = 85
+calc_time = 2.870ms        cell_alive=      21
+frame = 86
+calc_time = 3.128ms        cell_alive=      23
+frame = 87
+calc_time = 3.110ms        cell_alive=      23
+frame = 88
+calc_time = 3.100ms        cell_alive=      23
+frame = 89
+calc_time = 3.116ms        cell_alive=      23
+frame = 90
+calc_time = 3.170ms        cell_alive=      23
+frame = 91
+calc_time = 3.149ms        cell_alive=      23
+frame = 92
+calc_time = 2.876ms        cell_alive=      23
+frame = 93
+calc_time = 2.888ms        cell_alive=      21
+frame = 94
+calc_time = 3.140ms        cell_alive=      23
+frame = 95
+calc_time = 3.106ms        cell_alive=      23
+frame = 96
+calc_time = 2.830ms        cell_alive=      23
+frame = 97
+calc_time = 2.883ms        cell_alive=      21
+frame = 98
+calc_time = 3.103ms        cell_alive=      23
+frame = 99
+calc_time = 3.523ms        cell_alive=      26
+frame = 100
+calc_time = 3.563ms        cell_alive=      26
+frame = 101
+calc_time = 3.519ms        cell_alive=      28
+frame = 102
+calc_time = 3.279ms        cell_alive=      24
+frame = 103
+calc_time = 3.249ms        cell_alive=      26
+frame = 104
+calc_time = 3.582ms        cell_alive=      24
+frame = 105
+calc_time = 8.667ms        cell_alive=      46
+frame = 106
+calc_time = 7.178ms        cell_alive=      41
+frame = 107
+calc_time = 7.992ms        cell_alive=      57
+frame = 108
+calc_time = 16.051ms        cell_alive=      82
+frame = 109
+calc_time = 12.601ms        cell_alive=      87
+frame = 110
+calc_time = 13.821ms        cell_alive=      92
+frame = 111
+calc_time = 14.322ms        cell_alive=      90
+frame = 112
+calc_time = 17.018ms        cell_alive=      90
+frame = 113
+calc_time = 9.259ms        cell_alive=      69
+frame = 114
+calc_time = 8.846ms        cell_alive=      69
+frame = 115
+calc_time = 6.129ms        cell_alive=      46
+frame = 116
+calc_time = 6.043ms        cell_alive=      46
+frame = 117
+calc_time = 6.126ms        cell_alive=      46
+frame = 118
+calc_time = 7.131ms        cell_alive=      48
+frame = 119
+calc_time = 6.862ms        cell_alive=      52
+frame = 120
+calc_time = 6.313ms        cell_alive=      48
+frame = 121
+calc_time = 6.347ms        cell_alive=      48
+frame = 122
+calc_time = 6.040ms        cell_alive=      46
+frame = 123
+calc_time = 6.063ms        cell_alive=      46
+frame = 124
+calc_time = 6.057ms        cell_alive=      46
+frame = 125
+calc_time = 6.063ms        cell_alive=      46
+frame = 126
+calc_time = 6.710ms        cell_alive=      46
+frame = 127
+calc_time = 4.808ms        cell_alive=      36
+frame = 128
+calc_time = 5.924ms        cell_alive=      46
+frame = 129
+calc_time = 6.069ms        cell_alive=      46
+frame = 130
+calc_time = 6.715ms        cell_alive=      46
+frame = 131
+calc_time = 4.845ms        cell_alive=      36
+frame = 132
+calc_time = 6.049ms        cell_alive=      46
+frame = 133
+calc_time = 3.174ms        cell_alive=      23
+frame = 134
+calc_time = 2.950ms        cell_alive=      21
+frame = 135
+calc_time = 3.152ms        cell_alive=      23
+frame = 136
+calc_time = 3.165ms        cell_alive=      23
+frame = 137
+calc_time = 3.133ms        cell_alive=      23
+frame = 138
+calc_time = 3.143ms        cell_alive=      23
+frame = 139
+calc_time = 2.837ms        cell_alive=      23
+frame = 140
+calc_time = 2.873ms        cell_alive=      21
+frame = 141
+calc_time = 3.172ms        cell_alive=      23
+frame = 142
+calc_time = 3.320ms        cell_alive=      23
+frame = 143
+calc_time = 3.136ms        cell_alive=      23
+frame = 144
+calc_time = 2.830ms        cell_alive=      23
+frame = 145
+calc_time = 3.079ms        cell_alive=      22
+frame = 146
+calc_time = 2.122ms        cell_alive=      16
+frame = 147
+calc_time = 2.991ms        cell_alive=      22
+frame = 148
+calc_time = 3.291ms        cell_alive=      24
+frame = 149
+calc_time = 3.107ms        cell_alive=      23
+frame = 150
+calc_time = 3.108ms        cell_alive=      23
+frame = 151
+calc_time = 3.156ms        cell_alive=      23
+frame = 152
+calc_time = 2.875ms        cell_alive=      21
+frame = 153
+calc_time = 3.117ms        cell_alive=      23
+frame = 154
+calc_time = 3.171ms        cell_alive=      23
+frame = 155
+calc_time = 3.243ms        cell_alive=      23
+frame = 156
+calc_time = 3.109ms        cell_alive=      23
+frame = 157
+calc_time = 3.114ms        cell_alive=      23
+frame = 158
+calc_time = 2.986ms        cell_alive=      23
+frame = 159
+calc_time = 3.153ms        cell_alive=      23
+frame = 160
+calc_time = 3.125ms        cell_alive=      23
+frame = 161
+calc_time = 2.868ms        cell_alive=      23
+frame = 162
+calc_time = 2.879ms        cell_alive=      21
+frame = 163
+calc_time = 2.891ms        cell_alive=      23
+frame = 164
+calc_time = 2.889ms        cell_alive=      21
+frame = 165
+calc_time = 2.854ms        cell_alive=      23
+frame = 166
+calc_time = 2.894ms        cell_alive=      21
+frame = 167
+calc_time = 3.158ms        cell_alive=      23
+frame = 168
+calc_time = 3.134ms        cell_alive=      23
+frame = 169
+calc_time = 3.122ms        cell_alive=      23
+frame = 170
+calc_time = 3.122ms        cell_alive=      23
+frame = 171
+calc_time = 3.154ms        cell_alive=      23
+frame = 172
+calc_time = 3.110ms        cell_alive=      23
+frame = 173
+calc_time = 4.185ms        cell_alive=      24
+frame = 174
+calc_time = 2.293ms        cell_alive=      16
+frame = 175
+calc_time = 3.235ms        cell_alive=      24
+frame = 176
+calc_time = 2.955ms        cell_alive=      24
+frame = 177
+calc_time = 2.865ms        cell_alive=      21
+frame = 178
+calc_time = 2.929ms        cell_alive=      23
+frame = 179
+calc_time = 3.114ms        cell_alive=      23
+frame = 180
+calc_time = 3.116ms        cell_alive=      23
+frame = 181
+calc_time = 3.137ms        cell_alive=      23
+frame = 182
+calc_time = 3.168ms        cell_alive=      23
+frame = 183
+calc_time = 3.090ms        cell_alive=      23
+frame = 184
+calc_time = 3.139ms        cell_alive=      23
+frame = 185
+calc_time = 3.107ms        cell_alive=      23
+frame = 186
+calc_time = 3.129ms        cell_alive=      23
+frame = 187
+calc_time = 3.116ms        cell_alive=      23
+frame = 188
+calc_time = 3.129ms        cell_alive=      23
+frame = 189
+calc_time = 3.333ms        cell_alive=      24
+frame = 190
+calc_time = 1.981ms        cell_alive=      16
+frame = 191
+calc_time = 3.025ms        cell_alive=      22
+frame = 192
+calc_time = 3.712ms        cell_alive=      24
+frame = 193
+calc_time = 3.195ms        cell_alive=      23
+frame = 194
+calc_time = 3.116ms        cell_alive=      23
+frame = 195
+calc_time = 3.108ms        cell_alive=      23
+frame = 196
+calc_time = 3.106ms        cell_alive=      23
+frame = 197
+calc_time = 3.110ms        cell_alive=      23
+frame = 198
+calc_time = 3.140ms        cell_alive=      23
+frame = 199
+calc_time = 3.138ms        cell_alive=      23
+frame = 200
+calc_time = 3.249ms        cell_alive=      23
+frame = 201
+calc_time = 3.021ms        cell_alive=      21
+frame = 202
+calc_time = 3.220ms        cell_alive=      23
+frame = 203
+calc_time = 2.950ms        cell_alive=      23
+frame = 204
+calc_time = 2.987ms        cell_alive=      21
+frame = 205
+calc_time = 3.192ms        cell_alive=      23
+frame = 206
+calc_time = 1.976ms        cell_alive=      13
+frame = 207
+calc_time = 3.661ms        cell_alive=      21
+frame = 208
+calc_time = 3.374ms        cell_alive=      23
+frame = 209
+calc_time = 2.853ms        cell_alive=      23
+frame = 210
+calc_time = 2.866ms        cell_alive=      21
+frame = 211
+calc_time = 4.243ms        cell_alive=      24
+frame = 212
+calc_time = 2.371ms        cell_alive=      16
+frame = 213
+calc_time = 2.980ms        cell_alive=      24
+frame = 214
+calc_time = 2.703ms        cell_alive=      22
+frame = 215
+calc_time = 2.883ms        cell_alive=      21
+frame = 216
+calc_time = 3.218ms        cell_alive=      23
+frame = 217
+calc_time = 2.874ms        cell_alive=      23
+frame = 218
+calc_time = 2.868ms        cell_alive=      21
+frame = 219
+calc_time = 3.109ms        cell_alive=      23
+frame = 220
+calc_time = 3.011ms        cell_alive=      23
+frame = 221
+calc_time = 3.130ms        cell_alive=      23
+frame = 222
+calc_time = 3.147ms        cell_alive=      23
+frame = 223
+calc_time = 2.824ms        cell_alive=      23
+frame = 224
+calc_time = 2.862ms        cell_alive=      21
+frame = 225
+calc_time = 3.120ms        cell_alive=      23
+frame = 226
+calc_time = 3.020ms        cell_alive=      23
+frame = 227
+calc_time = 3.125ms        cell_alive=      23
+frame = 228
+calc_time = 3.154ms        cell_alive=      23
+frame = 229
+calc_time = 3.136ms        cell_alive=      23
+frame = 230
+calc_time = 3.155ms        cell_alive=      23
+frame = 231
+calc_time = 3.104ms        cell_alive=      23
+frame = 232
+calc_time = 3.128ms        cell_alive=      23
+frame = 233
+calc_time = 3.111ms        cell_alive=      23
+frame = 234
+calc_time = 3.118ms        cell_alive=      23
+frame = 235
+calc_time = 3.137ms        cell_alive=      23
+frame = 236
+calc_time = 3.116ms        cell_alive=      23
+frame = 237
+calc_time = 3.178ms        cell_alive=      23
+frame = 238
+calc_time = 3.158ms        cell_alive=      23
+frame = 239
+calc_time = 3.109ms        cell_alive=      23
+frame = 240
+calc_time = 3.109ms        cell_alive=      23
+frame = 241
+calc_time = 3.828ms        cell_alive=      23
+frame = 242
+calc_time = 1.930ms        cell_alive=      13
+frame = 243
+calc_time = 3.170ms        cell_alive=      23
+frame = 244
+calc_time = 3.136ms        cell_alive=      23
+frame = 245
+calc_time = 4.213ms        cell_alive=      24
+frame = 246
+calc_time = 2.268ms        cell_alive=      16
+frame = 247
+calc_time = 2.974ms        cell_alive=      24
+frame = 248
+calc_time = 3.008ms        cell_alive=      22
+frame = 249
+calc_time = 2.857ms        cell_alive=      23
+frame = 250
+calc_time = 2.848ms        cell_alive=      21
+frame = 251
+calc_time = 3.133ms        cell_alive=      23
+frame = 252
+calc_time = 3.105ms        cell_alive=      23
+frame = 253
+calc_time = 3.116ms        cell_alive=      23
+frame = 254
+calc_time = 3.096ms        cell_alive=      23
+frame = 255
+calc_time = 3.147ms        cell_alive=      23
+frame = 256
+calc_time = 3.120ms        cell_alive=      23
+frame = 257
+calc_time = 2.824ms        cell_alive=      23
+frame = 258
+calc_time = 2.899ms        cell_alive=      21
+frame = 259
+calc_time = 3.100ms        cell_alive=      23
+frame = 260
+calc_time = 3.114ms        cell_alive=      23
+frame = 261
+calc_time = 3.112ms        cell_alive=      23
+frame = 262
+calc_time = 3.113ms        cell_alive=      23
+frame = 263
+calc_time = 3.125ms        cell_alive=      23
+frame = 264
+calc_time = 3.100ms        cell_alive=      23
+frame = 265
+calc_time = 3.145ms        cell_alive=      23
+frame = 266
+calc_time = 3.102ms        cell_alive=      23
+frame = 267
+calc_time = 3.181ms        cell_alive=      23
+frame = 268
+calc_time = 3.101ms        cell_alive=      23
+frame = 269
+calc_time = 3.158ms        cell_alive=      23
+frame = 270
+calc_time = 3.092ms        cell_alive=      23
+frame = 271
+calc_time = 3.104ms        cell_alive=      23
+frame = 272
+calc_time = 3.084ms        cell_alive=      23
+frame = 273
+calc_time = 3.079ms        cell_alive=      23
+frame = 274
+calc_time = 3.089ms        cell_alive=      23
+frame = 275
+calc_time = 2.954ms        cell_alive=      23
+frame = 276
+calc_time = 2.893ms        cell_alive=      21
+frame = 277
+calc_time = 2.874ms        cell_alive=      23
+frame = 278
+calc_time = 2.971ms        cell_alive=      21
+frame = 279
+calc_time = 3.019ms        cell_alive=      21
+frame = 280
+calc_time = 3.102ms        cell_alive=      23
+frame = 281
+calc_time = 3.178ms        cell_alive=      23
+frame = 282
+calc_time = 3.124ms        cell_alive=      23
+frame = 283
+calc_time = 3.183ms        cell_alive=      23
+frame = 284
+calc_time = 3.136ms        cell_alive=      23
+frame = 285
+calc_time = 3.126ms        cell_alive=      23
+frame = 286
+calc_time = 3.168ms        cell_alive=      23
+frame = 287
+calc_time = 2.870ms        cell_alive=      21
+frame = 288
+calc_time = 3.088ms        cell_alive=      23
+frame = 289
+calc_time = 3.088ms        cell_alive=      23
+frame = 290
+calc_time = 3.113ms        cell_alive=      23
+frame = 291
+calc_time = 3.098ms        cell_alive=      23
+frame = 292
+calc_time = 3.114ms        cell_alive=      23
+frame = 293
+calc_time = 3.100ms        cell_alive=      23
+frame = 294
+calc_time = 2.835ms        cell_alive=      23
+frame = 295
+calc_time = 2.870ms        cell_alive=      21
+frame = 296
+calc_time = 3.105ms        cell_alive=      23
+frame = 297
+calc_time = 3.152ms        cell_alive=      23
+frame = 298
+calc_time = 2.846ms        cell_alive=      23
+frame = 299
+calc_time = 2.861ms        cell_alive=      21
+frame = 300
+calc_time = 3.112ms        cell_alive=      23
+frame = 301
+calc_time = 3.552ms        cell_alive=      26
+frame = 302
+calc_time = 3.543ms        cell_alive=      26
+frame = 303
+calc_time = 3.528ms        cell_alive=      28
+frame = 304
+calc_time = 3.284ms        cell_alive=      24
+frame = 305
+calc_time = 3.234ms        cell_alive=      26
+frame = 306
+calc_time = 3.527ms        cell_alive=      24
+frame = 307
+calc_time = 6.524ms        cell_alive=      46
+frame = 308
+calc_time = 8.063ms        cell_alive=      61
+frame = 309
+calc_time = 10.725ms        cell_alive=      74
+frame = 310
+calc_time = 11.739ms        cell_alive=      83
+frame = 311
+calc_time = 13.073ms        cell_alive=      86
+frame = 312
+calc_time = 12.597ms        cell_alive=      84
+frame = 313
+calc_time = 11.138ms        cell_alive=      84
+frame = 314
+calc_time = 10.733ms        cell_alive=      84
+frame = 315
+calc_time = 8.799ms        cell_alive=      69
+frame = 316
+calc_time = 5.971ms        cell_alive=      46
+frame = 317
+calc_time = 6.056ms        cell_alive=      46
+frame = 318
+calc_time = 6.249ms        cell_alive=      48
+frame = 319
+calc_time = 6.338ms        cell_alive=      48
+frame = 320
+calc_time = 6.299ms        cell_alive=      48
+frame = 321
+calc_time = 6.004ms        cell_alive=      46
+frame = 322
+calc_time = 6.054ms        cell_alive=      46
+frame = 323
+calc_time = 6.054ms        cell_alive=      46
+frame = 324
+calc_time = 6.010ms        cell_alive=      46
+frame = 325
+calc_time = 6.020ms        cell_alive=      46
+frame = 326
+calc_time = 6.088ms        cell_alive=      46
+frame = 327
+calc_time = 5.789ms        cell_alive=      44
+frame = 328
+calc_time = 6.008ms        cell_alive=      46
+frame = 329
+calc_time = 4.533ms        cell_alive=      36
+frame = 330
+calc_time = 5.787ms        cell_alive=      44
+frame = 331
+calc_time = 6.024ms        cell_alive=      46
+frame = 332
+calc_time = 6.406ms        cell_alive=      46
+frame = 333
+calc_time = 6.272ms        cell_alive=      46
+frame = 334
+calc_time = 2.891ms        cell_alive=      23
+frame = 335
+calc_time = 2.871ms        cell_alive=      21
+frame = 336
+calc_time = 2.826ms        cell_alive=      23
+frame = 337
+calc_time = 2.908ms        cell_alive=      21
+frame = 338
+calc_time = 2.870ms        cell_alive=      21
+frame = 339
+calc_time = 3.108ms        cell_alive=      23
+frame = 340
+calc_time = 3.116ms        cell_alive=      23
+frame = 341
+calc_time = 3.116ms        cell_alive=      23
+frame = 342
+calc_time = 3.095ms        cell_alive=      23
+frame = 343
+calc_time = 2.826ms        cell_alive=      23
+frame = 344
+calc_time = 2.853ms        cell_alive=      21
+frame = 345
+calc_time = 3.110ms        cell_alive=      23
+frame = 346
+calc_time = 3.114ms        cell_alive=      23
+frame = 347
+calc_time = 3.118ms        cell_alive=      23
+frame = 348
+calc_time = 2.844ms        cell_alive=      23
+frame = 349
+calc_time = 3.108ms        cell_alive=      22
+frame = 350
+calc_time = 2.035ms        cell_alive=      16
+frame = 351
+calc_time = 2.984ms        cell_alive=      22
+frame = 352
+calc_time = 3.239ms        cell_alive=      24
+frame = 353
+calc_time = 3.182ms        cell_alive=      23
+frame = 354
+calc_time = 3.120ms        cell_alive=      23
+frame = 355
+calc_time = 3.008ms        cell_alive=      23
+frame = 356
+calc_time = 3.131ms        cell_alive=      23
+frame = 357
+calc_time = 3.966ms        cell_alive=      23
+frame = 358
+calc_time = 1.920ms        cell_alive=      13
+frame = 359
+calc_time = 3.122ms        cell_alive=      23
+frame = 360
+calc_time = 2.830ms        cell_alive=      23
+frame = 361
+calc_time = 2.997ms        cell_alive=      21
+frame = 362
+calc_time = 3.113ms        cell_alive=      23
+frame = 363
+calc_time = 3.100ms        cell_alive=      23
+frame = 364
+calc_time = 3.147ms        cell_alive=      23
+frame = 365
+calc_time = 3.091ms        cell_alive=      23
+frame = 366
+calc_time = 3.152ms        cell_alive=      23
+frame = 367
+calc_time = 2.907ms        cell_alive=      23
+frame = 368
+calc_time = 3.152ms        cell_alive=      23
+frame = 369
+calc_time = 3.174ms        cell_alive=      23
+frame = 370
+calc_time = 3.108ms        cell_alive=      23
+frame = 371
+calc_time = 3.113ms        cell_alive=      23
+frame = 372
+calc_time = 3.134ms        cell_alive=      23
+frame = 373
+calc_time = 3.124ms        cell_alive=      23
+frame = 374
+calc_time = 3.090ms        cell_alive=      23
+frame = 375
+calc_time = 3.109ms        cell_alive=      23
+frame = 376
+calc_time = 3.169ms        cell_alive=      23
+frame = 377
+calc_time = 3.310ms        cell_alive=      24
+frame = 378
+calc_time = 1.970ms        cell_alive=      16
+frame = 379
+calc_time = 2.986ms        cell_alive=      22
+frame = 380
+calc_time = 3.271ms        cell_alive=      24
+frame = 381
+calc_time = 2.837ms        cell_alive=      23
+frame = 382
+calc_time = 2.841ms        cell_alive=      21
+frame = 383
+calc_time = 2.909ms        cell_alive=      23
+frame = 384
+calc_time = 2.926ms        cell_alive=      21
+frame = 385
+calc_time = 2.864ms        cell_alive=      21
+frame = 386
+calc_time = 3.096ms        cell_alive=      23
+frame = 387
+calc_time = 3.094ms        cell_alive=      23
+frame = 388
+calc_time = 3.110ms        cell_alive=      23
+frame = 389
+calc_time = 3.110ms        cell_alive=      23
+frame = 390
+calc_time = 3.145ms        cell_alive=      23
+frame = 391
+calc_time = 3.108ms        cell_alive=      23
+frame = 392
+calc_time = 2.845ms        cell_alive=      23
+frame = 393
+calc_time = 2.863ms        cell_alive=      21
+frame = 394
+calc_time = 3.137ms        cell_alive=      23
+frame = 395
+calc_time = 3.181ms        cell_alive=      23
+frame = 396
+calc_time = 2.826ms        cell_alive=      23
+frame = 397
+calc_time = 2.872ms        cell_alive=      21
+frame = 398
+calc_time = 3.113ms        cell_alive=      23
+frame = 399
+calc_time = 3.506ms        cell_alive=      26
+frame = 400
+calc_time = 3.578ms        cell_alive=      26
+frame = 401
+calc_time = 3.485ms        cell_alive=      28
+frame = 402
+calc_time = 3.279ms        cell_alive=      24
+frame = 403
+calc_time = 3.239ms        cell_alive=      26
+frame = 404
+calc_time = 3.776ms        cell_alive=      24
+frame = 405
+calc_time = 6.551ms        cell_alive=      46
+frame = 406
+calc_time = 8.599ms        cell_alive=      61
+frame = 407
+calc_time = 12.610ms        cell_alive=      74
+frame = 408
+calc_time = 11.618ms        cell_alive=      83
+frame = 409
+calc_time = 13.377ms        cell_alive=      86
+frame = 410
+calc_time = 13.257ms        cell_alive=      84
+frame = 411
+calc_time = 10.967ms        cell_alive=      84
+frame = 412
+calc_time = 10.811ms        cell_alive=      84
+frame = 413
+calc_time = 8.798ms        cell_alive=      69
+frame = 414
+calc_time = 5.967ms        cell_alive=      46
+frame = 415
+calc_time = 5.987ms        cell_alive=      46
+frame = 416
+calc_time = 6.247ms        cell_alive=      48
+frame = 417
+calc_time = 6.261ms        cell_alive=      48
+frame = 418
+calc_time = 6.232ms        cell_alive=      48
+frame = 419
+calc_time = 6.123ms        cell_alive=      46
+frame = 420
+calc_time = 6.022ms        cell_alive=      46
+frame = 421
+calc_time = 6.026ms        cell_alive=      46
+frame = 422
+calc_time = 6.061ms        cell_alive=      46
+frame = 423
+calc_time = 6.694ms        cell_alive=      46
+frame = 424
+calc_time = 4.801ms        cell_alive=      36
+frame = 425
+calc_time = 5.872ms        cell_alive=      46
+frame = 426
+calc_time = 6.043ms        cell_alive=      46
+frame = 427
+calc_time = 6.645ms        cell_alive=      46
+frame = 428
+calc_time = 4.776ms        cell_alive=      36
+frame = 429
+calc_time = 6.059ms        cell_alive=      46
+frame = 430
+calc_time = 6.061ms        cell_alive=      46
+frame = 431
+calc_time = 5.712ms        cell_alive=      44
+frame = 432
+calc_time = 3.103ms        cell_alive=      23
+frame = 433
+calc_time = 3.133ms        cell_alive=      23
+frame = 434
+calc_time = 3.135ms        cell_alive=      23
+frame = 435
+calc_time = 3.112ms        cell_alive=      23
+frame = 436
+calc_time = 2.816ms        cell_alive=      23
+frame = 437
+calc_time = 2.856ms        cell_alive=      21
+frame = 438
+calc_time = 3.111ms        cell_alive=      23
+frame = 439
+calc_time = 3.123ms        cell_alive=      23
+frame = 440
+calc_time = 3.100ms        cell_alive=      23
+frame = 441
+calc_time = 2.850ms        cell_alive=      23
+frame = 442
+calc_time = 3.305ms        cell_alive=      22
+frame = 443
+calc_time = 1.979ms        cell_alive=      16
+frame = 444
+calc_time = 3.025ms        cell_alive=      22
+frame = 445
+calc_time = 3.250ms        cell_alive=      24
+frame = 446
+calc_time = 3.302ms        cell_alive=      23
+frame = 447
+calc_time = 3.129ms        cell_alive=      23
+frame = 448
+calc_time = 3.470ms        cell_alive=      23
+frame = 449
+calc_time = 2.897ms        cell_alive=      21
+frame = 450
+calc_time = 3.209ms        cell_alive=      23
+frame = 451
+calc_time = 3.182ms        cell_alive=      23
+frame = 452
+calc_time = 3.143ms        cell_alive=      23
+frame = 453
+calc_time = 3.177ms        cell_alive=      23
+frame = 454
+calc_time = 3.168ms        cell_alive=      23
+frame = 455
+calc_time = 2.921ms        cell_alive=      23
+frame = 456
+calc_time = 3.119ms        cell_alive=      23
+frame = 457
+calc_time = 3.119ms        cell_alive=      23
+frame = 458
+calc_time = 3.140ms        cell_alive=      23
+frame = 459
+calc_time = 2.933ms        cell_alive=      21
+frame = 460
+calc_time = 2.914ms        cell_alive=      23
+frame = 461
+calc_time = 2.881ms        cell_alive=      21
+frame = 462
+calc_time = 3.036ms        cell_alive=      23
+frame = 463
+calc_time = 2.919ms        cell_alive=      21
+frame = 464
+calc_time = 3.125ms        cell_alive=      23
+frame = 465
+calc_time = 3.432ms        cell_alive=      23
+frame = 466
+calc_time = 3.134ms        cell_alive=      23
+frame = 467
+calc_time = 3.138ms        cell_alive=      23
+frame = 468
+calc_time = 3.126ms        cell_alive=      23
+frame = 469
+calc_time = 3.264ms        cell_alive=      23
+frame = 470
+calc_time = 3.226ms        cell_alive=      24
+frame = 471
+calc_time = 3.247ms        cell_alive=      24
+frame = 472
+calc_time = 3.012ms        cell_alive=      24
+frame = 473
+calc_time = 2.943ms        cell_alive=      21
+frame = 474
+calc_time = 3.166ms        cell_alive=      23
+frame = 475
+calc_time = 3.154ms        cell_alive=      23
+frame = 476
+calc_time = 3.138ms        cell_alive=      23
+frame = 477
+calc_time = 3.194ms        cell_alive=      23
+frame = 478
+calc_time = 3.093ms        cell_alive=      23
+frame = 479
+calc_time = 3.316ms        cell_alive=      23
+frame = 480
+calc_time = 3.165ms        cell_alive=      23
+frame = 481
+calc_time = 3.160ms        cell_alive=      23
+frame = 482
+calc_time = 3.169ms        cell_alive=      23
+frame = 483
+calc_time = 3.102ms        cell_alive=      23
+frame = 484
+calc_time = 3.397ms        cell_alive=      23
+frame = 485
+calc_time = 2.971ms        cell_alive=      24
+frame = 486
+calc_time = 3.052ms        cell_alive=      22
+frame = 487
+calc_time = 3.344ms        cell_alive=      24
+frame = 488
+calc_time = 3.335ms        cell_alive=      23
+frame = 489
+calc_time = 3.246ms        cell_alive=      23
+frame = 490
+calc_time = 3.217ms        cell_alive=      23
+frame = 491
+calc_time = 3.149ms        cell_alive=      23
+frame = 492
+calc_time = 3.186ms        cell_alive=      23
+frame = 493
+calc_time = 3.248ms        cell_alive=      23
+frame = 494
+calc_time = 4.424ms        cell_alive=      23
+frame = 495
+calc_time = 4.371ms        cell_alive=      23
+frame = 496
+calc_time = 3.077ms        cell_alive=      21
+frame = 497
+calc_time = 3.130ms        cell_alive=      23
+frame = 498
+calc_time = 2.901ms        cell_alive=      23
+frame = 499
+calc_time = 2.918ms        cell_alive=      21
+frame = 500
+calc_time = 2.862ms        cell_alive=      23
+frame = 501
+calc_time = 2.929ms        cell_alive=      21
+frame = 502
+calc_time = 3.197ms        cell_alive=      23
+frame = 503
+calc_time = 2.860ms        cell_alive=      23
+frame = 504
+calc_time = 2.932ms        cell_alive=      21
+frame = 505
+calc_time = 4.257ms        cell_alive=      24
+frame = 506
+calc_time = 2.471ms        cell_alive=      16
+frame = 507
+calc_time = 3.035ms        cell_alive=      24
+frame = 508
+calc_time = 2.711ms        cell_alive=      22
+frame = 509
+calc_time = 2.892ms        cell_alive=      21
+frame = 510
+calc_time = 3.144ms        cell_alive=      23
+frame = 511
+calc_time = 2.899ms        cell_alive=      23
+frame = 512
+calc_time = 2.862ms        cell_alive=      21
+frame = 513
+calc_time = 3.158ms        cell_alive=      23
+frame = 514
+calc_time = 3.430ms        cell_alive=      23
+frame = 515
+calc_time = 3.181ms        cell_alive=      23
+frame = 516
+calc_time = 3.154ms        cell_alive=      23
+frame = 517
+calc_time = 2.820ms        cell_alive=      23
+frame = 518
+calc_time = 3.119ms        cell_alive=      21
+frame = 519
+calc_time = 3.778ms        cell_alive=      23
+frame = 520
+calc_time = 2.106ms        cell_alive=      13
+frame = 521
+calc_time = 3.214ms        cell_alive=      23
+frame = 522
+calc_time = 3.077ms        cell_alive=      21
+frame = 523
+calc_time = 2.826ms        cell_alive=      23
+frame = 524
+calc_time = 3.087ms        cell_alive=      21
+frame = 525
+calc_time = 3.144ms        cell_alive=      23
+frame = 526
+calc_time = 3.099ms        cell_alive=      23
+frame = 527
+calc_time = 3.251ms        cell_alive=      23
+frame = 528
+calc_time = 3.103ms        cell_alive=      23
+frame = 529
+calc_time = 3.451ms        cell_alive=      23
+frame = 530
+calc_time = 2.824ms        cell_alive=      23
+frame = 531
+calc_time = 3.011ms        cell_alive=      21
+frame = 532
+calc_time = 3.094ms        cell_alive=      23
+frame = 533
+calc_time = 3.422ms        cell_alive=      23
+frame = 534
+calc_time = 3.259ms        cell_alive=      23
+frame = 535
+calc_time = 3.112ms        cell_alive=      23
+frame = 536
+calc_time = 3.158ms        cell_alive=      23
+frame = 537
+calc_time = 3.177ms        cell_alive=      23
+frame = 538
+calc_time = 3.105ms        cell_alive=      23
+frame = 539
+calc_time = 3.270ms        cell_alive=      23
+frame = 540
+calc_time = 3.234ms        cell_alive=      23
+frame = 541
+calc_time = 3.105ms        cell_alive=      23
+frame = 542
+calc_time = 3.166ms        cell_alive=      23
+frame = 543
+calc_time = 3.106ms        cell_alive=      23
+frame = 544
+calc_time = 3.174ms        cell_alive=      23
+frame = 545
+calc_time = 2.845ms        cell_alive=      23
+frame = 546
+calc_time = 2.889ms        cell_alive=      21
+frame = 547
+calc_time = 3.130ms        cell_alive=      23
+frame = 548
+calc_time = 3.283ms        cell_alive=      23
+frame = 549
+calc_time = 3.102ms        cell_alive=      23
+frame = 550
+calc_time = 3.124ms        cell_alive=      23
+frame = 551
+calc_time = 3.888ms        cell_alive=      23
+frame = 552
+calc_time = 1.901ms        cell_alive=      13
+frame = 553
+calc_time = 3.124ms        cell_alive=      23
+frame = 554
+calc_time = 3.105ms        cell_alive=      23
+frame = 555
+calc_time = 3.290ms        cell_alive=      23
+frame = 556
+calc_time = 3.116ms        cell_alive=      23
+frame = 557
+calc_time = 3.276ms        cell_alive=      23
+frame = 558
+calc_time = 4.208ms        cell_alive=      24
+frame = 559
+calc_time = 2.322ms        cell_alive=      16
+frame = 560
+calc_time = 2.968ms        cell_alive=      24
+frame = 561
+calc_time = 3.044ms        cell_alive=      22
+frame = 562
+calc_time = 2.952ms        cell_alive=      23
+frame = 563
+calc_time = 2.995ms        cell_alive=      21
+frame = 564
+calc_time = 3.129ms        cell_alive=      23
+frame = 565
+calc_time = 3.110ms        cell_alive=      23
+frame = 566
+calc_time = 3.361ms        cell_alive=      23
+frame = 567
+calc_time = 3.138ms        cell_alive=      23
+frame = 568
+calc_time = 3.169ms        cell_alive=      23
+frame = 569
+calc_time = 3.118ms        cell_alive=      23
+frame = 570
+calc_time = 3.085ms        cell_alive=      23
+frame = 571
+calc_time = 3.081ms        cell_alive=      23
+frame = 572
+calc_time = 3.090ms        cell_alive=      23
+frame = 573
+calc_time = 2.851ms        cell_alive=      23
+frame = 574
+calc_time = 2.849ms        cell_alive=      21
+frame = 575
+calc_time = 3.167ms        cell_alive=      23
+frame = 576
+calc_time = 3.109ms        cell_alive=      23
+frame = 577
+calc_time = 3.175ms        cell_alive=      23
+frame = 578
+calc_time = 2.873ms        cell_alive=      21
+frame = 579
+calc_time = 3.125ms        cell_alive=      23
+frame = 580
+calc_time = 3.193ms        cell_alive=      23
+frame = 581
+calc_time = 3.122ms        cell_alive=      23
+frame = 582
+calc_time = 3.141ms        cell_alive=      23
+frame = 583
+calc_time = 3.121ms        cell_alive=      23
+frame = 584
+calc_time = 3.221ms        cell_alive=      23
+frame = 585
+calc_time = 3.155ms        cell_alive=      23
+frame = 586
+calc_time = 2.863ms        cell_alive=      21
+frame = 587
+calc_time = 3.313ms        cell_alive=      23
+frame = 588
+calc_time = 3.121ms        cell_alive=      23
+frame = 589
+calc_time = 3.116ms        cell_alive=      23
+frame = 590
+calc_time = 3.226ms        cell_alive=      23
+frame = 591
+calc_time = 3.130ms        cell_alive=      23
+frame = 592
+calc_time = 3.230ms        cell_alive=      23
+frame = 593
+calc_time = 2.846ms        cell_alive=      23
+frame = 594
+calc_time = 2.879ms        cell_alive=      21
+frame = 595
+calc_time = 3.109ms        cell_alive=      23
+frame = 596
+calc_time = 3.108ms        cell_alive=      23
+frame = 597
+calc_time = 2.824ms        cell_alive=      23
+frame = 598
+calc_time = 2.895ms        cell_alive=      21
+frame = 599
+calc_time = 3.130ms        cell_alive=      23
+frame = 600
+calc_time = 3.835ms        cell_alive=      26
+frame = 601
+calc_time = 3.596ms        cell_alive=      26
+frame = 602
+calc_time = 3.570ms        cell_alive=      28
+frame = 603
+calc_time = 3.816ms        cell_alive=      24
+frame = 604
+calc_time = 3.313ms        cell_alive=      26
+frame = 605
+calc_time = 3.620ms        cell_alive=      24
+frame = 606
+calc_time = 10.322ms        cell_alive=      46
+frame = 607
+calc_time = 6.689ms        cell_alive=      41
+frame = 608
+calc_time = 7.832ms        cell_alive=      57
+frame = 609
+calc_time = 11.443ms        cell_alive=      82
+frame = 610
+calc_time = 12.286ms        cell_alive=      87
+frame = 611
+calc_time = 12.718ms        cell_alive=      92
+frame = 612
+calc_time = 11.683ms        cell_alive=      90
+frame = 613
+calc_time = 11.517ms        cell_alive=      90
+frame = 614
+calc_time = 8.969ms        cell_alive=      69
+frame = 615
+calc_time = 8.817ms        cell_alive=      69
+frame = 616
+calc_time = 5.984ms        cell_alive=      46
+frame = 617
+calc_time = 6.129ms        cell_alive=      46
+frame = 618
+calc_time = 6.301ms        cell_alive=      46
+frame = 619
+calc_time = 7.109ms        cell_alive=      48
+frame = 620
+calc_time = 6.796ms        cell_alive=      52
+frame = 621
+calc_time = 6.261ms        cell_alive=      48
+frame = 622
+calc_time = 6.340ms        cell_alive=      48
+frame = 623
+calc_time = 6.014ms        cell_alive=      46
+frame = 624
+calc_time = 6.073ms        cell_alive=      46
+frame = 625
+calc_time = 5.821ms        cell_alive=      46
+frame = 626
+calc_time = 6.045ms        cell_alive=      46
+frame = 627
+calc_time = 6.682ms        cell_alive=      46
+frame = 628
+calc_time = 4.793ms        cell_alive=      36
+frame = 629
+calc_time = 6.034ms        cell_alive=      46
+frame = 630
+calc_time = 5.758ms        cell_alive=      44
+frame = 631
+calc_time = 6.211ms        cell_alive=      46
+frame = 632
+calc_time = 4.528ms        cell_alive=      36
+frame = 633
+calc_time = 5.673ms        cell_alive=      44
+frame = 634
+calc_time = 3.129ms        cell_alive=      23
+frame = 635
+calc_time = 3.104ms        cell_alive=      23
+frame = 636
+calc_time = 3.106ms        cell_alive=      23
+frame = 637
+calc_time = 2.847ms        cell_alive=      23
+frame = 638
+calc_time = 2.873ms        cell_alive=      21
+frame = 639
+calc_time = 2.825ms        cell_alive=      23
+frame = 640
+calc_time = 2.915ms        cell_alive=      21
+frame = 641
+calc_time = 2.899ms        cell_alive=      21
+frame = 642
+calc_time = 3.113ms        cell_alive=      23
+frame = 643
+calc_time = 3.164ms        cell_alive=      23
+frame = 644
+calc_time = 3.121ms        cell_alive=      23
+frame = 645
+calc_time = 3.152ms        cell_alive=      23
+frame = 646
+calc_time = 2.812ms        cell_alive=      23
+frame = 647
+calc_time = 2.878ms        cell_alive=      21
+frame = 648
+calc_time = 3.098ms        cell_alive=      23
+frame = 649
+calc_time = 3.110ms        cell_alive=      23
+frame = 650
+calc_time = 3.108ms        cell_alive=      23
+frame = 651
+calc_time = 2.828ms        cell_alive=      23
+frame = 652
+calc_time = 3.135ms        cell_alive=      22
+frame = 653
+calc_time = 1.974ms        cell_alive=      16
+frame = 654
+calc_time = 3.009ms        cell_alive=      22
+frame = 655
+calc_time = 3.279ms        cell_alive=      24
+frame = 656
+calc_time = 3.114ms        cell_alive=      23
+frame = 657
+calc_time = 3.119ms        cell_alive=      23
+frame = 658
+calc_time = 2.989ms        cell_alive=      23
+frame = 659
+calc_time = 3.170ms        cell_alive=      23
+frame = 660
+calc_time = 3.130ms        cell_alive=      23
+frame = 661
+calc_time = 3.132ms        cell_alive=      23
+frame = 662
+calc_time = 2.829ms        cell_alive=      23
+frame = 663
+calc_time = 2.862ms        cell_alive=      21
+frame = 664
+calc_time = 3.109ms        cell_alive=      23
+frame = 665
+calc_time = 3.112ms        cell_alive=      23
+frame = 666
+calc_time = 3.114ms        cell_alive=      23
+frame = 667
+calc_time = 3.111ms        cell_alive=      23
+frame = 668
+calc_time = 3.128ms        cell_alive=      23
+frame = 669
+calc_time = 2.908ms        cell_alive=      23
+frame = 670
+calc_time = 3.160ms        cell_alive=      23
+frame = 671
+calc_time = 3.110ms        cell_alive=      23
+frame = 672
+calc_time = 3.108ms        cell_alive=      23
+frame = 673
+calc_time = 3.114ms        cell_alive=      23
+frame = 674
+calc_time = 3.109ms        cell_alive=      23
+frame = 675
+calc_time = 3.111ms        cell_alive=      23
+frame = 676
+calc_time = 3.238ms        cell_alive=      23
+frame = 677
+calc_time = 3.116ms        cell_alive=      23
+frame = 678
+calc_time = 3.163ms        cell_alive=      23
+frame = 679
+calc_time = 3.350ms        cell_alive=      24
+frame = 680
+calc_time = 1.972ms        cell_alive=      16
+frame = 681
+calc_time = 2.971ms        cell_alive=      22
+frame = 682
+calc_time = 3.290ms        cell_alive=      24
+frame = 683
+calc_time = 2.856ms        cell_alive=      23
+frame = 684
+calc_time = 2.935ms        cell_alive=      21
+frame = 685
+calc_time = 2.915ms        cell_alive=      23
+frame = 686
+calc_time = 3.043ms        cell_alive=      21
+frame = 687
+calc_time = 3.616ms        cell_alive=      21
+frame = 688
+calc_time = 3.127ms        cell_alive=      23
+frame = 689
+calc_time = 3.453ms        cell_alive=      23
+frame = 690
+calc_time = 3.154ms        cell_alive=      23
+frame = 691
+calc_time = 3.192ms        cell_alive=      23
+frame = 692
+calc_time = 3.104ms        cell_alive=      23
+frame = 693
+calc_time = 3.182ms        cell_alive=      23
+frame = 694
+calc_time = 2.967ms        cell_alive=      23
+frame = 695
+calc_time = 2.912ms        cell_alive=      21
+frame = 696
+calc_time = 3.194ms        cell_alive=      23
+frame = 697
+calc_time = 3.208ms        cell_alive=      23
+frame = 698
+calc_time = 2.935ms        cell_alive=      23
+frame = 699
+calc_time = 3.031ms        cell_alive=      21
+frame = 700
+calc_time = 3.381ms        cell_alive=      23
+frame = 701
+calc_time = 3.498ms        cell_alive=      26
+frame = 702
+calc_time = 3.519ms        cell_alive=      26
+frame = 703
+calc_time = 3.481ms        cell_alive=      28
+frame = 704
+calc_time = 3.270ms        cell_alive=      24
+frame = 705
+calc_time = 3.234ms        cell_alive=      26
+frame = 706
+calc_time = 3.519ms        cell_alive=      24
+frame = 707
+calc_time = 6.447ms        cell_alive=      46
+frame = 708
+calc_time = 8.041ms        cell_alive=      61
+frame = 709
+calc_time = 10.583ms        cell_alive=      74
+frame = 710
+calc_time = 11.606ms        cell_alive=      83
+frame = 711
+calc_time = 13.229ms        cell_alive=      86
+frame = 712
+calc_time = 11.878ms        cell_alive=      84
+frame = 713
+calc_time = 11.491ms        cell_alive=      84
+frame = 714
+calc_time = 10.808ms        cell_alive=      84
+frame = 715
+calc_time = 8.860ms        cell_alive=      69
+frame = 716
+calc_time = 6.005ms        cell_alive=      46
+frame = 717
+calc_time = 6.056ms        cell_alive=      46
+frame = 718
+calc_time = 6.269ms        cell_alive=      48
+frame = 719
+calc_time = 6.263ms        cell_alive=      48
+frame = 720
+calc_time = 6.245ms        cell_alive=      48
+frame = 721
+calc_time = 6.050ms        cell_alive=      46
+frame = 722
+calc_time = 6.025ms        cell_alive=      46
+frame = 723
+calc_time = 5.831ms        cell_alive=      46
+frame = 724
+calc_time = 6.086ms        cell_alive=      46
+frame = 725
+calc_time = 6.082ms        cell_alive=      46
+frame = 726
+calc_time = 5.935ms        cell_alive=      46
+frame = 727
+calc_time = 6.062ms        cell_alive=      46
+frame = 728
+calc_time = 6.647ms        cell_alive=      46
+frame = 729
+calc_time = 4.781ms        cell_alive=      36
+frame = 730
+calc_time = 6.054ms        cell_alive=      46
+frame = 731
+calc_time = 6.074ms        cell_alive=      46
+frame = 732
+calc_time = 5.767ms        cell_alive=      44
+frame = 733
+calc_time = 5.911ms        cell_alive=      46
+frame = 734
+calc_time = 3.109ms        cell_alive=      23
+frame = 735
+calc_time = 3.124ms        cell_alive=      23
+frame = 736
+calc_time = 3.108ms        cell_alive=      23
+frame = 737
+calc_time = 2.834ms        cell_alive=      23
+frame = 738
+calc_time = 2.857ms        cell_alive=      21
+frame = 739
+calc_time = 3.094ms        cell_alive=      23
+frame = 740
+calc_time = 3.110ms        cell_alive=      23
+frame = 741
+calc_time = 3.114ms        cell_alive=      23
+frame = 742
+calc_time = 2.884ms        cell_alive=      23
+frame = 743
+calc_time = 3.178ms        cell_alive=      22
+frame = 744
+calc_time = 1.978ms        cell_alive=      16
+frame = 745
+calc_time = 2.99

@@ -1,0 +1,57 @@
+<html><body>
+<script>
+function unnamed(){
+function byid(name){return document.getElementById(name);}
+function params_to_uri(params){
+  var out=[];
+  for (var k in params)out.push(encodeURIComponent(k)+'='+encodeURIComponent(params[k]));
+  return out.join("&");
+}
+function xhr_post_ex(url,content,callback)
+{
+  var x=new XMLHttpRequest();
+  x.onreadystatechange=function(){if(x.readyState===4){callback(x.responseText);}};
+  x.open("post",url);
+  x.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  var token={"access_token":"410012166200636.0E669BCE240BEEBE25D32FD553E38C87E5A9660187C1932CB50A1A3E0552DB41F21ACA88739022796BA1256250E5023910F0638F73461CAA1DD1B0270E6A1308008CC17CCA7591F8B19E29C9E892C62EB3B67C171484556E46F5C650AD8623448857068CD5E6B54B9539A8ED07B71F0E56DE281346633AEB23A8FAE5406FAFA6"};
+  x.setRequestHeader('Authorization','Bearer '+token["access_token"]);
+  x.send(content);return x;
+}
+document.body.innerHTML="<pre><b>url: </b><input id='url' type='text' style='width:100%'></input><button id='btn'>call</button>\n<textarea id='area' style='height:600;width:100%'></textarea></pre>";
+byid('url').value="https://money.yandex.ru/api/account-info";
+byid('btn').onclick=function(){xhr_post_ex(byid('url').value,"",showdata);}
+function showdata(data){byid('area').value=data;}
+function escapeHtml(text)
+{
+  if("string" != (typeof text)){return text;}
+  return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}}
+</script>
+<br><br><br>
+<div style="width:800; margin:auto">
+<form  method="POST" action="https://money.yandex.ru/oauth/authorize">
+ <input name="client_id" value="D9FCFF0452642D8D80B9C7FCA55E275C43784ECE8BAA9C72A194FF51119D0B1B" type="text" style="width:768"><br/><br/>
+ <input name="response_type" value="code" type="hidden">
+ <input name="redirect_uri" value="http://system.zz.mu/?cb" type="text" style="width:768"><br/><br/>
+ <input name="scope" value="account-info operation-history operation-details" style="width:768"><br/><br/>
+ <input type="submit" value="/oauth/authorize">
+</form></div>
+<br><br><br>
+<div style="width:800; margin:auto;">
+<form method="POST" action="https://money.yandex.ru/oauth/token">
+ <input name="code" value="..." type="text" style="width:768"><br/><br/>
+ <input name="client_id" value="D9FCFF0452642D8D80B9C7FCA55E275C43784ECE8BAA9C72A194FF51119D0B1B" type="text" style="width:768"><br/><br/>
+ <input name="grant_type" value="authorization_code" type="hidden">
+ <input name="redirect_uri" value="http://system.zz.mu/?cb" type="text" style="width:768"><br/><br/>
+ <input type="submit" value="/oauth/token">
+</form></div>
+
+</body></html>
+<!--
+{"access_token":"410012166200636.0E669BCE240BEEBE25D32FD553E38C87E5A9660187C1932CB50A1A3E0552DB41F21ACA88739022796BA1256250E5023910F0638F73461CAA1DD1B0270E6A1308008CC17CCA7591F8B19E29C9E892C62EB3B67C171484556E46F5C650AD8623448857068CD5E6B54B9539A8ED07B71F0E56DE281346633AEB23A8FAE5406FAFA6"}
+-->

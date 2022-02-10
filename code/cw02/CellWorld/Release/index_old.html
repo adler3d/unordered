@@ -1,0 +1,194 @@
+<html>
+  <head>
+  <style>
+  table{
+    background: #ffffff url(rules/bg.png) repeat;
+  }
+  .x{
+    //box-shadow: 0 0 4px rgba(0,0,0,0.7);
+    //border-radius: 16px;
+  }
+  div.emphasize-inset{
+    box-shadow: inset 0 0 7px 4px rgba(255,255,255,.5)
+    display:none
+  }
+  </style>
+<script type='text/javascript'>
+  waiting=false;
+  cur_id=0;
+  prev_id=0;
+  function pad(number,length)
+  {
+    var my_string = '' + number;
+    while (my_string.length < length){
+      my_string = '0' + my_string;
+    }
+    return my_string;
+  }
+  function change_frame_back()
+  {
+    cur_id=prev_id;waiting=false;change_frame(+0);
+  }
+  function change_frame(dx)
+  {
+    if(waiting);
+    prev_id=cur_id;cur_id+=dx;
+    if(cur_id<00000)cur_id=00000;
+    if(cur_id>99999)cur_id=99999;
+    var frame=document.getElementById('frame');
+    frame.src="frame"+pad(cur_id,5)+".png";
+    waiting=true;
+  }
+  function myFunction(evt)
+  {
+    evt=evt||window.event;
+    if(evt.keyCode==107)// plus
+    {
+      var frame=document.getElementById('frame');frame.height+=10;
+      return false;
+    }
+    if(evt.keyCode==109)// minus
+    {
+      var frame=document.getElementById('frame');frame.height-=10;
+      return false;
+    }
+    if(evt.keyCode==39)//VK_RIGHT
+    {
+      change_frame(+1);
+      return false;
+    }
+    if(evt.keyCode==37)//VK_LEFT
+    {
+      change_frame(-1);
+      return false;
+    }
+    if(evt.keyCode==33)//VK_PGUP
+    {
+      change_frame(+128);
+      return false;
+    }
+    if(evt.keyCode==34)//VK_PGDOWN
+    {
+      change_frame(-128);
+      return false;
+    }
+    if(evt.keyCode==106)//VK_SLASH
+    {
+      var frame=document.getElementById('frame');frame.height=frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==50)//2
+    {
+      var frame=document.getElementById('frame');frame.height=2*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==51)//3
+    {
+      var frame=document.getElementById('frame');frame.height=3*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==52)//4
+    {
+      var frame=document.getElementById('frame');frame.height=4*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==53)//5
+    {
+      var frame=document.getElementById('frame');frame.height=5*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==54)//6
+    {
+      var frame=document.getElementById('frame');frame.height=6*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==55)//7
+    {
+      var frame=document.getElementById('frame');frame.height=7*frame.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==56)//8
+    {
+      var frame=document.getElementById('frame');frame.height=8*frame.naturalHeight;
+      return false;
+    }
+  };
+  document.onkeydown=myFunction;
+</script>
+  </head>
+  <body>
+    <div align="center">
+<script>
+/*
+<tr height="32"><td bgcolor="#ffffff" width="32"><div style="ok" height="32" width="32">0-0</div></td></tr>
+<tr height="32"><td></td><td bgcolor="#0000ff" width="32"></td><td bgcolor="#0000ff" width="32"></td><td bgcolor="#0000ff" width="32"></td></tr>
+<tr height="32"><td bgcolor="#ffff00" width="32"></td></tr>
+*/
+</script>
+<table cellspacing="0" cellpadding="0"><tr><td>
+<table id="tab" cellspacing="0" cellpadding="0">
+<tr height="32"><td bgcolor="#00ff00" width="32"></td></tr>
+</table></td></tr>
+</table>
+  <br>
+    <table style="display:none" cellspacing="0" cellpadding="32"><tr><td><img id="frame" style="image-rendering: -moz-crisp-edges;" height="60%" border="1"/></td></tr></table>
+  </div>
+  </body>
+<canvas id="canvas" style="display:none"></canvas>
+<script>
+  change_frame(+0);
+  function pad16(number,length) {
+    var str=(number|0).toString(16);
+    var count=length-str.length;
+    tmp='';
+    for(var i=0;i<count;i++){tmp+='0';}
+    return tmp+str;
+  }
+  function ColorToStr(data,x,y,w,h)
+  {
+    var id=(x+y*w)*4;
+    var arr=[data[id+0],data[id+1],data[id+2]];
+    for(var key in arr){arr[key]=pad16(arr[key],2);}
+    return '#'+arr.join('');
+  }
+  function go()
+  {
+    var test=pad(0,2);
+    var tab=document.getElementById('tab');
+    var img=document.getElementById('frame');
+    var canvas=document.getElementById('canvas');
+    var w=img.naturalWidth;
+    var h=img.naturalHeight;
+    canvas.width=w;
+    canvas.height=h;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    var pixelData=canvas.getContext('2d').getImageData(0,0,w,h).data;
+    tmp="";
+    function f(data,x,y,w,h)
+    {
+      var id=(x+y*w)*4;
+      if(!data[id+3])return '';
+      return 'bgcolor="'+ColorToStr(data,x,y,w,h)+'"';
+    }
+    var cellsize=24;
+    for(var y=0;y<h;y++)
+    {
+      tmp+='<tr height="'+cellsize+'">';
+      for(var x=0;x<w;x++){tmp+='<td class="x" width="'+cellsize+'" '+f(pixelData,x,y,w,h)+'></td>';};
+      tmp+='</tr>';
+    }
+    tab.innerHTML=tmp;
+  }
+  //go();
+  frame.onload=function()
+  {
+    var frame=document.getElementById('frame');frame.height=32*frame.naturalHeight;
+    go();
+    return false;
+  };
+  frame.onerror=function()
+  {
+    if(cur_id!=prev_id){change_frame_back();}else{document.getElementById('tab').innerHTML="<tr><td>resource not found</td></tr>";document.getElementById('frame').src="rules/bg.png";}
+  };
+</script>
+</html>

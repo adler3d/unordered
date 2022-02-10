@@ -1,0 +1,172 @@
+add_rule(0x50,"BGX\n","XBG\n");
+add_rule(0x50,"BEX\n","XBE\n");
+add_rule
+(
+  0x20,
+  ".O\n"+
+  "BE\n"+
+  ".X\n"
+  ,
+  ".O\n"+
+  "XB\n"+
+  ".E\n"
+);
+add_rule
+(
+  0x20,
+  ".O\n"+
+  "BG\n"+
+  ".X\n"
+  ,
+  ".O\n"+
+  "XB\n"+
+  ".G\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  "XG\n"+
+  ".O\n"+
+  "GY\n"
+  ,
+  ".X\n"+
+  "GB\n"+
+  ".O\n"+
+  "GY\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  "XE\n"+
+  ".O\n"+
+  "EY\n"
+  ,
+  ".X\n"+
+  "EB\n"+
+  ".O\n"+
+  "EY\n"
+); 
+add_rule
+(  
+  0x10,
+  "BGX\n"+
+  ".O.\n"+
+  ".YG\n"
+  ,
+  "XBG\n"+
+  ".O.\n"+
+  ".YG\n"
+);
+add_rule
+(
+  0x10,
+  "BEX\n"+
+  ".O.\n"+
+  ".YE\n"
+  ,
+  "XBE\n"+
+  ".O.\n"+
+  ".YE\n"
+);
+add_rule(0x30,"OGYOE","OEYOE");
+add_rule(0x30,"OEYOG","OGYOG");
+add_rule(0x40,"GOEYO","EOEYO");
+add_rule(0x40,"EOGYO","GOGYO");
+add_rule(0x25,"GOGYOE","EOEYOE");
+add_rule(0x25,"EOEYOG","GOGYOG");
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "GOBBOX\n"
+  ,
+  "B.....\n"+
+  "GOBBOX\n"
+);
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "EOBBOX\n"
+  ,
+  "B.....\n"+
+  "EOBBOX\n"
+);
+var add_full_sync=function(A,B)
+{
+  var f=function(str,from,to){return str.split(from).join(to);};
+  var g=function(s){var str=s;str=f(str,'1',A);str=f(str,'2',B);return str;};
+  var add=function(level,from,to){
+    var stra=g(from);
+    var strb=g(to);
+    add_rule(level,stra,strb);
+  };
+  add
+  (
+    0x30,
+    ".....B\n"+
+    "B....2\n"+
+    "1OBBOX\n"
+    ,
+    ".....X\n"+
+    "B....B\n"+
+    "1OBBO2\n"
+  );
+};
+add_full_sync('E','E');
+add_full_sync('E','G');
+add_full_sync('G','E');
+add_full_sync('G','G');
+//swither
+{
+  add_rule(
+    0x80,
+    "..O.\n"+
+    "..Y.\n"+
+    "..O.\n"+
+    "BGNX\n"
+    ,
+    "..O.\n"+
+    "..Y.\n"+
+    "..O.\n"+
+    "XBNE\n"
+  );
+  add_rule(
+    0x80,
+    ".O..\n"+
+    ".Y..\n"+
+    ".O..\n"+
+    "BNEX\n"
+    ,
+    ".O..\n"+
+    ".Y..\n"+
+    ".O..\n"+
+    "XNBE\n"
+  );
+  add_rule(
+    0x80,
+    "..O.\n"+
+    "..Y.\n"+
+    "..O.\n"+
+    "BENX\n"
+    ,
+    "..O.\n"+
+    "..Y.\n"+
+    "..O.\n"+
+    "XBNG\n"
+  );
+  add_rule(
+    0x80,
+    ".O..\n"+
+    ".Y..\n"+
+    ".O..\n"+
+    "BNGX\n"
+    ,
+    ".O..\n"+
+    ".Y..\n"+
+    ".O..\n"+
+    "XNBG\n"
+  );
+}

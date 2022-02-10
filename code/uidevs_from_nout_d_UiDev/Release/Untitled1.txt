@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string>
+#include <memory>
+#include <vector>
+using std::string;
+using std::unique_ptr;
+struct t_link{
+  t_link*next;
+  t_link*rnd;
+};
+t_link*add(t_link*list=0)
+{
+  static vector<unique_ptr<t_link>> arr;
+  arr.push_back(unique_ptr<t_link>(new t_link));
+  auto*p=arr.back().get();
+  p->next=0;
+  p->rnd=0;
+  if(list)list->next=p;return p;
+}
+vector<t_link*> make_list(int n)
+{
+  vector<t_link*> arr;
+  t_link*list=0;
+  for(int i=0;i<n;i++)
+  {
+    list=add(list);
+    arr.push_back(list);
+  }
+  return arr;
+}
+/*
+---
+
+foo->foo
+bar->foo
+gaz->foo
+
+g1
+g2
+g3
+---
+
+foo->(g1^foo);
+bar->(g2^foo);
+gaz->(g3^foo);
+
+g1->foo
+g2->foo
+g3->foo
+---
+
+foo->(g1^foo);
+bar->(g2^foo);
+gaz->(g3^foo);
+
+g1->(((g1.rnd => foo).rnd => g1^foo)^(g1.rnd => foo) => g1)
+g2->(((g2.rnd => foo).rnd => g1^foo)^(g2.rnd => foo) => g1)
+g3->(((g3.rnd => foo).rnd => g1^foo)^(g3.rnd => foo) => g1)
+---
+
+foo->(g1^foo);
+bar->(g2^foo);
+gaz->(g3^foo);
+
+g1->g1
+g2->g1
+g3->g1*/
+
+
+void deep_copy(t_link*inp,t_link*out,int n)
+{
+  auto*pinp=inp;
+  auto*pout=out;
+  for(int i=0;i<n;i++)
+  {
+    pout->rnd=pinp->rnd;
+    pinp->rnd^=pout;
+    pinp=pinp->next;
+    pout=pout->next;
+  }
+  pout=out;
+  for(int i=0;i<n;i++)
+  {
+    auto*inp_target=pout->rnd;
+    auto*out_target=pout->rnd->rnd;
+    pout->rnd^=out_target;
+    pout=pout->next;
+  }
+  pinp=inp;
+  pout=out;
+  for(int i=0;i<n;i++)
+  {
+    pinp->rnd^=pout;
+    pinp=pinp->next;
+    pout=pout->next;
+  }
+}
+int main()
+{
+  srand(time(NULL));
+  int n=4;
+  auto inp_arr=make_list(n);
+  auto out_arr=make_list(n);
+  t_link*p=inp_arr[0];
+  for(int i=0;i<n;i++)
+  {
+    p->rnd=inp_arr[rand()%n];
+    p=p->next;
+  }
+  deep_copy(inp_arr[0],out_arr[0],n);
+  return 0;
+}

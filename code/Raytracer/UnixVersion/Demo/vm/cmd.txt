@@ -1,0 +1,4 @@
+echo cat_mainloop_log_started_there
+cat mainloop.log
+echo exit_now
+exit

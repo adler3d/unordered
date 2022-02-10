@@ -1,0 +1,3 @@
+prevbook.books[2].book.pages[0].get{TBookPageWithPerf}().color=prevbook.books[0].book.pages[0].get{TBookPageWithColoredRect}().color
+root.Scene.Items[1].get{TRenderNode}().Items[0].get{TDay20140605BookV00}().book.pages[8].get{TBookPageWithMultyBook}().books[2].rect.w=1024
+root.Scene.Items[1].get{TRenderNode}().Items[0].get{TDay20140605BookV00}().book.pages[8].get{TBookPageWithMultyBook}().books[2].book.pages[0].get{TBookPageWithPerf}().count=512

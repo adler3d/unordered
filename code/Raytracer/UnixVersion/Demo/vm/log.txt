@@ -1,0 +1,1727 @@
+[2017.09.11 18:08:27] qhrd.req :: Got response
+[2017.09.11 18:08:27] formR :: [2017.09.11 15:08:20] :: begin
+USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+default       1  0.0  0.1 1097036 39672 ?       Ssl  13:25   0:00 npm
+default      24  0.0  0.0  11616  1264 ?        S    13:25   0:00 sh -c node mainloop.js 2>&1 | tee mainloop.log
+default      25  0.0  0.0 912744 19188 ?        Sl   13:25   0:00 node mainloop.js
+default      26  0.0  0.0   8484   392 ?        S    13:25   0:00 tee mainloop.log
+default      45  0.0  0.0  11776  1452 ?        Ss+  13:25   0:00 /bin/sh
+default     306  0.2  0.1 1276264 60416 ?       Sl   14:27   0:06 node main.js
+default     536  0.0  0.0  11752  1812 ?        Ss   15:08   0:00 bash -i
+default     551  0.0  0.0  47428  1620 ?        R    15:08   0:00 ps -aux
+xhr_shell URL = http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh
+welcome
+cat_mainloop_log_started_there
+[2017.09.11 13:25:50] mainloop::iter = 1
+[2017.09.11 13:25:50] Static file server running at http://localhost:8080
+[2017.09.11 13:25:50] CTRL + C to shutdown
+[2017.09.11 13:25:51] url = /fetch?quit
+[2017.09.11 13:25:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:26:05] 
+child process exited with code 0
+[2017.09.11 13:26:05] mainloop::iter = 2
+[2017.09.11 13:26:05] Static file server running at http://localhost:8080
+[2017.09.11 13:26:05] CTRL + C to shutdown
+[2017.09.11 13:26:05] on_restart.js :: ok
+[2017.09.11 13:26:05] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:26:05] url = /rollback
+[2017.09.11 13:26:14] url = /fetch?quit
+[2017.09.11 13:26:14] 
+child process exited with code 0
+[2017.09.11 13:26:14] mainloop::iter = 3
+[2017.09.11 13:26:14] Static file server running at http://localhost:8080
+[2017.09.11 13:26:14] CTRL + C to shutdown
+[2017.09.11 13:26:15] on_restart.js :: ok
+[2017.09.11 13:26:15] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:26:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:26:33] url = /mainloop.log
+[2017.09.11 13:26:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:27:18] url = /rt_sh
+[2017.09.11 13:27:18] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:27:18] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:27:18] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:27:18] {"z":"i","msg":""}
+[2017.09.11 13:27:18] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:27:18] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:27:18] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:27:18] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:27:18] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:27:18] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:27:18] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:27:18] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:27:18] {"z":"","msg":"echo w"}
+[2017.09.11 13:27:18] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:27:18] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:27:18] {"z":"pi","msg":""}
+[2017.09.11 13:27:18] frag = "1\u0000ping\u00000"
+[2017.09.11 13:27:18] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:27:19] {"z":"pi","msg":""}
+[2017.09.11 13:27:19] frag = "1\u0000ping\u00001"
+[2017.09.11 13:27:19] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:27:19] {"z":"pi","msg":""}
+[2017.09.11 13:27:19] frag = "1\u0000ping\u00002"
+[2017.09.11 13:27:19] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:27:20] {"z":"pi","msg":""}
+[2017.09.11 13:27:20] frag = "1\u0000ping\u00003"
+[2017.09.11 13:27:20] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:27:20] {"z":"pi","msg":""}
+[2017.09.11 13:27:20] frag = "1\u0000ping\u00004"
+[2017.09.11 13:27:20] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:27:20] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1581,"bytesWritten":242}
+[2017.09.11 13:27:20] rt_sh.request :: Got aborted
+[2017.09.11 13:27:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:27:36] url = /mainloop.log
+[2017.09.11 13:27:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:28:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:28:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:29:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:29:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:30:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:30:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:31:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:31:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:32:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:32:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:33:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:33:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:34:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:34:59] url = /tick?from=vm-7-clg08
+[2017.09.11 13:35:09] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:35:10] 
+child process exited with code 0
+[2017.09.11 13:35:10] mainloop::iter = 4
+[2017.09.11 13:35:10] Static file server running at http://localhost:8080
+[2017.09.11 13:35:10] CTRL + C to shutdown
+[2017.09.11 13:35:10] on_restart.js :: ok
+[2017.09.11 13:35:10] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:35:29] url = /tick?from=vm-7-clg08
+[2017.09.11 13:36:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:36:07] url = /rt_sh
+[2017.09.11 13:36:07] [object Object]
+[2017.09.11 13:36:07] uncaughtException :: err = {} //ReferenceError: z is not defined
+    at IncomingMessage.emitter.on.data (/opt/app-root/src/main.js:120:16)
+    at emitOne (events.js:96:13)
+    at IncomingMessage.emit (events.js:188:7)
+    at IncomingMessage.Readable.read (_stream_readable.js:381:10)
+    at flow (_stream_readable.js:761:34)
+    at resume_ (_stream_readable.js:743:3)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+[2017.09.11 13:36:08] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_CB_body"},"bytesRead":1529,"bytesWritten":203}
+[2017.09.11 13:36:08] rt_sh.request :: Got aborted
+[2017.09.11 13:36:16] url = /mainloop.log
+[2017.09.11 13:36:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:36:57] url = /rt_sh
+[2017.09.11 13:36:57] [object Object]
+[2017.09.11 13:36:57] uncaughtException :: err = {} //ReferenceError: z is not defined
+    at IncomingMessage.emitter.on.data (/opt/app-root/src/main.js:120:16)
+    at emitOne (events.js:96:13)
+    at IncomingMessage.emit (events.js:188:7)
+    at IncomingMessage.Readable.read (_stream_readable.js:381:10)
+    at flow (_stream_readable.js:761:34)
+    at resume_ (_stream_readable.js:743:3)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+[2017.09.11 13:36:58] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_CB_body"},"bytesRead":1529,"bytesWritten":203}
+[2017.09.11 13:36:58] rt_sh.request :: Got aborted
+[2017.09.11 13:36:58] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:36:58] 
+child process exited with code 0
+[2017.09.11 13:36:58] mainloop::iter = 5
+[2017.09.11 13:36:59] Static file server running at http://localhost:8080
+[2017.09.11 13:36:59] CTRL + C to shutdown
+[2017.09.11 13:36:59] on_restart.js :: ok
+[2017.09.11 13:36:59] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:37:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:37:04] url = /mainloop.log
+[2017.09.11 13:37:11] url = /mainloop.log
+[2017.09.11 13:37:15] url = /rt_sh
+[2017.09.11 13:37:15] [object Object]
+[2017.09.11 13:37:15] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:37:15] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:37:15] uncaughtException :: err = {} //ReferenceError: z is not defined
+    at IncomingMessage.emitter.on.data (/opt/app-root/src/main.js:124:34)
+    at emitOne (events.js:96:13)
+    at IncomingMessage.emit (events.js:188:7)
+    at IncomingMessage.Readable.read (_stream_readable.js:381:10)
+    at flow (_stream_readable.js:761:34)
+    at resume_ (_stream_readable.js:743:3)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+[2017.09.11 13:37:15] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_CB_body"},"bytesRead":1529,"bytesWritten":203}
+[2017.09.11 13:37:15] rt_sh.request :: Got aborted
+[2017.09.11 13:37:17] url = /mainloop.log
+[2017.09.11 13:37:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:38:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:38:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:38:50] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:38:50] 
+child process exited with code 0
+[2017.09.11 13:38:51] mainloop::iter = 6
+[2017.09.11 13:38:51] Static file server running at http://localhost:8080
+[2017.09.11 13:38:51] CTRL + C to shutdown
+[2017.09.11 13:38:51] on_restart.js :: ok
+[2017.09.11 13:38:51] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:38:55] url = /rt_sh
+[2017.09.11 13:38:55] [object Object]
+[2017.09.11 13:38:55] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:38:55] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:38:55] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:38:55] [object Object]
+[2017.09.11 13:38:55] {"z":"i","msg":""}
+[2017.09.11 13:38:55] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:38:55] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:38:55] [object Object]
+[2017.09.11 13:38:55] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:38:55] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:38:55] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:38:55] [object Object]
+[2017.09.11 13:38:55] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:38:55] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:38:55] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:38:55] [object Object]
+[2017.09.11 13:38:55] {"z":"","msg":"echo w"}
+[2017.09.11 13:38:55] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:38:55] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:38:56] [object Object]
+[2017.09.11 13:38:56] {"z":"pi","msg":""}
+[2017.09.11 13:38:56] frag = "1\u0000ping\u00000"
+[2017.09.11 13:38:56] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:56] [object Object]
+[2017.09.11 13:38:56] {"z":"pi","msg":""}
+[2017.09.11 13:38:56] frag = "1\u0000ping\u00001"
+[2017.09.11 13:38:56] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:57] [object Object]
+[2017.09.11 13:38:57] {"z":"pi","msg":""}
+[2017.09.11 13:38:57] frag = "1\u0000ping\u00002"
+[2017.09.11 13:38:57] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:57] [object Object]
+[2017.09.11 13:38:57] {"z":"pi","msg":""}
+[2017.09.11 13:38:57] frag = "1\u0000ping\u00003"
+[2017.09.11 13:38:57] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:58] [object Object]
+[2017.09.11 13:38:58] {"z":"pi","msg":""}
+[2017.09.11 13:38:58] frag = "1\u0000ping\u00004"
+[2017.09.11 13:38:58] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:58] [object Object]
+[2017.09.11 13:38:58] {"z":"pi","msg":""}
+[2017.09.11 13:38:58] frag = "1\u0000ping\u00005"
+[2017.09.11 13:38:58] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:59] [object Object]
+[2017.09.11 13:38:59] {"z":"pi","msg":""}
+[2017.09.11 13:38:59] frag = "1\u0000ping\u00006"
+[2017.09.11 13:38:59] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:38:59] [object Object]
+[2017.09.11 13:38:59] {"z":"pi","msg":""}
+[2017.09.11 13:38:59] frag = "1\u0000ping\u00007"
+[2017.09.11 13:38:59] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:00] [object Object]
+[2017.09.11 13:39:00] {"z":"pi","msg":""}
+[2017.09.11 13:39:00] frag = "1\u0000ping\u00008"
+[2017.09.11 13:39:00] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:39:00] [object Object]
+[2017.09.11 13:39:00] {"z":"pi","msg":""}
+[2017.09.11 13:39:00] frag = "1\u0000ping\u00009"
+[2017.09.11 13:39:00] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:01] [object Object]
+[2017.09.11 13:39:01] {"z":"pi","msg":""}
+[2017.09.11 13:39:01] frag = "2\u0000ping\u000010"
+[2017.09.11 13:39:01] (4.ok){"len":2,"z":"pi","msg":""}
+[2017.09.11 13:39:01] [object Object]
+[2017.09.11 13:39:01] {"z":"pi","msg":""}
+[2017.09.11 13:39:01] frag = "2\u0000ping\u000011"
+[2017.09.11 13:39:01] (4.ok){"len":2,"z":"pi","msg":""}
+[2017.09.11 13:39:02] [object Object]
+[2017.09.11 13:39:02] {"z":"pi","msg":""}
+[2017.09.11 13:39:02] frag = "2\u0000ping\u000012"
+[2017.09.11 13:39:02] (4.ok){"len":2,"z":"pi","msg":""}
+[2017.09.11 13:39:03] [object Object]
+[2017.09.11 13:39:03] {"z":"pi","msg":""}
+[2017.09.11 13:39:03] frag = "2\u0000ping\u000013"
+[2017.09.11 13:39:03] (4.ok){"len":2,"z":"pi","msg":""}
+[2017.09.11 13:39:03] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1702,"bytesWritten":390}
+[2017.09.11 13:39:03] rt_sh.request :: Got aborted
+[2017.09.11 13:39:05] url = /mainloop.log
+[2017.09.11 13:39:27] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:39:27] 
+child process exited with code 0
+[2017.09.11 13:39:27] mainloop::iter = 7
+[2017.09.11 13:39:27] Static file server running at http://localhost:8080
+[2017.09.11 13:39:27] CTRL + C to shutdown
+[2017.09.11 13:39:27] on_restart.js :: ok
+[2017.09.11 13:39:27] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:39:28] url = /rt_sh
+[2017.09.11 13:39:28] [object Object]
+[2017.09.11 13:39:28] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:39:28] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:39:28] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:39:28] [object Object]
+[2017.09.11 13:39:28] {"z":"i","msg":""}
+[2017.09.11 13:39:28] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:39:28] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:39:28] [object Object]
+[2017.09.11 13:39:28] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:39:28] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:39:28] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:39:28] [object Object]
+[2017.09.11 13:39:28] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:39:28] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:39:28] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:39:28] [object Object]
+[2017.09.11 13:39:28] {"z":"","msg":"echo w"}
+[2017.09.11 13:39:28] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:39:28] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:39:29] [object Object]
+[2017.09.11 13:39:29] {"z":"pi","msg":""}
+[2017.09.11 13:39:29] frag = "1\u0000ping\u00000"
+[2017.09.11 13:39:29] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:29] [object Object]
+[2017.09.11 13:39:29] {"z":"pi","msg":""}
+[2017.09.11 13:39:29] frag = "1\u0000ping\u00001"
+[2017.09.11 13:39:29] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:30] [object Object]
+[2017.09.11 13:39:30] {"z":"pi","msg":""}
+[2017.09.11 13:39:30] frag = "1\u0000ping\u00002"
+[2017.09.11 13:39:30] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:39:30] [object Object]
+[2017.09.11 13:39:30] {"z":"pi","msg":""}
+[2017.09.11 13:39:30] frag = "1\u0000ping\u00003"
+[2017.09.11 13:39:30] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:31] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1568,"bytesWritten":242}
+[2017.09.11 13:39:31] rt_sh.request :: Got aborted
+[2017.09.11 13:39:31] url = /mainloop.log
+[2017.09.11 13:39:47] url = /rt_sh
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:39:47] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:39:47] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"i","msg":""}
+[2017.09.11 13:39:47] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:39:47] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:39:47] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:39:47] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:39:47] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:39:47] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"","msg":"echo w"}
+[2017.09.11 13:39:47] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:39:47] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:39:47] [object Object]
+[2017.09.11 13:39:47] {"z":"pi","msg":""}
+[2017.09.11 13:39:47] frag = "1\u0000ping\u00000"
+[2017.09.11 13:39:47] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:48] [object Object]
+[2017.09.11 13:39:48] {"z":"pi","msg":""}
+[2017.09.11 13:39:48] frag = "1\u0000ping\u00001"
+[2017.09.11 13:39:48] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:48] [object Object]
+[2017.09.11 13:39:48] {"z":"pi","msg":""}
+[2017.09.11 13:39:48] frag = "1\u0000ping\u00002"
+[2017.09.11 13:39:48] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:49] [object Object]
+[2017.09.11 13:39:49] {"z":"pi","msg":""}
+[2017.09.11 13:39:49] frag = "1\u0000ping\u00003"
+[2017.09.11 13:39:49] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:49] [object Object]
+[2017.09.11 13:39:49] {"z":"pi","msg":""}
+[2017.09.11 13:39:49] frag = "1\u0000ping\u00004"
+[2017.09.11 13:39:49] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:39:49] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1581,"bytesWritten":255}
+[2017.09.11 13:39:49] rt_sh.request :: Got aborted
+[2017.09.11 13:39:51] url = /mainloop.log
+[2017.09.11 13:40:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:40:06] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:40:06] 
+child process exited with code 0
+[2017.09.11 13:40:06] mainloop::iter = 8
+[2017.09.11 13:40:06] Static file server running at http://localhost:8080
+[2017.09.11 13:40:06] CTRL + C to shutdown
+[2017.09.11 13:40:07] on_restart.js :: ok
+[2017.09.11 13:40:07] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:40:14] url = /mainloop.log
+[2017.09.11 13:40:22] url = /rt_sh
+[2017.09.11 13:40:22] {"zn":9,"len":634,"zpos":8}
+[2017.09.11 13:40:22] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:40:22] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:40:22] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:40:22] {"zn":6,"len":4,"zpos":5}
+[2017.09.11 13:40:22] {"z":"i","msg":""}
+[2017.09.11 13:40:22] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:40:22] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:40:22] {"zn":8,"len":322,"zpos":7}
+[2017.09.11 13:40:22] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:40:22] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:40:22] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:40:22] {"zn":7,"len":86,"zpos":6}
+[2017.09.11 13:40:22] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:40:22] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:40:22] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:40:22] {"zn":7,"len":13,"zpos":6}
+[2017.09.11 13:40:22] {"z":"","msg":"echo w"}
+[2017.09.11 13:40:22] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:40:22] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:40:23] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:40:23] {"z":"pi","msg":""}
+[2017.09.11 13:40:23] frag = "1\u0000ping\u00000"
+[2017.09.11 13:40:23] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:40:23] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:40:23] {"z":"pi","msg":""}
+[2017.09.11 13:40:23] frag = "1\u0000ping\u00001"
+[2017.09.11 13:40:23] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:40:24] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:40:24] {"z":"pi","msg":""}
+[2017.09.11 13:40:24] frag = "1\u0000ping\u00002"
+[2017.09.11 13:40:24] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:40:24] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:40:24] {"z":"pi","msg":""}
+[2017.09.11 13:40:24] frag = "1\u0000ping\u00003"
+[2017.09.11 13:40:24] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:40:25] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1568,"bytesWritten":242}
+[2017.09.11 13:40:25] rt_sh.request :: Got aborted
+[2017.09.11 13:40:28] url = /mainloop.log
+[2017.09.11 13:40:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:41:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:41:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:42:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:42:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:43:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:43:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:44:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:44:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:45:00] url = /tick?from=vm-7-clg08
+[2017.09.11 13:45:30] url = /tick?from=vm-7-clg08
+[2017.09.11 13:46:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:46:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:47:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:47:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:48:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:48:21] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:48:21] 
+child process exited with code 0
+[2017.09.11 13:48:22] mainloop::iter = 9
+[2017.09.11 13:48:22] Static file server running at http://localhost:8080
+[2017.09.11 13:48:22] CTRL + C to shutdown
+[2017.09.11 13:48:22] on_restart.js :: ok
+[2017.09.11 13:48:22] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:48:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:48:51] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:48:51] 
+child process exited with code 0
+[2017.09.11 13:48:52] mainloop::iter = 10
+[2017.09.11 13:48:52] Static file server running at http://localhost:8080
+[2017.09.11 13:48:52] CTRL + C to shutdown
+[2017.09.11 13:48:52] on_restart.js :: ok
+[2017.09.11 13:48:52] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:49:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:49:13] url = /rt_sh
+[2017.09.11 13:49:13] {"zn":9,"len":634,"zpos":8}
+[2017.09.11 13:49:13] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:49:13] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:49:13] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:49:13] {"zn":6,"len":4,"zpos":5}
+[2017.09.11 13:49:13] {"z":"i","msg":""}
+[2017.09.11 13:49:13] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:49:13] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:49:13] {"zn":8,"len":322,"zpos":7}
+[2017.09.11 13:49:13] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:49:13] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:49:13] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:49:13] {"zn":7,"len":86,"zpos":6}
+[2017.09.11 13:49:13] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:49:13] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:49:13] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:49:13] {"zn":7,"len":13,"zpos":6}
+[2017.09.11 13:49:13] {"z":"","msg":"echo w"}
+[2017.09.11 13:49:13] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:49:13] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:49:14] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:49:14] {"z":"pi","msg":""}
+[2017.09.11 13:49:14] frag = "1\u0000ping\u00000"
+[2017.09.11 13:49:14] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:49:14] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:49:14] {"z":"pi","msg":""}
+[2017.09.11 13:49:14] frag = "1\u0000ping\u00001"
+[2017.09.11 13:49:14] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:49:15] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:49:15] {"z":"pi","msg":""}
+[2017.09.11 13:49:15] frag = "1\u0000ping\u00002"
+[2017.09.11 13:49:15] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:49:15] {"zn":7,"len":1,"zpos":6}
+[2017.09.11 13:49:15] {"z":"pi","msg":""}
+[2017.09.11 13:49:15] frag = "1\u0000ping\u00003"
+[2017.09.11 13:49:15] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:49:16] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1568,"bytesWritten":242}
+[2017.09.11 13:49:16] rt_sh.request :: Got aborted
+[2017.09.11 13:49:20] url = /mainloop.log
+[2017.09.11 13:49:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:49:52] url = /fetch?quit
+[2017.09.11 13:49:53] 
+child process exited with code 0
+[2017.09.11 13:49:53] mainloop::iter = 11
+[2017.09.11 13:49:53] Static file server running at http://localhost:8080
+[2017.09.11 13:49:53] CTRL + C to shutdown
+[2017.09.11 13:49:53] on_restart.js :: ok
+[2017.09.11 13:49:53] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:50:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:50:10] url = /mainloop.log
+[2017.09.11 13:50:15] url = /rt_sh
+[2017.09.11 13:50:15] {"zn":9,"len":634,"zpos":8,"en":4}
+[2017.09.11 13:50:15] {"en":4,"zpos-en":4}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:50:15] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:50:15] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:50:15] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:50:15] {"zn":6,"len":4,"zpos":5,"en":2}
+[2017.09.11 13:50:15] {"en":2,"zpos-en":3}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[105]}}
+[2017.09.11 13:50:15] {"z":"i","msg":""}
+[2017.09.11 13:50:15] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:50:15] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:50:15] {"zn":8,"len":322,"zpos":7,"en":4}
+[2017.09.11 13:50:15] {"en":4,"zpos-en":3}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:50:15] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:50:15] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:50:15] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:50:15] {"zn":7,"len":86,"zpos":6,"en":3}
+[2017.09.11 13:50:15] {"en":3,"zpos-en":3}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:50:15] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:50:15] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:50:15] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:50:15] {"zn":7,"len":13,"zpos":6,"en":3}
+[2017.09.11 13:50:15] {"en":3,"zpos-en":3}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:50:15] {"z":"","msg":"echo w"}
+[2017.09.11 13:50:15] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:50:15] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:50:15] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:50:15] {"en":2,"zpos-en":4}
+[2017.09.11 13:50:15] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:50:15] {"z":"pi","msg":""}
+[2017.09.11 13:50:15] frag = "1\u0000ping\u00000"
+[2017.09.11 13:50:15] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:50:16] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:50:16] {"en":2,"zpos-en":4}
+[2017.09.11 13:50:16] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:50:16] {"z":"pi","msg":""}
+[2017.09.11 13:50:16] frag = "1\u0000ping\u00001"
+[2017.09.11 13:50:16] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:50:16] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:50:16] {"en":2,"zpos-en":4}
+[2017.09.11 13:50:16] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:50:16] {"z":"pi","msg":""}
+[2017.09.11 13:50:16] frag = "1\u0000ping\u00002"
+[2017.09.11 13:50:16] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:50:17] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1555,"bytesWritten":229}
+[2017.09.11 13:50:17] rt_sh.request :: Got aborted
+[2017.09.11 13:50:18] url = /mainloop.log
+[2017.09.11 13:50:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:51:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:51:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:52:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:52:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:53:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:53:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:54:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:54:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:55:02] url = /tick?from=vm-7-clg08
+[2017.09.11 13:55:32] url = /tick?from=vm-7-clg08
+[2017.09.11 13:56:03] url = /tick?from=vm-7-clg08
+[2017.09.11 13:56:33] url = /tick?from=vm-7-clg08
+[2017.09.11 13:57:03] url = /tick?from=vm-7-clg08
+[2017.09.11 13:57:33] url = /tick?from=vm-7-clg08
+[2017.09.11 13:57:38] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 13:57:38] 
+child process exited with code 0
+[2017.09.11 13:57:38] mainloop::iter = 12
+[2017.09.11 13:57:38] Static file server running at http://localhost:8080
+[2017.09.11 13:57:38] CTRL + C to shutdown
+[2017.09.11 13:57:38] on_restart.js :: ok
+[2017.09.11 13:57:38] on_restart.js :: main.js is up-to-date
+[2017.09.11 13:57:47] url = /mainloop.log
+[2017.09.11 13:58:03] url = /tick?from=vm-7-clg08
+[2017.09.11 13:58:17] url = /rt_sh
+[2017.09.11 13:58:17] {"en":4,"zpos-en":4}
+[2017.09.11 13:58:17] {"zn":9,"len":634,"zpos":8,"en":4}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:58:17] {"z":"","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\""}
+[2017.09.11 13:58:17] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 13:58:17] (4.ok){"len":634,"z":"","msg":"*** 625 ***"}
+[2017.09.11 13:58:17] {"en":2,"zpos-en":3}
+[2017.09.11 13:58:17] {"zn":6,"len":4,"zpos":5,"en":2}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[105]}}
+[2017.09.11 13:58:17] {"z":"i","msg":""}
+[2017.09.11 13:58:17] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 13:58:17] (4.ok){"len":4,"z":"i","msg":""}
+[2017.09.11 13:58:17] {"en":4,"zpos-en":3}
+[2017.09.11 13:58:17] {"zn":8,"len":322,"zpos":7,"en":4}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:58:17] {"z":"","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\np"}
+[2017.09.11 13:58:17] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 13:58:17] (4.ok){"len":322,"z":"","msg":"*** 314 ***"}
+[2017.09.11 13:58:17] {"en":3,"zpos-en":3}
+[2017.09.11 13:58:17] {"zn":7,"len":86,"zpos":6,"en":3}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:58:17] {"z":"","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/"}
+[2017.09.11 13:58:17] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 13:58:17] (4.ok){"len":86,"z":"","msg":"*** 79 ***"}
+[2017.09.11 13:58:17] {"en":3,"zpos-en":3}
+[2017.09.11 13:58:17] {"zn":7,"len":13,"zpos":6,"en":3}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[]}}
+[2017.09.11 13:58:17] {"z":"","msg":"echo w"}
+[2017.09.11 13:58:17] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 13:58:17] (4.ok){"len":13,"z":"","msg":"echo w"}
+[2017.09.11 13:58:17] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:17] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:17] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:17] {"z":"pi","msg":""}
+[2017.09.11 13:58:17] frag = "1\u0000ping\u00000"
+[2017.09.11 13:58:17] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:18] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:18] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:18] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:18] {"z":"pi","msg":""}
+[2017.09.11 13:58:18] frag = "1\u0000ping\u00001"
+[2017.09.11 13:58:18] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:18] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:18] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:18] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:18] {"z":"pi","msg":""}
+[2017.09.11 13:58:18] frag = "1\u0000ping\u00002"
+[2017.09.11 13:58:18] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:19] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:19] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:19] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:19] {"z":"pi","msg":""}
+[2017.09.11 13:58:19] frag = "1\u0000ping\u00003"
+[2017.09.11 13:58:19] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:19] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:19] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:19] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:19] {"z":"pi","msg":""}
+[2017.09.11 13:58:19] frag = "1\u0000ping\u00004"
+[2017.09.11 13:58:19] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:20] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:20] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:20] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:20] {"z":"pi","msg":""}
+[2017.09.11 13:58:20] frag = "1\u0000ping\u00005"
+[2017.09.11 13:58:20] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:20] {"en":2,"zpos-en":3}
+[2017.09.11 13:58:20] {"zn":6,"len":1,"zpos":5,"en":2}
+[2017.09.11 13:58:20] {"bz":{"type":"Buffer","data":[105]}}
+[2017.09.11 13:58:20] {"z":"i","msg":""}
+[2017.09.11 13:58:20] frag = "1\u0000inp\u0000\u0016"
+[2017.09.11 13:58:20] (4.ok){"len":1,"z":"i","msg":""}
+[2017.09.11 13:58:20] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:20] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:20] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:20] {"z":"pi","msg":""}
+[2017.09.11 13:58:20] frag = "1\u0000ping\u00006"
+[2017.09.11 13:58:20] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:21] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:21] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:21] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:21] {"z":"pi","msg":""}
+[2017.09.11 13:58:21] frag = "1\u0000ping\u00007"
+[2017.09.11 13:58:21] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:21] {"en":2,"zpos-en":4}
+[2017.09.11 13:58:21] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 13:58:21] {"bz":{"type":"Buffer","data":[112,105]}}
+[2017.09.11 13:58:21] {"z":"pi","msg":""}
+[2017.09.11 13:58:21] frag = "1\u0000ping\u00008"
+[2017.09.11 13:58:21] (4.ok){"len":1,"z":"pi","msg":""}
+[2017.09.11 13:58:21] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1645,"bytesWritten":307}
+[2017.09.11 13:58:21] rt_sh.request :: Got aborted
+[2017.09.11 13:58:24] url = /mainloop.log
+[2017.09.11 13:58:33] url = /tick?from=vm-7-clg08
+[2017.09.11 13:59:03] url = /tick?from=vm-7-clg08
+[2017.09.11 13:59:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:00:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:00:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:01:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:01:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:02:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:02:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:03:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:03:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:04:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:04:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:05:03] url = /tick?from=vm-7-clg08
+[2017.09.11 14:05:33] url = /tick?from=vm-7-clg08
+[2017.09.11 14:06:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:06:12] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 14:06:12] 
+child process exited with code 0
+[2017.09.11 14:06:13] mainloop::iter = 13
+[2017.09.11 14:06:13] Static file server running at http://localhost:8080
+[2017.09.11 14:06:13] CTRL + C to shutdown
+[2017.09.11 14:06:13] on_restart.js :: ok
+[2017.09.11 14:06:13] on_restart.js :: main.js is up-to-date
+[2017.09.11 14:06:18] url = /rt_sh
+[2017.09.11 14:06:18] {"en":4,"zpos-en":4}
+[2017.09.11 14:06:18] {"zn":9,"len":634,"zpos":8,"en":4}
+[2017.09.11 14:06:18] {"bz":{"type":"Buffer","data":[101,118,97,108]}}
+[2017.09.11 14:06:18] {"z":"eval","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"}
+[2017.09.11 14:06:18] frag = "634\u0000eval\u0000      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"
+[2017.09.11 14:06:18] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:06:18] {"en":2,"zpos-en":3}
+[2017.09.11 14:06:18] {"zn":6,"len":4,"zpos":5,"en":2}
+[2017.09.11 14:06:18] {"bz":{"type":"Buffer","data":[105,110,112]}}
+[2017.09.11 14:06:18] {"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:06:18] frag = "4\u0000inp\u0000\u001b[2~"
+[2017.09.11 14:06:18] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:06:18] {"en":4,"zpos-en":3}
+[2017.09.11 14:06:18] {"zn":8,"len":322,"zpos":7,"en":4}
+[2017.09.11 14:06:18] {"bz":{"type":"Buffer","data":[105,110,112]}}
+[2017.09.11 14:06:18] {"z":"inp","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"}
+[2017.09.11 14:06:18] frag = "322\u0000inp\u0000COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"
+[2017.09.11 14:06:18] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:06:18] {"en":3,"zpos-en":3}
+[2017.09.11 14:06:18] {"zn":7,"len":86,"zpos":6,"en":3}
+[2017.09.11 14:06:18] {"bz":{"type":"Buffer","data":[105,110,112]}}
+[2017.09.11 14:06:18] {"z":"inp","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"}
+[2017.09.11 14:06:18] frag = "86\u0000inp\u0000echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"
+[2017.09.11 14:06:18] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:06:18] {"en":3,"zpos-en":3}
+[2017.09.11 14:06:18] {"zn":7,"len":13,"zpos":6,"en":3}
+[2017.09.11 14:06:18] {"bz":{"type":"Buffer","data":[105,110,112]}}
+[2017.09.11 14:06:18] {"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:06:18] frag = "13\u0000inp\u0000echo welcome\n"
+[2017.09.11 14:06:18] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:06:19] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:19] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:19] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:19] {"z":"ping","msg":"0"}
+[2017.09.11 14:06:19] frag = "1\u0000ping\u00000"
+[2017.09.11 14:06:19] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 14:06:19] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:19] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:19] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:19] {"z":"ping","msg":"1"}
+[2017.09.11 14:06:19] frag = "1\u0000ping\u00001"
+[2017.09.11 14:06:19] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 14:06:20] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:20] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:20] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:20] {"z":"ping","msg":"2"}
+[2017.09.11 14:06:20] frag = "1\u0000ping\u00002"
+[2017.09.11 14:06:20] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 14:06:20] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:20] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:20] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:20] {"z":"ping","msg":"3"}
+[2017.09.11 14:06:20] frag = "1\u0000ping\u00003"
+[2017.09.11 14:06:20] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 14:06:21] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:21] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:21] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:21] {"z":"ping","msg":"4"}
+[2017.09.11 14:06:21] frag = "1\u0000ping\u00004"
+[2017.09.11 14:06:21] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 14:06:21] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:21] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:21] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:21] {"z":"ping","msg":"5"}
+[2017.09.11 14:06:21] frag = "1\u0000ping\u00005"
+[2017.09.11 14:06:21] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 14:06:22] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:22] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:22] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:22] {"z":"ping","msg":"6"}
+[2017.09.11 14:06:22] frag = "1\u0000ping\u00006"
+[2017.09.11 14:06:22] (4.ok){"len":1,"z":"ping","msg":"6"}
+[2017.09.11 14:06:22] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:22] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:22] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:22] {"z":"ping","msg":"7"}
+[2017.09.11 14:06:22] frag = "1\u0000ping\u00007"
+[2017.09.11 14:06:22] (4.ok){"len":1,"z":"ping","msg":"7"}
+[2017.09.11 14:06:23] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:23] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:23] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:23] {"z":"ping","msg":"8"}
+[2017.09.11 14:06:23] frag = "1\u0000ping\u00008"
+[2017.09.11 14:06:23] (4.ok){"len":1,"z":"ping","msg":"8"}
+[2017.09.11 14:06:23] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:23] {"zn":7,"len":1,"zpos":6,"en":2}
+[2017.09.11 14:06:23] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:23] {"z":"ping","msg":"9"}
+[2017.09.11 14:06:23] frag = "1\u0000ping\u00009"
+[2017.09.11 14:06:23] (4.ok){"len":1,"z":"ping","msg":"9"}
+[2017.09.11 14:06:24] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:24] {"zn":7,"len":2,"zpos":6,"en":2}
+[2017.09.11 14:06:24] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:24] {"z":"ping","msg":"10"}
+[2017.09.11 14:06:24] frag = "2\u0000ping\u000010"
+[2017.09.11 14:06:24] (4.ok){"len":2,"z":"ping","msg":"10"}
+[2017.09.11 14:06:24] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:24] {"zn":7,"len":2,"zpos":6,"en":2}
+[2017.09.11 14:06:24] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:24] {"z":"ping","msg":"11"}
+[2017.09.11 14:06:24] frag = "2\u0000ping\u000011"
+[2017.09.11 14:06:24] (4.ok){"len":2,"z":"ping","msg":"11"}
+[2017.09.11 14:06:25] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:25] {"zn":7,"len":2,"zpos":6,"en":2}
+[2017.09.11 14:06:25] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:25] {"z":"ping","msg":"12"}
+[2017.09.11 14:06:25] frag = "2\u0000ping\u000012"
+[2017.09.11 14:06:25] (4.ok){"len":2,"z":"ping","msg":"12"}
+[2017.09.11 14:06:26] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:26] {"zn":7,"len":2,"zpos":6,"en":2}
+[2017.09.11 14:06:26] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:26] {"z":"ping","msg":"13"}
+[2017.09.11 14:06:26] frag = "2\u0000ping\u000013"
+[2017.09.11 14:06:26] (4.ok){"len":2,"z":"ping","msg":"13"}
+[2017.09.11 14:06:26] {"en":2,"zpos-en":4}
+[2017.09.11 14:06:26] {"zn":7,"len":2,"zpos":6,"en":2}
+[2017.09.11 14:06:26] {"bz":{"type":"Buffer","data":[112,105,110,103]}}
+[2017.09.11 14:06:26] {"z":"ping","msg":"14"}
+[2017.09.11 14:06:26] frag = "2\u0000ping\u000014"
+[2017.09.11 14:06:26] (4.ok){"len":2,"z":"ping","msg":"14"}
+[2017.09.11 14:06:26] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1716,"bytesWritten":2923}
+[2017.09.11 14:06:26] rt_sh.request :: Got aborted
+[2017.09.11 14:06:33] url = /mainloop.log
+[2017.09.11 14:06:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:07:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:07:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:08:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:08:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:09:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:09:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:10:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:10:17] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 14:10:17] 
+child process exited with code 0
+[2017.09.11 14:10:18] mainloop::iter = 14
+[2017.09.11 14:10:18] Static file server running at http://localhost:8080
+[2017.09.11 14:10:18] CTRL + C to shutdown
+[2017.09.11 14:10:18] on_restart.js :: ok
+[2017.09.11 14:10:18] on_restart.js :: main.js is up-to-date
+[2017.09.11 14:10:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:10:37] url = /mainloop.log
+[2017.09.11 14:10:59] url = /rt_sh
+[2017.09.11 14:10:59] {"z":"eval","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var stream=false;var off=s=>{if(!s)return;s.destroy();}\r\n      Object.assign(z2func,{\r\n        fn:msg=>{off(stream);stream=fs.createWriteStream(msg);q(\"fn = \"+msg);},\r\n        data:(msg,buf)=>{stream.write(buf);q(msg.length);}\r\n      });\r\n      q(\"begin\");\r\n      on_exit_funcs.push(()=>off(stream));\r"}
+[2017.09.11 14:10:59] (4.ok){"len":368,"z":"eval","msg":"*** 368 ***"}
+[2017.09.11 14:10:59] {"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:10:59] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:10:59] (3.wait_data){"rd.length":1441,"zn+len":65547}
+[2017.09.11 14:10:59] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 14:10:59] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2260,"bytesWritten":307}
+[2017.09.11 14:10:59] rt_sh.request :: Got aborted
+[2017.09.11 14:11:02] url = /mainloop.log
+[2017.09.11 14:11:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:11:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:12:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:12:10] url = /rt_sh
+[2017.09.11 14:12:10] {"z":"eval","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var sh=spawn('bash',['-i'],{detached:true});on_exit_funcs.push(()=>sh.kill('SIGHUP'));\r\n      var finish=msg=>{\r\n        q(msg);\r\n        toR(\"exit\")();\r\n        on_exit();\r\n      }\r\n      sh.stderr.on(\"data\",toR(\"err\")).on('end',()=>q(\"end of bash stderr\"));\r\n      sh.stdout.on(\"data\",toR(\"out\")).on('end',()=>q(\"end of bash stdout\"));\r\n      sh.on('close',code=>finish(\"bash exited with code \"+code));\r\n      call_cb_on_err(sh,qap_log,'sh');\r\n      z2func['inp']=msg=>sh.stdin.write(msg);\r\n      on_exit_funcs.push(()=>{delete z2func['inp'];});\r\n      q(\"begin\");\r"}
+[2017.09.11 14:12:10] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:12:10] {"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:12:10] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:12:10] {"z":"inp","msg":"COLUMNS=180;\r\nSTARTCOLOR='\\e[0;32m';\r\nENDCOLOR=\"\\e[0m\"\r\nexport PS1=\"$STARTCOLOR[\\$(date +%k:%M:%S)] \\w |\\$?> $ENDCOLOR\"\r\nexport TERM='xterm'\r\nalias rollback='pkill -f npm'\r\nalias cls='clear'\r\nalias ll='ls -alh --color=always'\r\nalias grep='grep --color=always'\r\nLS_COLORS=$LS_COLORS:'di=0;33:' ; export LS_COLORS\r\nps -aux\r\n"}
+[2017.09.11 14:12:10] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:12:10] {"z":"inp","msg":"echo xhr_shell URL = \"http://vm-vm.193b.starter-ca-central-1.openshiftapps.com/rt_sh\"\n"}
+[2017.09.11 14:12:10] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:12:10] {"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:12:10] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:12:11] {"z":"ping","msg":"0"}
+[2017.09.11 14:12:11] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 14:12:11] {"z":"ping","msg":"1"}
+[2017.09.11 14:12:11] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 14:12:12] {"z":"ping","msg":"2"}
+[2017.09.11 14:12:12] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 14:12:12] {"z":"ping","msg":"3"}
+[2017.09.11 14:12:12] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 14:12:12] {"z":"inp","msg":"e"}
+[2017.09.11 14:12:12] (4.ok){"len":1,"z":"inp","msg":"e"}
+[2017.09.11 14:12:12] {"z":"inp","msg":"x"}
+[2017.09.11 14:12:12] (4.ok){"len":1,"z":"inp","msg":"x"}
+[2017.09.11 14:12:13] {"z":"inp","msg":"i"}
+[2017.09.11 14:12:13] (4.ok){"len":1,"z":"inp","msg":"i"}
+[2017.09.11 14:12:13] {"z":"ping","msg":"4"}
+[2017.09.11 14:12:13] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 14:12:13] {"z":"inp","msg":"t"}
+[2017.09.11 14:12:13] (4.ok){"len":1,"z":"inp","msg":"t"}
+[2017.09.11 14:12:13] {"z":"ping","msg":"5"}
+[2017.09.11 14:12:13] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 14:12:13] {"z":"inp","msg":"\r"}
+[2017.09.11 14:12:13] (4.ok){"len":1,"z":"inp","msg":"\r"}
+[2017.09.11 14:12:13] rt_sh.request :: Got aborted
+[2017.09.11 14:12:17] url = /rt_sh
+[2017.09.11 14:12:17] {"z":"eval","msg":"      var q=a=>toR(\"qap_log\")(\"[\"+getDateTime()+\"] :: \"+a);\r\n      var stream=false;var off=s=>{if(!s)return;s.destroy();}\r\n      Object.assign(z2func,{\r\n        fn:msg=>{off(stream);stream=fs.createWriteStream(msg);q(\"fn = \"+msg);},\r\n        data:(msg,buf)=>{stream.write(buf);q(msg.length);}\r\n      });\r\n      q(\"begin\");\r\n      on_exit_funcs.push(()=>off(stream));\r"}
+[2017.09.11 14:12:17] (4.ok){"len":368,"z":"eval","msg":"*** 368 ***"}
+[2017.09.11 14:12:17] {"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:12:17] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:12:20] url = /mainloop.log
+[2017.09.11 14:12:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:13:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:13:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:14:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:14:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:14:42] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 14:14:43] 
+child process exited with code 0
+[2017.09.11 14:14:43] mainloop::iter = 15
+[2017.09.11 14:14:43] Static file server running at http://localhost:8080
+[2017.09.11 14:14:43] CTRL + C to shutdown
+[2017.09.11 14:14:43] on_restart.js :: ok
+[2017.09.11 14:14:43] on_restart.js :: main.js is up-to-date
+[2017.09.11 14:14:46] url = /rt_sh
+[2017.09.11 14:14:46] (4.ok){"len":368,"z":"eval","msg":"*** 368 ***"}
+[2017.09.11 14:14:46] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:14:52] url = /mainloop.log
+[2017.09.11 14:15:00] url = /mainloop.log
+[2017.09.11 14:15:05] url = /tick?from=vm-7-clg08
+[2017.09.11 14:15:27] url = /rt_sh
+[2017.09.11 14:15:27] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:15:27] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:15:27] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:15:27] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:15:27] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:15:27] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 14:15:28] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 14:15:28] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 14:15:28] (4.ok){"len":1,"z":"inp","msg":"l"}
+[2017.09.11 14:15:28] (4.ok){"len":1,"z":"inp","msg":"l"}
+[2017.09.11 14:15:29] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 14:15:29] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 14:15:29] (4.ok){"len":1,"z":"inp","msg":"\r"}
+[2017.09.11 14:15:30] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 14:15:30] (4.ok){"len":1,"z":"ping","msg":"6"}
+[2017.09.11 14:15:31] (4.ok){"len":1,"z":"ping","msg":"7"}
+[2017.09.11 14:15:31] (4.ok){"len":1,"z":"ping","msg":"8"}
+[2017.09.11 14:15:32] (4.ok){"len":1,"z":"ping","msg":"9"}
+[2017.09.11 14:15:32] (4.ok){"len":2,"z":"ping","msg":"10"}
+[2017.09.11 14:15:33] (4.ok){"len":2,"z":"ping","msg":"11"}
+[2017.09.11 14:15:33] (4.ok){"len":2,"z":"ping","msg":"12"}
+[2017.09.11 14:15:34] (4.ok){"len":2,"z":"ping","msg":"13"}
+[2017.09.11 14:15:34] (4.ok){"len":2,"z":"ping","msg":"14"}
+[2017.09.11 14:15:35] (4.ok){"len":2,"z":"ping","msg":"15"}
+[2017.09.11 14:15:35] url = /tick?from=vm-7-clg08
+[2017.09.11 14:15:35] (4.ok){"len":2,"z":"ping","msg":"16"}
+[2017.09.11 14:15:36] (4.ok){"len":2,"z":"ping","msg":"17"}
+[2017.09.11 14:15:36] (4.ok){"len":2,"z":"ping","msg":"18"}
+[2017.09.11 14:15:37] (4.ok){"len":2,"z":"ping","msg":"19"}
+[2017.09.11 14:15:37] (4.ok){"len":2,"z":"ping","msg":"20"}
+[2017.09.11 14:15:38] (4.ok){"len":2,"z":"ping","msg":"21"}
+[2017.09.11 14:15:38] (4.ok){"len":2,"z":"ping","msg":"22"}
+[2017.09.11 14:15:39] (4.ok){"len":2,"z":"ping","msg":"23"}
+[2017.09.11 14:15:40] (4.ok){"len":2,"z":"ping","msg":"24"}
+[2017.09.11 14:15:40] (4.ok){"len":2,"z":"ping","msg":"25"}
+[2017.09.11 14:15:41] (4.ok){"len":2,"z":"ping","msg":"26"}
+[2017.09.11 14:15:41] (4.ok){"len":2,"z":"ping","msg":"27"}
+[2017.09.11 14:15:42] (4.ok){"len":2,"z":"ping","msg":"28"}
+[2017.09.11 14:15:42] (4.ok){"len":2,"z":"ping","msg":"29"}
+[2017.09.11 14:15:43] (4.ok){"len":2,"z":"ping","msg":"30"}
+[2017.09.11 14:15:43] (4.ok){"len":2,"z":"ping","msg":"31"}
+[2017.09.11 14:15:44] (4.ok){"len":2,"z":"ping","msg":"32"}
+[2017.09.11 14:15:44] (4.ok){"len":2,"z":"ping","msg":"33"}
+[2017.09.11 14:15:45] (4.ok){"len":2,"z":"ping","msg":"34"}
+[2017.09.11 14:15:45] (4.ok){"len":2,"z":"ping","msg":"35"}
+[2017.09.11 14:15:46] (4.ok){"len":2,"z":"ping","msg":"36"}
+[2017.09.11 14:15:46] (4.ok){"len":2,"z":"ping","msg":"37"}
+[2017.09.11 14:15:47] (4.ok){"len":2,"z":"ping","msg":"38"}
+[2017.09.11 14:15:47] (4.ok){"len":2,"z":"ping","msg":"39"}
+[2017.09.11 14:15:48] (4.ok){"len":2,"z":"ping","msg":"40"}
+[2017.09.11 14:15:48] (4.ok){"len":2,"z":"ping","msg":"41"}
+[2017.09.11 14:15:49] (4.ok){"len":2,"z":"ping","msg":"42"}
+[2017.09.11 14:15:49] (4.ok){"len":2,"z":"ping","msg":"43"}
+[2017.09.11 14:15:50] (4.ok){"len":2,"z":"ping","msg":"44"}
+[2017.09.11 14:15:50] (4.ok){"len":2,"z":"ping","msg":"45"}
+[2017.09.11 14:15:51] (4.ok){"len":2,"z":"ping","msg":"46"}
+[2017.09.11 14:15:51] (4.ok){"len":2,"z":"ping","msg":"47"}
+[2017.09.11 14:15:52] (4.ok){"len":2,"z":"ping","msg":"48"}
+[2017.09.11 14:15:52] (4.ok){"len":2,"z":"ping","msg":"49"}
+[2017.09.11 14:15:53] (4.ok){"len":2,"z":"ping","msg":"50"}
+[2017.09.11 14:15:53] (4.ok){"len":1,"z":"inp","msg":"u"}
+[2017.09.11 14:15:53] (4.ok){"len":2,"z":"ping","msg":"51"}
+[2017.09.11 14:15:53] (4.ok){"len":1,"z":"inp","msg":"n"}
+[2017.09.11 14:15:54] (4.ok){"len":1,"z":"inp","msg":"l"}
+[2017.09.11 14:15:54] (4.ok){"len":2,"z":"ping","msg":"52"}
+[2017.09.11 14:15:54] (4.ok){"len":1,"z":"inp","msg":"i"}
+[2017.09.11 14:15:54] (4.ok){"len":2,"z":"ping","msg":"53"}
+[2017.09.11 14:15:54] (4.ok){"len":1,"z":"inp","msg":"n"}
+[2017.09.11 14:15:55] (4.ok){"len":1,"z":"inp","msg":"k"}
+[2017.09.11 14:15:55] (4.ok){"len":1,"z":"inp","msg":" "}
+[2017.09.11 14:15:55] (4.ok){"len":2,"z":"ping","msg":"54"}
+[2017.09.11 14:15:55] (4.ok){"len":2,"z":"ping","msg":"55"}
+[2017.09.11 14:15:56] (4.ok){"len":1,"z":"inp","msg":"r"}
+[2017.09.11 14:15:56] (4.ok){"len":2,"z":"ping","msg":"56"}
+[2017.09.11 14:15:56] (4.ok){"len":1,"z":"inp","msg":"a"}
+[2017.09.11 14:15:56] (4.ok){"len":2,"z":"ping","msg":"57"}
+[2017.09.11 14:15:56] (4.ok){"len":1,"z":"inp","msg":"\t"}
+[2017.09.11 14:15:57] (4.ok){"len":2,"z":"ping","msg":"58"}
+[2017.09.11 14:15:57] (4.ok){"len":1,"z":"inp","msg":"\r"}
+[2017.09.11 14:15:57] (4.ok){"len":2,"z":"ping","msg":"59"}
+[2017.09.11 14:15:58] (4.ok){"len":2,"z":"ping","msg":"60"}
+[2017.09.11 14:15:58] (4.ok){"len":2,"z":"ping","msg":"61"}
+[2017.09.11 14:15:59] (4.ok){"len":2,"z":"ping","msg":"62"}
+[2017.09.11 14:15:59] (4.ok){"len":2,"z":"ping","msg":"63"}
+[2017.09.11 14:16:00] (4.ok){"len":2,"z":"ping","msg":"64"}
+[2017.09.11 14:16:00] (4.ok){"len":2,"z":"ping","msg":"65"}
+[2017.09.11 14:16:01] (4.ok){"len":2,"z":"ping","msg":"66"}
+[2017.09.11 14:16:01] (4.ok){"len":2,"z":"ping","msg":"67"}
+[2017.09.11 14:16:02] (4.ok){"len":2,"z":"ping","msg":"68"}
+[2017.09.11 14:16:03] (4.ok){"len":2,"z":"ping","msg":"69"}
+[2017.09.11 14:16:03] (4.ok){"len":2,"z":"ping","msg":"70"}
+[2017.09.11 14:16:04] (4.ok){"len":2,"z":"ping","msg":"71"}
+[2017.09.11 14:16:04] (4.ok){"len":2,"z":"ping","msg":"72"}
+[2017.09.11 14:16:05] (4.ok){"len":2,"z":"ping","msg":"73"}
+[2017.09.11 14:16:05] (4.ok){"len":2,"z":"ping","msg":"74"}
+[2017.09.11 14:16:06] (4.ok){"len":2,"z":"ping","msg":"75"}
+[2017.09.11 14:16:06] (4.ok){"len":2,"z":"ping","msg":"76"}
+[2017.09.11 14:16:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:16:07] (4.ok){"len":2,"z":"ping","msg":"77"}
+[2017.09.11 14:16:07] (4.ok){"len":2,"z":"ping","msg":"78"}
+[2017.09.11 14:16:07] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2780,"bytesWritten":5705}
+[2017.09.11 14:16:07] rt_sh.request :: Got aborted
+[2017.09.11 14:16:12] url = /rt_sh
+[2017.09.11 14:16:12] (4.ok){"len":368,"z":"eval","msg":"*** 368 ***"}
+[2017.09.11 14:16:12] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:16:15] url = /mainloop.log
+[2017.09.11 14:16:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:17:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:17:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:18:05] url = /rt_sh
+[2017.09.11 14:18:05] (4.ok){"len":387,"z":"eval","msg":"*** 387 ***"}
+[2017.09.11 14:18:05] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:18:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:18:09] url = /mainloop.log
+[2017.09.11 14:18:25] url = /rt_sh
+[2017.09.11 14:18:25] (4.ok){"len":387,"z":"eval","msg":"*** 387 ***"}
+[2017.09.11 14:18:25] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:18:25] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 14:18:25] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2279,"bytesWritten":307}
+[2017.09.11 14:18:25] rt_sh.request :: Got aborted
+[2017.09.11 14:18:27] url = /mainloop.log
+[2017.09.11 14:18:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:19:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:19:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:19:41] url = /rt_sh
+[2017.09.11 14:19:41] (4.ok){"len":429,"z":"eval","msg":"*** 429 ***"}
+[2017.09.11 14:19:41] uncaughtException :: err = {} //ReferenceError: buff is not defined
+    at Object.fn (eval at eval (/opt/app-root/src/main.js:323:42), <anonymous>:4:64)
+    at fromR (/opt/app-root/src/main.js:318:57)
+    at IncomingMessage.emitter.on.data (/opt/app-root/src/main.js:128:5)
+    at emitOne (events.js:96:13)
+    at IncomingMessage.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:176:18)
+    at IncomingMessage.Readable.push (_stream_readable.js:134:10)
+    at HTTPParser.parserOnBody (_http_common.js:123:22)
+[2017.09.11 14:19:45] url = /mainloop.log
+[2017.09.11 14:19:56] url = /rt_sh
+[2017.09.11 14:19:56] (4.ok){"len":428,"z":"eval","msg":"*** 428 ***"}
+[2017.09.11 14:19:56] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:19:56] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:19:56] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 14:19:56] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2320,"bytesWritten":307}
+[2017.09.11 14:19:56] rt_sh.request :: Got aborted
+[2017.09.11 14:19:58] url = /mainloop.log
+[2017.09.11 14:20:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:20:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:20:52] url = /rt_sh
+[2017.09.11 14:20:52] (4.ok){"len":452,"z":"eval","msg":"*** 452 ***"}
+[2017.09.11 14:20:52] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:20:52] {
+  "_writableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "needDrain": false,
+    "ending": false,
+    "ended": false,
+    "finished": false,
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "length": 0,
+    "writing": false,
+    "corked": 0,
+    "sync": true,
+    "bufferProcessing": false,
+    "writecb": null,
+    "writelen": 0,
+    "bufferedRequest": null,
+    "lastBufferedRequest": null,
+    "pendingcb": 0,
+    "prefinished": false,
+    "errorEmitted": false,
+    "bufferedRequestCount": 0,
+    "corkedRequestsFree": {
+      "next": null,
+      "entry": null
+    }
+  },
+  "writable": true,
+  "domain": null,
+  "_events": {},
+  "_eventsCount": 1,
+  "path": "rayenv_L8_scene_v22.bin",
+  "fd": null,
+  "flags": "w",
+  "mode": 438,
+  "autoClose": true,
+  "bytesWritten": 0
+}
+[2017.09.11 14:20:52] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:20:53] url = /mainloop.log
+[2017.09.11 14:21:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:21:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:22:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:22:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:23:01] url = /rt_sh
+[2017.09.11 14:23:01] (4.ok){"len":477,"z":"eval","msg":"*** 477 ***"}
+[2017.09.11 14:23:01] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:23:01] {
+  "_writableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "needDrain": false,
+    "ending": false,
+    "ended": false,
+    "finished": false,
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "length": 6,
+    "writing": true,
+    "corked": 0,
+    "sync": false,
+    "bufferProcessing": false,
+    "writelen": 6,
+    "bufferedRequest": null,
+    "lastBufferedRequest": null,
+    "pendingcb": 1,
+    "prefinished": false,
+    "errorEmitted": false,
+    "bufferedRequestCount": 0,
+    "corkedRequestsFree": {
+      "next": null,
+      "entry": null
+    }
+  },
+  "writable": true,
+  "domain": null,
+  "_events": {},
+  "_eventsCount": 2,
+  "path": "rayenv_L8_scene_v22.bin",
+  "fd": null,
+  "flags": "w",
+  "mode": 438,
+  "autoClose": true,
+  "bytesWritten": 0
+}
+[2017.09.11 14:23:01] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:23:03] url = /mainloop.log
+[2017.09.11 14:23:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:23:31] url = /rt_sh
+[2017.09.11 14:23:31] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:23:31] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:23:31] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:23:31] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:23:31] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:23:31] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"inp","msg":"c"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"inp","msg":"a"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"inp","msg":"t"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 14:23:32] (4.ok){"len":1,"z":"inp","msg":" "}
+[2017.09.11 14:23:33] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 14:23:33] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 14:23:34] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 14:23:34] (4.ok){"len":1,"z":"inp","msg":"r"}
+[2017.09.11 14:23:34] (4.ok){"len":1,"z":"inp","msg":"a"}
+[2017.09.11 14:23:34] (4.ok){"len":1,"z":"inp","msg":"\t"}
+[2017.09.11 14:23:34] (4.ok){"len":1,"z":"ping","msg":"6"}
+[2017.09.11 14:23:35] (4.ok){"len":1,"z":"ping","msg":"7"}
+[2017.09.11 14:23:35] (4.ok){"len":1,"z":"inp","msg":"\r"}
+[2017.09.11 14:23:35] (4.ok){"len":1,"z":"ping","msg":"8"}
+[2017.09.11 14:23:36] (4.ok){"len":1,"z":"ping","msg":"9"}
+[2017.09.11 14:23:36] (4.ok){"len":2,"z":"ping","msg":"10"}
+[2017.09.11 14:23:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:23:37] (4.ok){"len":2,"z":"ping","msg":"11"}
+[2017.09.11 14:23:37] (4.ok){"len":2,"z":"ping","msg":"12"}
+[2017.09.11 14:23:38] (4.ok){"len":2,"z":"ping","msg":"13"}
+[2017.09.11 14:23:38] (4.ok){"len":2,"z":"ping","msg":"14"}
+[2017.09.11 14:23:38] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1812,"bytesWritten":3088}
+[2017.09.11 14:23:38] rt_sh.request :: Got aborted
+[2017.09.11 14:23:42] url = /mainloop.log
+[2017.09.11 14:24:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:24:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:25:06] url = /tick?from=vm-7-clg08
+[2017.09.11 14:25:36] url = /tick?from=vm-7-clg08
+[2017.09.11 14:26:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:26:31] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 14:26:32] 
+child process exited with code 0
+[2017.09.11 14:26:32] mainloop::iter = 16
+[2017.09.11 14:26:32] Static file server running at http://localhost:8080
+[2017.09.11 14:26:32] CTRL + C to shutdown
+[2017.09.11 14:26:32] on_restart.js :: ok
+[2017.09.11 14:26:32] on_restart.js :: main.js is up-to-date
+[2017.09.11 14:26:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:26:41] url = /rt_sh
+[2017.09.11 14:26:41] {"rd_len":486,"chunk_len":486}
+[2017.09.11 14:26:41] (4.ok){"len":477,"z":"eval","msg":"*** 477 ***"}
+[2017.09.11 14:26:41] {"rd_len":29,"chunk_len":29}
+[2017.09.11 14:26:41] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:26:41] {
+  "_writableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "needDrain": false,
+    "ending": false,
+    "ended": false,
+    "finished": false,
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "length": 6,
+    "writing": true,
+    "corked": 0,
+    "sync": false,
+    "bufferProcessing": false,
+    "writelen": 6,
+    "bufferedRequest": null,
+    "lastBufferedRequest": null,
+    "pendingcb": 1,
+    "prefinished": false,
+    "errorEmitted": false,
+    "bufferedRequestCount": 0,
+    "corkedRequestsFree": {
+      "next": null,
+      "entry": null
+    }
+  },
+  "writable": true,
+  "domain": null,
+  "_events": {},
+  "_eventsCount": 2,
+  "path": "rayenv_L8_scene_v22.bin",
+  "fd": null,
+  "flags": "w",
+  "mode": 438,
+  "autoClose": true,
+  "bytesWritten": 0
+}
+[2017.09.11 14:26:41] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:26:45] url = /mainloop.log
+[2017.09.11 14:27:06] url = /fetch?quit&from=commit_push_and_do_restart.js
+[2017.09.11 14:27:06] 
+child process exited with code 0
+[2017.09.11 14:27:06] mainloop::iter = 17
+[2017.09.11 14:27:06] Static file server running at http://localhost:8080
+[2017.09.11 14:27:06] CTRL + C to shutdown
+[2017.09.11 14:27:06] on_restart.js :: ok
+[2017.09.11 14:27:06] on_restart.js :: main.js is up-to-date
+[2017.09.11 14:27:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:27:16] url = /rt_sh
+[2017.09.11 14:27:16] {"rd_len":486,"chunk_len":486}
+[2017.09.11 14:27:16] (4.ok){"len":477,"z":"eval","msg":"*** 477 ***"}
+[2017.09.11 14:27:16] {"rd_len":29,"chunk_len":29}
+[2017.09.11 14:27:16] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:27:16] {
+  "_writableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "needDrain": false,
+    "ending": false,
+    "ended": false,
+    "finished": false,
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "length": 6,
+    "writing": true,
+    "corked": 0,
+    "sync": false,
+    "bufferProcessing": false,
+    "writelen": 6,
+    "bufferedRequest": null,
+    "lastBufferedRequest": null,
+    "pendingcb": 1,
+    "prefinished": false,
+    "errorEmitted": false,
+    "bufferedRequestCount": 0,
+    "corkedRequestsFree": {
+      "next": null,
+      "entry": null
+    }
+  },
+  "writable": true,
+  "domain": null,
+  "_events": {},
+  "_eventsCount": 2,
+  "path": "rayenv_L8_scene_v22.bin",
+  "fd": null,
+  "flags": "w",
+  "mode": 438,
+  "autoClose": true,
+  "bytesWritten": 0
+}
+[2017.09.11 14:27:16] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:27:17] {"rd_len":1445,"chunk_len":1445}
+[2017.09.11 14:27:17] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 14:27:17] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2369,"bytesWritten":307}
+[2017.09.11 14:27:17] rt_sh.request :: Got aborted
+[2017.09.11 14:27:19] url = /mainloop.log
+[2017.09.11 14:27:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:28:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:28:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:29:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:29:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:30:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:30:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:31:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:31:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:32:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:32:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:33:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:33:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:34:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:34:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:35:08] url = /tick?from=vm-7-clg08
+[2017.09.11 14:35:38] url = /tick?from=vm-7-clg08
+[2017.09.11 14:36:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:36:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:37:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:37:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:38:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:38:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:39:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:39:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:40:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:40:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:41:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:41:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:42:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:42:35] url = /rt_sh
+[2017.09.11 14:42:35] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:42:35] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:42:35] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:42:35] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:42:35] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:42:35] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:42:35] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:42:35] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:42:35] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:42:35] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:42:35] {"rd_len":29,"chunk_len":29}
+[2017.09.11 14:42:35] (4.ok){"len":22,"z":"inp","msg":"cat mainloop.log\r\nexit"}
+[2017.09.11 14:42:36] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:36] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 14:42:37] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:37] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 14:42:37] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:37] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 14:42:38] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:38] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 14:42:38] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:38] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 14:42:39] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:39] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 14:42:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:42:40] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:40] (4.ok){"len":1,"z":"ping","msg":"6"}
+[2017.09.11 14:42:40] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:40] (4.ok){"len":1,"z":"ping","msg":"7"}
+[2017.09.11 14:42:41] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:41] (4.ok){"len":1,"z":"ping","msg":"8"}
+[2017.09.11 14:42:41] {"rd_len":8,"chunk_len":8}
+[2017.09.11 14:42:41] (4.ok){"len":1,"z":"ping","msg":"9"}
+[2017.09.11 14:42:42] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:42] (4.ok){"len":2,"z":"ping","msg":"10"}
+[2017.09.11 14:42:42] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:42] (4.ok){"len":2,"z":"ping","msg":"11"}
+[2017.09.11 14:42:43] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:43] (4.ok){"len":2,"z":"ping","msg":"12"}
+[2017.09.11 14:42:43] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:43] (4.ok){"len":2,"z":"ping","msg":"13"}
+[2017.09.11 14:42:44] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:44] (4.ok){"len":2,"z":"ping","msg":"14"}
+[2017.09.11 14:42:44] {"rd_len":9,"chunk_len":9}
+[2017.09.11 14:42:44] (4.ok){"len":2,"z":"ping","msg":"15"}
+[2017.09.11 14:42:44] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1765,"bytesWritten":91733}
+[2017.09.11 14:42:44] rt_sh.request :: Got aborted
+[2017.09.11 14:42:52] url = /rt_sh
+[2017.09.11 14:42:52] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:42:52] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:42:52] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:42:52] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:42:52] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:42:52] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:42:52] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:42:52] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:42:52] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:42:52] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:42:52] {"rd_len":31,"chunk_len":31}
+[2017.09.11 14:42:52] (4.ok){"len":24,"z":"inp","msg":"cat mainloop.log\r\nexit\r\n"}
+[2017.09.11 14:42:52] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 14:42:52] rt_sh.request :: Got aborted
+[2017.09.11 14:43:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:43:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:43:54] url = /rt_sh
+[2017.09.11 14:43:54] {"rd_len":486,"chunk_len":486}
+[2017.09.11 14:43:54] (4.ok){"len":477,"z":"eval","msg":"*** 477 ***"}
+[2017.09.11 14:43:54] {"rd_len":29,"chunk_len":29}
+[2017.09.11 14:43:54] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 14:43:54] {
+  "_writableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "needDrain": false,
+    "ending": false,
+    "ended": false,
+    "finished": false,
+    "decodeStrings": true,
+    "defaultEncoding": "utf8",
+    "length": 6,
+    "writing": true,
+    "corked": 0,
+    "sync": false,
+    "bufferProcessing": false,
+    "writelen": 6,
+    "bufferedRequest": null,
+    "lastBufferedRequest": null,
+    "pendingcb": 1,
+    "prefinished": false,
+    "errorEmitted": false,
+    "bufferedRequestCount": 0,
+    "corkedRequestsFree": {
+      "next": null,
+      "entry": null
+    }
+  },
+  "writable": true,
+  "domain": null,
+  "_events": {},
+  "_eventsCount": 2,
+  "path": "rayenv_L8_scene_v22.bin",
+  "fd": null,
+  "flags": "w",
+  "mode": 438,
+  "autoClose": true,
+  "bytesWritten": 0
+}
+[2017.09.11 14:43:54] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 14:43:55] {"rd_len":5817,"chunk_len":5817}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":5817,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":10157,"chunk_len":4340}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":10157,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":15965,"chunk_len":5808}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":15965,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":24864,"chunk_len":8899}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":24864,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":26129,"chunk_len":1265}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":26129,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":27581,"chunk_len":1452}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":27581,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":30485,"chunk_len":2904}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":30485,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":39384,"chunk_len":8899}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":39384,"zn+len":65547}
+[2017.09.11 14:43:55] {"rd_len":40649,"chunk_len":1265}
+[2017.09.11 14:43:55] (3.wait_data){"rd.length":40649,"zn+len":65547}
+[2017.09.11 14:43:55] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":41573,"bytesWritten":333}
+[2017.09.11 14:43:55] rt_sh.request :: Got aborted
+[2017.09.11 14:44:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:44:12] url = /rt_sh
+[2017.09.11 14:44:12] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:44:12] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:44:12] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:44:12] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:44:12] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:44:12] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:44:12] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:44:12] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:44:12] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:44:12] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:44:12] {"rd_len":31,"chunk_len":31}
+[2017.09.11 14:44:12] (4.ok){"len":24,"z":"inp","msg":"cat mainloop.log\r\nexit\r\n"}
+[2017.09.11 14:44:12] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 14:44:12] rt_sh.request :: Got aborted
+[2017.09.11 14:44:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:44:45] url = /rt_sh
+[2017.09.11 14:44:45] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:44:45] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:44:45] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:44:45] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:44:45] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:44:45] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:44:45] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:44:45] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:44:45] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:44:45] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:44:45] {"rd_len":31,"chunk_len":31}
+[2017.09.11 14:44:45] (4.ok){"len":24,"z":"inp","msg":"cat mainloop.log\r\nexit\r\n"}
+[2017.09.11 14:44:45] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 14:44:45] rt_sh.request :: Got aborted
+[2017.09.11 14:45:09] url = /tick?from=vm-7-clg08
+[2017.09.11 14:45:39] url = /tick?from=vm-7-clg08
+[2017.09.11 14:45:55] url = /rt_sh
+[2017.09.11 14:45:55] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:45:55] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:45:55] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:45:55] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:45:55] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:45:55] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:45:55] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:45:55] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:45:55] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:45:55] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:45:55] {"rd_len":83,"chunk_len":83}
+[2017.09.11 14:45:55] (4.ok){"len":76,"z":"inp","msg":"echo cat_mainloop_loh_started_there\r\ncat mainloop.log\r\necho exit_now\r\nexit\r\n"}
+[2017.09.11 14:45:55] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 14:45:55] rt_sh.request :: Got aborted
+[2017.09.11 14:46:10] url = /rt_sh
+[2017.09.11 14:46:10] {"rd_len":643,"chunk_len":643}
+[2017.09.11 14:46:10] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 14:46:10] {"rd_len":10,"chunk_len":10}
+[2017.09.11 14:46:10] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 14:46:10] {"rd_len":330,"chunk_len":330}
+[2017.09.11 14:46:10] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 14:46:10] {"rd_len":93,"chunk_len":93}
+[2017.09.11 14:46:10] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 14:46:10] {"rd_len":20,"chunk_len":20}
+[2017.09.11 14:46:10] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 14:46:10] {"rd_len":83,"chunk_len":83}
+[2017.09.11 14:46:10] (4.ok){"len":76,"z":"inp","msg":"echo cat_mainloop_log_started_there\r\ncat mainloop.log\r\necho exit_now\r\nexit\r\n"}
+[2017.09.11 14:46:10] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 14:46:10] rt_sh.request :: Got aborted
+[2017.09.11 14:46:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:46:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:47:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:47:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:48:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:48:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:49:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:49:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:50:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:50:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:51:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:51:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:52:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:52:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:53:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:53:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:54:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:54:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:55:11] url = /tick?from=vm-7-clg08
+[2017.09.11 14:55:41] url = /tick?from=vm-7-clg08
+[2017.09.11 14:56:13] url = /tick?from=vm-7-clg08
+[2017.09.11 14:56:42] url = /tick?from=vm-7-clg08
+[2017.09.11 14:57:13] url = /tick?from=vm-7-clg08
+[2017.09.11 14:57:42] url = /tick?from=vm-7-clg08
+[2017.09.11 14:58:13] url = /tick?from=vm-7-clg08
+[2017.09.11 14:58:42] url = /tick?from=vm-7-clg08
+[2017.09.11 14:59:13] url = /tick?from=vm-7-clg08
+[2017.09.11 14:59:42] url = /tick?from=vm-7-clg08
+[2017.09.11 15:00:13] url = /tick?from=vm-7-clg08
+[2017.09.11 15:00:42] url = /tick?from=vm-7-clg08
+[2017.09.11 15:01:12] url = /tick?from=vm-7-clg08
+[2017.09.11 15:01:43] url = /tick?from=vm-7-clg08
+[2017.09.11 15:01:48] url = /rt_sh
+[2017.09.11 15:01:48] {"rd_len":643,"chunk_len":643}
+[2017.09.11 15:01:48] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 15:01:48] {"rd_len":10,"chunk_len":10}
+[2017.09.11 15:01:48] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 15:01:48] {"rd_len":330,"chunk_len":330}
+[2017.09.11 15:01:48] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 15:01:48] {"rd_len":93,"chunk_len":93}
+[2017.09.11 15:01:48] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 15:01:48] {"rd_len":20,"chunk_len":20}
+[2017.09.11 15:01:48] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 15:01:48] {"rd_len":83,"chunk_len":83}
+[2017.09.11 15:01:48] (4.ok){"len":76,"z":"inp","msg":"echo cat_mainloop_log_started_there\r\ncat mainloop.log\r\necho exit_now\r\nexit\r\n"}
+[2017.09.11 15:01:48] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 15:01:48] rt_sh.request :: Got aborted
+[2017.09.11 15:02:12] url = /tick?from=vm-7-clg08
+[2017.09.11 15:02:43] url = /tick?from=vm-7-clg08
+[2017.09.11 15:03:13] url = /tick?from=vm-7-clg08
+[2017.09.11 15:03:25] url = /rt_sh
+[2017.09.11 15:03:25] {"rd_len":462,"chunk_len":462}
+[2017.09.11 15:03:25] (4.ok){"len":453,"z":"eval","msg":"*** 453 ***"}
+[2017.09.11 15:03:25] {"rd_len":29,"chunk_len":29}
+[2017.09.11 15:03:25] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 15:03:25] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 15:03:35] url = /rt_sh
+[2017.09.11 15:03:35] {"rd_len":643,"chunk_len":643}
+[2017.09.11 15:03:35] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 15:03:35] {"rd_len":10,"chunk_len":10}
+[2017.09.11 15:03:35] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 15:03:35] {"rd_len":330,"chunk_len":330}
+[2017.09.11 15:03:35] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 15:03:35] {"rd_len":93,"chunk_len":93}
+[2017.09.11 15:03:35] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 15:03:35] {"rd_len":20,"chunk_len":20}
+[2017.09.11 15:03:35] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 15:03:35] {"rd_len":83,"chunk_len":83}
+[2017.09.11 15:03:35] (4.ok){"len":76,"z":"inp","msg":"echo cat_mainloop_log_started_there\r\ncat mainloop.log\r\necho exit_now\r\nexit\r\n"}
+[2017.09.11 15:03:35] uncaughtException :: err = {
+  "code": "ECONNRESET",
+  "errno": "ECONNRESET",
+  "syscall": "read"
+} //Error: read ECONNRESET
+    at exports._errnoException (util.js:1026:11)
+    at Pipe.onread (net.js:569:26)
+[2017.09.11 15:03:35] rt_sh.request :: Got aborted
+[2017.09.11 15:03:42] url = /tick?from=vm-7-clg08
+[2017.09.11 15:04:11] url = /eval?nolog
+[2017.09.11 15:04:11] url = /rt_sh
+[2017.09.11 15:04:11] {"rd_len":569,"chunk_len":569}
+[2017.09.11 15:04:11] (4.ok){"len":560,"z":"eval","msg":"*** 560 ***"}
+[2017.09.11 15:04:11] rt_sh.request :: Got end
+[2017.09.11 15:04:12] url = /rt_sh
+[2017.09.11 15:04:12] {"rd_len":427,"chunk_len":427}
+[2017.09.11 15:04:12] (4.ok){"len":418,"z":"eval","msg":"*** 418 ***"}
+[2017.09.11 15:04:12] {"rd_len":10,"chunk_len":10}
+[2017.09.11 15:04:12] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 15:04:12] {"rd_len":330,"chunk_len":330}
+[2017.09.11 15:04:12] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 15:04:12] {"rd_len":93,"chunk_len":93}
+[2017.09.11 15:04:12] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 15:04:12] {"rd_len":20,"chunk_len":20}
+[2017.09.11 15:04:12] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 15:04:12] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:12] (4.ok){"len":1,"z":"ping","msg":"0"}
+[2017.09.11 15:04:13] url = /tick?from=vm-7-clg08
+[2017.09.11 15:04:13] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:13] (4.ok){"len":1,"z":"ping","msg":"1"}
+[2017.09.11 15:04:13] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:13] (4.ok){"len":1,"z":"ping","msg":"2"}
+[2017.09.11 15:04:14] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:14] (4.ok){"len":1,"z":"ping","msg":"3"}
+[2017.09.11 15:04:14] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:14] (4.ok){"len":1,"z":"ping","msg":"4"}
+[2017.09.11 15:04:15] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:15] (4.ok){"len":1,"z":"ping","msg":"5"}
+[2017.09.11 15:04:15] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:15] (4.ok){"len":1,"z":"ping","msg":"6"}
+[2017.09.11 15:04:16] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:16] (4.ok){"len":1,"z":"ping","msg":"7"}
+[2017.09.11 15:04:16] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:16] (4.ok){"len":1,"z":"ping","msg":"8"}
+[2017.09.11 15:04:17] {"rd_len":8,"chunk_len":8}
+[2017.09.11 15:04:17] (4.ok){"len":1,"z":"ping","msg":"9"}
+[2017.09.11 15:04:17] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:17] (4.ok){"len":2,"z":"ping","msg":"10"}
+[2017.09.11 15:04:18] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:18] (4.ok){"len":2,"z":"ping","msg":"11"}
+[2017.09.11 15:04:18] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:18] (4.ok){"len":2,"z":"ping","msg":"12"}
+[2017.09.11 15:04:19] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:19] (4.ok){"len":2,"z":"ping","msg":"13"}
+[2017.09.11 15:04:19] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:19] (4.ok){"len":2,"z":"ping","msg":"14"}
+[2017.09.11 15:04:20] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:20] (4.ok){"len":2,"z":"ping","msg":"15"}
+[2017.09.11 15:04:20] {"rd_len":9,"chunk_len":9}
+[2017.09.11 15:04:20] (4.ok){"len":2,"z":"ping","msg":"16"}
+[2017.09.11 15:04:20] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":1528,"bytesWritten":418}
+[2017.09.11 15:04:20] rt_sh.request :: Got aborted
+[2017.09.11 15:04:20] rt_sh.request :: Got aborted
+[2017.09.11 15:04:43] url = /tick?from=vm-7-clg08
+[2017.09.11 15:05:12] url = /tick?from=vm-7-clg08
+[2017.09.11 15:05:42] url = /tick?from=vm-7-clg08
+[2017.09.11 15:06:15] url = /tick?from=vm-7-clg08
+[2017.09.11 15:06:17] url = /rt_sh
+[2017.09.11 15:06:17] {"rd_len":462,"chunk_len":462}
+[2017.09.11 15:06:17] (4.ok){"len":453,"z":"eval","msg":"*** 453 ***"}
+[2017.09.11 15:06:17] {"rd_len":29,"chunk_len":29}
+[2017.09.11 15:06:17] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 15:06:17] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 15:06:19] url = /rt_sh
+[2017.09.11 15:06:19] {"rd_len":462,"chunk_len":462}
+[2017.09.11 15:06:19] (4.ok){"len":453,"z":"eval","msg":"*** 453 ***"}
+[2017.09.11 15:06:19] {"rd_len":29,"chunk_len":29}
+[2017.09.11 15:06:19] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 15:06:19] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 15:06:19] {"rd_len":1445,"chunk_len":1445}
+[2017.09.11 15:06:19] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 15:06:19] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2345,"bytesWritten":307}
+[2017.09.11 15:06:19] rt_sh.request :: Got aborted
+[2017.09.11 15:06:20] url = /rt_sh
+[2017.09.11 15:06:20] {"rd_len":462,"chunk_len":462}
+[2017.09.11 15:06:20] (4.ok){"len":453,"z":"eval","msg":"*** 453 ***"}
+[2017.09.11 15:06:20] {"rd_len":29,"chunk_len":29}
+[2017.09.11 15:06:20] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 15:06:20] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 15:06:21] {"rd_len":1445,"chunk_len":1445}
+[2017.09.11 15:06:21] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 15:06:21] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2345,"bytesWritten":307}
+[2017.09.11 15:06:21] rt_sh.request :: Got aborted
+[2017.09.11 15:06:22] url = /rt_sh
+[2017.09.11 15:06:22] {"rd_len":462,"chunk_len":462}
+[2017.09.11 15:06:22] (4.ok){"len":453,"z":"eval","msg":"*** 453 ***"}
+[2017.09.11 15:06:22] {"rd_len":29,"chunk_len":29}
+[2017.09.11 15:06:22] ["msg+buf","rayenv_L8_scene_v22.bin",{"type":"Buffer","data":[114,97,121,101,110,118,95,76,56,95,115,99,101,110,101,95,118,50,50,46,98,105,110]}]
+[2017.09.11 15:06:22] (4.ok){"len":23,"z":"fn","msg":"rayenv_L8_scene_v22.bin"}
+[2017.09.11 15:06:22] {"rd_len":1445,"chunk_len":1445}
+[2017.09.11 15:06:22] (3.wait_data){"rd.length":1445,"zn+len":65547}
+[2017.09.11 15:06:22] http_server::on_clientError : {"ip":"95.37.145.118","err":{"bytesParsed":0,"code":"HPE_INVALID_EOF_STATE"},"bytesRead":2345,"bytesWritten":307}
+[2017.09.11 15:06:22] rt_sh.request :: Got aborted
+[2017.09.11 15:06:44] url = /tick?from=vm-7-clg08
+[2017.09.11 15:06:52] url = /mainloop.log
+[2017.09.11 15:06:53] url = /favicon.ico
+[2017.09.11 15:06:53] url = /favicon.ico
+[2017.09.11 15:06:58] url = /mainloop.log
+[2017.09.11 15:07:14] url = /tick?from=vm-7-clg08
+[2017.09.11 15:07:44] url = /tick?from=vm-7-clg08
+[2017.09.11 15:08:14] url = /tick?from=vm-7-clg08
+[2017.09.11 15:08:20] url = /rt_sh
+[2017.09.11 15:08:20] {"rd_len":643,"chunk_len":643}
+[2017.09.11 15:08:20] (4.ok){"len":634,"z":"eval","msg":"*** 634 ***"}
+[2017.09.11 15:08:20] {"rd_len":10,"chunk_len":10}
+[2017.09.11 15:08:20] (4.ok){"len":4,"z":"inp","msg":"\u001b[2~"}
+[2017.09.11 15:08:20] {"rd_len":330,"chunk_len":330}
+[2017.09.11 15:08:20] (4.ok){"len":322,"z":"inp","msg":"*** 322 ***"}
+[2017.09.11 15:08:20] {"rd_len":93,"chunk_len":93}
+[2017.09.11 15:08:20] (4.ok){"len":86,"z":"inp","msg":"*** 86 ***"}
+[2017.09.11 15:08:20] {"rd_len":20,"chunk_len":20}
+[2017.09.11 15:08:20] (4.ok){"len":13,"z":"inp","msg":"echo welcome\n"}
+[2017.09.11 15:08:20] {"rd_len":83,"chunk_len":83}
+[2017.09.11 15:08:20] (4.ok){"len":76,"z":"inp","msg":"echo cat_mainloop_log_started_there\r\ncat mainloop.log\r\necho exit_now\r\nexit\r\n"}
+exit_now
+[2017.09.11 18:08:28] formR :: [2017.09.11 15:08:20] :: end of bash stdout
+[2017.09.11 18:08:28] formR :: [2017.09.11 15:08:20] :: end of bash stderr
+[2017.09.11 18:08:28] formR :: [2017.09.11 15:08:20] :: bash exited with code 0

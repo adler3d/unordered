@@ -1,0 +1,1 @@
+Release\bmp\1.bmp

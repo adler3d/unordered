@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{aa6be04d-f596-45fb-82cb-5333cd0ecbf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{1d7a49b6-df89-4130-8bfb-fe3c22dc5c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{44bfcf47-3a0d-4df9-9224-59accbdcf6b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main_2013_04_10.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main.inl">
+      <Filter>Include</Filter>
+    </None>
+    <None Include="YedSaver_TConMachine_GP_Bots.inl">
+      <Filter>Include</Filter>
+    </None>
+    <None Include="GUI_Panel.inl">
+      <Filter>Include</Filter>
+    </None>
+    <None Include="QapTypeSelector.inl">
+      <Filter>Include</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

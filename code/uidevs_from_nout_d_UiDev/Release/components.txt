@@ -1,0 +1,44 @@
+auto p=cbrft("TBookPageWithComponents")
+p.items.back().caption="MegaScript"
+p.items.back().script=self.editor.buffer
+p.items.back().enabled=1
+book.pages[0].get()
+
+p.items.back().script=""
+
+auto p=cbrft("TBookPageWithComponents")
+auto cr=p.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr=p.component.rect
+pcr.rect_color=cr.color
+auto p2=cbrft("TBookPageWithComponents")
+auto cr2=p2.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr2=p2.component.rect
+pcr2.rect_color=cr2.color
+auto p3=cbrft("TBookPageWithComponents")
+auto cr3=p3.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr3=p3.component.rect
+pcr3.rect_color=cr3.color
+auto p4=cbrft("TBookPageWithComponents")
+auto cr4=p4.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr4=p4.component.rect
+pcr4.rect_color=cr4.color
+auto p5=cbrft("TBookPageWithComponents")
+auto cr5=p5.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr5=p5.component.rect
+pcr5.rect_color=cr5.color
+auto p6=cbrft("TBookPageWithComponents")
+auto cr6=p6.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr6=p6.component.rect
+pcr6.rect_color=cr6.color
+auto p7=cbrft("TBookPageWithComponents")
+auto cr7=p7.books.books[2].book.pages.front().get{TBookPageWithColoredRect}()
+auto pcr7=p7.component.rect
+pcr7.rect_color=cr7.color
+
+IBookPage
+auto p=cbrft("TBookPageWithComponents")
+auto b=p.books.books.front().book.pages[0].get{TPageWithBranchLexV03}().editor.buffer
+p.books.books.front().book.pages[2].get().Caption=b
+
+m.selector.Lines[0]
+.front().

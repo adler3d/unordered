@@ -1,0 +1,13 @@
+
+int main()
+{
+  vector<map_frag> frags;
+  frags.at(0,0);
+
+  obj=obj.at(0,0);
+  
+  for(int i=0;i<10;i++)
+  {
+    
+  }
+}

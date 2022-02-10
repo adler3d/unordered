@@ -1,0 +1,12 @@
+abc.cde[][].emplace_back().
+t_foo{
+  t_hard_barckets{t_num num;{go_const("[");go_auto(num);go_const("]");}}
+  t_hard=>i_case{vector<t_hard_barckets> arr;}
+  t_soft=>i_case{}
+  t_item{
+    t_name name;
+    t_template templ;
+    TAutoPtr<i_case> case;
+  }
+  vector<t_item> arr; 
+}

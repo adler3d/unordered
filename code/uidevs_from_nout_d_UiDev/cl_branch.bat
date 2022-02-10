@@ -1,0 +1,1 @@
+cl /c /Z7 /nologo /W1 /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\UiDev.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze-  /bigobj branch_lex_v3.cpp

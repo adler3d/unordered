@@ -1,0 +1,1 @@
+"D:\Adler\My Doc\Programs\VirtualDub-1.9.8\VirtualDub.exe" Release\bmp_pos\1.bmp

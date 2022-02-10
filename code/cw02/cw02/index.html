@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CellWorld 2013_08_11</title>
+    <style>
+    div.bg{
+      background: #ffffff url(background.png) repeat;
+    }
+    .x{
+      box-shadow: 0 0 4px rgba(0,0,0,0.7);
+      border-radius: 16px;
+    }
+    div.emphasize-inset{
+      box-shadow: inset 0 0 7px 4px rgba(255,255,255,0.5);
+      display:none
+    }
+    canvas, img {
+      image-rendering: optimizeSpeed;             /* Older versions of FF*/
+      image-rendering: -moz-crisp-edges;          /* FF 6.0+*/
+      image-rendering: -webkit-optimize-contrast; /* Webkit*/
+                                                  /*  (Safari now, Chrome soon)*/
+      image-rendering: -o-crisp-edges;            /*OS X & Windows Opera (12.02+)*/
+      image-rendering: optimize-contrast;         /* Possible future browsers.*/
+      -ms-interpolation-mode: nearest-neighbor;   /* IE*/
+    }
+    </style>
+    <script type='text/javascript' src="cellworld_core.js"></script>
+<script type='text/javascript'>
+  var RgbaToUint=function(r,g,b,a){var m=1;var tmp=a;tmp*=0x100;tmp+=b;tmp*=0x100;tmp+=g;tmp*=0x100;tmp+=r;return tmp;}
+  function g_func_onload()
+  {
+    var z=8;
+    var img=document.getElementById('img');
+    img.height=z*img.naturalHeight;
+    var w=img.naturalWidth;
+    var h=img.naturalHeight;
+    var canvas=document.getElementById('canvas');
+    canvas.width=w*z;canvas.height=h*z;
+    //canvas.style.width=w*z;canvas.style.height=h*z;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    var data=canvas.getContext('2d').getImageData(0,0,w,h).data;
+    g_field.w=w;g_field.h=h;g_field.arr=[];
+    var f=function(arr,id){return RgbaToUint(arr[id+0],arr[id+1],arr[id+2],arr[id+3]);}
+    for(var i=0;i<data.length;i+=4)g_field.arr.push(f(data,i));//console.log([g_field.arr]);
+    field_draw_to_canvas(g_field);
+    return false;
+  };
+  function field_draw_to_canvas(field)
+  {
+    var canvas=document.getElementById('canvas');
+    var ctx=canvas.getContext("2d");
+    var w=field.w;var h=field.h;var z=8;
+    var imgData=ctx.getImageData(0,0,w*z,h*z);
+    var f=function(data)
+    {
+      var out=[];
+      for(var i in data)
+      {
+        var tmp=safe_UintToRGBA(data[i]);
+        for(var j=0;j<4;j++)out.push(tmp[j]);
+      }
+      return out;
+    }
+    var wd=f(field.arr);
+    var data=imgData.data;
+    var set=function(data,wd,x,y,w,h,dx,dy,z,i){
+      var id=(x*z+dx+(y*z+dy)*w*z)*4+i;
+      data[id]=wd[(x+y*w)*4+i];
+    };
+    for(var y=0;y<h;y++)for(var dy=0;dy<z;dy++)for(var x=0;x<w;x++)for(var dx=0;dx<z;dx++)for(var i=0;i<4;i++){
+      set(data,wd,x,y,w,h,dx,dy,z,i);
+    }
+    ctx.putImageData(imgData,0,0);
+  }
+  function show(id){document.getElementById(id).style="";}
+  function hide(id){document.getElementById(id).style="display:none";}
+  setTimeout("/*show('data');*/step();",512);
+</script>
+  </head>
+  <body>
+    <div class="bg" align="center" id="head"><br>
+      <canvas id="canvas" nestyle="display:none" width="768" height="512"></canvas><br><br>
+    </div>
+    <div align="center">
+      <button onclick="start();">start</button>
+      <button onclick="step();">step</button>
+      <button onclick="stop();">stop</button>
+      <button onclick="gen();">gen</button>
+    </div>
+    <div align="center" id="info"></div>
+    <div style="display:none" align="center"><img id="img" src="source.bmp" style="image-rendering: -moz-crisp-edges;" height="50%" border="1" onload="g_func_onload();"/></div>
+    <hr>
+    <div align="center">
+      (<button onclick="show('data');">show</button>&nbsp; data &nbsp;<button onclick="hide('data');">hide</button>)<br>
+      <textarea style="display:none" rows="50" cols="150" id="data"></textarea>
+    </div>
+    <hr>
+    <div align="center">
+      (<button onclick="show('code');">show</button>&nbsp; code &nbsp;<button onclick="hide('code');">hide</button>)<br>
+      <textarea style="display:none" rows="15" cols="150" id="code">
+//add_rule(0x50,"B\n","X\n");
+if(1){
+add_rule(0x50,"BGX\n","XBG\n");
+add_rule(0x50,"BEX\n","XBE\n");
+add_rule
+(
+  0x20,
+  ".O\n"+
+  "BE\n"+
+  ".X\n"
+  ,
+  ".O\n"+
+  "XB\n"+
+  ".E\n"
+);
+add_rule
+(
+  0x20,
+  ".O\n"+
+  "BG\n"+
+  ".X\n"
+  ,
+  ".O\n"+
+  "XB\n"+
+  ".G\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  "XG\n"+
+  ".O\n"+
+  "GY\n"
+  ,
+  ".X\n"+
+  "GB\n"+
+  ".O\n"+
+  "GY\n"
+);
+add_rule
+(
+  0x50,
+  ".B\n"+
+  "XE\n"+
+  ".O\n"+
+  "EY\n"
+  ,
+  ".X\n"+
+  "EB\n"+
+  ".O\n"+
+  "EY\n"
+); 
+add_rule
+(
+  0x10,
+  "BGX\n"+
+  ".O.\n"+
+  ".YG\n"
+  ,
+  "XBG\n"+
+  ".O.\n"+
+  ".YG\n"
+);
+add_rule
+(
+  0x10,
+  "BEX\n"+
+  ".O.\n"+
+  ".YE\n"
+  ,
+  "XBE\n"+
+  ".O.\n"+
+  ".YE\n"
+);
+add_rule(0x1a,"OGYOE","OEYOE");
+add_rule(0x1a,"OEYOG","OGYOG");
+add_rule(0x1d,"GOEYO","EOEYO");
+add_rule(0x1d,"EOGYO","GOGYO");
+add_rule(0x2a,"GOGYOE","EOEYOE");
+add_rule(0x2a,"EOEYOG","GOGYOG");
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "GOBBOX\n"
+  ,
+  "B.....\n"+
+  "GOBBOX\n"
+);
+add_rule
+(
+  0x49,
+  "B.....\n"+
+  "EOBBOX\n"
+  ,
+  "B.....\n"+
+  "EOBBOX\n"
+);
+var add_full_sync=function(A,B)
+{
+  var f=function(str,from,to){return str.split(from).join(to);};
+  var g=function(s){var str=s;str=f(str,'1',A);str=f(str,'2',B);return str;};
+  var add=function(level,from,to){
+    var stra=g(from);
+    var strb=g(to);
+    add_rule(level,stra,strb);
+  };
+  add
+  (
+    0x30,
+    ".....B\n"+
+    "B....2\n"+
+    "1OBBOX\n"
+    ,
+    ".....X\n"+
+    "B....B\n"+
+    "1OBBO2\n"
+  );
+};
+add_full_sync('E','E');
+add_full_sync('E','G');
+add_full_sync('G','E');
+add_full_sync('G','G');}
+      </textarea>
+    </div>
+    <hr>
+  </body>
+</html>

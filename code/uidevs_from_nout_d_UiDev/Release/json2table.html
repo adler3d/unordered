@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      ##TIME##
+    </title>
+    <script type="text/javascript" src="google/jsapi.js"></script>
+    <script type="text/javascript">
+      //google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script src="google/a" type="text/javascript"></script>
+    <link href="google/uientableen.css" type="text/css" rel="stylesheet">
+    <script src="google/formatendefaultenuientableen.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function getDataTable()
+      {
+        var arr=[
+##TARGET##
+        ];
+        var content=document.getElementById('me_text').value;
+        content=content.toString();
+        var tmp_arr=content.split('\n');
+        var visualization;
+        var dataTable = google.visualization.arrayToDataTable(arr);
+        return dataTable;
+      }
+      function foo()
+      {
+        drawVisualization();
+      }
+      function drawVisualization()
+      {
+        var visualization;
+        var dataTable=getDataTable();
+        var table1 = new google.visualization.Table(document.getElementById('table'));
+        table1.draw(dataTable, null);
+      }
+    </script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;" onload="foo()">
+    <form style="display:none"enctype="multipart/form-data" method="post" action="javascript:(foo())">
+      <textarea id="me_text" name="me_text" cols="100" rows="5"></textarea>
+      <div><input type="submit"/></div>
+    </form>
+    <br />
+    <div id="table"></div>
+</body>
+</html>

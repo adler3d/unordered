@@ -1,0 +1,22 @@
+# Exported from 3D Builder
+
+newmtl White_0
+Kd 1.000000 1.000000 1.000000
+
+newmtl Green_0_0
+Kd 0.129412 0.733333 0.298039
+
+newmtl Object_10
+Kd 0.243137254902 0.278431372549 0.7960784313725
+
+newmtl white
+Kd 1.000000 1.000000 1.000000
+
+newmtl obj7
+Kd 0.7098039215686 0.901960784314 0.1137254901961
+
+newmtl obj8
+Kd 1 1 0
+
+newmtl red
+Kd 1 0 0

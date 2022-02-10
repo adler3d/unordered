@@ -1,0 +1,11 @@
+auto c=cbrft("TBookPageWithComponents")
+auto arr_old=c.component.arr
+auto arr=arr_old.back().arr
+arr.emplace_back()
+arr.back().rect.w=64
+arr.back().rect.h=64
+arr.clear()
+c.component.rect.fixed=1
+c.component.enabled=1
+self.editor.fn="blv03.txt"
+c.component.script="for(int i=0;i<10;i++){auto x=i;x*=32;qDev.DrawQuad(x,0,16,16);}"

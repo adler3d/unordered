@@ -1,0 +1,14 @@
+call "U.bat" caption_finder.cpp
+call "U.bat" MsgBox.cpp
+call "U.bat" branch_lex_v3.cpp
+call "U.bat" drag_rects.cpp
+call "U.bat" dungeon_server.cpp
+call "U.bat" gabob.cpp
+call "U.bat" GameAndEasyScript.cpp
+call "U.bat" last_hope_loader.cpp
+call "U.bat" PageWithHiddenBooks.cpp
+call "U.bat" PageWithPerf.cpp
+call "U.bat" QapPublicUberXImpl.cpp
+call "U.bat" simple_rect_test.cpp
+call "U.bat" TD3DGameBox.cpp
+call "U.bat" t_components.cpp

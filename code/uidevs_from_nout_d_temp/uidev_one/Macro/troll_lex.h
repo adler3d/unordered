@@ -1,0 +1,21713 @@
+class t_inl_file
+{
+public:
+  class i_class_stat;
+  class t_access_mod_class_stat;
+  class t_fv_class_stat;
+  class t_typedef_class_stat;
+  class t_dtor_class_stat;
+  class t_ctor_class_stat;
+  class t_oper_cast_class_stat;
+  class t_common_oper_class_stat;
+  class t_namespace_class_stat;
+  class t_template_class_stat;
+  class t_enum_class_stat;
+  class t_using_class_stat;
+  class t_pragma_class_stat;
+  class t_include_class_stat;
+  class t_preproc_if_class_stat;
+  class t_preproc_else_class_stat;
+  class t_preproc_endif_class_stat;
+  class t_define_class_stat;
+  class t_undef_class_stat;
+  class t_sep_class_stat;
+  class t_null_class_stat;
+  class t_class_class_stat;
+  class i_class_stat_visitor
+  {
+  public:
+    typedef t_inl_file::i_class_stat i_class_stat;
+  public:
+    virtual void Do(t_access_mod_class_stat*p)=0;
+    virtual void Do(t_fv_class_stat*p)=0;
+    virtual void Do(t_typedef_class_stat*p)=0;
+    virtual void Do(t_dtor_class_stat*p)=0;
+    virtual void Do(t_ctor_class_stat*p)=0;
+    virtual void Do(t_oper_cast_class_stat*p)=0;
+    virtual void Do(t_common_oper_class_stat*p)=0;
+    virtual void Do(t_namespace_class_stat*p)=0;
+    virtual void Do(t_template_class_stat*p)=0;
+    virtual void Do(t_enum_class_stat*p)=0;
+    virtual void Do(t_using_class_stat*p)=0;
+    virtual void Do(t_pragma_class_stat*p)=0;
+    virtual void Do(t_include_class_stat*p)=0;
+    virtual void Do(t_preproc_if_class_stat*p)=0;
+    virtual void Do(t_preproc_else_class_stat*p)=0;
+    virtual void Do(t_preproc_endif_class_stat*p)=0;
+    virtual void Do(t_define_class_stat*p)=0;
+    virtual void Do(t_undef_class_stat*p)=0;
+    virtual void Do(t_sep_class_stat*p)=0;
+    virtual void Do(t_null_class_stat*p)=0;
+    virtual void Do(t_class_class_stat*p)=0;
+  public:
+    typedef t_inl_file::t_access_mod_class_stat t_access_mod_class_stat;
+    typedef t_inl_file::t_fv_class_stat t_fv_class_stat;
+    typedef t_inl_file::t_typedef_class_stat t_typedef_class_stat;
+    typedef t_inl_file::t_dtor_class_stat t_dtor_class_stat;
+    typedef t_inl_file::t_ctor_class_stat t_ctor_class_stat;
+    typedef t_inl_file::t_oper_cast_class_stat t_oper_cast_class_stat;
+    typedef t_inl_file::t_common_oper_class_stat t_common_oper_class_stat;
+    typedef t_inl_file::t_namespace_class_stat t_namespace_class_stat;
+    typedef t_inl_file::t_template_class_stat t_template_class_stat;
+    typedef t_inl_file::t_enum_class_stat t_enum_class_stat;
+    typedef t_inl_file::t_using_class_stat t_using_class_stat;
+    typedef t_inl_file::t_pragma_class_stat t_pragma_class_stat;
+    typedef t_inl_file::t_include_class_stat t_include_class_stat;
+    typedef t_inl_file::t_preproc_if_class_stat t_preproc_if_class_stat;
+    typedef t_inl_file::t_preproc_else_class_stat t_preproc_else_class_stat;
+    typedef t_inl_file::t_preproc_endif_class_stat t_preproc_endif_class_stat;
+    typedef t_inl_file::t_define_class_stat t_define_class_stat;
+    typedef t_inl_file::t_undef_class_stat t_undef_class_stat;
+    typedef t_inl_file::t_sep_class_stat t_sep_class_stat;
+    typedef t_inl_file::t_null_class_stat t_null_class_stat;
+    typedef t_inl_file::t_class_class_stat t_class_class_stat;
+  public:
+    template<class TYPE,class Visitor>
+    struct Is:public Visitor
+    {
+      TYPE*ptr;
+      Is():ptr(nullptr) {}
+public:
+      template<class U>static TYPE*get(U*p)
+      {
+        return nullptr;
+      }
+      template<>static TYPE*get<TYPE>(TYPE*p)
+      {
+        return p;
+      }
+public:
+      void Do(t_access_mod_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_fv_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_typedef_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_dtor_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_ctor_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_oper_cast_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_common_oper_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_namespace_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_template_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_enum_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_using_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_pragma_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_include_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_preproc_if_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_preproc_else_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_preproc_endif_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_define_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_undef_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_sep_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_null_class_stat*p)
+      {
+        ptr=get(p);
+      } void Do(t_class_class_stat*p)
+      {
+        ptr=get(p);
+      }
+    };
+    template<class TYPE>
+    static TYPE*UberCast(i_class_stat*p)
+    {
+      if (!p)return nullptr;
+      Is<TYPE,i_class_stat_visitor> IS;
+      p->Use(IS);
+      return IS.ptr;
+    }
+  };
+public:
+  class i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef i_class_stat SelfClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+      }
+    }
+  public:
+    i_class_stat(const i_class_stat&)=delete;
+    i_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    i_class_stat(i_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(i_class_stat&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="i_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "i_class_stat";
+      }
+    };
+  public:
+  public:
+    typedef i_class_stat_visitor i_visitor;
+    virtual void Use(i_visitor&A)
+    {
+      QapDebugMsg("no way.");/*A.Do(this);*/
+    }
+  public:
+    virtual bool go(i_dev&dev)
+    {
+      QapDebugMsg("no way.");
+      return false;
+    };
+    struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+    {
+      typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+      bool load()
+      {
+        go_for<t_access_mod_class_stat>();
+        go_for<t_fv_class_stat>();
+        go_for<t_typedef_class_stat>();
+        go_for<t_dtor_class_stat>();
+        go_for<t_ctor_class_stat>();
+        go_for<t_oper_cast_class_stat>();
+        go_for<t_common_oper_class_stat>();
+        go_for<t_namespace_class_stat>();
+        go_for<t_template_class_stat>();
+        go_for<t_enum_class_stat>();
+        go_for<t_using_class_stat>();
+        go_for<t_pragma_class_stat>();
+        go_for<t_include_class_stat>();
+        go_for<t_preproc_if_class_stat>();
+        go_for<t_preproc_else_class_stat>();
+        go_for<t_preproc_endif_class_stat>();
+        go_for<t_define_class_stat>();
+        go_for<t_undef_class_stat>();
+        go_for<t_sep_class_stat>();
+        go_for<t_null_class_stat>();
+        go_for<t_class_class_stat>();
+        (void)count;
+        (void)first_id;
+        (void)out_arr;
+        (void)this;
+        main();
+        return scope.ok;
+      }
+      static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        vector<t_out_rec> out_arr;
+        static int out_arr_size=0;
+        out_arr.reserve(out_arr_size);
+        t_fallback scope(dev,__FUNCTION__);
+        int count=0;
+        int first_id=-1;
+        auto&Env=dev.getEnv();
+        static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+        t_poly_tool::go_poly<SelfClass> solver_impl=
+        {
+          out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+        };
+        t_poly_impl&solver=(t_poly_impl&)solver_impl;
+        solver.load();
+        out_arr_size=out_arr.size();
+        return scope.ok;
+      }
+      static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        bool&ok=scope.ok;
+        if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+          {
+            return false;
+          }
+        if (!ref)return false;
+        QapAssert(ref);
+        auto*p=ref.get();
+        ok=p->go(dev);
+        return ok;
+      }
+    };
+  };
+public:
+  class i_expr;
+  class t_call_expr;
+  class t_block_expr;
+  class t_bool_expr;
+  class t_string_expr;
+  class t_char_expr;
+  class t_num_expr;
+  class t_real_expr;
+  class t_nullptr_expr;
+  class t_or_expr;
+  class t_hex_expr;
+  class t_var_expr;
+  class i_expr_visitor
+  {
+  public:
+    typedef t_inl_file::i_expr i_expr;
+  public:
+    virtual void Do(t_call_expr*p)=0;
+    virtual void Do(t_block_expr*p)=0;
+    virtual void Do(t_bool_expr*p)=0;
+    virtual void Do(t_string_expr*p)=0;
+    virtual void Do(t_char_expr*p)=0;
+    virtual void Do(t_num_expr*p)=0;
+    virtual void Do(t_real_expr*p)=0;
+    virtual void Do(t_nullptr_expr*p)=0;
+    virtual void Do(t_or_expr*p)=0;
+    virtual void Do(t_hex_expr*p)=0;
+    virtual void Do(t_var_expr*p)=0;
+  public:
+    typedef t_inl_file::t_call_expr t_call_expr;
+    typedef t_inl_file::t_block_expr t_block_expr;
+    typedef t_inl_file::t_bool_expr t_bool_expr;
+    typedef t_inl_file::t_string_expr t_string_expr;
+    typedef t_inl_file::t_char_expr t_char_expr;
+    typedef t_inl_file::t_num_expr t_num_expr;
+    typedef t_inl_file::t_real_expr t_real_expr;
+    typedef t_inl_file::t_nullptr_expr t_nullptr_expr;
+    typedef t_inl_file::t_or_expr t_or_expr;
+    typedef t_inl_file::t_hex_expr t_hex_expr;
+    typedef t_inl_file::t_var_expr t_var_expr;
+  public:
+    template<class TYPE,class Visitor>
+    struct Is:public Visitor
+    {
+      TYPE*ptr;
+      Is():ptr(nullptr) {}
+public:
+      template<class U>static TYPE*get(U*p)
+      {
+        return nullptr;
+      }
+      template<>static TYPE*get<TYPE>(TYPE*p)
+      {
+        return p;
+      }
+public:
+      void Do(t_call_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_block_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_bool_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_string_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_char_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_num_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_real_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_nullptr_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_or_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_hex_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_var_expr*p)
+      {
+        ptr=get(p);
+      }
+    };
+    template<class TYPE>
+    static TYPE*UberCast(i_expr*p)
+    {
+      if (!p)return nullptr;
+      Is<TYPE,i_expr_visitor> IS;
+      p->Use(IS);
+      return IS.ptr;
+    }
+  };
+public:
+  class i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef i_expr SelfClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+      }
+    }
+  public:
+    i_expr(const i_expr&)=delete;
+    i_expr()
+    {
+      DoReset();
+    };
+  public:
+    i_expr(i_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(i_expr&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="i_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "i_expr";
+      }
+    };
+  public:
+  public:
+    typedef i_expr_visitor i_visitor;
+    virtual void Use(i_visitor&A)
+    {
+      QapDebugMsg("no way.");/*A.Do(this);*/
+    }
+  public:
+    virtual bool go(i_dev&dev)
+    {
+      QapDebugMsg("no way.");
+      return false;
+    };
+    struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+    {
+      typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+      bool load()
+      {
+        go_for<t_call_expr>();
+        go_for<t_block_expr>();
+        go_for<t_bool_expr>();
+        go_for<t_string_expr>();
+        go_for<t_char_expr>();
+        go_for<t_num_expr>();
+        go_for<t_real_expr>();
+        go_for<t_nullptr_expr>();
+        go_for<t_or_expr>();
+        go_for<t_hex_expr>();
+        go_for<t_var_expr>();
+        (void)count;
+        (void)first_id;
+        (void)out_arr;
+        (void)this;
+        main();
+        return scope.ok;
+      }
+      static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        vector<t_out_rec> out_arr;
+        static int out_arr_size=0;
+        out_arr.reserve(out_arr_size);
+        t_fallback scope(dev,__FUNCTION__);
+        int count=0;
+        int first_id=-1;
+        auto&Env=dev.getEnv();
+        static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+        t_poly_tool::go_poly<SelfClass> solver_impl=
+        {
+          out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+        };
+        t_poly_impl&solver=(t_poly_impl&)solver_impl;
+        solver.load();
+        out_arr_size=out_arr.size();
+        return scope.ok;
+      }
+      static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        bool&ok=scope.ok;
+        if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+          {
+            return false;
+          }
+        if (!ref)return false;
+        QapAssert(ref);
+        auto*p=ref.get();
+        ok=p->go(dev);
+        return ok;
+      }
+    };
+  };
+public:
+  class i_func_body;
+  class t_zero_func_body;
+  class t_null_func_body;
+  class t_delete_func_body;
+  class t_impl_func_body;
+  class i_func_body_visitor
+  {
+  public:
+    typedef t_inl_file::i_func_body i_func_body;
+  public:
+    virtual void Do(t_zero_func_body*p)=0;
+    virtual void Do(t_null_func_body*p)=0;
+    virtual void Do(t_delete_func_body*p)=0;
+    virtual void Do(t_impl_func_body*p)=0;
+  public:
+    typedef t_inl_file::t_zero_func_body t_zero_func_body;
+    typedef t_inl_file::t_null_func_body t_null_func_body;
+    typedef t_inl_file::t_delete_func_body t_delete_func_body;
+    typedef t_inl_file::t_impl_func_body t_impl_func_body;
+  public:
+    template<class TYPE,class Visitor>
+    struct Is:public Visitor
+    {
+      TYPE*ptr;
+      Is():ptr(nullptr) {}
+public:
+      template<class U>static TYPE*get(U*p)
+      {
+        return nullptr;
+      }
+      template<>static TYPE*get<TYPE>(TYPE*p)
+      {
+        return p;
+      }
+public:
+      void Do(t_zero_func_body*p)
+      {
+        ptr=get(p);
+      } void Do(t_null_func_body*p)
+      {
+        ptr=get(p);
+      } void Do(t_delete_func_body*p)
+      {
+        ptr=get(p);
+      } void Do(t_impl_func_body*p)
+      {
+        ptr=get(p);
+      }
+    };
+    template<class TYPE>
+    static TYPE*UberCast(i_func_body*p)
+    {
+      if (!p)return nullptr;
+      Is<TYPE,i_func_body_visitor> IS;
+      p->Use(IS);
+      return IS.ptr;
+    }
+  };
+public:
+  class i_func_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef i_func_body SelfClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+      }
+    }
+  public:
+    i_func_body(const i_func_body&)=delete;
+    i_func_body()
+    {
+      DoReset();
+    };
+  public:
+    i_func_body(i_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(i_func_body&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="i_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "i_func_body";
+      }
+    };
+  public:
+  public:
+    typedef i_func_body_visitor i_visitor;
+    virtual void Use(i_visitor&A)
+    {
+      QapDebugMsg("no way.");/*A.Do(this);*/
+    }
+  public:
+    virtual bool go(i_dev&dev)
+    {
+      QapDebugMsg("no way.");
+      return false;
+    };
+    struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+    {
+      typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+      bool load()
+      {
+        go_for<t_zero_func_body>();
+        go_for<t_null_func_body>();
+        go_for<t_delete_func_body>();
+        go_for<t_impl_func_body>();
+        (void)count;
+        (void)first_id;
+        (void)out_arr;
+        (void)this;
+        main();
+        return scope.ok;
+      }
+      static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        vector<t_out_rec> out_arr;
+        static int out_arr_size=0;
+        out_arr.reserve(out_arr_size);
+        t_fallback scope(dev,__FUNCTION__);
+        int count=0;
+        int first_id=-1;
+        auto&Env=dev.getEnv();
+        static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+        t_poly_tool::go_poly<SelfClass> solver_impl=
+        {
+          out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+        };
+        t_poly_impl&solver=(t_poly_impl&)solver_impl;
+        solver.load();
+        out_arr_size=out_arr.size();
+        return scope.ok;
+      }
+      static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        bool&ok=scope.ok;
+        if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+          {
+            return false;
+          }
+        if (!ref)return false;
+        QapAssert(ref);
+        auto*p=ref.get();
+        ok=p->go(dev);
+        return ok;
+      }
+    };
+  };
+public:
+  class i_tmpl_expr;
+  class t_call_tmpl_expr;
+  class t_block_tmpl_expr;
+  class t_bool_tmpl_expr;
+  class t_string_tmpl_expr;
+  class t_char_tmpl_expr;
+  class t_num_tmpl_expr;
+  class t_real_tmpl_expr;
+  class t_nullptr_tmpl_expr;
+  class t_or_tmpl_expr;
+  class t_hex_tmpl_expr;
+  class t_var_tmpl_expr;
+  class i_tmpl_expr_visitor
+  {
+  public:
+    typedef t_inl_file::i_tmpl_expr i_tmpl_expr;
+  public:
+    virtual void Do(t_call_tmpl_expr*p)=0;
+    virtual void Do(t_block_tmpl_expr*p)=0;
+    virtual void Do(t_bool_tmpl_expr*p)=0;
+    virtual void Do(t_string_tmpl_expr*p)=0;
+    virtual void Do(t_char_tmpl_expr*p)=0;
+    virtual void Do(t_num_tmpl_expr*p)=0;
+    virtual void Do(t_real_tmpl_expr*p)=0;
+    virtual void Do(t_nullptr_tmpl_expr*p)=0;
+    virtual void Do(t_or_tmpl_expr*p)=0;
+    virtual void Do(t_hex_tmpl_expr*p)=0;
+    virtual void Do(t_var_tmpl_expr*p)=0;
+  public:
+    typedef t_inl_file::t_call_tmpl_expr t_call_tmpl_expr;
+    typedef t_inl_file::t_block_tmpl_expr t_block_tmpl_expr;
+    typedef t_inl_file::t_bool_tmpl_expr t_bool_tmpl_expr;
+    typedef t_inl_file::t_string_tmpl_expr t_string_tmpl_expr;
+    typedef t_inl_file::t_char_tmpl_expr t_char_tmpl_expr;
+    typedef t_inl_file::t_num_tmpl_expr t_num_tmpl_expr;
+    typedef t_inl_file::t_real_tmpl_expr t_real_tmpl_expr;
+    typedef t_inl_file::t_nullptr_tmpl_expr t_nullptr_tmpl_expr;
+    typedef t_inl_file::t_or_tmpl_expr t_or_tmpl_expr;
+    typedef t_inl_file::t_hex_tmpl_expr t_hex_tmpl_expr;
+    typedef t_inl_file::t_var_tmpl_expr t_var_tmpl_expr;
+  public:
+    template<class TYPE,class Visitor>
+    struct Is:public Visitor
+    {
+      TYPE*ptr;
+      Is():ptr(nullptr) {}
+public:
+      template<class U>static TYPE*get(U*p)
+      {
+        return nullptr;
+      }
+      template<>static TYPE*get<TYPE>(TYPE*p)
+      {
+        return p;
+      }
+public:
+      void Do(t_call_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_block_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_bool_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_string_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_char_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_num_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_real_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_nullptr_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_or_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_hex_tmpl_expr*p)
+      {
+        ptr=get(p);
+      } void Do(t_var_tmpl_expr*p)
+      {
+        ptr=get(p);
+      }
+    };
+    template<class TYPE>
+    static TYPE*UberCast(i_tmpl_expr*p)
+    {
+      if (!p)return nullptr;
+      Is<TYPE,i_tmpl_expr_visitor> IS;
+      p->Use(IS);
+      return IS.ptr;
+    }
+  };
+public:
+  class i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef i_tmpl_expr SelfClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+      }
+    }
+  public:
+    i_tmpl_expr(const i_tmpl_expr&)=delete;
+    i_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    i_tmpl_expr(i_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(i_tmpl_expr&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="i_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "i_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    typedef i_tmpl_expr_visitor i_visitor;
+    virtual void Use(i_visitor&A)
+    {
+      QapDebugMsg("no way.");/*A.Do(this);*/
+    }
+  public:
+    virtual bool go(i_dev&dev)
+    {
+      QapDebugMsg("no way.");
+      return false;
+    };
+    struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+    {
+      typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+      bool load()
+      {
+        go_for<t_call_tmpl_expr>();
+        go_for<t_block_tmpl_expr>();
+        go_for<t_bool_tmpl_expr>();
+        go_for<t_string_tmpl_expr>();
+        go_for<t_char_tmpl_expr>();
+        go_for<t_num_tmpl_expr>();
+        go_for<t_real_tmpl_expr>();
+        go_for<t_nullptr_tmpl_expr>();
+        go_for<t_or_tmpl_expr>();
+        go_for<t_hex_tmpl_expr>();
+        go_for<t_var_tmpl_expr>();
+        (void)count;
+        (void)first_id;
+        (void)out_arr;
+        (void)this;
+        main();
+        return scope.ok;
+      }
+      static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        vector<t_out_rec> out_arr;
+        static int out_arr_size=0;
+        out_arr.reserve(out_arr_size);
+        t_fallback scope(dev,__FUNCTION__);
+        int count=0;
+        int first_id=-1;
+        auto&Env=dev.getEnv();
+        static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+        t_poly_tool::go_poly<SelfClass> solver_impl=
+        {
+          out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+        };
+        t_poly_impl&solver=(t_poly_impl&)solver_impl;
+        solver.load();
+        out_arr_size=out_arr.size();
+        return scope.ok;
+      }
+      static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        bool&ok=scope.ok;
+        if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+          {
+            return false;
+          }
+        if (!ref)return false;
+        QapAssert(ref);
+        auto*p=ref.get();
+        ok=p->go(dev);
+        return ok;
+      }
+    };
+  };
+public:
+  class i_concrete_param_way;
+  class t_pfunc_concrete_param_way;
+  class t_type_concrete_param_way;
+  class t_expr_concrete_param_way;
+  class i_concrete_param_way_visitor
+  {
+  public:
+    typedef t_inl_file::i_concrete_param_way i_concrete_param_way;
+  public:
+    virtual void Do(t_pfunc_concrete_param_way*p)=0;
+    virtual void Do(t_type_concrete_param_way*p)=0;
+    virtual void Do(t_expr_concrete_param_way*p)=0;
+  public:
+    typedef t_inl_file::t_pfunc_concrete_param_way t_pfunc_concrete_param_way;
+    typedef t_inl_file::t_type_concrete_param_way t_type_concrete_param_way;
+    typedef t_inl_file::t_expr_concrete_param_way t_expr_concrete_param_way;
+  public:
+    template<class TYPE,class Visitor>
+    struct Is:public Visitor
+    {
+      TYPE*ptr;
+      Is():ptr(nullptr) {}
+public:
+      template<class U>static TYPE*get(U*p)
+      {
+        return nullptr;
+      }
+      template<>static TYPE*get<TYPE>(TYPE*p)
+      {
+        return p;
+      }
+public:
+      void Do(t_pfunc_concrete_param_way*p)
+      {
+        ptr=get(p);
+      } void Do(t_type_concrete_param_way*p)
+      {
+        ptr=get(p);
+      } void Do(t_expr_concrete_param_way*p)
+      {
+        ptr=get(p);
+      }
+    };
+    template<class TYPE>
+    static TYPE*UberCast(i_concrete_param_way*p)
+    {
+      if (!p)return nullptr;
+      Is<TYPE,i_concrete_param_way_visitor> IS;
+      p->Use(IS);
+      return IS.ptr;
+    }
+  };
+public:
+  class i_concrete_param_way
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef i_concrete_param_way SelfClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+      }
+    }
+  public:
+    i_concrete_param_way(const i_concrete_param_way&)=delete;
+    i_concrete_param_way()
+    {
+      DoReset();
+    };
+  public:
+    i_concrete_param_way(i_concrete_param_way&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(i_concrete_param_way&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="i_concrete_param_way";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "i_concrete_param_way";
+      }
+    };
+  public:
+  public:
+    typedef i_concrete_param_way_visitor i_visitor;
+    virtual void Use(i_visitor&A)
+    {
+      QapDebugMsg("no way.");/*A.Do(this);*/
+    }
+  public:
+    virtual bool go(i_dev&dev)
+    {
+      QapDebugMsg("no way.");
+      return false;
+    };
+    struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+    {
+      typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+      bool load()
+      {
+        go_for<t_pfunc_concrete_param_way>();
+        go_for<t_type_concrete_param_way>();
+        go_for<t_expr_concrete_param_way>();
+        (void)count;
+        (void)first_id;
+        (void)out_arr;
+        (void)this;
+        main();
+        return scope.ok;
+      }
+      static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        vector<t_out_rec> out_arr;
+        static int out_arr_size=0;
+        out_arr.reserve(out_arr_size);
+        t_fallback scope(dev,__FUNCTION__);
+        int count=0;
+        int first_id=-1;
+        auto&Env=dev.getEnv();
+        static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+        t_poly_tool::go_poly<SelfClass> solver_impl=
+        {
+          out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+        };
+        t_poly_impl&solver=(t_poly_impl&)solver_impl;
+        solver.load();
+        out_arr_size=out_arr.size();
+        return scope.ok;
+      }
+      static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        bool&ok=scope.ok;
+        if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+          {
+            return false;
+          }
+        if (!ref)return false;
+        QapAssert(ref);
+        auto*p=ref.get();
+        ok=p->go(dev);
+        return ok;
+      }
+    };
+  };
+  class t_lev03
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev03 SelfClass;
+  public:
+    string oper;
+    TAutoPtr<i_expr> expr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->oper);
+      detail::FieldTryDoReset(this->expr);
+    }
+  public:
+    t_lev03(const t_lev03&)=delete;
+    t_lev03()
+    {
+      DoReset();
+    };
+  public:
+    t_lev03(t_lev03&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev03&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->oper=std::move(_Right.oper);
+      this->expr=std::move(_Right.expr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev03";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_expr>>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev03";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("&,*,+,-,!,~",","));
+      O+=dev.go_any_str_from_vec(oper,g_static_var_0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev05
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev05 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("*,/,%",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev05 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev03 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev03>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev05 SelfClass;
+  public:
+    t_lev03 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev05(const t_lev05&)=delete;
+    t_lev05()
+    {
+      DoReset();
+    };
+  public:
+    t_lev05(t_lev05&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev05&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev05";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev03>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev05";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev06
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev06 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("+,-",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev06 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev05 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev05>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev06 SelfClass;
+  public:
+    t_lev05 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev06(const t_lev06&)=delete;
+    t_lev06()
+    {
+      DoReset();
+    };
+  public:
+    t_lev06(t_lev06&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev06&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev06";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev05>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev06";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev07
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev07 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("<<,>>",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev07 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev06 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev06>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev07 SelfClass;
+  public:
+    t_lev06 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev07(const t_lev07&)=delete;
+    t_lev07()
+    {
+      DoReset();
+    };
+  public:
+    t_lev07(t_lev07&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev07&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev07";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev06>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev07";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev08
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev08 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("<,<=,>,>=",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev08 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev07 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev07>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev08 SelfClass;
+  public:
+    t_lev07 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev08(const t_lev08&)=delete;
+    t_lev08()
+    {
+      DoReset();
+    };
+  public:
+    t_lev08(t_lev08&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev08&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev08";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev07>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev08";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev09
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev09 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("==,!=",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev09 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev08 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev08>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev09 SelfClass;
+  public:
+    t_lev08 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev09(const t_lev09&)=delete;
+    t_lev09()
+    {
+      DoReset();
+    };
+  public:
+    t_lev09(t_lev09&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev09&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev09";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev08>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev09";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev10
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev10 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("&",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev10 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev09 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev09>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev10 SelfClass;
+  public:
+    t_lev09 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev10(const t_lev10&)=delete;
+    t_lev10()
+    {
+      DoReset();
+    };
+  public:
+    t_lev10(t_lev10&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev10&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev10";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev09>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev10";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev11
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev11 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("^",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev11 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev10 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev10>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev11 SelfClass;
+  public:
+    t_lev10 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev11(const t_lev11&)=delete;
+    t_lev11()
+    {
+      DoReset();
+    };
+  public:
+    t_lev11(t_lev11&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev11&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev11";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev10>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev11";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev12
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev12 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("|",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev12 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev11 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev11>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev12 SelfClass;
+  public:
+    t_lev11 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev12(const t_lev12&)=delete;
+    t_lev12()
+    {
+      DoReset();
+    };
+  public:
+    t_lev12(t_lev12&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev12&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev12";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev11>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev12";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev13
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev13 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("&&",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev13 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev12 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev12>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev13 SelfClass;
+  public:
+    t_lev12 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev13(const t_lev13&)=delete;
+    t_lev13()
+    {
+      DoReset();
+    };
+  public:
+    t_lev13(t_lev13&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev13&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev13";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev12>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev13";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_lev14
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_lev14 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("||",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_lev14 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_lev13 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_lev13>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_lev14 SelfClass;
+  public:
+    t_lev13 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_lev14(const t_lev14&)=delete;
+    t_lev14()
+    {
+      DoReset();
+    };
+  public:
+    t_lev14(t_lev14&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_lev14&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_lev14";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev13>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_lev14";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_expr SelfClass;
+  public:
+    t_lev14 body;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_expr(const t_expr&)=delete;
+    t_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_expr(t_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_expr&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_lev14>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_expr";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev03
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev03 SelfClass;
+  public:
+    string oper;
+    TAutoPtr<i_tmpl_expr> expr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->oper);
+      detail::FieldTryDoReset(this->expr);
+    }
+  public:
+    t_tmpl_lev03(const t_tmpl_lev03&)=delete;
+    t_tmpl_lev03()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev03(t_tmpl_lev03&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev03&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->oper=std::move(_Right.oper);
+      this->expr=std::move(_Right.expr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev03";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_tmpl_expr>>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev03";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("&,*,+,-,!,~",","));
+      O+=dev.go_any_str_from_vec(oper,g_static_var_0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev05
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev05 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("*,/,%",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev05 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev03 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev03>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev05 SelfClass;
+  public:
+    t_tmpl_lev03 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev05(const t_tmpl_lev05&)=delete;
+    t_tmpl_lev05()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev05(t_tmpl_lev05&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev05&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev05";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev03>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev05";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev06
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev06 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("+,-",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev06 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev05 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev05>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev06 SelfClass;
+  public:
+    t_tmpl_lev05 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev06(const t_tmpl_lev06&)=delete;
+    t_tmpl_lev06()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev06(t_tmpl_lev06&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev06&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev06";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev05>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev06";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev09
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev09 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("==,!=",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev09 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev06 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev06>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev09 SelfClass;
+  public:
+    t_tmpl_lev06 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev09(const t_tmpl_lev09&)=delete;
+    t_tmpl_lev09()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev09(t_tmpl_lev09&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev09&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev09";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev06>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev09";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev10
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev10 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("&",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev10 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev09 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev09>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev10 SelfClass;
+  public:
+    t_tmpl_lev09 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev10(const t_tmpl_lev10&)=delete;
+    t_tmpl_lev10()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev10(t_tmpl_lev10&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev10&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev10";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev09>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev10";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev11
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev11 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("^",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev11 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev10 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev10>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev11 SelfClass;
+  public:
+    t_tmpl_lev10 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev11(const t_tmpl_lev11&)=delete;
+    t_tmpl_lev11()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev11(t_tmpl_lev11&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev11&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev11";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev10>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev11";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev12
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev12 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("|",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev12 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev11 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev11>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev12 SelfClass;
+  public:
+    t_tmpl_lev11 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev12(const t_tmpl_lev12&)=delete;
+    t_tmpl_lev12()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev12(t_tmpl_lev12&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev12&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev12";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev11>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev12";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev13
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev13 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("&&",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev13 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev12 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev12>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev13 SelfClass;
+  public:
+    t_tmpl_lev12 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev13(const t_tmpl_lev13&)=delete;
+    t_tmpl_lev13()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev13(t_tmpl_lev13&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev13&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev13";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev12>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev13";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_lev14
+  {
+  public:
+    class t_oper
+    {
+    public:
+      typedef t_tmpl_lev14 OwnerClass;
+    public:
+      typedef t_oper SelfClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_oper(const t_oper&)=delete;
+      t_oper()
+      {
+        DoReset();
+      };
+    public:
+      t_oper(t_oper&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_oper&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_oper";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_oper";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("||",","));
+        D+=dev.go_any_str_from_vec(value,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_tmpl_lev14 OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_oper oper;
+      t_tmpl_lev13 expr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->expr);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->oper=std::move(_Right.oper);
+        this->expr=std::move(_Right.expr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_oper>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_tmpl_lev13>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(oper);
+        if (!ok)return ok;
+        D+=dev.go_auto(expr);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_lev14 SelfClass;
+  public:
+    t_tmpl_lev13 expr;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_tmpl_lev14(const t_tmpl_lev14&)=delete;
+    t_tmpl_lev14()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_lev14(t_tmpl_lev14&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_lev14&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->expr=std::move(_Right.expr);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_lev14";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev13>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_oper>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_lev14";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_expr SelfClass;
+  public:
+    t_tmpl_lev14 body;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_tmpl_expr(const t_tmpl_expr&)=delete;
+    t_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_expr(t_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_expr&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_lev14>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_concrete_param
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_concrete_param SelfClass;
+  public:
+    t_sep sep0;
+    TAutoPtr<i_concrete_param_way> body;
+    t_sep sep1;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->body);
+      detail::FieldTryDoReset(this->sep1);
+    }
+  public:
+    t_concrete_param(const t_concrete_param&)=delete;
+    t_concrete_param()
+    {
+      DoReset();
+    };
+  public:
+    t_concrete_param(t_concrete_param&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_concrete_param&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->body=std::move(_Right.body);
+      this->sep1=std::move(_Right.sep1);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_concrete_param";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_concrete_param_way>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_concrete_param";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_concrete_params
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_concrete_params SelfClass;
+  public:
+    vector<t_concrete_param> arr;
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->arr);
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_concrete_params(const t_concrete_params&)=delete;
+    t_concrete_params()
+    {
+      DoReset();
+    };
+  public:
+    t_concrete_params(t_concrete_params&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_concrete_params&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->arr=std::move(_Right.arr);
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_concrete_params";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<t_concrete_param>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_concrete_params";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("<");
+      if (!ok)return ok;
+      O+=dev.go_vec(arr,",");
+      if (!ok)return ok;
+      M+=dev.go_const(">");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_access_mod
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_access_mod SelfClass;
+  public:
+    string keyword;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->keyword);
+    }
+  public:
+    t_access_mod(const t_access_mod&)=delete;
+    t_access_mod()
+    {
+      DoReset();
+    };
+  public:
+    t_access_mod(t_access_mod&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_access_mod&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->keyword=std::move(_Right.keyword);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_access_mod";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"keyword",int(&(((SelfClass*)nullptr)->*(&SelfClass::keyword))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_access_mod";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("public,protected,private",","));
+      D+=dev.go_any_str_from_vec(keyword,g_static_var_0);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_access_mod_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_access_mod_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_access_mod mod;
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->mod);
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_access_mod_class_stat(const t_access_mod_class_stat&)=delete;
+    t_access_mod_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_access_mod_class_stat(t_access_mod_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_access_mod_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->mod=std::move(_Right.mod);
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_access_mod_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_access_mod>::GetRTTI(RTTI),"mod",int(&(((SelfClass*)nullptr)->*(&SelfClass::mod))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_access_mod_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(mod);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const(":");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_raw_func_body
+  {
+  public:
+    class i_item;
+    class t_sep_item;
+    class t_s_item;
+    class t_c_item;
+    class t_code_item;
+    class t_div_item;
+    class t_block_item;
+    class i_item_visitor
+    {
+    public:
+      typedef t_raw_func_body::i_item i_item;
+    public:
+      virtual void Do(t_sep_item*p)=0;
+      virtual void Do(t_s_item*p)=0;
+      virtual void Do(t_c_item*p)=0;
+      virtual void Do(t_code_item*p)=0;
+      virtual void Do(t_div_item*p)=0;
+      virtual void Do(t_block_item*p)=0;
+    public:
+      typedef t_raw_func_body::t_sep_item t_sep_item;
+      typedef t_raw_func_body::t_s_item t_s_item;
+      typedef t_raw_func_body::t_c_item t_c_item;
+      typedef t_raw_func_body::t_code_item t_code_item;
+      typedef t_raw_func_body::t_div_item t_div_item;
+      typedef t_raw_func_body::t_block_item t_block_item;
+    public:
+      template<class TYPE,class Visitor>
+      struct Is:public Visitor
+      {
+        TYPE*ptr;
+        Is():ptr(nullptr) {}
+public:
+        template<class U>static TYPE*get(U*p)
+        {
+          return nullptr;
+        }
+        template<>static TYPE*get<TYPE>(TYPE*p)
+        {
+          return p;
+        }
+public:
+        void Do(t_sep_item*p)
+        {
+          ptr=get(p);
+        } void Do(t_s_item*p)
+        {
+          ptr=get(p);
+        } void Do(t_c_item*p)
+        {
+          ptr=get(p);
+        } void Do(t_code_item*p)
+        {
+          ptr=get(p);
+        } void Do(t_div_item*p)
+        {
+          ptr=get(p);
+        } void Do(t_block_item*p)
+        {
+          ptr=get(p);
+        }
+      };
+      template<class TYPE>
+      static TYPE*UberCast(i_item*p)
+      {
+        if (!p)return nullptr;
+        Is<TYPE,i_item_visitor> IS;
+        p->Use(IS);
+        return IS.ptr;
+      }
+    };
+  public:
+    class i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef i_item SelfClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+        }
+      }
+    public:
+      i_item(const i_item&)=delete;
+      i_item()
+      {
+        DoReset();
+      };
+    public:
+      i_item(i_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(i_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="i_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "i_item";
+        }
+      };
+    public:
+    public:
+      typedef i_item_visitor i_visitor;
+      virtual void Use(i_visitor&A)
+      {
+        QapDebugMsg("no way.");/*A.Do(this);*/
+      }
+    public:
+      virtual bool go(i_dev&dev)
+      {
+        QapDebugMsg("no way.");
+        return false;
+      };
+      struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        bool load()
+        {
+          go_for<t_sep_item>();
+          go_for<t_s_item>();
+          go_for<t_c_item>();
+          go_for<t_code_item>();
+          go_for<t_div_item>();
+          go_for<t_block_item>();
+          (void)count;
+          (void)first_id;
+          (void)out_arr;
+          (void)this;
+          main();
+          return scope.ok;
+        }
+        static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          vector<t_out_rec> out_arr;
+          static int out_arr_size=0;
+          out_arr.reserve(out_arr_size);
+          t_fallback scope(dev,__FUNCTION__);
+          int count=0;
+          int first_id=-1;
+          auto&Env=dev.getEnv();
+          static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+          t_poly_tool::go_poly<SelfClass> solver_impl=
+          {
+            out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+          };
+          t_poly_impl&solver=(t_poly_impl&)solver_impl;
+          solver.load();
+          out_arr_size=out_arr.size();
+          return scope.ok;
+        }
+        static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          bool&ok=scope.ok;
+          if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+            {
+              return false;
+            }
+          if (!ref)return false;
+          QapAssert(ref);
+          auto*p=ref.get();
+          ok=p->go(dev);
+          return ok;
+        }
+      };
+    };
+    class t_sep_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_sep_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+      t_sep sep;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->sep);
+      }
+    public:
+      t_sep_item(const t_sep_item&)=delete;
+      t_sep_item()
+      {
+        DoReset();
+      };
+    public:
+      t_sep_item(t_sep_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_sep_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+        this->sep=std::move(_Right.sep);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_sep_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_sep_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(sep);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_s_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_s_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_s_item(const t_s_item&)=delete;
+      t_s_item()
+      {
+        DoReset();
+      };
+    public:
+      t_s_item(t_s_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_s_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_s_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_s_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_str<t_str_item::t_impl>(value);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_c_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_c_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_c_item(const t_c_item&)=delete;
+      t_c_item()
+      {
+        DoReset();
+      };
+    public:
+      t_c_item(t_c_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_c_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_c_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_c_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_str<t_char_item::t_impl>(value);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_code_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_code_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+      string code;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->code);
+      }
+    public:
+      t_code_item(const t_code_item&)=delete;
+      t_code_item()
+      {
+        DoReset();
+      };
+    public:
+      t_code_item(t_code_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_code_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+        this->code=std::move(_Right.code);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_code_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"code",int(&(((SelfClass*)nullptr)->*(&SelfClass::code))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_code_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=CharMask::fromStr(gen_dips("AZaz09")+"+-*?<>[](),.:;~!@#$_=%^&\\|");
+        D+=dev.go_any(code,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_div_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_div_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+      }
+    public:
+      t_div_item(const t_div_item&)=delete;
+      t_div_item()
+      {
+        DoReset();
+      };
+    public:
+      t_div_item(t_div_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_div_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_div_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_div_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_const("/");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_block_item:public i_item
+    {
+    public:
+      typedef t_raw_func_body OwnerClass;
+    public:
+      typedef t_block_item SelfClass;
+    public:
+      typedef i_item ParentClass;
+    public:
+      TAutoPtr<t_raw_func_body> body;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_block_item(const t_block_item&)=delete;
+      t_block_item()
+      {
+        DoReset();
+      };
+    public:
+      t_block_item(t_block_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_block_item&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_item(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_item::operator=(std::move(_Right));
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_block_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_raw_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_block_item";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_raw_func_body SelfClass;
+  public:
+    t_sep sep;
+    vector<TAutoPtr<i_item>> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_raw_func_body(const t_raw_func_body&)=delete;
+    t_raw_func_body()
+    {
+      DoReset();
+    };
+  public:
+    t_raw_func_body(t_raw_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_raw_func_body&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_raw_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<TAutoPtr<i_item>>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_sep_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_s_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_c_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_code_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_div_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_block_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_raw_func_body";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("{");
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      M+=dev.go_const("}");
+      if (!ok)return ok;
+      return ok;
+    }
+  public:
+  };
+  class t_func_path
+  {
+  public:
+    class t_item
+    {
+    public:
+      typedef t_func_path OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      string value;
+      t_sep sep0;
+      t_sep sep1;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->value);
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->sep1);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->value=std::move(_Right.value);
+        this->sep0=std::move(_Right.sep0);
+        this->sep1=std::move(_Right.sep1);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_str<t_name>(value);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_const("::");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_func_path SelfClass;
+  public:
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_func_path(const t_func_path&)=delete;
+    t_func_path()
+    {
+      DoReset();
+    };
+  public:
+    t_func_path(t_func_path&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_func_path&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_func_path";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_func_path";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_first_scope
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_first_scope SelfClass;
+  public:
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_first_scope(const t_first_scope&)=delete;
+    t_first_scope()
+    {
+      DoReset();
+    };
+  public:
+    t_first_scope(t_first_scope&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_first_scope&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_first_scope";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_first_scope";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("::");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_const_with_sep
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_const_with_sep SelfClass;
+  public:
+    t_sep sep;
+    string keyword;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->keyword);
+    }
+  public:
+    t_const_with_sep(const t_const_with_sep&)=delete;
+    t_const_with_sep()
+    {
+      DoReset();
+    };
+  public:
+    t_const_with_sep(t_const_with_sep&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_const_with_sep&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+      this->keyword=std::move(_Right.keyword);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_const_with_sep";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"keyword",int(&(((SelfClass*)nullptr)->*(&SelfClass::keyword))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_const_with_sep";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      static const auto g_static_var_1=QapStrFinder::fromArr(split("typename,const,unsigned",","));
+      M+=dev.go_any_str_from_vec(keyword,g_static_var_1);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_keyword
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_keyword SelfClass;
+  public:
+    string keyword;
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->keyword);
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_keyword(const t_keyword&)=delete;
+    t_keyword()
+    {
+      DoReset();
+    };
+  public:
+    t_keyword(t_keyword&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_keyword&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->keyword=std::move(_Right.keyword);
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_keyword";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"keyword",int(&(((SelfClass*)nullptr)->*(&SelfClass::keyword))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_keyword";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("friend,typename,extern,explicit,constexpr,virtual,const,static,inline,unsigned",","));
+      M+=dev.go_any_str_from_vec(keyword,g_static_var_0);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_ptr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_ptr SelfClass;
+  public:
+    TAutoPtr<t_const_with_sep> cv;
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->cv);
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_ptr(const t_ptr&)=delete;
+    t_ptr()
+    {
+      DoReset();
+    };
+  public:
+    t_ptr(t_ptr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_ptr&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->cv=std::move(_Right.cv);
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_ptr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_ptr";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(cv);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const("*");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_ref
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_ref SelfClass;
+  public:
+    TAutoPtr<t_const_with_sep> cv;
+    t_sep sep;
+    string ref;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->cv);
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->ref);
+    }
+  public:
+    t_ref(const t_ref&)=delete;
+    t_ref()
+    {
+      DoReset();
+    };
+  public:
+    t_ref(t_ref&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_ref&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->cv=std::move(_Right.cv);
+      this->sep=std::move(_Right.sep);
+      this->ref=std::move(_Right.ref);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_ref";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"ref",int(&(((SelfClass*)nullptr)->*(&SelfClass::ref))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_ref";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(cv);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      static const auto g_static_var_2=QapStrFinder::fromArr(split("&&,&",","));
+      M+=dev.go_any_str_from_vec(ref,g_static_var_2);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_type_with_sep
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_type_with_sep SelfClass;
+  public:
+    t_sep sep;
+    string name;
+    TAutoPtr<t_concrete_params> concrete_params;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->name);
+      detail::FieldTryDoReset(this->concrete_params);
+    }
+  public:
+    t_type_with_sep(const t_type_with_sep&)=delete;
+    t_type_with_sep()
+    {
+      DoReset();
+    };
+  public:
+    t_type_with_sep(t_type_with_sep&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_type_with_sep&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+      this->name=std::move(_Right.name);
+      this->concrete_params=std::move(_Right.concrete_params);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_type_with_sep";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_concrete_params>>::GetRTTI(RTTI),"concrete_params",int(&(((SelfClass*)nullptr)->*(&SelfClass::concrete_params))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_type_with_sep";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_str<t_name>(name);
+      if (!ok)return ok;
+      O+=dev.go_auto(concrete_params);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_scope_with_sep
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_scope_with_sep SelfClass;
+  public:
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_scope_with_sep(const t_scope_with_sep&)=delete;
+    t_scope_with_sep()
+    {
+      DoReset();
+    };
+  public:
+    t_scope_with_sep(t_scope_with_sep&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_scope_with_sep&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_scope_with_sep";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_scope_with_sep";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const("::");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_scopes
+  {
+  public:
+    class t_item
+    {
+    public:
+      typedef t_scopes OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_scope_with_sep sws;
+      t_type_with_sep body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sws);
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sws=std::move(_Right.sws);
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_scope_with_sep>::GetRTTI(RTTI),"sws",int(&(((SelfClass*)nullptr)->*(&SelfClass::sws))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_type_with_sep>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(sws);
+        if (!ok)return ok;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_scopes SelfClass;
+  public:
+    t_type_with_sep first;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->first);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_scopes(const t_scopes&)=delete;
+    t_scopes()
+    {
+      DoReset();
+    };
+  public:
+    t_scopes(t_scopes&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_scopes&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->first=std::move(_Right.first);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_scopes";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_type_with_sep>::GetRTTI(RTTI),"first",int(&(((SelfClass*)nullptr)->*(&SelfClass::first))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_scopes";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(first);
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_fv_class_stat:public i_class_stat
+  {
+  public:
+    class t_type_expr
+    {
+    public:
+      class i_name_part;
+      class t_raw_name_part;
+      class t_brackets_name_part;
+      class i_name_part_visitor
+      {
+      public:
+        typedef t_type_expr::i_name_part i_name_part;
+      public:
+        virtual void Do(t_raw_name_part*p)=0;
+        virtual void Do(t_brackets_name_part*p)=0;
+      public:
+        typedef t_type_expr::t_raw_name_part t_raw_name_part;
+        typedef t_type_expr::t_brackets_name_part t_brackets_name_part;
+      public:
+        template<class TYPE,class Visitor>
+        struct Is:public Visitor
+        {
+          TYPE*ptr;
+          Is():ptr(nullptr) {}
+public:
+          template<class U>static TYPE*get(U*p)
+          {
+            return nullptr;
+          }
+          template<>static TYPE*get<TYPE>(TYPE*p)
+          {
+            return p;
+          }
+public:
+          void Do(t_raw_name_part*p)
+          {
+            ptr=get(p);
+          } void Do(t_brackets_name_part*p)
+          {
+            ptr=get(p);
+          }
+        };
+        template<class TYPE>
+        static TYPE*UberCast(i_name_part*p)
+        {
+          if (!p)return nullptr;
+          Is<TYPE,i_name_part_visitor> IS;
+          p->Use(IS);
+          return IS.ptr;
+        }
+      };
+    public:
+      class i_name_part
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef i_name_part SelfClass;
+      public:
+      public:
+        void DoReset()
+        {
+          {
+          }
+        }
+      public:
+        i_name_part(const i_name_part&)=delete;
+        i_name_part()
+        {
+          DoReset();
+        };
+      public:
+        i_name_part(i_name_part&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(i_name_part&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="i_name_part";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "i_name_part";
+          }
+        };
+      public:
+      public:
+        typedef i_name_part_visitor i_visitor;
+        virtual void Use(i_visitor&A)
+        {
+          QapDebugMsg("no way.");/*A.Do(this);*/
+        }
+      public:
+        virtual bool go(i_dev&dev)
+        {
+          QapDebugMsg("no way.");
+          return false;
+        };
+        struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          bool load()
+          {
+            go_for<t_raw_name_part>();
+            go_for<t_brackets_name_part>();
+            (void)count;
+            (void)first_id;
+            (void)out_arr;
+            (void)this;
+            main();
+            return scope.ok;
+          }
+          static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            vector<t_out_rec> out_arr;
+            static int out_arr_size=0;
+            out_arr.reserve(out_arr_size);
+            t_fallback scope(dev,__FUNCTION__);
+            int count=0;
+            int first_id=-1;
+            auto&Env=dev.getEnv();
+            static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+            t_poly_tool::go_poly<SelfClass> solver_impl=
+            {
+              out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+            };
+            t_poly_impl&solver=(t_poly_impl&)solver_impl;
+            solver.load();
+            out_arr_size=out_arr.size();
+            return scope.ok;
+          }
+          static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            bool&ok=scope.ok;
+            if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+              {
+                return false;
+              }
+            if (!ref)return false;
+            QapAssert(ref);
+            auto*p=ref.get();
+            ok=p->go(dev);
+            return ok;
+          }
+        };
+      };
+    public:
+      class i_func_param;
+      class t_pfunc_func_param;
+      class t_var_args_func_param;
+      class t_type_func_param;
+      class t_expr_func_param;
+      class i_func_param_visitor
+      {
+      public:
+        typedef t_type_expr::i_func_param i_func_param;
+      public:
+        virtual void Do(t_pfunc_func_param*p)=0;
+        virtual void Do(t_var_args_func_param*p)=0;
+        virtual void Do(t_type_func_param*p)=0;
+        virtual void Do(t_expr_func_param*p)=0;
+      public:
+        typedef t_type_expr::t_pfunc_func_param t_pfunc_func_param;
+        typedef t_type_expr::t_var_args_func_param t_var_args_func_param;
+        typedef t_type_expr::t_type_func_param t_type_func_param;
+        typedef t_type_expr::t_expr_func_param t_expr_func_param;
+      public:
+        template<class TYPE,class Visitor>
+        struct Is:public Visitor
+        {
+          TYPE*ptr;
+          Is():ptr(nullptr) {}
+public:
+          template<class U>static TYPE*get(U*p)
+          {
+            return nullptr;
+          }
+          template<>static TYPE*get<TYPE>(TYPE*p)
+          {
+            return p;
+          }
+public:
+          void Do(t_pfunc_func_param*p)
+          {
+            ptr=get(p);
+          } void Do(t_var_args_func_param*p)
+          {
+            ptr=get(p);
+          } void Do(t_type_func_param*p)
+          {
+            ptr=get(p);
+          } void Do(t_expr_func_param*p)
+          {
+            ptr=get(p);
+          }
+        };
+        template<class TYPE>
+        static TYPE*UberCast(i_func_param*p)
+        {
+          if (!p)return nullptr;
+          Is<TYPE,i_func_param_visitor> IS;
+          p->Use(IS);
+          return IS.ptr;
+        }
+      };
+    public:
+      class i_func_param
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef i_func_param SelfClass;
+      public:
+      public:
+        void DoReset()
+        {
+          {
+          }
+        }
+      public:
+        i_func_param(const i_func_param&)=delete;
+        i_func_param()
+        {
+          DoReset();
+        };
+      public:
+        i_func_param(i_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(i_func_param&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="i_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "i_func_param";
+          }
+        };
+      public:
+      public:
+        typedef i_func_param_visitor i_visitor;
+        virtual void Use(i_visitor&A)
+        {
+          QapDebugMsg("no way.");/*A.Do(this);*/
+        }
+      public:
+        virtual bool go(i_dev&dev)
+        {
+          QapDebugMsg("no way.");
+          return false;
+        };
+        struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          bool load()
+          {
+            go_for<t_pfunc_func_param>();
+            go_for<t_var_args_func_param>();
+            go_for<t_type_func_param>();
+            go_for<t_expr_func_param>();
+            (void)count;
+            (void)first_id;
+            (void)out_arr;
+            (void)this;
+            main();
+            return scope.ok;
+          }
+          static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            vector<t_out_rec> out_arr;
+            static int out_arr_size=0;
+            out_arr.reserve(out_arr_size);
+            t_fallback scope(dev,__FUNCTION__);
+            int count=0;
+            int first_id=-1;
+            auto&Env=dev.getEnv();
+            static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+            t_poly_tool::go_poly<SelfClass> solver_impl=
+            {
+              out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+            };
+            t_poly_impl&solver=(t_poly_impl&)solver_impl;
+            solver.load();
+            out_arr_size=out_arr.size();
+            return scope.ok;
+          }
+          static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            bool&ok=scope.ok;
+            if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+              {
+                return false;
+              }
+            if (!ref)return false;
+            QapAssert(ref);
+            auto*p=ref.get();
+            ok=p->go(dev);
+            return ok;
+          }
+        };
+      };
+    public:
+      class i_func_param_value;
+      class t_expr_func_param_value;
+      class i_func_param_value_visitor
+      {
+      public:
+        typedef t_type_expr::i_func_param_value i_func_param_value;
+      public:
+        virtual void Do(t_expr_func_param_value*p)=0;
+      public:
+        typedef t_type_expr::t_expr_func_param_value t_expr_func_param_value;
+      public:
+        template<class TYPE,class Visitor>
+        struct Is:public Visitor
+        {
+          TYPE*ptr;
+          Is():ptr(nullptr) {}
+public:
+          template<class U>static TYPE*get(U*p)
+          {
+            return nullptr;
+          }
+          template<>static TYPE*get<TYPE>(TYPE*p)
+          {
+            return p;
+          }
+public:
+          void Do(t_expr_func_param_value*p)
+          {
+            ptr=get(p);
+          }
+        };
+        template<class TYPE>
+        static TYPE*UberCast(i_func_param_value*p)
+        {
+          if (!p)return nullptr;
+          Is<TYPE,i_func_param_value_visitor> IS;
+          p->Use(IS);
+          return IS.ptr;
+        }
+      };
+    public:
+      class i_func_param_value
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef i_func_param_value SelfClass;
+      public:
+      public:
+        void DoReset()
+        {
+          {
+          }
+        }
+      public:
+        i_func_param_value(const i_func_param_value&)=delete;
+        i_func_param_value()
+        {
+          DoReset();
+        };
+      public:
+        i_func_param_value(i_func_param_value&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(i_func_param_value&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="i_func_param_value";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "i_func_param_value";
+          }
+        };
+      public:
+      public:
+        typedef i_func_param_value_visitor i_visitor;
+        virtual void Use(i_visitor&A)
+        {
+          QapDebugMsg("no way.");/*A.Do(this);*/
+        }
+      public:
+        virtual bool go(i_dev&dev)
+        {
+          QapDebugMsg("no way.");
+          return false;
+        };
+        struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          bool load()
+          {
+            go_for<t_expr_func_param_value>();
+            (void)count;
+            (void)first_id;
+            (void)out_arr;
+            (void)this;
+            main();
+            return scope.ok;
+          }
+          static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            vector<t_out_rec> out_arr;
+            static int out_arr_size=0;
+            out_arr.reserve(out_arr_size);
+            t_fallback scope(dev,__FUNCTION__);
+            int count=0;
+            int first_id=-1;
+            auto&Env=dev.getEnv();
+            static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+            t_poly_tool::go_poly<SelfClass> solver_impl=
+            {
+              out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+            };
+            t_poly_impl&solver=(t_poly_impl&)solver_impl;
+            solver.load();
+            out_arr_size=out_arr.size();
+            return scope.ok;
+          }
+          static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            bool&ok=scope.ok;
+            if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+              {
+                return false;
+              }
+            if (!ref)return false;
+            QapAssert(ref);
+            auto*p=ref.get();
+            ok=p->go(dev);
+            return ok;
+          }
+        };
+      };
+    public:
+      class i_typeexpr;
+      class t_impl_typeexpr;
+      class t_decl_typeexpr;
+      class i_typeexpr_visitor
+      {
+      public:
+        typedef t_type_expr::i_typeexpr i_typeexpr;
+      public:
+        virtual void Do(t_impl_typeexpr*p)=0;
+        virtual void Do(t_decl_typeexpr*p)=0;
+      public:
+        typedef t_type_expr::t_impl_typeexpr t_impl_typeexpr;
+        typedef t_type_expr::t_decl_typeexpr t_decl_typeexpr;
+      public:
+        template<class TYPE,class Visitor>
+        struct Is:public Visitor
+        {
+          TYPE*ptr;
+          Is():ptr(nullptr) {}
+public:
+          template<class U>static TYPE*get(U*p)
+          {
+            return nullptr;
+          }
+          template<>static TYPE*get<TYPE>(TYPE*p)
+          {
+            return p;
+          }
+public:
+          void Do(t_impl_typeexpr*p)
+          {
+            ptr=get(p);
+          } void Do(t_decl_typeexpr*p)
+          {
+            ptr=get(p);
+          }
+        };
+        template<class TYPE>
+        static TYPE*UberCast(i_typeexpr*p)
+        {
+          if (!p)return nullptr;
+          Is<TYPE,i_typeexpr_visitor> IS;
+          p->Use(IS);
+          return IS.ptr;
+        }
+      };
+    public:
+      class i_typeexpr
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef i_typeexpr SelfClass;
+      public:
+      public:
+        void DoReset()
+        {
+          {
+          }
+        }
+      public:
+        i_typeexpr(const i_typeexpr&)=delete;
+        i_typeexpr()
+        {
+          DoReset();
+        };
+      public:
+        i_typeexpr(i_typeexpr&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(i_typeexpr&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="i_typeexpr";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "i_typeexpr";
+          }
+        };
+      public:
+      public:
+        typedef i_typeexpr_visitor i_visitor;
+        virtual void Use(i_visitor&A)
+        {
+          QapDebugMsg("no way.");/*A.Do(this);*/
+        }
+      public:
+        virtual bool go(i_dev&dev)
+        {
+          QapDebugMsg("no way.");
+          return false;
+        };
+        struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          bool load()
+          {
+            go_for<t_impl_typeexpr>();
+            go_for<t_decl_typeexpr>();
+            (void)count;
+            (void)first_id;
+            (void)out_arr;
+            (void)this;
+            main();
+            return scope.ok;
+          }
+          static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            vector<t_out_rec> out_arr;
+            static int out_arr_size=0;
+            out_arr.reserve(out_arr_size);
+            t_fallback scope(dev,__FUNCTION__);
+            int count=0;
+            int first_id=-1;
+            auto&Env=dev.getEnv();
+            static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+            t_poly_tool::go_poly<SelfClass> solver_impl=
+            {
+              out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+            };
+            t_poly_impl&solver=(t_poly_impl&)solver_impl;
+            solver.load();
+            out_arr_size=out_arr.size();
+            return scope.ok;
+          }
+          static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            bool&ok=scope.ok;
+            if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+              {
+                return false;
+              }
+            if (!ref)return false;
+            QapAssert(ref);
+            auto*p=ref.get();
+            ok=p->go(dev);
+            return ok;
+          }
+        };
+      };
+      class t_type_expr_with_sep_and_cv
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_type_expr_with_sep_and_cv SelfClass;
+      public:
+        vector<t_const_with_sep> cvs;
+        TAutoPtr<t_type_expr> body;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->cvs);
+          detail::FieldTryDoReset(this->body);
+        }
+      public:
+        t_type_expr_with_sep_and_cv(const t_type_expr_with_sep_and_cv&)=delete;
+        t_type_expr_with_sep_and_cv()
+        {
+          DoReset();
+        };
+      public:
+        t_type_expr_with_sep_and_cv(t_type_expr_with_sep_and_cv&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_type_expr_with_sep_and_cv&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->cvs=std::move(_Right.cvs);
+          this->body=std::move(_Right.body);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_type_expr_with_sep_and_cv";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<vector<t_const_with_sep>>::GetRTTI(RTTI),"cvs",int(&(((SelfClass*)nullptr)->*(&SelfClass::cvs))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_type_expr>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_type_expr_with_sep_and_cv";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(cvs);
+          if (!ok)return ok;
+          M+=dev.go_auto(body);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_name_part
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_name_part SelfClass;
+      public:
+        TAutoPtr<i_name_part> body;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->body);
+        }
+      public:
+        t_name_part(const t_name_part&)=delete;
+        t_name_part()
+        {
+          DoReset();
+        };
+      public:
+        t_name_part(t_name_part&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_name_part&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->body=std::move(_Right.body);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_name_part";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<TAutoPtr<i_name_part>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_name_part";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_auto(body);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_arr_body
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_arr_body SelfClass;
+      public:
+        t_sep sep0;
+        t_sep sep1;
+        t_expr expr;
+        t_sep sep2;
+        t_sep sep3;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep0);
+          detail::FieldTryDoReset(this->sep1);
+          detail::FieldTryDoReset(this->expr);
+          detail::FieldTryDoReset(this->sep2);
+          detail::FieldTryDoReset(this->sep3);
+        }
+      public:
+        t_arr_body(const t_arr_body&)=delete;
+        t_arr_body()
+        {
+          DoReset();
+        };
+      public:
+        t_arr_body(t_arr_body&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_arr_body&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep0=std::move(_Right.sep0);
+          this->sep1=std::move(_Right.sep1);
+          this->expr=std::move(_Right.expr);
+          this->sep2=std::move(_Right.sep2);
+          this->sep3=std::move(_Right.sep3);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_arr_body";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep3",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep3))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_arr_body";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(sep0);
+          if (!ok)return ok;
+          M+=dev.go_const("[");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep1);
+          if (!ok)return ok;
+          M+=dev.go_auto(expr);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep2);
+          if (!ok)return ok;
+          M+=dev.go_const("]");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep3);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_raw_name_part:public i_name_part
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_raw_name_part SelfClass;
+      public:
+        typedef i_name_part ParentClass;
+      public:
+        string name;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->name);
+        }
+      public:
+        t_raw_name_part(const t_raw_name_part&)=delete;
+        t_raw_name_part()
+        {
+          DoReset();
+        };
+      public:
+        t_raw_name_part(t_raw_name_part&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_raw_name_part&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_name_part(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_name_part::operator=(std::move(_Right));
+          }
+          this->name=std::move(_Right.name);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_raw_name_part";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_raw_name_part";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_str<t_name>(name);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_brackets_name_part:public i_name_part
+      {
+      public:
+        class i_part;
+        class t_amp_part;
+        class t_star_part;
+        class i_part_visitor
+        {
+        public:
+          typedef t_brackets_name_part::i_part i_part;
+        public:
+          virtual void Do(t_amp_part*p)=0;
+          virtual void Do(t_star_part*p)=0;
+        public:
+          typedef t_brackets_name_part::t_amp_part t_amp_part;
+          typedef t_brackets_name_part::t_star_part t_star_part;
+        public:
+          template<class TYPE,class Visitor>
+          struct Is:public Visitor
+          {
+            TYPE*ptr;
+            Is():ptr(nullptr) {}
+public:
+            template<class U>static TYPE*get(U*p)
+            {
+              return nullptr;
+            }
+            template<>static TYPE*get<TYPE>(TYPE*p)
+            {
+              return p;
+            }
+public:
+            void Do(t_amp_part*p)
+            {
+              ptr=get(p);
+            } void Do(t_star_part*p)
+            {
+              ptr=get(p);
+            }
+          };
+          template<class TYPE>
+          static TYPE*UberCast(i_part*p)
+          {
+            if (!p)return nullptr;
+            Is<TYPE,i_part_visitor> IS;
+            p->Use(IS);
+            return IS.ptr;
+          }
+        };
+      public:
+        class i_part
+        {
+        public:
+          typedef t_brackets_name_part OwnerClass;
+        public:
+          typedef i_part SelfClass;
+        public:
+        public:
+          void DoReset()
+          {
+            {
+            }
+          }
+        public:
+          i_part(const i_part&)=delete;
+          i_part()
+          {
+            DoReset();
+          };
+        public:
+          i_part(i_part&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(i_part&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="i_part";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "i_part";
+            }
+          };
+        public:
+        public:
+          typedef i_part_visitor i_visitor;
+          virtual void Use(i_visitor&A)
+          {
+            QapDebugMsg("no way.");/*A.Do(this);*/
+          }
+        public:
+          virtual bool go(i_dev&dev)
+          {
+            QapDebugMsg("no way.");
+            return false;
+          };
+          struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            bool load()
+            {
+              go_for<t_amp_part>();
+              go_for<t_star_part>();
+              (void)count;
+              (void)first_id;
+              (void)out_arr;
+              (void)this;
+              main();
+              return scope.ok;
+            }
+            static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+              vector<t_out_rec> out_arr;
+              static int out_arr_size=0;
+              out_arr.reserve(out_arr_size);
+              t_fallback scope(dev,__FUNCTION__);
+              int count=0;
+              int first_id=-1;
+              auto&Env=dev.getEnv();
+              static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+              t_poly_tool::go_poly<SelfClass> solver_impl=
+              {
+                out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+              };
+              t_poly_impl&solver=(t_poly_impl&)solver_impl;
+              solver.load();
+              out_arr_size=out_arr.size();
+              return scope.ok;
+            }
+            static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              bool&ok=scope.ok;
+              if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+                {
+                  return false;
+                }
+              if (!ref)return false;
+              QapAssert(ref);
+              auto*p=ref.get();
+              ok=p->go(dev);
+              return ok;
+            }
+          };
+        };
+        class t_amp
+        {
+        public:
+          typedef t_brackets_name_part OwnerClass;
+        public:
+          typedef t_amp SelfClass;
+        public:
+          string body;
+        public:
+          void DoReset()
+          {
+            {
+            }
+            detail::FieldTryDoReset(this->body);
+          }
+        public:
+          t_amp(const t_amp&)=delete;
+          t_amp()
+          {
+            DoReset();
+          };
+        public:
+          t_amp(t_amp&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_amp&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+            this->body=std::move(_Right.body);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_amp";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_amp";
+            }
+          };
+        public:
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            static const auto g_static_var_0=QapStrFinder::fromArr(split("&,&&",","));
+            D+=dev.go_any_str_from_vec(body,g_static_var_0);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_amp_part:public i_part
+        {
+        public:
+          typedef t_brackets_name_part OwnerClass;
+        public:
+          typedef t_amp_part SelfClass;
+        public:
+          typedef i_part ParentClass;
+        public:
+          t_amp body;
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+            detail::FieldTryDoReset(this->body);
+          }
+        public:
+          t_amp_part(const t_amp_part&)=delete;
+          t_amp_part()
+          {
+            DoReset();
+          };
+        public:
+          t_amp_part(t_amp_part&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_amp_part&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_part(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_part::operator=(std::move(_Right));
+            }
+            this->body=std::move(_Right.body);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_amp_part";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<t_amp>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_amp_part";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            D+=dev.go_auto(body);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_star_part:public i_part
+        {
+        public:
+          typedef t_brackets_name_part OwnerClass;
+        public:
+          typedef t_star_part SelfClass;
+        public:
+          typedef i_part ParentClass;
+        public:
+          string stars;
+          TAutoPtr<t_amp> amp;
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+            detail::FieldTryDoReset(this->stars);
+            detail::FieldTryDoReset(this->amp);
+          }
+        public:
+          t_star_part(const t_star_part&)=delete;
+          t_star_part()
+          {
+            DoReset();
+          };
+        public:
+          t_star_part(t_star_part&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_star_part&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_part(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_part::operator=(std::move(_Right));
+            }
+            this->stars=std::move(_Right.stars);
+            this->amp=std::move(_Right.amp);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_star_part";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"stars",int(&(((SelfClass*)nullptr)->*(&SelfClass::stars))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<TAutoPtr<t_amp>>::GetRTTI(RTTI),"amp",int(&(((SelfClass*)nullptr)->*(&SelfClass::amp))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_star_part";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            static const auto g_static_var_0=CharMask::fromStr("*");
+            M+=dev.go_any(stars,g_static_var_0);
+            if (!ok)return ok;
+            O+=dev.go_auto(amp);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+      public:
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_brackets_name_part SelfClass;
+      public:
+        typedef i_name_part ParentClass;
+      public:
+        TAutoPtr<i_part> stamp_part;
+        t_sep sep;
+        TAutoPtr<t_name_part> namepart;
+        TAutoPtr<t_arr_body> arrbody;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->stamp_part);
+          detail::FieldTryDoReset(this->sep);
+          detail::FieldTryDoReset(this->namepart);
+          detail::FieldTryDoReset(this->arrbody);
+        }
+      public:
+        t_brackets_name_part(const t_brackets_name_part&)=delete;
+        t_brackets_name_part()
+        {
+          DoReset();
+        };
+      public:
+        t_brackets_name_part(t_brackets_name_part&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_brackets_name_part&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_name_part(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_name_part::operator=(std::move(_Right));
+          }
+          this->stamp_part=std::move(_Right.stamp_part);
+          this->sep=std::move(_Right.sep);
+          this->namepart=std::move(_Right.namepart);
+          this->arrbody=std::move(_Right.arrbody);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_brackets_name_part";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<TAutoPtr<i_part>>::GetRTTI(RTTI),"stamp_part",int(&(((SelfClass*)nullptr)->*(&SelfClass::stamp_part))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_name_part>>::GetRTTI(RTTI),"namepart",int(&(((SelfClass*)nullptr)->*(&SelfClass::namepart))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_arr_body>>::GetRTTI(RTTI),"arrbody",int(&(((SelfClass*)nullptr)->*(&SelfClass::arrbody))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+              Info->AddNested(Sys$$<t_amp>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_amp_part>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_star_part>::GetRTTI(RTTI));
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_brackets_name_part";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("(");
+          if (!ok)return ok;
+          M+=dev.go_auto(stamp_part);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          O+=dev.go_auto(namepart);
+          if (!ok)return ok;
+          M+=dev.go_const(")");
+          if (!ok)return ok;
+          O+=dev.go_auto(arrbody);
+          if (!ok)return ok;
+          return ok;
+        }
+      public:
+      };
+      class t_func_param_value
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_func_param_value SelfClass;
+      public:
+        t_sep sep;
+        TAutoPtr<i_func_param_value> value;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep);
+          detail::FieldTryDoReset(this->value);
+        }
+      public:
+        t_func_param_value(const t_func_param_value&)=delete;
+        t_func_param_value()
+        {
+          DoReset();
+        };
+      public:
+        t_func_param_value(t_func_param_value&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_func_param_value&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep=std::move(_Right.sep);
+          this->value=std::move(_Right.value);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_func_param_value";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_param_value>>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_func_param_value";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("=");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          M+=dev.go_auto(value);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_func_param
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_func_param SelfClass;
+      public:
+        t_sep sep0;
+        TAutoPtr<i_func_param> body;
+        t_sep sep1;
+        TAutoPtr<t_func_param_value> value;
+        t_sep sep2;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep0);
+          detail::FieldTryDoReset(this->body);
+          detail::FieldTryDoReset(this->sep1);
+          detail::FieldTryDoReset(this->value);
+          detail::FieldTryDoReset(this->sep2);
+        }
+      public:
+        t_func_param(const t_func_param&)=delete;
+        t_func_param()
+        {
+          DoReset();
+        };
+      public:
+        t_func_param(t_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_func_param&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep0=std::move(_Right.sep0);
+          this->body=std::move(_Right.body);
+          this->sep1=std::move(_Right.sep1);
+          this->value=std::move(_Right.value);
+          this->sep2=std::move(_Right.sep2);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_param>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_param_value>>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_func_param";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(sep0);
+          if (!ok)return ok;
+          M+=dev.go_auto(body);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep1);
+          if (!ok)return ok;
+          O+=dev.go_auto(value);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep2);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_func_params
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_func_params SelfClass;
+      public:
+        t_sep sep;
+        vector<t_func_param> arr;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep);
+          detail::FieldTryDoReset(this->arr);
+        }
+      public:
+        t_func_params(const t_func_params&)=delete;
+        t_func_params()
+        {
+          DoReset();
+        };
+      public:
+        t_func_params(t_func_params&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_func_params&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep=std::move(_Right.sep);
+          this->arr=std::move(_Right.arr);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_func_params";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<vector<t_func_param>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_func_params";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          M+=dev.go_const("(");
+          if (!ok)return ok;
+          O+=dev.go_vec(arr,",");
+          if (!ok)return ok;
+          M+=dev.go_const(")");
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_pfunc
+      {
+      public:
+        class t_addr
+        {
+        public:
+          typedef t_pfunc OwnerClass;
+        public:
+          typedef t_addr SelfClass;
+        public:
+          t_type_expr_with_sep_and_cv type;
+        public:
+          void DoReset()
+          {
+            {
+            }
+            detail::FieldTryDoReset(this->type);
+          }
+        public:
+          t_addr(const t_addr&)=delete;
+          t_addr()
+          {
+            DoReset();
+          };
+        public:
+          t_addr(t_addr&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_addr&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+            this->type=std::move(_Right.type);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_addr";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<t_type_expr_with_sep_and_cv>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_addr";
+            }
+          };
+        public:
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            M+=dev.go_auto(type);
+            if (!ok)return ok;
+            M+=dev.go_const("::");
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+      public:
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_pfunc SelfClass;
+      public:
+        t_type_expr_with_sep_and_cv type;
+        t_addr addr;
+        string name;
+        t_func_params params;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->type);
+          detail::FieldTryDoReset(this->addr);
+          detail::FieldTryDoReset(this->name);
+          detail::FieldTryDoReset(this->params);
+        }
+      public:
+        t_pfunc(const t_pfunc&)=delete;
+        t_pfunc()
+        {
+          DoReset();
+        };
+      public:
+        t_pfunc(t_pfunc&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_pfunc&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->type=std::move(_Right.type);
+          this->addr=std::move(_Right.addr);
+          this->name=std::move(_Right.name);
+          this->params=std::move(_Right.params);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_pfunc";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_type_expr_with_sep_and_cv>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_addr>::GetRTTI(RTTI),"addr",int(&(((SelfClass*)nullptr)->*(&SelfClass::addr))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+              Info->AddNested(Sys$$<t_addr>::GetRTTI(RTTI));
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_pfunc";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_auto(type);
+          if (!ok)return ok;
+          M+=dev.go_const("(");
+          if (!ok)return ok;
+          O+=dev.go_auto(addr);
+          if (!ok)return ok;
+          M+=dev.go_const("*");
+          if (!ok)return ok;
+          O+=dev.go_str<t_name>(name);
+          if (!ok)return ok;
+          M+=dev.go_const(")");
+          if (!ok)return ok;
+          M+=dev.go_auto(params);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_pfunc_func_param:public i_func_param
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_pfunc_func_param SelfClass;
+      public:
+        typedef i_func_param ParentClass;
+      public:
+        t_pfunc value;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->value);
+        }
+      public:
+        t_pfunc_func_param(const t_pfunc_func_param&)=delete;
+        t_pfunc_func_param()
+        {
+          DoReset();
+        };
+      public:
+        t_pfunc_func_param(t_pfunc_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_pfunc_func_param&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_func_param(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_func_param::operator=(std::move(_Right));
+          }
+          this->value=std::move(_Right.value);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_pfunc_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_pfunc>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_pfunc_func_param";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_auto(value);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_var_args_func_param:public i_func_param
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_var_args_func_param SelfClass;
+      public:
+        typedef i_func_param ParentClass;
+      public:
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+        }
+      public:
+        t_var_args_func_param(const t_var_args_func_param&)=delete;
+        t_var_args_func_param()
+        {
+          DoReset();
+        };
+      public:
+        t_var_args_func_param(t_var_args_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_var_args_func_param&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_func_param(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_func_param::operator=(std::move(_Right));
+          }
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_var_args_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_var_args_func_param";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_const("...");
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_type_func_param:public i_func_param
+      {
+      public:
+        class t_const
+        {
+        public:
+          typedef t_type_func_param OwnerClass;
+        public:
+          typedef t_const SelfClass;
+        public:
+          t_sep sep;
+        public:
+          void DoReset()
+          {
+            {
+            }
+            detail::FieldTryDoReset(this->sep);
+          }
+        public:
+          t_const(const t_const&)=delete;
+          t_const()
+          {
+            DoReset();
+          };
+        public:
+          t_const(t_const&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_const&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+            this->sep=std::move(_Right.sep);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_const";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_const";
+            }
+          };
+        public:
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            M+=dev.go_const("const");
+            if (!ok)return ok;
+            O+=dev.go_auto(sep);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+      public:
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_type_func_param SelfClass;
+      public:
+        typedef i_func_param ParentClass;
+      public:
+        t_type_expr_with_sep_and_cv type;
+        t_sep sep;
+        TAutoPtr<t_const> cv;
+        TAutoPtr<t_name_part> namepart;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->type);
+          detail::FieldTryDoReset(this->sep);
+          detail::FieldTryDoReset(this->cv);
+          detail::FieldTryDoReset(this->namepart);
+        }
+      public:
+        t_type_func_param(const t_type_func_param&)=delete;
+        t_type_func_param()
+        {
+          DoReset();
+        };
+      public:
+        t_type_func_param(t_type_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_type_func_param&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_func_param(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_func_param::operator=(std::move(_Right));
+          }
+          this->type=std::move(_Right.type);
+          this->sep=std::move(_Right.sep);
+          this->cv=std::move(_Right.cv);
+          this->namepart=std::move(_Right.namepart);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_type_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_type_expr_with_sep_and_cv>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_const>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_name_part>>::GetRTTI(RTTI),"namepart",int(&(((SelfClass*)nullptr)->*(&SelfClass::namepart))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+              Info->AddNested(Sys$$<t_const>::GetRTTI(RTTI));
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_type_func_param";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_auto(type);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          O+=dev.go_auto(cv);
+          if (!ok)return ok;
+          O+=dev.go_auto(namepart);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_expr_func_param:public i_func_param
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_expr_func_param SelfClass;
+      public:
+        typedef i_func_param ParentClass;
+      public:
+        t_expr body;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->body);
+        }
+      public:
+        t_expr_func_param(const t_expr_func_param&)=delete;
+        t_expr_func_param()
+        {
+          DoReset();
+        };
+      public:
+        t_expr_func_param(t_expr_func_param&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_expr_func_param&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_func_param(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_func_param::operator=(std::move(_Right));
+          }
+          this->body=std::move(_Right.body);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_expr_func_param";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_expr_func_param";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_minor<t_type_func_param>(body);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_expr_func_param_value:public i_func_param_value
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_expr_func_param_value SelfClass;
+      public:
+        typedef i_func_param_value ParentClass;
+      public:
+        t_expr body;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->body);
+        }
+      public:
+        t_expr_func_param_value(const t_expr_func_param_value&)=delete;
+        t_expr_func_param_value()
+        {
+          DoReset();
+        };
+      public:
+        t_expr_func_param_value(t_expr_func_param_value&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_expr_func_param_value&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_func_param_value(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_func_param_value::operator=(std::move(_Right));
+          }
+          this->body=std::move(_Right.body);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_expr_func_param_value";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_expr_func_param_value";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          D+=dev.go_auto(body);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_fv_stat
+      {
+      public:
+        class i_fv_body;
+        class t_impl_func_body;
+        class t_zero_func_body;
+        class t_delete_func_body;
+        class i_fv_body_visitor
+        {
+        public:
+          typedef t_fv_stat::i_fv_body i_fv_body;
+        public:
+          virtual void Do(t_impl_func_body*p)=0;
+          virtual void Do(t_zero_func_body*p)=0;
+          virtual void Do(t_delete_func_body*p)=0;
+        public:
+          typedef t_fv_stat::t_impl_func_body t_impl_func_body;
+          typedef t_fv_stat::t_zero_func_body t_zero_func_body;
+          typedef t_fv_stat::t_delete_func_body t_delete_func_body;
+        public:
+          template<class TYPE,class Visitor>
+          struct Is:public Visitor
+          {
+            TYPE*ptr;
+            Is():ptr(nullptr) {}
+public:
+            template<class U>static TYPE*get(U*p)
+            {
+              return nullptr;
+            }
+            template<>static TYPE*get<TYPE>(TYPE*p)
+            {
+              return p;
+            }
+public:
+            void Do(t_impl_func_body*p)
+            {
+              ptr=get(p);
+            } void Do(t_zero_func_body*p)
+            {
+              ptr=get(p);
+            } void Do(t_delete_func_body*p)
+            {
+              ptr=get(p);
+            }
+          };
+          template<class TYPE>
+          static TYPE*UberCast(i_fv_body*p)
+          {
+            if (!p)return nullptr;
+            Is<TYPE,i_fv_body_visitor> IS;
+            p->Use(IS);
+            return IS.ptr;
+          }
+        };
+      public:
+        class i_fv_body
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef i_fv_body SelfClass;
+        public:
+        public:
+          void DoReset()
+          {
+            {
+            }
+          }
+        public:
+          i_fv_body(const i_fv_body&)=delete;
+          i_fv_body()
+          {
+            DoReset();
+          };
+        public:
+          i_fv_body(i_fv_body&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(i_fv_body&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="i_fv_body";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "i_fv_body";
+            }
+          };
+        public:
+        public:
+          typedef i_fv_body_visitor i_visitor;
+          virtual void Use(i_visitor&A)
+          {
+            QapDebugMsg("no way.");/*A.Do(this);*/
+          }
+        public:
+          virtual bool go(i_dev&dev)
+          {
+            QapDebugMsg("no way.");
+            return false;
+          };
+          struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            bool load()
+            {
+              go_for<t_impl_func_body>();
+              go_for<t_zero_func_body>();
+              go_for<t_delete_func_body>();
+              (void)count;
+              (void)first_id;
+              (void)out_arr;
+              (void)this;
+              main();
+              return scope.ok;
+            }
+            static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+              vector<t_out_rec> out_arr;
+              static int out_arr_size=0;
+              out_arr.reserve(out_arr_size);
+              t_fallback scope(dev,__FUNCTION__);
+              int count=0;
+              int first_id=-1;
+              auto&Env=dev.getEnv();
+              static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+              t_poly_tool::go_poly<SelfClass> solver_impl=
+              {
+                out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+              };
+              t_poly_impl&solver=(t_poly_impl&)solver_impl;
+              solver.load();
+              out_arr_size=out_arr.size();
+              return scope.ok;
+            }
+            static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              bool&ok=scope.ok;
+              if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+                {
+                  return false;
+                }
+              if (!ref)return false;
+              QapAssert(ref);
+              auto*p=ref.get();
+              ok=p->go(dev);
+              return ok;
+            }
+          };
+        };
+      public:
+        class i_fv_end;
+        class t_func_fv_end;
+        class t_var_fv_end;
+        class i_fv_end_visitor
+        {
+        public:
+          typedef t_fv_stat::i_fv_end i_fv_end;
+        public:
+          virtual void Do(t_func_fv_end*p)=0;
+          virtual void Do(t_var_fv_end*p)=0;
+        public:
+          typedef t_fv_stat::t_func_fv_end t_func_fv_end;
+          typedef t_fv_stat::t_var_fv_end t_var_fv_end;
+        public:
+          template<class TYPE,class Visitor>
+          struct Is:public Visitor
+          {
+            TYPE*ptr;
+            Is():ptr(nullptr) {}
+public:
+            template<class U>static TYPE*get(U*p)
+            {
+              return nullptr;
+            }
+            template<>static TYPE*get<TYPE>(TYPE*p)
+            {
+              return p;
+            }
+public:
+            void Do(t_func_fv_end*p)
+            {
+              ptr=get(p);
+            } void Do(t_var_fv_end*p)
+            {
+              ptr=get(p);
+            }
+          };
+          template<class TYPE>
+          static TYPE*UberCast(i_fv_end*p)
+          {
+            if (!p)return nullptr;
+            Is<TYPE,i_fv_end_visitor> IS;
+            p->Use(IS);
+            return IS.ptr;
+          }
+        };
+      public:
+        class i_fv_end
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef i_fv_end SelfClass;
+        public:
+        public:
+          void DoReset()
+          {
+            {
+            }
+          }
+        public:
+          i_fv_end(const i_fv_end&)=delete;
+          i_fv_end()
+          {
+            DoReset();
+          };
+        public:
+          i_fv_end(i_fv_end&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(i_fv_end&&_Right)
+          {
+            if (&_Right==this)return;
+            {
+            }
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="i_fv_end";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=nullptr;
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "i_fv_end";
+            }
+          };
+        public:
+        public:
+          typedef i_fv_end_visitor i_visitor;
+          virtual void Use(i_visitor&A)
+          {
+            QapDebugMsg("no way.");/*A.Do(this);*/
+          }
+        public:
+          virtual bool go(i_dev&dev)
+          {
+            QapDebugMsg("no way.");
+            return false;
+          };
+          struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+          {
+            typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+            bool load()
+            {
+              go_for<t_func_fv_end>();
+              go_for<t_var_fv_end>();
+              (void)count;
+              (void)first_id;
+              (void)out_arr;
+              (void)this;
+              main();
+              return scope.ok;
+            }
+            static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+              vector<t_out_rec> out_arr;
+              static int out_arr_size=0;
+              out_arr.reserve(out_arr_size);
+              t_fallback scope(dev,__FUNCTION__);
+              int count=0;
+              int first_id=-1;
+              auto&Env=dev.getEnv();
+              static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+              t_poly_tool::go_poly<SelfClass> solver_impl=
+              {
+                out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+              };
+              t_poly_impl&solver=(t_poly_impl&)solver_impl;
+              solver.load();
+              out_arr_size=out_arr.size();
+              return scope.ok;
+            }
+            static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              bool&ok=scope.ok;
+              if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+                {
+                  return false;
+                }
+              if (!ref)return false;
+              QapAssert(ref);
+              auto*p=ref.get();
+              ok=p->go(dev);
+              return ok;
+            }
+          };
+        };
+        class t_impl_func_body:public i_fv_body
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef t_impl_func_body SelfClass;
+        public:
+          typedef i_fv_body ParentClass;
+        public:
+          t_sep sep;
+          t_raw_func_body body;
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+            detail::FieldTryDoReset(this->sep);
+            detail::FieldTryDoReset(this->body);
+          }
+        public:
+          t_impl_func_body(const t_impl_func_body&)=delete;
+          t_impl_func_body()
+          {
+            DoReset();
+          };
+        public:
+          t_impl_func_body(t_impl_func_body&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_impl_func_body&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_fv_body(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_fv_body::operator=(std::move(_Right));
+            }
+            this->sep=std::move(_Right.sep);
+            this->body=std::move(_Right.body);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_impl_func_body";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<t_raw_func_body>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_impl_func_body";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            O+=dev.go_auto(sep);
+            if (!ok)return ok;
+            M+=dev.go_auto(body);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_zero_func_body:public i_fv_body
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef t_zero_func_body SelfClass;
+        public:
+          typedef i_fv_body ParentClass;
+        public:
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+          }
+        public:
+          t_zero_func_body(const t_zero_func_body&)=delete;
+          t_zero_func_body()
+          {
+            DoReset();
+          };
+        public:
+          t_zero_func_body(t_zero_func_body&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_zero_func_body&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_fv_body(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_fv_body::operator=(std::move(_Right));
+            }
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_zero_func_body";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_zero_func_body";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            D+=dev.go_const("=0;");
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_delete_func_body:public i_fv_body
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef t_delete_func_body SelfClass;
+        public:
+          typedef i_fv_body ParentClass;
+        public:
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+          }
+        public:
+          t_delete_func_body(const t_delete_func_body&)=delete;
+          t_delete_func_body()
+          {
+            DoReset();
+          };
+        public:
+          t_delete_func_body(t_delete_func_body&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_delete_func_body&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_fv_body(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_fv_body::operator=(std::move(_Right));
+            }
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_delete_func_body";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_delete_func_body";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            D+=dev.go_const("=delete;");
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_func_fv_end:public i_fv_end
+        {
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef t_func_fv_end SelfClass;
+        public:
+          typedef i_fv_end ParentClass;
+        public:
+          TAutoPtr<t_func_params> params;
+          TAutoPtr<t_const_with_sep> cv1;
+          t_sep sep1;
+          TAutoPtr<i_fv_body> body;
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+            detail::FieldTryDoReset(this->params);
+            detail::FieldTryDoReset(this->cv1);
+            detail::FieldTryDoReset(this->sep1);
+            detail::FieldTryDoReset(this->body);
+          }
+        public:
+          t_func_fv_end(const t_func_fv_end&)=delete;
+          t_func_fv_end()
+          {
+            DoReset();
+          };
+        public:
+          t_func_fv_end(t_func_fv_end&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_func_fv_end&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_fv_end(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_fv_end::operator=(std::move(_Right));
+            }
+            this->params=std::move(_Right.params);
+            this->cv1=std::move(_Right.cv1);
+            this->sep1=std::move(_Right.sep1);
+            this->body=std::move(_Right.body);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_func_fv_end";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_params>>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv1",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv1))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<TAutoPtr<i_fv_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_func_fv_end";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            M+=dev.go_auto(params);
+            if (!ok)return ok;
+            O+=dev.go_auto(cv1);
+            if (!ok)return ok;
+            O+=dev.go_auto(sep1);
+            if (!ok)return ok;
+            M+=dev.go_auto(body);
+            if (!ok)return ok;
+            return ok;
+          }
+        };
+        class t_var_fv_end:public i_fv_end
+        {
+        public:
+          class i_fv_item;
+          class t_func_fv_item;
+          class t_var_fv_item;
+          class i_fv_item_visitor
+          {
+          public:
+            typedef t_var_fv_end::i_fv_item i_fv_item;
+          public:
+            virtual void Do(t_func_fv_item*p)=0;
+            virtual void Do(t_var_fv_item*p)=0;
+          public:
+            typedef t_var_fv_end::t_func_fv_item t_func_fv_item;
+            typedef t_var_fv_end::t_var_fv_item t_var_fv_item;
+          public:
+            template<class TYPE,class Visitor>
+            struct Is:public Visitor
+            {
+              TYPE*ptr;
+              Is():ptr(nullptr) {}
+public:
+              template<class U>static TYPE*get(U*p)
+              {
+                return nullptr;
+              }
+              template<>static TYPE*get<TYPE>(TYPE*p)
+              {
+                return p;
+              }
+public:
+              void Do(t_func_fv_item*p)
+              {
+                ptr=get(p);
+              } void Do(t_var_fv_item*p)
+              {
+                ptr=get(p);
+              }
+            };
+            template<class TYPE>
+            static TYPE*UberCast(i_fv_item*p)
+            {
+              if (!p)return nullptr;
+              Is<TYPE,i_fv_item_visitor> IS;
+              p->Use(IS);
+              return IS.ptr;
+            }
+          };
+        public:
+          class i_fv_item
+          {
+          public:
+            typedef t_var_fv_end OwnerClass;
+          public:
+            typedef i_fv_item SelfClass;
+          public:
+          public:
+            void DoReset()
+            {
+              {
+              }
+            }
+          public:
+            i_fv_item(const i_fv_item&)=delete;
+            i_fv_item()
+            {
+              DoReset();
+            };
+          public:
+            i_fv_item(i_fv_item&&_Right)
+            {
+              operator=(std::move(_Right));
+            }
+            void operator=(i_fv_item&&_Right)
+            {
+              if (&_Right==this)return;
+              {
+              }
+            }
+          public:
+            struct ProxySys$$
+            {
+              typedef TTypeStruct metatype;
+              static metatype*GetRTTI(IEnvRTTI&RTTI)
+              {
+                static const string Name="i_fv_item";
+                TTypeStruct*Info=nullptr;
+                if (RTTI.Register<SelfClass>(Info,Name))
+                {
+                  return Info;
+                }
+                else
+                {
+                  Info->SubType=nullptr;
+                  Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+                }
+                {
+                  RTTI.OnRegEnd(Info);
+                }
+                {
+                }
+                Info->SelfTesting();
+                return Info;
+              }
+              static string GetFullName()
+              {
+                return "i_fv_item";
+              }
+            };
+          public:
+          public:
+            typedef i_fv_item_visitor i_visitor;
+            virtual void Use(i_visitor&A)
+            {
+              QapDebugMsg("no way.");/*A.Do(this);*/
+            }
+          public:
+            virtual bool go(i_dev&dev)
+            {
+              QapDebugMsg("no way.");
+              return false;
+            };
+            struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+            {
+              typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+              bool load()
+              {
+                go_for<t_func_fv_item>();
+                go_for<t_var_fv_item>();
+                (void)count;
+                (void)first_id;
+                (void)out_arr;
+                (void)this;
+                main();
+                return scope.ok;
+              }
+              static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+              {
+                typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+                vector<t_out_rec> out_arr;
+                static int out_arr_size=0;
+                out_arr.reserve(out_arr_size);
+                t_fallback scope(dev,__FUNCTION__);
+                int count=0;
+                int first_id=-1;
+                auto&Env=dev.getEnv();
+                static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+                t_poly_tool::go_poly<SelfClass> solver_impl=
+                {
+                  out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+                };
+                t_poly_impl&solver=(t_poly_impl&)solver_impl;
+                solver.load();
+                out_arr_size=out_arr.size();
+                return scope.ok;
+              }
+              static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+              {
+                t_fallback scope(dev,__FUNCTION__);
+                bool&ok=scope.ok;
+                if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+                  {
+                    return false;
+                  }
+                if (!ref)return false;
+                QapAssert(ref);
+                auto*p=ref.get();
+                ok=p->go(dev);
+                return ok;
+              }
+            };
+          };
+          class t_func_fv_item:public i_fv_item
+          {
+          public:
+            typedef t_var_fv_end OwnerClass;
+          public:
+            typedef t_func_fv_item SelfClass;
+          public:
+            typedef i_fv_item ParentClass;
+          public:
+            TAutoPtr<t_func_params> params;
+            TAutoPtr<t_const_with_sep> cv1;
+          public:
+            void DoReset()
+            {
+              {
+                detail::TryDoReset<SelfClass>(this);
+              }
+              detail::FieldTryDoReset(this->params);
+              detail::FieldTryDoReset(this->cv1);
+            }
+          public:
+            t_func_fv_item(const t_func_fv_item&)=delete;
+            t_func_fv_item()
+            {
+              DoReset();
+            };
+          public:
+            t_func_fv_item(t_func_fv_item&&_Right)
+            {
+              operator=(std::move(_Right));
+            }
+            void operator=(t_func_fv_item&&_Right)
+            {
+              struct hidden
+              {
+                static void foo(i_fv_item(*)=(SelfClass*)nullptr) {}};
+              if (&_Right==this)return;
+              {
+                i_fv_item::operator=(std::move(_Right));
+              }
+              this->params=std::move(_Right.params);
+              this->cv1=std::move(_Right.cv1);
+            }
+          public:
+            struct ProxySys$$
+            {
+              typedef TTypeStruct metatype;
+              static metatype*GetRTTI(IEnvRTTI&RTTI)
+              {
+                static const string Name="t_func_fv_item";
+                TTypeStruct*Info=nullptr;
+                if (RTTI.Register<SelfClass>(Info,Name))
+                {
+                  return Info;
+                }
+                else
+                {
+                  Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                  Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+                }
+                Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_params>>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv1",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv1))),"DEF","$");
+                {
+                  RTTI.OnRegEnd(Info);
+                }
+                {
+                }
+                Info->SelfTesting();
+                return Info;
+              }
+              static string GetFullName()
+              {
+                return "t_func_fv_item";
+              }
+            };
+          public:
+          public:
+            void Use(i_visitor&A)
+            {
+              A.Do(this);
+            }
+            static SelfClass*UberCast(ParentClass*ptr)
+            {
+              return i_visitor::UberCast<SelfClass>(ptr);
+            }
+          public:
+            bool go(i_dev&dev)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              auto&ok=scope.ok;
+              auto&D=scope.mandatory;
+              auto&M=scope.mandatory;
+              auto&O=scope.optional;
+              M+=dev.go_auto(params);
+              if (!ok)return ok;
+              O+=dev.go_auto(cv1);
+              if (!ok)return ok;
+              return ok;
+            }
+          };
+          class t_var_fv_item:public i_fv_item
+          {
+          public:
+            typedef t_var_fv_end OwnerClass;
+          public:
+            typedef t_var_fv_item SelfClass;
+          public:
+            typedef i_fv_item ParentClass;
+          public:
+            TAutoPtr<t_arr_body> arrbody;
+            TAutoPtr<t_func_param_value> value;
+          public:
+            void DoReset()
+            {
+              {
+                detail::TryDoReset<SelfClass>(this);
+              }
+              detail::FieldTryDoReset(this->arrbody);
+              detail::FieldTryDoReset(this->value);
+            }
+          public:
+            t_var_fv_item(const t_var_fv_item&)=delete;
+            t_var_fv_item()
+            {
+              DoReset();
+            };
+          public:
+            t_var_fv_item(t_var_fv_item&&_Right)
+            {
+              operator=(std::move(_Right));
+            }
+            void operator=(t_var_fv_item&&_Right)
+            {
+              struct hidden
+              {
+                static void foo(i_fv_item(*)=(SelfClass*)nullptr) {}};
+              if (&_Right==this)return;
+              {
+                i_fv_item::operator=(std::move(_Right));
+              }
+              this->arrbody=std::move(_Right.arrbody);
+              this->value=std::move(_Right.value);
+            }
+          public:
+            struct ProxySys$$
+            {
+              typedef TTypeStruct metatype;
+              static metatype*GetRTTI(IEnvRTTI&RTTI)
+              {
+                static const string Name="t_var_fv_item";
+                TTypeStruct*Info=nullptr;
+                if (RTTI.Register<SelfClass>(Info,Name))
+                {
+                  return Info;
+                }
+                else
+                {
+                  Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                  Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+                }
+                Info->AddMemberDEF(Sys$$<TAutoPtr<t_arr_body>>::GetRTTI(RTTI),"arrbody",int(&(((SelfClass*)nullptr)->*(&SelfClass::arrbody))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_param_value>>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+                {
+                  RTTI.OnRegEnd(Info);
+                }
+                {
+                }
+                Info->SelfTesting();
+                return Info;
+              }
+              static string GetFullName()
+              {
+                return "t_var_fv_item";
+              }
+            };
+          public:
+          public:
+            void Use(i_visitor&A)
+            {
+              A.Do(this);
+            }
+            static SelfClass*UberCast(ParentClass*ptr)
+            {
+              return i_visitor::UberCast<SelfClass>(ptr);
+            }
+          public:
+            bool go(i_dev&dev)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              auto&ok=scope.ok;
+              auto&D=scope.mandatory;
+              auto&M=scope.mandatory;
+              auto&O=scope.optional;
+              O+=dev.go_auto(arrbody);
+              if (!ok)return ok;
+              O+=dev.go_auto(value);
+              if (!ok)return ok;
+              return ok;
+            }
+          };
+          class t_body
+          {
+          public:
+            typedef t_var_fv_end OwnerClass;
+          public:
+            typedef t_body SelfClass;
+          public:
+            TAutoPtr<i_fv_item> body;
+          public:
+            void DoReset()
+            {
+              {
+              }
+              detail::FieldTryDoReset(this->body);
+            }
+          public:
+            t_body(const t_body&)=delete;
+            t_body()
+            {
+              DoReset();
+            };
+          public:
+            t_body(t_body&&_Right)
+            {
+              operator=(std::move(_Right));
+            }
+            void operator=(t_body&&_Right)
+            {
+              if (&_Right==this)return;
+              {
+              }
+              this->body=std::move(_Right.body);
+            }
+          public:
+            struct ProxySys$$
+            {
+              typedef TTypeStruct metatype;
+              static metatype*GetRTTI(IEnvRTTI&RTTI)
+              {
+                static const string Name="t_body";
+                TTypeStruct*Info=nullptr;
+                if (RTTI.Register<SelfClass>(Info,Name))
+                {
+                  return Info;
+                }
+                else
+                {
+                  Info->SubType=nullptr;
+                  Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+                }
+                Info->AddMemberDEF(Sys$$<TAutoPtr<i_fv_item>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+                {
+                  RTTI.OnRegEnd(Info);
+                }
+                {
+                }
+                Info->SelfTesting();
+                return Info;
+              }
+              static string GetFullName()
+              {
+                return "t_body";
+              }
+            };
+          public:
+          public:
+            bool go(i_dev&dev)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              auto&ok=scope.ok;
+              auto&D=scope.mandatory;
+              auto&M=scope.mandatory;
+              auto&O=scope.optional;
+              D+=dev.go_auto(body);
+              if (!ok)return ok;
+              return ok;
+            }
+          };
+          class t_item
+          {
+          public:
+            typedef t_var_fv_end OwnerClass;
+          public:
+            typedef t_item SelfClass;
+          public:
+            t_sep sep0;
+            TAutoPtr<t_const_with_sep> cv;
+            t_sep sep1;
+            string name;
+            t_sep sep2;
+            t_body body;
+            t_sep sep3;
+          public:
+            void DoReset()
+            {
+              {
+              }
+              detail::FieldTryDoReset(this->sep0);
+              detail::FieldTryDoReset(this->cv);
+              detail::FieldTryDoReset(this->sep1);
+              detail::FieldTryDoReset(this->name);
+              detail::FieldTryDoReset(this->sep2);
+              detail::FieldTryDoReset(this->body);
+              detail::FieldTryDoReset(this->sep3);
+            }
+          public:
+            t_item(const t_item&)=delete;
+            t_item()
+            {
+              DoReset();
+            };
+          public:
+            t_item(t_item&&_Right)
+            {
+              operator=(std::move(_Right));
+            }
+            void operator=(t_item&&_Right)
+            {
+              if (&_Right==this)return;
+              {
+              }
+              this->sep0=std::move(_Right.sep0);
+              this->cv=std::move(_Right.cv);
+              this->sep1=std::move(_Right.sep1);
+              this->name=std::move(_Right.name);
+              this->sep2=std::move(_Right.sep2);
+              this->body=std::move(_Right.body);
+              this->sep3=std::move(_Right.sep3);
+            }
+          public:
+            struct ProxySys$$
+            {
+              typedef TTypeStruct metatype;
+              static metatype*GetRTTI(IEnvRTTI&RTTI)
+              {
+                static const string Name="t_item";
+                TTypeStruct*Info=nullptr;
+                if (RTTI.Register<SelfClass>(Info,Name))
+                {
+                  return Info;
+                }
+                else
+                {
+                  Info->SubType=nullptr;
+                  Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+                }
+                Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<t_body>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+                Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep3",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep3))),"DEF","$");
+                {
+                  RTTI.OnRegEnd(Info);
+                }
+                {
+                }
+                Info->SelfTesting();
+                return Info;
+              }
+              static string GetFullName()
+              {
+                return "t_item";
+              }
+            };
+          public:
+          public:
+            bool go(i_dev&dev)
+            {
+              t_fallback scope(dev,__FUNCTION__);
+              auto&ok=scope.ok;
+              auto&D=scope.mandatory;
+              auto&M=scope.mandatory;
+              auto&O=scope.optional;
+              M+=dev.go_const(",");
+              if (!ok)return ok;
+              O+=dev.go_auto(sep0);
+              if (!ok)return ok;
+              O+=dev.go_auto(cv);
+              if (!ok)return ok;
+              O+=dev.go_auto(sep1);
+              if (!ok)return ok;
+              M+=dev.go_str<t_name>(name);
+              if (!ok)return ok;
+              O+=dev.go_auto(sep2);
+              if (!ok)return ok;
+              M+=dev.go_auto(body);
+              if (!ok)return ok;
+              O+=dev.go_auto(sep3);
+              if (!ok)return ok;
+              return ok;
+            }
+          };
+        public:
+        public:
+          typedef t_fv_stat OwnerClass;
+        public:
+          typedef t_var_fv_end SelfClass;
+        public:
+          typedef i_fv_end ParentClass;
+        public:
+          TAutoPtr<t_body> body;
+          vector<t_item> arr;
+        public:
+          void DoReset()
+          {
+            {
+              detail::TryDoReset<SelfClass>(this);
+            }
+            detail::FieldTryDoReset(this->body);
+            detail::FieldTryDoReset(this->arr);
+          }
+        public:
+          t_var_fv_end(const t_var_fv_end&)=delete;
+          t_var_fv_end()
+          {
+            DoReset();
+          };
+        public:
+          t_var_fv_end(t_var_fv_end&&_Right)
+          {
+            operator=(std::move(_Right));
+          }
+          void operator=(t_var_fv_end&&_Right)
+          {
+            struct hidden
+            {
+              static void foo(i_fv_end(*)=(SelfClass*)nullptr) {}};
+            if (&_Right==this)return;
+            {
+              i_fv_end::operator=(std::move(_Right));
+            }
+            this->body=std::move(_Right.body);
+            this->arr=std::move(_Right.arr);
+          }
+        public:
+          struct ProxySys$$
+          {
+            typedef TTypeStruct metatype;
+            static metatype*GetRTTI(IEnvRTTI&RTTI)
+            {
+              static const string Name="t_var_fv_end";
+              TTypeStruct*Info=nullptr;
+              if (RTTI.Register<SelfClass>(Info,Name))
+              {
+                return Info;
+              }
+              else
+              {
+                Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+                Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+              }
+              Info->AddMemberDEF(Sys$$<TAutoPtr<t_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+              Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+              {
+                RTTI.OnRegEnd(Info);
+              }
+              {
+                Info->AddNested(Sys$$<t_func_fv_item>::GetRTTI(RTTI));
+                Info->AddNested(Sys$$<t_var_fv_item>::GetRTTI(RTTI));
+                Info->AddNested(Sys$$<t_body>::GetRTTI(RTTI));
+                Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+              }
+              Info->SelfTesting();
+              return Info;
+            }
+            static string GetFullName()
+            {
+              return "t_var_fv_end";
+            }
+          };
+        public:
+        public:
+          void Use(i_visitor&A)
+          {
+            A.Do(this);
+          }
+          static SelfClass*UberCast(ParentClass*ptr)
+          {
+            return i_visitor::UberCast<SelfClass>(ptr);
+          }
+        public:
+          bool go(i_dev&dev)
+          {
+            t_fallback scope(dev,__FUNCTION__);
+            auto&ok=scope.ok;
+            auto&D=scope.mandatory;
+            auto&M=scope.mandatory;
+            auto&O=scope.optional;
+            O+=dev.go_auto(body);
+            if (!ok)return ok;
+            O+=dev.go_auto(arr);
+            if (!ok)return ok;
+            M+=dev.go_const(";");
+            if (!ok)return ok;
+            return ok;
+          }
+        public:
+        };
+      public:
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_fv_stat SelfClass;
+      public:
+        t_sep sep_wa;
+        vector<t_keyword> keywords;
+        TAutoPtr<t_type_expr> type;
+        TAutoPtr<t_const_with_sep> cv;
+        t_sep sep0;
+        TAutoPtr<t_func_path> path;
+        t_name_part name;
+        t_sep sep1;
+        TAutoPtr<i_fv_end> way;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep_wa);
+          detail::FieldTryDoReset(this->keywords);
+          detail::FieldTryDoReset(this->type);
+          detail::FieldTryDoReset(this->cv);
+          detail::FieldTryDoReset(this->sep0);
+          detail::FieldTryDoReset(this->path);
+          detail::FieldTryDoReset(this->name);
+          detail::FieldTryDoReset(this->sep1);
+          detail::FieldTryDoReset(this->way);
+        }
+      public:
+        t_fv_stat(const t_fv_stat&)=delete;
+        t_fv_stat()
+        {
+          DoReset();
+        };
+      public:
+        t_fv_stat(t_fv_stat&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_fv_stat&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep_wa=std::move(_Right.sep_wa);
+          this->keywords=std::move(_Right.keywords);
+          this->type=std::move(_Right.type);
+          this->cv=std::move(_Right.cv);
+          this->sep0=std::move(_Right.sep0);
+          this->path=std::move(_Right.path);
+          this->name=std::move(_Right.name);
+          this->sep1=std::move(_Right.sep1);
+          this->way=std::move(_Right.way);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_fv_stat";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep_wa",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep_wa))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<vector<t_keyword>>::GetRTTI(RTTI),"keywords",int(&(((SelfClass*)nullptr)->*(&SelfClass::keywords))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_type_expr>>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_path>>::GetRTTI(RTTI),"path",int(&(((SelfClass*)nullptr)->*(&SelfClass::path))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_name_part>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<i_fv_end>>::GetRTTI(RTTI),"way",int(&(((SelfClass*)nullptr)->*(&SelfClass::way))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+              Info->AddNested(Sys$$<t_impl_func_body>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_zero_func_body>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_delete_func_body>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_func_fv_end>::GetRTTI(RTTI));
+              Info->AddNested(Sys$$<t_var_fv_end>::GetRTTI(RTTI));
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_fv_stat";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(sep_wa);
+          if (!ok)return ok;
+          O+=dev.go_auto(keywords);
+          if (!ok)return ok;
+          M+=dev.go_auto(type);
+          if (!ok)return ok;
+          O+=dev.go_auto(cv);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep0);
+          if (!ok)return ok;
+          O+=dev.go_auto(path);
+          if (!ok)return ok;
+          M+=dev.go_auto(name);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep1);
+          if (!ok)return ok;
+          M+=dev.go_auto(way);
+          if (!ok)return ok;
+          return ok;
+        }
+      public:
+      };
+      class t_impl_typeexpr:public i_typeexpr
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_impl_typeexpr SelfClass;
+      public:
+        typedef i_typeexpr ParentClass;
+      public:
+        TAutoPtr<t_first_scope> first;
+        t_scopes scopes;
+        vector<t_ptr> ptrs;
+        TAutoPtr<t_ref> ref;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->first);
+          detail::FieldTryDoReset(this->scopes);
+          detail::FieldTryDoReset(this->ptrs);
+          detail::FieldTryDoReset(this->ref);
+        }
+      public:
+        t_impl_typeexpr(const t_impl_typeexpr&)=delete;
+        t_impl_typeexpr()
+        {
+          DoReset();
+        };
+      public:
+        t_impl_typeexpr(t_impl_typeexpr&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_impl_typeexpr&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_typeexpr(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_typeexpr::operator=(std::move(_Right));
+          }
+          this->first=std::move(_Right.first);
+          this->scopes=std::move(_Right.scopes);
+          this->ptrs=std::move(_Right.ptrs);
+          this->ref=std::move(_Right.ref);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_impl_typeexpr";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_first_scope>>::GetRTTI(RTTI),"first",int(&(((SelfClass*)nullptr)->*(&SelfClass::first))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_scopes>::GetRTTI(RTTI),"scopes",int(&(((SelfClass*)nullptr)->*(&SelfClass::scopes))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<vector<t_ptr>>::GetRTTI(RTTI),"ptrs",int(&(((SelfClass*)nullptr)->*(&SelfClass::ptrs))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<TAutoPtr<t_ref>>::GetRTTI(RTTI),"ref",int(&(((SelfClass*)nullptr)->*(&SelfClass::ref))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_impl_typeexpr";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          O+=dev.go_auto(first);
+          if (!ok)return ok;
+          M+=dev.go_auto(scopes);
+          if (!ok)return ok;
+          O+=dev.go_auto(ptrs);
+          if (!ok)return ok;
+          O+=dev.go_auto(ref);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_decl_typeexpr:public i_typeexpr
+      {
+      public:
+        typedef t_type_expr OwnerClass;
+      public:
+        typedef t_decl_typeexpr SelfClass;
+      public:
+        typedef i_typeexpr ParentClass;
+      public:
+        t_sep sep0;
+        t_sep sep1;
+        t_expr expr;
+        t_sep sep2;
+      public:
+        void DoReset()
+        {
+          {
+            detail::TryDoReset<SelfClass>(this);
+          }
+          detail::FieldTryDoReset(this->sep0);
+          detail::FieldTryDoReset(this->sep1);
+          detail::FieldTryDoReset(this->expr);
+          detail::FieldTryDoReset(this->sep2);
+        }
+      public:
+        t_decl_typeexpr(const t_decl_typeexpr&)=delete;
+        t_decl_typeexpr()
+        {
+          DoReset();
+        };
+      public:
+        t_decl_typeexpr(t_decl_typeexpr&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_decl_typeexpr&&_Right)
+        {
+          struct hidden
+          {
+            static void foo(i_typeexpr(*)=(SelfClass*)nullptr) {}};
+          if (&_Right==this)return;
+          {
+            i_typeexpr::operator=(std::move(_Right));
+          }
+          this->sep0=std::move(_Right.sep0);
+          this->sep1=std::move(_Right.sep1);
+          this->expr=std::move(_Right.expr);
+          this->sep2=std::move(_Right.sep2);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_decl_typeexpr";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_decl_typeexpr";
+          }
+        };
+      public:
+      public:
+        void Use(i_visitor&A)
+        {
+          A.Do(this);
+        }
+        static SelfClass*UberCast(ParentClass*ptr)
+        {
+          return i_visitor::UberCast<SelfClass>(ptr);
+        }
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("decltype");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep0);
+          if (!ok)return ok;
+          M+=dev.go_const("(");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep1);
+          if (!ok)return ok;
+          M+=dev.go_auto(expr);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep2);
+          if (!ok)return ok;
+          M+=dev.go_const(")");
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+    public:
+    public:
+      typedef t_fv_class_stat OwnerClass;
+    public:
+      typedef t_type_expr SelfClass;
+    public:
+      TAutoPtr<i_typeexpr> body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_type_expr(const t_type_expr&)=delete;
+      t_type_expr()
+      {
+        DoReset();
+      };
+    public:
+      t_type_expr(t_type_expr&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_type_expr&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_type_expr";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_typeexpr>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+            Info->AddNested(Sys$$<t_type_expr_with_sep_and_cv>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_name_part>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_arr_body>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_raw_name_part>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_brackets_name_part>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_func_param_value>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_func_param>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_func_params>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_pfunc>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_pfunc_func_param>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_var_args_func_param>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_type_func_param>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_expr_func_param>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_expr_func_param_value>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_fv_stat>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_impl_typeexpr>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_decl_typeexpr>::GetRTTI(RTTI));
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_type_expr";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    public:
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_fv_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_type_expr::t_fv_stat body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_fv_class_stat(const t_fv_class_stat&)=delete;
+    t_fv_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_fv_class_stat(t_fv_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_fv_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_fv_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_type_expr::t_fv_stat>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_type_expr>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_fv_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_typedef_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_typedef_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep;
+    t_fv_class_stat::t_type_expr::t_fv_stat body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_typedef_class_stat(const t_typedef_class_stat&)=delete;
+    t_typedef_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_typedef_class_stat(t_typedef_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_typedef_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep=std::move(_Right.sep);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_typedef_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_fv_stat>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_typedef_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("typedef");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_real
+  {
+  public:
+    class t_f
+    {
+    public:
+      typedef t_real OwnerClass;
+    public:
+      typedef t_f SelfClass;
+    public:
+      char body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_f(const t_f&)=delete;
+      t_f()
+      {
+        DoReset();
+      };
+    public:
+      t_f(t_f&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_f&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_f";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<char>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_f";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=CharMask::fromStr("fF");
+        D+=dev.go_any_char(body,g_static_var_0);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_real SelfClass;
+  public:
+    string bef;
+    string aft;
+    TAutoPtr<t_f> ext;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->bef);
+      detail::FieldTryDoReset(this->aft);
+      detail::FieldTryDoReset(this->ext);
+    }
+  public:
+    t_real(const t_real&)=delete;
+    t_real()
+    {
+      DoReset();
+    };
+  public:
+    t_real(t_real&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_real&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->bef=std::move(_Right.bef);
+      this->aft=std::move(_Right.aft);
+      this->ext=std::move(_Right.ext);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_real";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"bef",int(&(((SelfClass*)nullptr)->*(&SelfClass::bef))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"aft",int(&(((SelfClass*)nullptr)->*(&SelfClass::aft))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_f>>::GetRTTI(RTTI),"ext",int(&(((SelfClass*)nullptr)->*(&SelfClass::ext))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_f>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_real";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=CharMask::fromStr(gen_dips("09"));
+      M+=dev.go_any(bef,g_static_var_0);
+      if (!ok)return ok;
+      M+=dev.go_const(".");
+      if (!ok)return ok;
+      static const auto g_static_var_2=CharMask::fromStr(gen_dips("09"));
+      O+=dev.go_any(aft,g_static_var_2);
+      if (!ok)return ok;
+      O+=dev.go_auto(ext);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_call_param
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_call_param SelfClass;
+  public:
+    t_sep sep0;
+    t_expr expr;
+    t_sep sep1;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->sep1);
+    }
+  public:
+    t_call_param(const t_call_param&)=delete;
+    t_call_param()
+    {
+      DoReset();
+    };
+  public:
+    t_call_param(t_call_param&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_call_param&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->expr=std::move(_Right.expr);
+      this->sep1=std::move(_Right.sep1);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_call_param";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_call_param";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_call_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_call_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string func;
+    t_sep sep;
+    vector<t_call_param> arr;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->func);
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_call_expr(const t_call_expr&)=delete;
+    t_call_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_call_expr(t_call_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_call_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->func=std::move(_Right.func);
+      this->sep=std::move(_Right.sep);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_call_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"func",int(&(((SelfClass*)nullptr)->*(&SelfClass::func))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_call_param>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_call_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_str<t_name>(func);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const("(");
+      if (!ok)return ok;
+      O+=dev.go_vec(arr,",");
+      if (!ok)return ok;
+      M+=dev.go_const(")");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_block_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_block_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    t_sep sep0;
+    t_expr expr;
+    t_sep sep1;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->sep1);
+    }
+  public:
+    t_block_expr(const t_block_expr&)=delete;
+    t_block_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_block_expr(t_block_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_block_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->expr=std::move(_Right.expr);
+      this->sep1=std::move(_Right.sep1);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_block_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_block_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("(");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      M+=dev.go_const(")");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_bool_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_bool_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_bool_expr(const t_bool_expr&)=delete;
+    t_bool_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_bool_expr(t_bool_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_bool_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_bool_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_bool_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("false,true",","));
+      D+=dev.go_any_str_from_vec(value,g_static_var_0);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_string_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_string_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_string_expr(const t_string_expr&)=delete;
+    t_string_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_string_expr(t_string_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_string_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_string_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_string_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_str_item::t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_char_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_char_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_char_expr(const t_char_expr&)=delete;
+    t_char_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_char_expr(t_char_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_char_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_char_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_char_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_char_item::t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_num_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_num_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_num_expr(const t_num_expr&)=delete;
+    t_num_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_num_expr(t_num_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_num_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_num_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_num_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=CharMask::fromStr(gen_dips("09"));
+      D+=dev.go_any(value,g_static_var_0);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_real_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_real_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_real_expr(const t_real_expr&)=delete;
+    t_real_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_real_expr(t_real_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_real_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_real_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_real_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_real>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_nullptr_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_nullptr_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+    }
+  public:
+    t_nullptr_expr(const t_nullptr_expr&)=delete;
+    t_nullptr_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_nullptr_expr(t_nullptr_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_nullptr_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_nullptr_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_nullptr_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("nullptr");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_or_expr:public i_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_or_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    vector<t_name> arr;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_or_expr(const t_or_expr&)=delete;
+    t_or_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_or_expr(t_or_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_or_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_or_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<t_name>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_or_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_bin_oper(arr,"|");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_hex_expr:public i_expr
+  {
+  public:
+    class t_impl
+    {
+    public:
+      typedef t_hex_expr OwnerClass;
+    public:
+      typedef t_impl SelfClass;
+    public:
+      char x;
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->x);
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_impl(const t_impl&)=delete;
+      t_impl()
+      {
+        DoReset();
+      };
+    public:
+      t_impl(t_impl&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->x=std::move(_Right.x);
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<char>::GetRTTI(RTTI),"x",int(&(((SelfClass*)nullptr)->*(&SelfClass::x))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_const("0");
+        if (!ok)return ok;
+        static const auto g_static_var_1=CharMask::fromStr("xX");
+        D+=dev.go_any_char(x,g_static_var_1);
+        if (!ok)return ok;
+        static const auto g_static_var_2=CharMask::fromStr(gen_dips("09afAF"));
+        D+=dev.go_any(value,g_static_var_2);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_hex_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_hex_expr(const t_hex_expr&)=delete;
+    t_hex_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_hex_expr(t_hex_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_hex_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_hex_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_impl>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_hex_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_var_expr:public i_expr
+  {
+  public:
+    class t_item
+    {
+    public:
+      typedef t_var_expr OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_type_with_sep body;
+      t_sep sep;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->body);
+        detail::FieldTryDoReset(this->sep);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->body=std::move(_Right.body);
+        this->sep=std::move(_Right.sep);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_type_with_sep>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_auto(body);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep);
+        if (!ok)return ok;
+        M+=dev.go_const("::");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_field
+    {
+    public:
+      typedef t_var_expr OwnerClass;
+    public:
+      typedef t_field SelfClass;
+    public:
+      t_sep bef;
+      string name;
+      t_sep aft;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->bef);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->aft);
+      }
+    public:
+      t_field(const t_field&)=delete;
+      t_field()
+      {
+        DoReset();
+      };
+    public:
+      t_field(t_field&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_field&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->bef=std::move(_Right.bef);
+        this->name=std::move(_Right.name);
+        this->aft=std::move(_Right.aft);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_field";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"bef",int(&(((SelfClass*)nullptr)->*(&SelfClass::bef))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"aft",int(&(((SelfClass*)nullptr)->*(&SelfClass::aft))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_field";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(bef);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        O+=dev.go_auto(aft);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_impl
+    {
+    public:
+      typedef t_var_expr OwnerClass;
+    public:
+      typedef t_impl SelfClass;
+    public:
+      vector<t_item> items;
+      t_sep sep;
+      vector<t_field> arr;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->items);
+        detail::FieldTryDoReset(this->sep);
+        detail::FieldTryDoReset(this->arr);
+      }
+    public:
+      t_impl(const t_impl&)=delete;
+      t_impl()
+      {
+        DoReset();
+      };
+    public:
+      t_impl(t_impl&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->items=std::move(_Right.items);
+        this->sep=std::move(_Right.sep);
+        this->arr=std::move(_Right.arr);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"items",int(&(((SelfClass*)nullptr)->*(&SelfClass::items))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<vector<t_field>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(items);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep);
+        if (!ok)return ok;
+        M+=dev.go_vec(arr,".");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_var_expr SelfClass;
+  public:
+    typedef i_expr ParentClass;
+  public:
+    string name;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->name);
+    }
+  public:
+    t_var_expr(const t_var_expr&)=delete;
+    t_var_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_var_expr(t_var_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_var_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_expr::operator=(std::move(_Right));
+      }
+      this->name=std::move(_Right.name);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_var_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_field>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_impl>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_var_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_impl>(name);
+      if (!ok)return ok;
+      return ok;
+    }
+  public:
+  };
+  class t_ctor_init_list
+  {
+  public:
+    class t_init_param
+    {
+    public:
+      typedef t_ctor_init_list OwnerClass;
+    public:
+      typedef t_init_param SelfClass;
+    public:
+      t_sep sep0;
+      string name;
+      vector<t_call_param> arr;
+      t_sep sep1;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->arr);
+        detail::FieldTryDoReset(this->sep1);
+      }
+    public:
+      t_init_param(const t_init_param&)=delete;
+      t_init_param()
+      {
+        DoReset();
+      };
+    public:
+      t_init_param(t_init_param&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_init_param&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep0=std::move(_Right.sep0);
+        this->name=std::move(_Right.name);
+        this->arr=std::move(_Right.arr);
+        this->sep1=std::move(_Right.sep1);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_init_param";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<vector<t_call_param>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_init_param";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        M+=dev.go_const("(");
+        if (!ok)return ok;
+        O+=dev.go_vec(arr,",");
+        if (!ok)return ok;
+        M+=dev.go_const(")");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_ctor_init_list SelfClass;
+  public:
+    vector<t_init_param> params;
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->params);
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_ctor_init_list(const t_ctor_init_list&)=delete;
+    t_ctor_init_list()
+    {
+      DoReset();
+    };
+  public:
+    t_ctor_init_list(t_ctor_init_list&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_ctor_init_list&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->params=std::move(_Right.params);
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_ctor_init_list";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<t_init_param>>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_init_param>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_ctor_init_list";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const(":");
+      if (!ok)return ok;
+      M+=dev.go_vec(params,",");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_zero_func_body:public i_func_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_zero_func_body SelfClass;
+  public:
+    typedef i_func_body ParentClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+    }
+  public:
+    t_zero_func_body(const t_zero_func_body&)=delete;
+    t_zero_func_body()
+    {
+      DoReset();
+    };
+  public:
+    t_zero_func_body(t_zero_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_zero_func_body&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_func_body(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_func_body::operator=(std::move(_Right));
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_zero_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_zero_func_body";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("=0;");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_null_func_body:public i_func_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_null_func_body SelfClass;
+  public:
+    typedef i_func_body ParentClass;
+  public:
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_null_func_body(const t_null_func_body&)=delete;
+    t_null_func_body()
+    {
+      DoReset();
+    };
+  public:
+    t_null_func_body(t_null_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_null_func_body&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_func_body(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_func_body::operator=(std::move(_Right));
+      }
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_null_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_null_func_body";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const(";");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_delete_func_body:public i_func_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_delete_func_body SelfClass;
+  public:
+    typedef i_func_body ParentClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+    }
+  public:
+    t_delete_func_body(const t_delete_func_body&)=delete;
+    t_delete_func_body()
+    {
+      DoReset();
+    };
+  public:
+    t_delete_func_body(t_delete_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_delete_func_body&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_func_body(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_func_body::operator=(std::move(_Right));
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_delete_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_delete_func_body";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("=delete;");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_impl_func_body:public i_func_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_impl_func_body SelfClass;
+  public:
+    typedef i_func_body ParentClass;
+  public:
+    t_sep sep;
+    TAutoPtr<t_ctor_init_list> init_list;
+    t_raw_func_body body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->init_list);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_impl_func_body(const t_impl_func_body&)=delete;
+    t_impl_func_body()
+    {
+      DoReset();
+    };
+  public:
+    t_impl_func_body(t_impl_func_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_impl_func_body&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_func_body(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_func_body::operator=(std::move(_Right));
+      }
+      this->sep=std::move(_Right.sep);
+      this->init_list=std::move(_Right.init_list);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_impl_func_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_ctor_init_list>>::GetRTTI(RTTI),"init_list",int(&(((SelfClass*)nullptr)->*(&SelfClass::init_list))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_raw_func_body>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_impl_func_body";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      O+=dev.go_auto(init_list);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_dtor_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_dtor_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep0;
+    TAutoPtr<t_func_path> path;
+    string name;
+    t_sep sep1;
+    t_fv_class_stat::t_type_expr::t_func_params params;
+    TAutoPtr<i_func_body> body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->path);
+      detail::FieldTryDoReset(this->name);
+      detail::FieldTryDoReset(this->sep1);
+      detail::FieldTryDoReset(this->params);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_dtor_class_stat(const t_dtor_class_stat&)=delete;
+    t_dtor_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_dtor_class_stat(t_dtor_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_dtor_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->path=std::move(_Right.path);
+      this->name=std::move(_Right.name);
+      this->sep1=std::move(_Right.sep1);
+      this->params=std::move(_Right.params);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_dtor_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_path>>::GetRTTI(RTTI),"path",int(&(((SelfClass*)nullptr)->*(&SelfClass::path))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_dtor_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(path);
+      if (!ok)return ok;
+      M+=dev.go_const("~");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_str<t_name>(name);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      M+=dev.go_auto(params);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_ctor_class_stat:public i_class_stat
+  {
+  public:
+    class t_impl
+    {
+    public:
+      class t_explicit
+      {
+      public:
+        typedef t_impl OwnerClass;
+      public:
+        typedef t_explicit SelfClass;
+      public:
+        t_sep sep;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep);
+        }
+      public:
+        t_explicit(const t_explicit&)=delete;
+        t_explicit()
+        {
+          DoReset();
+        };
+      public:
+        t_explicit(t_explicit&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_explicit&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep=std::move(_Right.sep);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_explicit";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_explicit";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("explicit");
+          if (!ok)return ok;
+          M+=dev.go_auto(sep);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+    public:
+    public:
+      typedef t_ctor_class_stat OwnerClass;
+    public:
+      typedef t_impl SelfClass;
+    public:
+      TAutoPtr<t_explicit> prefix;
+      TAutoPtr<t_func_path> path;
+      string name;
+      t_sep sep1;
+      TAutoPtr<t_concrete_params> concrete_params;
+      t_fv_class_stat::t_type_expr::t_func_params params;
+      TAutoPtr<i_func_body> body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->prefix);
+        detail::FieldTryDoReset(this->path);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->concrete_params);
+        detail::FieldTryDoReset(this->params);
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_impl(const t_impl&)=delete;
+      t_impl()
+      {
+        DoReset();
+      };
+    public:
+      t_impl(t_impl&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->prefix=std::move(_Right.prefix);
+        this->path=std::move(_Right.path);
+        this->name=std::move(_Right.name);
+        this->sep1=std::move(_Right.sep1);
+        this->concrete_params=std::move(_Right.concrete_params);
+        this->params=std::move(_Right.params);
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_explicit>>::GetRTTI(RTTI),"prefix",int(&(((SelfClass*)nullptr)->*(&SelfClass::prefix))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_path>>::GetRTTI(RTTI),"path",int(&(((SelfClass*)nullptr)->*(&SelfClass::path))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_concrete_params>>::GetRTTI(RTTI),"concrete_params",int(&(((SelfClass*)nullptr)->*(&SelfClass::concrete_params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+            Info->AddNested(Sys$$<t_explicit>::GetRTTI(RTTI));
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(prefix);
+        if (!ok)return ok;
+        O+=dev.go_auto(path);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        O+=dev.go_auto(concrete_params);
+        if (!ok)return ok;
+        M+=dev.go_auto(params);
+        if (!ok)return ok;
+        M+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_ctor_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_impl body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_ctor_class_stat(const t_ctor_class_stat&)=delete;
+    t_ctor_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_ctor_class_stat(t_ctor_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_ctor_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_ctor_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_impl>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_impl>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_ctor_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_oper_cast_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_oper_cast_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    TAutoPtr<t_func_path> path;
+    t_sep sep0;
+    t_fv_class_stat::t_type_expr type;
+    t_sep sep1;
+    t_fv_class_stat::t_type_expr::t_func_params params;
+    TAutoPtr<t_const_with_sep> cv;
+    TAutoPtr<i_func_body> body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->path);
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->type);
+      detail::FieldTryDoReset(this->sep1);
+      detail::FieldTryDoReset(this->params);
+      detail::FieldTryDoReset(this->cv);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_oper_cast_class_stat(const t_oper_cast_class_stat&)=delete;
+    t_oper_cast_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_oper_cast_class_stat(t_oper_cast_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_oper_cast_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->path=std::move(_Right.path);
+      this->sep0=std::move(_Right.sep0);
+      this->type=std::move(_Right.type);
+      this->sep1=std::move(_Right.sep1);
+      this->params=std::move(_Right.params);
+      this->cv=std::move(_Right.cv);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_oper_cast_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_path>>::GetRTTI(RTTI),"path",int(&(((SelfClass*)nullptr)->*(&SelfClass::path))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_oper_cast_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(path);
+      if (!ok)return ok;
+      M+=dev.go_const("operator");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(type);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      M+=dev.go_auto(params);
+      if (!ok)return ok;
+      O+=dev.go_auto(cv);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_common_oper_class_stat:public i_class_stat
+  {
+  public:
+    class t_impl
+    {
+    public:
+      typedef t_common_oper_class_stat OwnerClass;
+    public:
+      typedef t_impl SelfClass;
+    public:
+      vector<t_keyword> keywords;
+      t_fv_class_stat::t_type_expr type;
+      TAutoPtr<t_const_with_sep> cv0;
+      t_sep sep0;
+      TAutoPtr<t_func_path> path;
+      t_sep sep1;
+      string oper;
+      t_fv_class_stat::t_type_expr::t_func_params params;
+      TAutoPtr<t_const_with_sep> cv1;
+      TAutoPtr<i_func_body> body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->keywords);
+        detail::FieldTryDoReset(this->type);
+        detail::FieldTryDoReset(this->cv0);
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->path);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->oper);
+        detail::FieldTryDoReset(this->params);
+        detail::FieldTryDoReset(this->cv1);
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_impl(const t_impl&)=delete;
+      t_impl()
+      {
+        DoReset();
+      };
+    public:
+      t_impl(t_impl&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->keywords=std::move(_Right.keywords);
+        this->type=std::move(_Right.type);
+        this->cv0=std::move(_Right.cv0);
+        this->sep0=std::move(_Right.sep0);
+        this->path=std::move(_Right.path);
+        this->sep1=std::move(_Right.sep1);
+        this->oper=std::move(_Right.oper);
+        this->params=std::move(_Right.params);
+        this->cv1=std::move(_Right.cv1);
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<vector<t_keyword>>::GetRTTI(RTTI),"keywords",int(&(((SelfClass*)nullptr)->*(&SelfClass::keywords))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv0",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_func_path>>::GetRTTI(RTTI),"path",int(&(((SelfClass*)nullptr)->*(&SelfClass::path))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"oper",int(&(((SelfClass*)nullptr)->*(&SelfClass::oper))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv1",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(keywords);
+        if (!ok)return ok;
+        M+=dev.go_auto(type);
+        if (!ok)return ok;
+        O+=dev.go_auto(cv0);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        O+=dev.go_auto(path);
+        if (!ok)return ok;
+        M+=dev.go_const("operator");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        static const auto g_static_var_7=QapStrFinder::fromArr(split("=,+=,-=,*=,/=,%=,|=,&=,^=,<<=,>>=,||,&&,|,^,&,==,!=,<,<=,>,>=,<<,>>,+,-,*,/,%,++,--,~,!,(),[],->",","));
+        M+=dev.go_any_str_from_vec(oper,g_static_var_7);
+        if (!ok)return ok;
+        M+=dev.go_auto(params);
+        if (!ok)return ok;
+        O+=dev.go_auto(cv1);
+        if (!ok)return ok;
+        M+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_common_oper_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_impl body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_common_oper_class_stat(const t_common_oper_class_stat&)=delete;
+    t_common_oper_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_common_oper_class_stat(t_common_oper_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_common_oper_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_common_oper_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_impl>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_impl>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_common_oper_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_parents
+  {
+  public:
+    class t_item
+    {
+    public:
+      class t_pub
+      {
+      public:
+        typedef t_item OwnerClass;
+      public:
+        typedef t_pub SelfClass;
+      public:
+        t_access_mod mod;
+        t_sep sep;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->mod);
+          detail::FieldTryDoReset(this->sep);
+        }
+      public:
+        t_pub(const t_pub&)=delete;
+        t_pub()
+        {
+          DoReset();
+        };
+      public:
+        t_pub(t_pub&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_pub&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->mod=std::move(_Right.mod);
+          this->sep=std::move(_Right.sep);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_pub";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_access_mod>::GetRTTI(RTTI),"mod",int(&(((SelfClass*)nullptr)->*(&SelfClass::mod))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_pub";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_auto(mod);
+          if (!ok)return ok;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+    public:
+    public:
+      typedef t_parents OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_sep sep;
+      TAutoPtr<t_pub> pub;
+      string name;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep);
+        detail::FieldTryDoReset(this->pub);
+        detail::FieldTryDoReset(this->name);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep=std::move(_Right.sep);
+        this->pub=std::move(_Right.pub);
+        this->name=std::move(_Right.name);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_pub>>::GetRTTI(RTTI),"pub",int(&(((SelfClass*)nullptr)->*(&SelfClass::pub))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+            Info->AddNested(Sys$$<t_pub>::GetRTTI(RTTI));
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(sep);
+        if (!ok)return ok;
+        O+=dev.go_auto(pub);
+        if (!ok)return ok;
+        M+=dev.go_str<t_fv_class_stat::t_type_expr::t_type_expr_with_sep_and_cv>(name);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_parents SelfClass;
+  public:
+    t_sep sep;
+    vector<t_item> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_parents(const t_parents&)=delete;
+    t_parents()
+    {
+      DoReset();
+    };
+  public:
+    t_parents(t_parents&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_parents&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_parents";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_parents";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const(":");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_vec(arr,",");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_class_body
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_class_body SelfClass;
+  public:
+    vector<TAutoPtr<i_class_stat>> arr;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_class_body(const t_class_body&)=delete;
+    t_class_body()
+    {
+      DoReset();
+    };
+  public:
+    t_class_body(t_class_body&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_class_body&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_class_body";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<TAutoPtr<i_class_stat>>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_class_body";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("{");
+      if (!ok)return ok;
+      O+=dev.go_auto(arr);
+      if (!ok)return ok;
+      M+=dev.go_const("}");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_class
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_class SelfClass;
+  public:
+    string keyword;
+    t_sep sep0;
+    string name;
+    t_sep sep1;
+    TAutoPtr<t_parents> parents;
+    t_sep sep2;
+    TAutoPtr<t_class_body> body;
+    t_sep sep3;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->keyword);
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->name);
+      detail::FieldTryDoReset(this->sep1);
+      detail::FieldTryDoReset(this->parents);
+      detail::FieldTryDoReset(this->sep2);
+      detail::FieldTryDoReset(this->body);
+      detail::FieldTryDoReset(this->sep3);
+    }
+  public:
+    t_class(const t_class&)=delete;
+    t_class()
+    {
+      DoReset();
+    };
+  public:
+    t_class(t_class&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_class&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->keyword=std::move(_Right.keyword);
+      this->sep0=std::move(_Right.sep0);
+      this->name=std::move(_Right.name);
+      this->sep1=std::move(_Right.sep1);
+      this->parents=std::move(_Right.parents);
+      this->sep2=std::move(_Right.sep2);
+      this->body=std::move(_Right.body);
+      this->sep3=std::move(_Right.sep3);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_class";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"keyword",int(&(((SelfClass*)nullptr)->*(&SelfClass::keyword))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_parents>>::GetRTTI(RTTI),"parents",int(&(((SelfClass*)nullptr)->*(&SelfClass::parents))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_class_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep3",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep3))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_class";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("struct,class,union",","));
+      M+=dev.go_any_str_from_vec(keyword,g_static_var_0);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      O+=dev.go_str<t_name>(name);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      O+=dev.go_auto(parents);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep2);
+      if (!ok)return ok;
+      O+=dev.go_auto(body);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep3);
+      if (!ok)return ok;
+      M+=dev.go_const(";");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_namespace_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_namespace_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep0;
+    string name;
+    t_sep sep1;
+    t_class_body body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->name);
+      detail::FieldTryDoReset(this->sep1);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_namespace_class_stat(const t_namespace_class_stat&)=delete;
+    t_namespace_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_namespace_class_stat(t_namespace_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_namespace_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->name=std::move(_Right.name);
+      this->sep1=std::move(_Right.sep1);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_namespace_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_class_body>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_namespace_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("namespace");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      O+=dev.go_str<t_name>(name);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_template_class_stat:public i_class_stat
+  {
+  public:
+    class i_template_body;
+    class t_common_oper_template_body;
+    class t_ctor_template_body;
+    class t_func_template_body;
+    class class_template_body;
+    class i_template_body_visitor
+    {
+    public:
+      typedef t_template_class_stat::i_template_body i_template_body;
+    public:
+      virtual void Do(t_common_oper_template_body*p)=0;
+      virtual void Do(t_ctor_template_body*p)=0;
+      virtual void Do(t_func_template_body*p)=0;
+      virtual void Do(class_template_body*p)=0;
+    public:
+      typedef t_template_class_stat::t_common_oper_template_body t_common_oper_template_body;
+      typedef t_template_class_stat::t_ctor_template_body t_ctor_template_body;
+      typedef t_template_class_stat::t_func_template_body t_func_template_body;
+      typedef t_template_class_stat::class_template_body class_template_body;
+    public:
+      template<class TYPE,class Visitor>
+      struct Is:public Visitor
+      {
+        TYPE*ptr;
+        Is():ptr(nullptr) {}
+public:
+        template<class U>static TYPE*get(U*p)
+        {
+          return nullptr;
+        }
+        template<>static TYPE*get<TYPE>(TYPE*p)
+        {
+          return p;
+        }
+public:
+        void Do(t_common_oper_template_body*p)
+        {
+          ptr=get(p);
+        } void Do(t_ctor_template_body*p)
+        {
+          ptr=get(p);
+        } void Do(t_func_template_body*p)
+        {
+          ptr=get(p);
+        } void Do(class_template_body*p)
+        {
+          ptr=get(p);
+        }
+      };
+      template<class TYPE>
+      static TYPE*UberCast(i_template_body*p)
+      {
+        if (!p)return nullptr;
+        Is<TYPE,i_template_body_visitor> IS;
+        p->Use(IS);
+        return IS.ptr;
+      }
+    };
+  public:
+    class i_template_body
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef i_template_body SelfClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+        }
+      }
+    public:
+      i_template_body(const i_template_body&)=delete;
+      i_template_body()
+      {
+        DoReset();
+      };
+    public:
+      i_template_body(i_template_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(i_template_body&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="i_template_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "i_template_body";
+        }
+      };
+    public:
+    public:
+      typedef i_template_body_visitor i_visitor;
+      virtual void Use(i_visitor&A)
+      {
+        QapDebugMsg("no way.");/*A.Do(this);*/
+      }
+    public:
+      virtual bool go(i_dev&dev)
+      {
+        QapDebugMsg("no way.");
+        return false;
+      };
+      struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        bool load()
+        {
+          go_for<t_common_oper_template_body>();
+          go_for<t_ctor_template_body>();
+          go_for<t_func_template_body>();
+          go_for<class_template_body>();
+          (void)count;
+          (void)first_id;
+          (void)out_arr;
+          (void)this;
+          main();
+          return scope.ok;
+        }
+        static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          vector<t_out_rec> out_arr;
+          static int out_arr_size=0;
+          out_arr.reserve(out_arr_size);
+          t_fallback scope(dev,__FUNCTION__);
+          int count=0;
+          int first_id=-1;
+          auto&Env=dev.getEnv();
+          static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+          t_poly_tool::go_poly<SelfClass> solver_impl=
+          {
+            out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+          };
+          t_poly_impl&solver=(t_poly_impl&)solver_impl;
+          solver.load();
+          out_arr_size=out_arr.size();
+          return scope.ok;
+        }
+        static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          bool&ok=scope.ok;
+          if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+            {
+              return false;
+            }
+          if (!ref)return false;
+          QapAssert(ref);
+          auto*p=ref.get();
+          ok=p->go(dev);
+          return ok;
+        }
+      };
+    };
+  public:
+    class i_template_param;
+    class t_name_template_param;
+    class t_type_template_param;
+    class i_template_param_visitor
+    {
+    public:
+      typedef t_template_class_stat::i_template_param i_template_param;
+    public:
+      virtual void Do(t_name_template_param*p)=0;
+      virtual void Do(t_type_template_param*p)=0;
+    public:
+      typedef t_template_class_stat::t_name_template_param t_name_template_param;
+      typedef t_template_class_stat::t_type_template_param t_type_template_param;
+    public:
+      template<class TYPE,class Visitor>
+      struct Is:public Visitor
+      {
+        TYPE*ptr;
+        Is():ptr(nullptr) {}
+public:
+        template<class U>static TYPE*get(U*p)
+        {
+          return nullptr;
+        }
+        template<>static TYPE*get<TYPE>(TYPE*p)
+        {
+          return p;
+        }
+public:
+        void Do(t_name_template_param*p)
+        {
+          ptr=get(p);
+        } void Do(t_type_template_param*p)
+        {
+          ptr=get(p);
+        }
+      };
+      template<class TYPE>
+      static TYPE*UberCast(i_template_param*p)
+      {
+        if (!p)return nullptr;
+        Is<TYPE,i_template_param_visitor> IS;
+        p->Use(IS);
+        return IS.ptr;
+      }
+    };
+  public:
+    class i_template_param
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef i_template_param SelfClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+        }
+      }
+    public:
+      i_template_param(const i_template_param&)=delete;
+      i_template_param()
+      {
+        DoReset();
+      };
+    public:
+      i_template_param(i_template_param&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(i_template_param&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="i_template_param";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "i_template_param";
+        }
+      };
+    public:
+    public:
+      typedef i_template_param_visitor i_visitor;
+      virtual void Use(i_visitor&A)
+      {
+        QapDebugMsg("no way.");/*A.Do(this);*/
+      }
+    public:
+      virtual bool go(i_dev&dev)
+      {
+        QapDebugMsg("no way.");
+        return false;
+      };
+      struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        bool load()
+        {
+          go_for<t_name_template_param>();
+          go_for<t_type_template_param>();
+          (void)count;
+          (void)first_id;
+          (void)out_arr;
+          (void)this;
+          main();
+          return scope.ok;
+        }
+        static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          vector<t_out_rec> out_arr;
+          static int out_arr_size=0;
+          out_arr.reserve(out_arr_size);
+          t_fallback scope(dev,__FUNCTION__);
+          int count=0;
+          int first_id=-1;
+          auto&Env=dev.getEnv();
+          static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+          t_poly_tool::go_poly<SelfClass> solver_impl=
+          {
+            out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+          };
+          t_poly_impl&solver=(t_poly_impl&)solver_impl;
+          solver.load();
+          out_arr_size=out_arr.size();
+          return scope.ok;
+        }
+        static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          bool&ok=scope.ok;
+          if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+            {
+              return false;
+            }
+          if (!ref)return false;
+          QapAssert(ref);
+          auto*p=ref.get();
+          ok=p->go(dev);
+          return ok;
+        }
+      };
+    };
+    class t_template_param
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_template_param SelfClass;
+    public:
+      t_sep bef;
+      TAutoPtr<i_template_param> body;
+      t_sep aft;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->bef);
+        detail::FieldTryDoReset(this->body);
+        detail::FieldTryDoReset(this->aft);
+      }
+    public:
+      t_template_param(const t_template_param&)=delete;
+      t_template_param()
+      {
+        DoReset();
+      };
+    public:
+      t_template_param(t_template_param&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_template_param&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->bef=std::move(_Right.bef);
+        this->body=std::move(_Right.body);
+        this->aft=std::move(_Right.aft);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_template_param";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"bef",int(&(((SelfClass*)nullptr)->*(&SelfClass::bef))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_template_param>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"aft",int(&(((SelfClass*)nullptr)->*(&SelfClass::aft))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_template_param";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(bef);
+        if (!ok)return ok;
+        M+=dev.go_auto(body);
+        if (!ok)return ok;
+        O+=dev.go_auto(aft);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_common_oper_template_body:public i_template_body
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_common_oper_template_body SelfClass;
+    public:
+      typedef i_template_body ParentClass;
+    public:
+      t_common_oper_class_stat::t_impl body;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_common_oper_template_body(const t_common_oper_template_body&)=delete;
+      t_common_oper_template_body()
+      {
+        DoReset();
+      };
+    public:
+      t_common_oper_template_body(t_common_oper_template_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_common_oper_template_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_body::operator=(std::move(_Right));
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_common_oper_template_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_common_oper_class_stat::t_impl>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_common_oper_template_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_ctor_template_body:public i_template_body
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_ctor_template_body SelfClass;
+    public:
+      typedef i_template_body ParentClass;
+    public:
+      t_ctor_class_stat::t_impl body;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_ctor_template_body(const t_ctor_template_body&)=delete;
+      t_ctor_template_body()
+      {
+        DoReset();
+      };
+    public:
+      t_ctor_template_body(t_ctor_template_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_ctor_template_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_body::operator=(std::move(_Right));
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_ctor_template_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_ctor_class_stat::t_impl>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_ctor_template_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_func_template_body:public i_template_body
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_func_template_body SelfClass;
+    public:
+      typedef i_template_body ParentClass;
+    public:
+      vector<t_keyword> keywords;
+      t_fv_class_stat::t_type_expr type;
+      TAutoPtr<t_const_with_sep> cv0;
+      t_sep sep0;
+      string func_name;
+      TAutoPtr<t_concrete_params> concrete_params;
+      t_sep sep1;
+      t_fv_class_stat::t_type_expr::t_func_params params;
+      t_sep sep2;
+      TAutoPtr<t_const_with_sep> cv1;
+      TAutoPtr<i_func_body> body;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->keywords);
+        detail::FieldTryDoReset(this->type);
+        detail::FieldTryDoReset(this->cv0);
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->func_name);
+        detail::FieldTryDoReset(this->concrete_params);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->params);
+        detail::FieldTryDoReset(this->sep2);
+        detail::FieldTryDoReset(this->cv1);
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_func_template_body(const t_func_template_body&)=delete;
+      t_func_template_body()
+      {
+        DoReset();
+      };
+    public:
+      t_func_template_body(t_func_template_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_func_template_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_body::operator=(std::move(_Right));
+        }
+        this->keywords=std::move(_Right.keywords);
+        this->type=std::move(_Right.type);
+        this->cv0=std::move(_Right.cv0);
+        this->sep0=std::move(_Right.sep0);
+        this->func_name=std::move(_Right.func_name);
+        this->concrete_params=std::move(_Right.concrete_params);
+        this->sep1=std::move(_Right.sep1);
+        this->params=std::move(_Right.params);
+        this->sep2=std::move(_Right.sep2);
+        this->cv1=std::move(_Right.cv1);
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_func_template_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<vector<t_keyword>>::GetRTTI(RTTI),"keywords",int(&(((SelfClass*)nullptr)->*(&SelfClass::keywords))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv0",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"func_name",int(&(((SelfClass*)nullptr)->*(&SelfClass::func_name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_concrete_params>>::GetRTTI(RTTI),"concrete_params",int(&(((SelfClass*)nullptr)->*(&SelfClass::concrete_params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_func_params>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_const_with_sep>>::GetRTTI(RTTI),"cv1",int(&(((SelfClass*)nullptr)->*(&SelfClass::cv1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_func_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_func_template_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(keywords);
+        if (!ok)return ok;
+        M+=dev.go_auto(type);
+        if (!ok)return ok;
+        O+=dev.go_auto(cv0);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(func_name);
+        if (!ok)return ok;
+        O+=dev.go_auto(concrete_params);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        M+=dev.go_auto(params);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep2);
+        if (!ok)return ok;
+        O+=dev.go_auto(cv1);
+        if (!ok)return ok;
+        M+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class class_template_body:public i_template_body
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef class_template_body SelfClass;
+    public:
+      typedef i_template_body ParentClass;
+    public:
+      string keyword;
+      t_sep sep0;
+      string name;
+      t_sep sep1;
+      TAutoPtr<t_concrete_params> params;
+      TAutoPtr<t_parents> parents;
+      t_sep sep2;
+      TAutoPtr<t_class_body> body;
+      t_sep sep3;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->keyword);
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->params);
+        detail::FieldTryDoReset(this->parents);
+        detail::FieldTryDoReset(this->sep2);
+        detail::FieldTryDoReset(this->body);
+        detail::FieldTryDoReset(this->sep3);
+      }
+    public:
+      class_template_body(const class_template_body&)=delete;
+      class_template_body()
+      {
+        DoReset();
+      };
+    public:
+      class_template_body(class_template_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(class_template_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_body::operator=(std::move(_Right));
+        }
+        this->keyword=std::move(_Right.keyword);
+        this->sep0=std::move(_Right.sep0);
+        this->name=std::move(_Right.name);
+        this->sep1=std::move(_Right.sep1);
+        this->params=std::move(_Right.params);
+        this->parents=std::move(_Right.parents);
+        this->sep2=std::move(_Right.sep2);
+        this->body=std::move(_Right.body);
+        this->sep3=std::move(_Right.sep3);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="class_template_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"keyword",int(&(((SelfClass*)nullptr)->*(&SelfClass::keyword))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_concrete_params>>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_parents>>::GetRTTI(RTTI),"parents",int(&(((SelfClass*)nullptr)->*(&SelfClass::parents))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_class_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep3",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep3))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "class_template_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        static const auto g_static_var_0=QapStrFinder::fromArr(split("struct,class,union",","));
+        M+=dev.go_any_str_from_vec(keyword,g_static_var_0);
+        if (!ok)return ok;
+        M+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        O+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        O+=dev.go_auto(params);
+        if (!ok)return ok;
+        O+=dev.go_auto(parents);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep2);
+        if (!ok)return ok;
+        O+=dev.go_auto(body);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep3);
+        if (!ok)return ok;
+        M+=dev.go_const(";");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_name_template_param:public i_template_param
+    {
+    public:
+      class t_unsgnd
+      {
+      public:
+        typedef t_name_template_param OwnerClass;
+      public:
+        typedef t_unsgnd SelfClass;
+      public:
+        t_sep sep;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->sep);
+        }
+      public:
+        t_unsgnd(const t_unsgnd&)=delete;
+        t_unsgnd()
+        {
+          DoReset();
+        };
+      public:
+        t_unsgnd(t_unsgnd&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_unsgnd&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->sep=std::move(_Right.sep);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_unsgnd";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_unsgnd";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("unsigned");
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+      class t_value
+      {
+      public:
+        typedef t_name_template_param OwnerClass;
+      public:
+        typedef t_value SelfClass;
+      public:
+        t_expr body;
+        t_sep sep;
+      public:
+        void DoReset()
+        {
+          {
+          }
+          detail::FieldTryDoReset(this->body);
+          detail::FieldTryDoReset(this->sep);
+        }
+      public:
+        t_value(const t_value&)=delete;
+        t_value()
+        {
+          DoReset();
+        };
+      public:
+        t_value(t_value&&_Right)
+        {
+          operator=(std::move(_Right));
+        }
+        void operator=(t_value&&_Right)
+        {
+          if (&_Right==this)return;
+          {
+          }
+          this->body=std::move(_Right.body);
+          this->sep=std::move(_Right.sep);
+        }
+      public:
+        struct ProxySys$$
+        {
+          typedef TTypeStruct metatype;
+          static metatype*GetRTTI(IEnvRTTI&RTTI)
+          {
+            static const string Name="t_value";
+            TTypeStruct*Info=nullptr;
+            if (RTTI.Register<SelfClass>(Info,Name))
+            {
+              return Info;
+            }
+            else
+            {
+              Info->SubType=nullptr;
+              Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+            }
+            Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+            Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+            {
+              RTTI.OnRegEnd(Info);
+            }
+            {
+            }
+            Info->SelfTesting();
+            return Info;
+          }
+          static string GetFullName()
+          {
+            return "t_value";
+          }
+        };
+      public:
+      public:
+        bool go(i_dev&dev)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          auto&ok=scope.ok;
+          auto&D=scope.mandatory;
+          auto&M=scope.mandatory;
+          auto&O=scope.optional;
+          M+=dev.go_const("=");
+          if (!ok)return ok;
+          O+=dev.go_auto(sep);
+          if (!ok)return ok;
+          M+=dev.go_auto(body);
+          if (!ok)return ok;
+          return ok;
+        }
+      };
+    public:
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_name_template_param SelfClass;
+    public:
+      typedef i_template_param ParentClass;
+    public:
+      string unsgnd0;
+      t_sep sep0;
+      string type;
+      t_sep sep1;
+      string unsgnd1;
+      t_sep sep2;
+      string name;
+      t_sep sep3;
+      TAutoPtr<t_value> value;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->unsgnd0);
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->type);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->unsgnd1);
+        detail::FieldTryDoReset(this->sep2);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->sep3);
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_name_template_param(const t_name_template_param&)=delete;
+      t_name_template_param()
+      {
+        DoReset();
+      };
+    public:
+      t_name_template_param(t_name_template_param&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_name_template_param&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_param(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_param::operator=(std::move(_Right));
+        }
+        this->unsgnd0=std::move(_Right.unsgnd0);
+        this->sep0=std::move(_Right.sep0);
+        this->type=std::move(_Right.type);
+        this->sep1=std::move(_Right.sep1);
+        this->unsgnd1=std::move(_Right.unsgnd1);
+        this->sep2=std::move(_Right.sep2);
+        this->name=std::move(_Right.name);
+        this->sep3=std::move(_Right.sep3);
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_name_template_param";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"unsgnd0",int(&(((SelfClass*)nullptr)->*(&SelfClass::unsgnd0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"unsgnd1",int(&(((SelfClass*)nullptr)->*(&SelfClass::unsgnd1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep2",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep2))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep3",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep3))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_value>>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+            Info->AddNested(Sys$$<t_unsgnd>::GetRTTI(RTTI));
+            Info->AddNested(Sys$$<t_value>::GetRTTI(RTTI));
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_name_template_param";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_str<t_unsgnd>(unsgnd0);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(type);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        O+=dev.go_str<t_unsgnd>(unsgnd1);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep2);
+        if (!ok)return ok;
+        O+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep3);
+        if (!ok)return ok;
+        O+=dev.go_auto(value);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_head
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_head SelfClass;
+    public:
+      t_sep sep0;
+      vector<t_template_param> params;
+      t_sep sep1;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->params);
+        detail::FieldTryDoReset(this->sep1);
+      }
+    public:
+      t_head(const t_head&)=delete;
+      t_head()
+      {
+        DoReset();
+      };
+    public:
+      t_head(t_head&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_head&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep0=std::move(_Right.sep0);
+        this->params=std::move(_Right.params);
+        this->sep1=std::move(_Right.sep1);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_head";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<vector<t_template_param>>::GetRTTI(RTTI),"params",int(&(((SelfClass*)nullptr)->*(&SelfClass::params))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_head";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_const("template");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_const("<");
+        if (!ok)return ok;
+        O+=dev.go_vec(params,",");
+        if (!ok)return ok;
+        M+=dev.go_const(">");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_type_template_param:public i_template_param
+    {
+    public:
+      typedef t_template_class_stat OwnerClass;
+    public:
+      typedef t_type_template_param SelfClass;
+    public:
+      typedef i_template_param ParentClass;
+    public:
+      TAutoPtr<t_head> head;
+      string type;
+      t_sep sep;
+      string name;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->head);
+        detail::FieldTryDoReset(this->type);
+        detail::FieldTryDoReset(this->sep);
+        detail::FieldTryDoReset(this->name);
+      }
+    public:
+      t_type_template_param(const t_type_template_param&)=delete;
+      t_type_template_param()
+      {
+        DoReset();
+      };
+    public:
+      t_type_template_param(t_type_template_param&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_type_template_param&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_template_param(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_template_param::operator=(std::move(_Right));
+        }
+        this->head=std::move(_Right.head);
+        this->type=std::move(_Right.type);
+        this->sep=std::move(_Right.sep);
+        this->name=std::move(_Right.name);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_type_template_param";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_head>>::GetRTTI(RTTI),"head",int(&(((SelfClass*)nullptr)->*(&SelfClass::head))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_type_template_param";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(head);
+        if (!ok)return ok;
+        static const auto g_static_var_1=QapStrFinder::fromArr(split("class,typename",","));
+        M+=dev.go_any_str_from_vec(type,g_static_var_1);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep);
+        if (!ok)return ok;
+        O+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_template_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_head head;
+    TAutoPtr<i_template_body> body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->head);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_template_class_stat(const t_template_class_stat&)=delete;
+    t_template_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_template_class_stat(t_template_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_template_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->head=std::move(_Right.head);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_template_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_head>::GetRTTI(RTTI),"head",int(&(((SelfClass*)nullptr)->*(&SelfClass::head))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<i_template_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_template_param>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_common_oper_template_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_ctor_template_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_func_template_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<class_template_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_name_template_param>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_head>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_type_template_param>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_template_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_auto(head);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  public:
+  };
+  class t_enum_class_stat:public i_class_stat
+  {
+  public:
+    class i_body;
+    class t_impl_body;
+    class t_empty_body;
+    class i_body_visitor
+    {
+    public:
+      typedef t_enum_class_stat::i_body i_body;
+    public:
+      virtual void Do(t_impl_body*p)=0;
+      virtual void Do(t_empty_body*p)=0;
+    public:
+      typedef t_enum_class_stat::t_impl_body t_impl_body;
+      typedef t_enum_class_stat::t_empty_body t_empty_body;
+    public:
+      template<class TYPE,class Visitor>
+      struct Is:public Visitor
+      {
+        TYPE*ptr;
+        Is():ptr(nullptr) {}
+public:
+        template<class U>static TYPE*get(U*p)
+        {
+          return nullptr;
+        }
+        template<>static TYPE*get<TYPE>(TYPE*p)
+        {
+          return p;
+        }
+public:
+        void Do(t_impl_body*p)
+        {
+          ptr=get(p);
+        } void Do(t_empty_body*p)
+        {
+          ptr=get(p);
+        }
+      };
+      template<class TYPE>
+      static TYPE*UberCast(i_body*p)
+      {
+        if (!p)return nullptr;
+        Is<TYPE,i_body_visitor> IS;
+        p->Use(IS);
+        return IS.ptr;
+      }
+    };
+  public:
+    class i_body
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef i_body SelfClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+        }
+      }
+    public:
+      i_body(const i_body&)=delete;
+      i_body()
+      {
+        DoReset();
+      };
+    public:
+      i_body(i_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(i_body&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="i_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "i_body";
+        }
+      };
+    public:
+    public:
+      typedef i_body_visitor i_visitor;
+      virtual void Use(i_visitor&A)
+      {
+        QapDebugMsg("no way.");/*A.Do(this);*/
+      }
+    public:
+      virtual bool go(i_dev&dev)
+      {
+        QapDebugMsg("no way.");
+        return false;
+      };
+      struct t_poly_impl:public t_poly_tool::go_poly<SelfClass>
+      {
+        typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+        bool load()
+        {
+          go_for<t_impl_body>();
+          go_for<t_empty_body>();
+          (void)count;
+          (void)first_id;
+          (void)out_arr;
+          (void)this;
+          main();
+          return scope.ok;
+        }
+        static bool go_lt(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          typedef t_poly_tool::t_out_rec<SelfClass> t_out_rec;
+          vector<t_out_rec> out_arr;
+          static int out_arr_size=0;
+          out_arr.reserve(out_arr_size);
+          t_fallback scope(dev,__FUNCTION__);
+          int count=0;
+          int first_id=-1;
+          auto&Env=dev.getEnv();
+          static const string strbasetype=Sys$$<SelfClass>::GetRTTI(Env)->GetFullName();
+          t_poly_tool::go_poly<SelfClass> solver_impl=
+          {
+            out_arr,dev,ref,scope,count,first_id,strbasetype,Env
+          };
+          t_poly_impl&solver=(t_poly_impl&)solver_impl;
+          solver.load();
+          out_arr_size=out_arr.size();
+          return scope.ok;
+        }
+        static bool go_st(i_dev&dev,TAutoPtr<SelfClass>&ref)
+        {
+          t_fallback scope(dev,__FUNCTION__);
+          bool&ok=scope.ok;
+          if (!std::is_polymorphic<SelfClass>::value)if (!ref)
+            {
+              return false;
+            }
+          if (!ref)return false;
+          QapAssert(ref);
+          auto*p=ref.get();
+          ok=p->go(dev);
+          return ok;
+        }
+      };
+    };
+    class t_value
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_value SelfClass;
+    public:
+      t_sep sep0;
+      t_expr expr;
+      t_sep sep1;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->expr);
+        detail::FieldTryDoReset(this->sep1);
+      }
+    public:
+      t_value(const t_value&)=delete;
+      t_value()
+      {
+        DoReset();
+      };
+    public:
+      t_value(t_value&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_value&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep0=std::move(_Right.sep0);
+        this->expr=std::move(_Right.expr);
+        this->sep1=std::move(_Right.sep1);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_value";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_value";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_const("=");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_auto(expr);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_item
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_item SelfClass;
+    public:
+      t_sep sep0;
+      string name;
+      t_sep sep1;
+      TAutoPtr<t_value> value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep0);
+        detail::FieldTryDoReset(this->name);
+        detail::FieldTryDoReset(this->sep1);
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_item(const t_item&)=delete;
+      t_item()
+      {
+        DoReset();
+      };
+    public:
+      t_item(t_item&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_item&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep0=std::move(_Right.sep0);
+        this->name=std::move(_Right.name);
+        this->sep1=std::move(_Right.sep1);
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_item";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_value>>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_item";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        O+=dev.go_auto(sep0);
+        if (!ok)return ok;
+        M+=dev.go_str<t_name>(name);
+        if (!ok)return ok;
+        O+=dev.go_auto(sep1);
+        if (!ok)return ok;
+        O+=dev.go_auto(value);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_comma_with_sep
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_comma_with_sep SelfClass;
+    public:
+      t_sep sep;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->sep);
+      }
+    public:
+      t_comma_with_sep(const t_comma_with_sep&)=delete;
+      t_comma_with_sep()
+      {
+        DoReset();
+      };
+    public:
+      t_comma_with_sep(t_comma_with_sep&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_comma_with_sep&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->sep=std::move(_Right.sep);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_comma_with_sep";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_comma_with_sep";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_const(",");
+        if (!ok)return ok;
+        O+=dev.go_auto(sep);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_impl_body:public i_body
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_impl_body SelfClass;
+    public:
+      typedef i_body ParentClass;
+    public:
+      vector<t_item> arr;
+      TAutoPtr<t_comma_with_sep> comma;
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+        detail::FieldTryDoReset(this->arr);
+        detail::FieldTryDoReset(this->comma);
+      }
+    public:
+      t_impl_body(const t_impl_body&)=delete;
+      t_impl_body()
+      {
+        DoReset();
+      };
+    public:
+      t_impl_body(t_impl_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_body::operator=(std::move(_Right));
+        }
+        this->arr=std::move(_Right.arr);
+        this->comma=std::move(_Right.comma);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<vector<t_item>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<TAutoPtr<t_comma_with_sep>>::GetRTTI(RTTI),"comma",int(&(((SelfClass*)nullptr)->*(&SelfClass::comma))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        M+=dev.go_const("{");
+        if (!ok)return ok;
+        O+=dev.go_vec(arr,",");
+        if (!ok)return ok;
+        O+=dev.go_auto(comma);
+        if (!ok)return ok;
+        M+=dev.go_const("}");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_empty_body:public i_body
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_empty_body SelfClass;
+    public:
+      typedef i_body ParentClass;
+    public:
+    public:
+      void DoReset()
+      {
+        {
+          detail::TryDoReset<SelfClass>(this);
+        }
+      }
+    public:
+      t_empty_body(const t_empty_body&)=delete;
+      t_empty_body()
+      {
+        DoReset();
+      };
+    public:
+      t_empty_body(t_empty_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_empty_body&&_Right)
+      {
+        struct hidden
+        {
+          static void foo(i_body(*)=(SelfClass*)nullptr) {}};
+        if (&_Right==this)return;
+        {
+          i_body::operator=(std::move(_Right));
+        }
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_empty_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_empty_body";
+        }
+      };
+    public:
+    public:
+      void Use(i_visitor&A)
+      {
+        A.Do(this);
+      }
+      static SelfClass*UberCast(ParentClass*ptr)
+      {
+        return i_visitor::UberCast<SelfClass>(ptr);
+      }
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_const(";");
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+    class t_body
+    {
+    public:
+      typedef t_enum_class_stat OwnerClass;
+    public:
+      typedef t_body SelfClass;
+    public:
+      TAutoPtr<i_body> body;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->body);
+      }
+    public:
+      t_body(const t_body&)=delete;
+      t_body()
+      {
+        DoReset();
+      };
+    public:
+      t_body(t_body&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_body&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->body=std::move(_Right.body);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_body";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<TAutoPtr<i_body>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_body";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_auto(body);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_enum_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep0;
+    string name;
+    t_sep sep1;
+    t_body body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->name);
+      detail::FieldTryDoReset(this->sep1);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_enum_class_stat(const t_enum_class_stat&)=delete;
+    t_enum_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_enum_class_stat(t_enum_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_enum_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->name=std::move(_Right.name);
+      this->sep1=std::move(_Right.sep1);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_enum_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_body>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_value>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_item>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_comma_with_sep>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_impl_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_empty_body>::GetRTTI(RTTI));
+          Info->AddNested(Sys$$<t_body>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_enum_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("enum");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      O+=dev.go_str<t_name>(name);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      O+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  public:
+  };
+  class t_using_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_using_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep;
+    t_fv_class_stat::t_type_expr type;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->type);
+    }
+  public:
+    t_using_class_stat(const t_using_class_stat&)=delete;
+    t_using_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_using_class_stat(t_using_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_using_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep=std::move(_Right.sep);
+      this->type=std::move(_Right.type);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_using_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr>::GetRTTI(RTTI),"type",int(&(((SelfClass*)nullptr)->*(&SelfClass::type))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_using_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("using");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_auto(type);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_tmpl_call_param
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_tmpl_call_param SelfClass;
+  public:
+    t_sep sep0;
+    t_tmpl_expr expr;
+    t_sep sep1;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->sep1);
+    }
+  public:
+    t_tmpl_call_param(const t_tmpl_call_param&)=delete;
+    t_tmpl_call_param()
+    {
+      DoReset();
+    };
+  public:
+    t_tmpl_call_param(t_tmpl_call_param&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_tmpl_call_param&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->expr=std::move(_Right.expr);
+      this->sep1=std::move(_Right.sep1);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_tmpl_call_param";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_tmpl_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_tmpl_call_param";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_call_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_call_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string func;
+    t_sep sep;
+    vector<t_tmpl_call_param> arr;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->func);
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_call_tmpl_expr(const t_call_tmpl_expr&)=delete;
+    t_call_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_call_tmpl_expr(t_call_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_call_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->func=std::move(_Right.func);
+      this->sep=std::move(_Right.sep);
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_call_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"func",int(&(((SelfClass*)nullptr)->*(&SelfClass::func))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<vector<t_tmpl_call_param>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_call_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_str<t_name>(func);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_const("(");
+      if (!ok)return ok;
+      O+=dev.go_vec(arr,",");
+      if (!ok)return ok;
+      M+=dev.go_const(")");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_block_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_block_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    t_sep sep0;
+    t_tmpl_expr expr;
+    t_sep sep1;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep0);
+      detail::FieldTryDoReset(this->expr);
+      detail::FieldTryDoReset(this->sep1);
+    }
+  public:
+    t_block_tmpl_expr(const t_block_tmpl_expr&)=delete;
+    t_block_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_block_tmpl_expr(t_block_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_block_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->sep0=std::move(_Right.sep0);
+      this->expr=std::move(_Right.expr);
+      this->sep1=std::move(_Right.sep1);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_block_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep0",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep0))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_tmpl_expr>::GetRTTI(RTTI),"expr",int(&(((SelfClass*)nullptr)->*(&SelfClass::expr))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep1",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep1))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_block_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      M+=dev.go_const("(");
+      if (!ok)return ok;
+      O+=dev.go_auto(sep0);
+      if (!ok)return ok;
+      M+=dev.go_auto(expr);
+      if (!ok)return ok;
+      O+=dev.go_auto(sep1);
+      if (!ok)return ok;
+      M+=dev.go_const(")");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_pfunc_concrete_param_way:public i_concrete_param_way
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_pfunc_concrete_param_way SelfClass;
+  public:
+    typedef i_concrete_param_way ParentClass;
+  public:
+    t_fv_class_stat::t_type_expr::t_pfunc value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_pfunc_concrete_param_way(const t_pfunc_concrete_param_way&)=delete;
+    t_pfunc_concrete_param_way()
+    {
+      DoReset();
+    };
+  public:
+    t_pfunc_concrete_param_way(t_pfunc_concrete_param_way&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_pfunc_concrete_param_way&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_concrete_param_way(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_concrete_param_way::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_pfunc_concrete_param_way";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_pfunc>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_pfunc_concrete_param_way";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_type_concrete_param_way:public i_concrete_param_way
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_type_concrete_param_way SelfClass;
+  public:
+    typedef i_concrete_param_way ParentClass;
+  public:
+    t_fv_class_stat::t_type_expr::t_type_expr_with_sep_and_cv value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_type_concrete_param_way(const t_type_concrete_param_way&)=delete;
+    t_type_concrete_param_way()
+    {
+      DoReset();
+    };
+  public:
+    t_type_concrete_param_way(t_type_concrete_param_way&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_type_concrete_param_way&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_concrete_param_way(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_concrete_param_way::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_type_concrete_param_way";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_fv_class_stat::t_type_expr::t_type_expr_with_sep_and_cv>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_type_concrete_param_way";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_expr_concrete_param_way:public i_concrete_param_way
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_expr_concrete_param_way SelfClass;
+  public:
+    typedef i_concrete_param_way ParentClass;
+  public:
+    t_tmpl_expr value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_expr_concrete_param_way(const t_expr_concrete_param_way&)=delete;
+    t_expr_concrete_param_way()
+    {
+      DoReset();
+    };
+  public:
+    t_expr_concrete_param_way(t_expr_concrete_param_way&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_expr_concrete_param_way&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_concrete_param_way(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_concrete_param_way::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_expr_concrete_param_way";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_tmpl_expr>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_expr_concrete_param_way";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_minor<t_type_concrete_param_way>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_bool_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_bool_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_bool_tmpl_expr(const t_bool_tmpl_expr&)=delete;
+    t_bool_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_bool_tmpl_expr(t_bool_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_bool_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_bool_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_bool_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=QapStrFinder::fromArr(split("false,true",","));
+      D+=dev.go_any_str_from_vec(value,g_static_var_0);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_string_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_string_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_string_tmpl_expr(const t_string_tmpl_expr&)=delete;
+    t_string_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_string_tmpl_expr(t_string_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_string_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_string_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_string_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_str_item::t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_char_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_char_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_char_tmpl_expr(const t_char_tmpl_expr&)=delete;
+    t_char_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_char_tmpl_expr(t_char_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_char_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_char_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_char_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_char_item::t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_num_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_num_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_num_tmpl_expr(const t_num_tmpl_expr&)=delete;
+    t_num_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_num_tmpl_expr(t_num_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_num_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_num_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_num_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      static const auto g_static_var_0=CharMask::fromStr(gen_dips("09"));
+      D+=dev.go_any(value,g_static_var_0);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_real_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_real_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_real_tmpl_expr(const t_real_tmpl_expr&)=delete;
+    t_real_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_real_tmpl_expr(t_real_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_real_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_real_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_real_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_real>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_nullptr_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_nullptr_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+    }
+  public:
+    t_nullptr_tmpl_expr(const t_nullptr_tmpl_expr&)=delete;
+    t_nullptr_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_nullptr_tmpl_expr(t_nullptr_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_nullptr_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_nullptr_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_nullptr_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("nullptr");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_or_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_or_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    vector<t_name> arr;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->arr);
+    }
+  public:
+    t_or_tmpl_expr(const t_or_tmpl_expr&)=delete;
+    t_or_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_or_tmpl_expr(t_or_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_or_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->arr=std::move(_Right.arr);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_or_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<vector<t_name>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_or_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_bin_oper(arr,"|");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_hex_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    class t_impl
+    {
+    public:
+      typedef t_hex_tmpl_expr OwnerClass;
+    public:
+      typedef t_impl SelfClass;
+    public:
+      char x;
+      string value;
+    public:
+      void DoReset()
+      {
+        {
+        }
+        detail::FieldTryDoReset(this->x);
+        detail::FieldTryDoReset(this->value);
+      }
+    public:
+      t_impl(const t_impl&)=delete;
+      t_impl()
+      {
+        DoReset();
+      };
+    public:
+      t_impl(t_impl&&_Right)
+      {
+        operator=(std::move(_Right));
+      }
+      void operator=(t_impl&&_Right)
+      {
+        if (&_Right==this)return;
+        {
+        }
+        this->x=std::move(_Right.x);
+        this->value=std::move(_Right.value);
+      }
+    public:
+      struct ProxySys$$
+      {
+        typedef TTypeStruct metatype;
+        static metatype*GetRTTI(IEnvRTTI&RTTI)
+        {
+          static const string Name="t_impl";
+          TTypeStruct*Info=nullptr;
+          if (RTTI.Register<SelfClass>(Info,Name))
+          {
+            return Info;
+          }
+          else
+          {
+            Info->SubType=nullptr;
+            Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+          }
+          Info->AddMemberDEF(Sys$$<char>::GetRTTI(RTTI),"x",int(&(((SelfClass*)nullptr)->*(&SelfClass::x))),"DEF","$");
+          Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+          {
+            RTTI.OnRegEnd(Info);
+          }
+          {
+          }
+          Info->SelfTesting();
+          return Info;
+        }
+        static string GetFullName()
+        {
+          return "t_impl";
+        }
+      };
+    public:
+    public:
+      bool go(i_dev&dev)
+      {
+        t_fallback scope(dev,__FUNCTION__);
+        auto&ok=scope.ok;
+        auto&D=scope.mandatory;
+        auto&M=scope.mandatory;
+        auto&O=scope.optional;
+        D+=dev.go_const("0");
+        if (!ok)return ok;
+        static const auto g_static_var_1=CharMask::fromStr("xX");
+        D+=dev.go_any_char(x,g_static_var_1);
+        if (!ok)return ok;
+        static const auto g_static_var_2=CharMask::fromStr(gen_dips("09afAF"));
+        D+=dev.go_any(value,g_static_var_2);
+        if (!ok)return ok;
+        return ok;
+      }
+    };
+  public:
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_hex_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string value;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->value);
+    }
+  public:
+    t_hex_tmpl_expr(const t_hex_tmpl_expr&)=delete;
+    t_hex_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_hex_tmpl_expr(t_hex_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_hex_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->value=std::move(_Right.value);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_hex_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"value",int(&(((SelfClass*)nullptr)->*(&SelfClass::value))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+          Info->AddNested(Sys$$<t_impl>::GetRTTI(RTTI));
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_hex_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_impl>(value);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_var_tmpl_expr:public i_tmpl_expr
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_var_tmpl_expr SelfClass;
+  public:
+    typedef i_tmpl_expr ParentClass;
+  public:
+    string name;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->name);
+    }
+  public:
+    t_var_tmpl_expr(const t_var_tmpl_expr&)=delete;
+    t_var_tmpl_expr()
+    {
+      DoReset();
+    };
+  public:
+    t_var_tmpl_expr(t_var_tmpl_expr&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_var_tmpl_expr&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_tmpl_expr(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_tmpl_expr::operator=(std::move(_Right));
+      }
+      this->name=std::move(_Right.name);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_var_tmpl_expr";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"name",int(&(((SelfClass*)nullptr)->*(&SelfClass::name))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_var_tmpl_expr";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_str<t_fv_class_stat::t_type_expr>(name);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_pragma_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_pragma_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_pragma_class_stat(const t_pragma_class_stat&)=delete;
+    t_pragma_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_pragma_class_stat(t_pragma_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_pragma_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_pragma_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_pragma_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#pragma");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_include_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_include_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_include_class_stat(const t_include_class_stat&)=delete;
+    t_include_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_include_class_stat(t_include_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_include_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_include_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_include_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#include");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_preproc_if_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_preproc_if_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_preproc_if_class_stat(const t_preproc_if_class_stat&)=delete;
+    t_preproc_if_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_preproc_if_class_stat(t_preproc_if_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_preproc_if_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_preproc_if_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_preproc_if_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#if");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_preproc_else_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_preproc_else_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_preproc_else_class_stat(const t_preproc_else_class_stat&)=delete;
+    t_preproc_else_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_preproc_else_class_stat(t_preproc_else_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_preproc_else_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_preproc_else_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_preproc_else_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#else");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_preproc_endif_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_preproc_endif_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_preproc_endif_class_stat(const t_preproc_endif_class_stat&)=delete;
+    t_preproc_endif_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_preproc_endif_class_stat(t_preproc_endif_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_preproc_endif_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_preproc_endif_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_preproc_endif_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#endif");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_define_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_define_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_define_class_stat(const t_define_class_stat&)=delete;
+    t_define_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_define_class_stat(t_define_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_define_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_define_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_define_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#define");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_undef_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_undef_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    string body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_undef_class_stat(const t_undef_class_stat&)=delete;
+    t_undef_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_undef_class_stat(t_undef_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_undef_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_undef_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<string>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_undef_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const("#undef");
+      if (!ok)return ok;
+      D+=dev.go_end(body,"\n");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_sep_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_sep_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_sep sep;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->sep);
+    }
+  public:
+    t_sep_class_stat(const t_sep_class_stat&)=delete;
+    t_sep_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_sep_class_stat(t_sep_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_sep_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->sep=std::move(_Right.sep);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_sep_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_sep_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(sep);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_null_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_null_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+    }
+  public:
+    t_null_class_stat(const t_null_class_stat&)=delete;
+    t_null_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_null_class_stat(t_null_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_null_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_null_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_null_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_const(";");
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_class_class_stat:public i_class_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_class_class_stat SelfClass;
+  public:
+    typedef i_class_stat ParentClass;
+  public:
+    t_class body;
+  public:
+    void DoReset()
+    {
+      {
+        detail::TryDoReset<SelfClass>(this);
+      }
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_class_class_stat(const t_class_class_stat&)=delete;
+    t_class_class_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_class_class_stat(t_class_class_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_class_class_stat&&_Right)
+    {
+      struct hidden
+      {
+        static void foo(i_class_stat(*)=(SelfClass*)nullptr) {}};
+      if (&_Right==this)return;
+      {
+        i_class_stat::operator=(std::move(_Right));
+      }
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_class_class_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=Sys$$<ParentClass>::GetRTTI(RTTI);
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_class>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_class_class_stat";
+      }
+    };
+  public:
+  public:
+    void Use(i_visitor&A)
+    {
+      A.Do(this);
+    }
+    static SelfClass*UberCast(ParentClass*ptr)
+    {
+      return i_visitor::UberCast<SelfClass>(ptr);
+    }
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      D+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+  class t_inl_file_stat
+  {
+  public:
+    typedef t_inl_file OwnerClass;
+  public:
+    typedef t_inl_file_stat SelfClass;
+  public:
+    t_sep sep;
+    TAutoPtr<t_class> body;
+  public:
+    void DoReset()
+    {
+      {
+      }
+      detail::FieldTryDoReset(this->sep);
+      detail::FieldTryDoReset(this->body);
+    }
+  public:
+    t_inl_file_stat(const t_inl_file_stat&)=delete;
+    t_inl_file_stat()
+    {
+      DoReset();
+    };
+  public:
+    t_inl_file_stat(t_inl_file_stat&&_Right)
+    {
+      operator=(std::move(_Right));
+    }
+    void operator=(t_inl_file_stat&&_Right)
+    {
+      if (&_Right==this)return;
+      {
+      }
+      this->sep=std::move(_Right.sep);
+      this->body=std::move(_Right.body);
+    }
+  public:
+    struct ProxySys$$
+    {
+      typedef TTypeStruct metatype;
+      static metatype*GetRTTI(IEnvRTTI&RTTI)
+      {
+        static const string Name="t_inl_file_stat";
+        TTypeStruct*Info=nullptr;
+        if (RTTI.Register<SelfClass>(Info,Name))
+        {
+          return Info;
+        }
+        else
+        {
+          Info->SubType=nullptr;
+          Info->OwnType=Sys$$<OwnerClass>::GetRTTI(RTTI);
+        }
+        Info->AddMemberDEF(Sys$$<t_sep>::GetRTTI(RTTI),"sep",int(&(((SelfClass*)nullptr)->*(&SelfClass::sep))),"DEF","$");
+        Info->AddMemberDEF(Sys$$<TAutoPtr<t_class>>::GetRTTI(RTTI),"body",int(&(((SelfClass*)nullptr)->*(&SelfClass::body))),"DEF","$");
+        {
+          RTTI.OnRegEnd(Info);
+        }
+        {
+        }
+        Info->SelfTesting();
+        return Info;
+      }
+      static string GetFullName()
+      {
+        return "t_inl_file_stat";
+      }
+    };
+  public:
+  public:
+    bool go(i_dev&dev)
+    {
+      t_fallback scope(dev,__FUNCTION__);
+      auto&ok=scope.ok;
+      auto&D=scope.mandatory;
+      auto&M=scope.mandatory;
+      auto&O=scope.optional;
+      O+=dev.go_auto(sep);
+      if (!ok)return ok;
+      M+=dev.go_auto(body);
+      if (!ok)return ok;
+      return ok;
+    }
+  };
+public:
+public:
+  typedef t_inl_file SelfClass;
+public:
+  vector<TAutoPtr<i_class_stat>> arr;
+public:
+  void DoReset()
+  {
+    {
+    }
+    detail::FieldTryDoReset(this->arr);
+  }
+public:
+  t_inl_file(const t_inl_file&)=delete;
+  t_inl_file()
+  {
+    DoReset();
+  };
+public:
+  t_inl_file(t_inl_file&&_Right)
+  {
+    operator=(std::move(_Right));
+  }
+  void operator=(t_inl_file&&_Right)
+  {
+    if (&_Right==this)return;
+    {
+    }
+    this->arr=std::move(_Right.arr);
+  }
+public:
+  struct ProxySys$$
+  {
+    typedef TTypeStruct metatype;
+    static metatype*GetRTTI(IEnvRTTI&RTTI)
+    {
+      static const string Name="t_inl_file";
+      TTypeStruct*Info=nullptr;
+      if (RTTI.Register<SelfClass>(Info,Name))
+      {
+        return Info;
+      }
+      else
+      {
+        Info->SubType=nullptr;
+        Info->OwnType=nullptr;
+      }
+      Info->AddMemberDEF(Sys$$<vector<TAutoPtr<i_class_stat>>>::GetRTTI(RTTI),"arr",int(&(((SelfClass*)nullptr)->*(&SelfClass::arr))),"DEF","$");
+      {
+        RTTI.OnRegEnd(Info);
+      }
+      {
+        Info->AddNested(Sys$$<t_lev03>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev05>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev06>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev07>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev08>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev09>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev10>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev11>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev12>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev13>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_lev14>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev03>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev05>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev06>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev09>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev10>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev11>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev12>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev13>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_lev14>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_concrete_param>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_concrete_params>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_access_mod>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_access_mod_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_raw_func_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_func_path>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_first_scope>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_const_with_sep>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_keyword>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_ptr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_ref>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_type_with_sep>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_scope_with_sep>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_scopes>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_fv_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_typedef_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_real>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_call_param>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_call_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_block_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_bool_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_string_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_char_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_num_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_real_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_nullptr_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_or_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_hex_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_var_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_ctor_init_list>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_zero_func_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_null_func_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_delete_func_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_impl_func_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_dtor_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_ctor_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_oper_cast_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_common_oper_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_parents>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_class_body>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_class>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_namespace_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_template_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_enum_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_using_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_tmpl_call_param>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_call_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_block_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_pfunc_concrete_param_way>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_type_concrete_param_way>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_expr_concrete_param_way>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_bool_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_string_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_char_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_num_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_real_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_nullptr_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_or_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_hex_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_var_tmpl_expr>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_pragma_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_include_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_preproc_if_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_preproc_else_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_preproc_endif_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_define_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_undef_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_sep_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_null_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_class_class_stat>::GetRTTI(RTTI));
+        Info->AddNested(Sys$$<t_inl_file_stat>::GetRTTI(RTTI));
+      }
+      Info->SelfTesting();
+      return Info;
+    }
+    static string GetFullName()
+    {
+      return "t_inl_file";
+    }
+  };
+public:
+public:
+  bool go(i_dev&dev)
+  {
+    t_fallback scope(dev,__FUNCTION__);
+    auto&ok=scope.ok;
+    auto&D=scope.mandatory;
+    auto&M=scope.mandatory;
+    auto&O=scope.optional;
+    D+=dev.go_auto(arr);
+    if (!ok)return ok;
+    return ok;
+  }
+public:
+};

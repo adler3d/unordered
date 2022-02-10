@@ -1,0 +1,1 @@
+t_diff_sys{  t_node_cmd=>i_cmd{    string type;    string cmd;    vector<TAutoPtr<i_cmd>> arr;  }  t_data_cmd=>i_cmd{    string type;    string cmd;    string data;  }}

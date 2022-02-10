@@ -1,0 +1,183 @@
+<html>
+  <head>
+  <style>
+  table.g{
+    background: #ffffff url(bg.png) repeat;
+  }
+  .x{
+    box-shadow: 0 0 4px rgba(0,0,0,0.7);
+    border-radius: 16px;
+  }
+  div.emphasize-inset{
+    box-shadow: inset 0 0 7px 4px rgba(255,255,255,.5)
+    display:none
+  }
+  </style>
+<script type='text/javascript'>
+  waiting=false;
+  cur_id=0;
+  prev_id=0;
+  function pad(number,length)
+  {
+    var my_string = '' + number;
+    while (my_string.length < length){
+      my_string = '0' + my_string;
+    }
+    return my_string;
+  }
+  function change_frame_back()
+  {
+    cur_id=prev_id;waiting=false;change_frame(+0);
+  }
+  function change_frame(dx)
+  {
+    if(waiting);
+    prev_id=cur_id;cur_id+=dx;
+    if(cur_id<00000)cur_id=00000;
+    if(cur_id>99999)cur_id=99999;
+    document.getElementById('cur_id').innerHTML="rule 0x"+pad16(cur_id,2);
+    document.getElementById('img_a').src="0x"+pad(cur_id,2)+"_a.png";
+    document.getElementById('img_b').src="0x"+pad(cur_id,2)+"_b.png";
+    waiting=true;
+  }
+  function set_zoom()
+  {
+  }
+  function myFunction(evt)
+  {
+    evt=evt||window.event;
+    if(evt.keyCode==107)// plus
+    {
+      var frame=document.getElementById('frame');frame.height+=10;
+      return false;
+    }
+    if(evt.keyCode==109)// minus
+    {
+      var frame=document.getElementById('frame');frame.height-=10;
+      return false;
+    }
+    if(evt.keyCode==39)//VK_RIGHT
+    {
+      change_frame(+1);
+      return false;
+    }
+    if(evt.keyCode==37)//VK_LEFT
+    {
+      change_frame(-1);
+      return false;
+    }
+    if(evt.keyCode==33)//VK_PGUP
+    {
+      change_frame(+128);
+      return false;
+    }
+    if(evt.keyCode==34)//VK_PGDOWN
+    {
+      change_frame(-128);
+      return false;
+    }
+    if(evt.keyCode==106)//VK_SLASH
+    {
+      set_zoom(1);
+      return false;
+    }
+    if(0)if((evt.keyCode>48)||(evt.keyCode<59))
+    {
+      set_zoom(evt.keyCode-48);
+      return false;
+    }
+  };
+  document.onkeydown=myFunction;
+</script>
+  </head>
+  <body>
+<div align="center">
+<h1 id="cur_id">loading...<h1>
+<table class="g" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <table cellspacing="32" cellpadding="0"><tr><td>
+        <table id="tab_a" cellspacing="6" cellpadding="0"></table></td></tr>
+      </table>
+    </td>
+    <td><b><font size="+400%">=&gt;</font></b></td>
+    <td>
+      <table cellspacing="32" cellpadding="0"><tr><td>
+        <table id="tab_b" cellspacing="6" cellpadding="0"></table></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="display:none" cellspacing="0" cellpadding="32">
+<tr><td><img id="img_a" style="image-rendering: -moz-crisp-edges;" height="50%" border="1"/></td></tr>
+<tr><td><img id="img_b" style="image-rendering: -moz-crisp-edges;" height="50%" border="1"/></td></tr>
+</table>
+</div>
+  </body>
+<canvas id="canvas" style="display:none"></canvas>
+<script>
+  change_frame(+0);
+  function pad16(number,length) {
+    var str=(number|0).toString(16);
+    var count=length-str.length;
+    tmp='';
+    for(var i=0;i<count;i++){tmp+='0';}
+    return tmp+str;
+  }
+  function ColorToStr(data,x,y,w,h)
+  {
+    var id=(x+y*w)*4;
+    var arr=[data[id+0],data[id+1],data[id+2]];
+    for(var key in arr){arr[key]=pad16(arr[key],2);}
+    return '#'+arr.join('');
+  }
+  function go(tab,img)
+  {
+    var test=pad(0,2);
+    var canvas=document.getElementById('canvas');
+    var w=img.naturalWidth;
+    var h=img.naturalHeight;
+    canvas.width=w;
+    canvas.height=h;
+    canvas.getContext('2d').drawImage(img,0,0,w,h);
+    var pixelData=canvas.getContext('2d').getImageData(0,0,w,h).data;
+    tmp="";
+    function f(data,x,y,w,h)
+    {
+      var id=(x+y*w)*4;
+      if(!data[id+3])return '';
+      return 'bgcolor="'+ColorToStr(data,x,y,w,h)+'"';
+    }
+    var cellsize=24;
+    for(var y=0;y<h;y++)
+    {
+      tmp+='<tr height="'+cellsize+'">';
+      for(var x=0;x<w;x++){tmp+='<td class="x" width="'+cellsize+'" '+f(pixelData,x,y,w,h)+'></td>';};
+      tmp+='</tr>';
+    }
+    tab.innerHTML=tmp;
+  }
+  //go();
+  document.getElementById('img_a').onload=function()
+  {
+    var tab=document.getElementById('tab_a');
+    var img=document.getElementById('img_a');
+    img.height=32*img.naturalHeight;
+    go(tab,img);
+    return false;
+  };
+  document.getElementById('img_b').onload=function()
+  {
+    var tab=document.getElementById('tab_b');
+    var img=document.getElementById('img_b');
+    img.height=32*img.naturalHeight;
+    go(tab,img);
+    return false;
+  };
+  document.getElementById('img_a').onerror=function()
+  {
+    if(cur_id!=prev_id){change_frame_back();}else{document.getElementById('tab_a').innerHTML="<tr><td>resource not found</td></tr>";document.getElementById('frame').src="bg.png";}
+  };
+</script>
+</html>

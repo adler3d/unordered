@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>cw_show_v03</title>
+<style>.slidecontainer{width:100%;}.slider{width:100%;height:50px;background:#d3d3d3;}</style>
+<script type="text/javascript">
+  var escapeHtml=(str)=>str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+  var pad=(num,len)=>{var s=''+num;while(s.length<len){s='0'+s;}return s;}
+  var qap_alert=(msg)=>{console.log(msg);}
+  //---
+  var curid=0;var get_fn=curid=>"frames/"+pad(curid,5)+".png";//var task={};
+  var g_img=null;var g_range=null;
+  //---
+  function init(){
+    g_range=document.getElementById('range');
+    g_img=document.getElementById("img");
+    g_img.focus();
+    g_img.g_ready=true;
+    update("init");
+  }
+  function update(origin){
+    if(curid>99999)curid=99999;
+    if(curid<00000)curid=00000;
+    g_range.value=curid*g_range.max/g_max_curid;
+    main_task(origin);
+  }
+  function main_task(origin){
+    if(!g_img.g_ready)return setTimeout(()=>main_task(origin+"|"),16);
+    if(g_img.src==get_fn(curid))return true;
+    g_img.curid=curid;
+    g_img.src=get_fn(curid);
+    g_img.g_ready=false;
+    if(g_ok_img)Object.keys(wh).map(e=>g_img[e]=wh[e]);
+    qap_alert(curid+" in main_task [by "+origin+"]");
+    return true;
+  }
+  //var tick=0;
+  function range_set_frame(r){
+    curid=((r.value|0)*g_max_curid/r.max)|0;
+    update("range_set_frame");//console.log("tick = "+(tick++));
+  }
+  function myFunction(evt)
+  {
+    evt=evt||window.event;
+    if(evt.keyCode==107)// plus
+    {
+      g_img.height+=10;
+      return false;
+    }
+    if(evt.keyCode==109)// minus
+    {
+      g_img.height-=10;
+      return false;
+    }
+    var use=(hint,vk,func)=>{if(vk==evt.keyCode){func();update("use"+JSON.stringify({hint,vk,func}));}}
+    use("home"  ,36,()=>curid=0);//VK_HOME
+    use("->"    ,39,()=>curid++);//VK_RIGHT
+    use("<-"    ,37,()=>curid--);//VK_LEFT
+    use("pgup"  ,33,()=>curid+=128);//VK_PGUP
+    use("pgdown",34,()=>curid-=128);//VK_PGDOWN
+    if(evt.keyCode==106)//VK_SLASH
+    {
+      g_img.height=g_img.naturalHeight;
+      return false;
+    }
+    // VK_2 .. VK_9
+    for(var i=2;i<=9;i++)if(evt.keyCode==(50-2)+i){
+      g_img.height=i*g_img.naturalHeight;
+      return false;
+    }
+    if(evt.keyCode==32)//VK_SPACE
+    {
+      if(g_pause){start();}else{stop();}
+      return false;
+    }
+    console.log(evt.keyCode);
+  };
+  document.onkeydown=myFunction;
+  var g_pause=true;var g_dt=64;var g_ok_img=false;var g_ok_curid=0;var g_last_err="nope";var g_max_curid=1000;var wh={width:100/*,height:100*/};
+  function start(){g_pause=false;setTimeout(step,g_dt);}
+  function stop(){g_pause=true;}
+  function step(){
+    curid++;update("step");
+    if(!g_pause)setTimeout(step,g_dt);
+  }
+  function img_fail(img){
+    stop();
+    g_last_err="loading failed : "+JSON.stringify(img.curid);
+    set_status(g_last_err);
+    if(g_ok_img){
+      //img.src=g_ok_img;
+      if(g_ok_curid){qap_alert(img.curid+" in fail");curid=g_ok_curid;update("img_fail");}
+    }
+    img.g_ready=true;
+  }
+  function img_ok(img){
+    img.g_ready=true;
+    if(!g_ok_img)Object.keys(wh).map(e=>{wh[e]=img[e];img[e]=wh[e];});
+    g_ok_curid=img.curid;
+    g_ok_img=img.src;
+    set_status('ok : '+JSON.stringify(img.curid));
+    g_max_curid=Math.max(g_ok_curid,g_max_curid);
+  }
+  function set_status(str){document.getElementById("status").innerHTML=escapeHtml("status: "+str+"\nold_g_last_err: "+g_last_err);}
+  function auto_width(){g_img.style.width="auto";}
+</script>
+  </head>
+  <body onload="init();" onresize="auto_width()">
+    <center><img id="img" style="image-rendering: -moz-crisp-edges;" height="85%" border="1" onload="img_ok(this)" onerror="img_fail(this);"/><br>
+    <div class="slidecontainer">
+      <input id="range" type="range" min="1" max="1000" value="1000" class="slider" id="r" oninput="range_set_frame(this)" onchange="range_set_frame(this)">
+    </div>
+    <button onclick="start();">start</button>&nbsp;&nbsp;&nbsp;<!--<button onclick="auto_width();">auto_width</button>--><button onclick="stop();">stop</button><br>
+    <pre id="status">"loading..."</pre>
+    </center>
+  </body>
+</html>

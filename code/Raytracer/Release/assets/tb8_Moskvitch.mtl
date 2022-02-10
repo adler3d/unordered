@@ -1,0 +1,16 @@
+# Exported from 3D Builder
+
+newmtl car
+Kd 0.000000 0.011765 0.709804
+
+newmtl gray
+Kd 0.819608 0.819608 0.819608
+
+newmtl Yellow
+Kd 0.996078 0.945098 0.000000
+
+newmtl gray
+Kd 0.819608 0.819608 0.819608
+
+newmtl Orange
+Kd 1.000000 0.498039 0.145098
