@@ -1,0 +1,53 @@
+[------0] "eXgine 0.80" log start
+[-----11] Network : Initialized
+[------0] Network : Description : WinSock 2.0
+[------0] Network : MaxSockets  : 32767
+[------0] Network : MaxSize UDP : 65467
+[------0] Input   : Keyboard ready
+[------0] Input   : Mouse    ready
+[-----39] Input   : Joystick not ready
+[-----72] Window  : Create main window
+[------2] OpenGL  : Init graphics core
+[-----29] OpenGL  : GL_VENDOR   : Intel
+[------0] OpenGL  : GL_RENDERER : Intel(R) HD Graphics 620
+[------0] OpenGL  : GL_VERSION  : 4.6.0 - Build 27.20.100.8190
+[------0] OpenGL  : MAX_TEX_UNITS  : 8
+[------0] OpenGL  : MAX_TEX_SIZE   : 16384
+[------0] OpenGL  : MAX_ANISOTROPY : 16
+[------0] OpenGL  : USE_AA_SAMPLES : 4
+[------0] OpenGL  : Reading extensions
+[------0] OpenGL  : + WGL_EXT_swap_control
+[------0] OpenGL  : + GL_ARB_multitexture
+[------0] OpenGL  : + GL_EXT_framebuffer_object
+[------0] OpenGL  : + GL_ARB_shading_language
+[------0] OpenGL  : + GL_ARB_vertex_buffer_object
+[-----36] Texture : Create #2	*Font_FixedSys_0*
+[-----36] Sound   : DirectSound Initialized
+[------0] Sound   : Can't initialize Ogg Vorbis
+[-----86] Texture : Loaded #3	..\GFX\Effects\Smoke.tga
+[------5] Texture : Loaded #4	..\GFX\Effects\flame.tga
+[------5] Texture : Loaded #5	..\GFX\GUI\Cursor.tga
+[-----21] Texture : Loaded #6	..\GFX\GUI\Logo.tga
+[------6] Texture : Loaded #7	..\GFX\GUI\Cell.bmp
+[-----16] Texture : Loaded #8	..\GFX\GUI\Light.tga
+[-----17] Texture : Loaded #9	..\GFX\GUI\Level Walking.tga
+[------6] Texture : Create #10	BoolPath.ASD
+[-----63] Texture : Create #11	*Font_Comic Sans MS_1*
+[-----30] Engine  : Main Loop start
+[---2242] Texture : Loaded #12	..\GFX\Maps\tile_maps2.bmp
+[------9] Texture : Loaded #13	..\GFX\Maps\gimp_maps.bmp
+[---6701] Engine  : Main Loop stop
+[-----12] Texture : Unload #2	*Font_FixedSys_0*
+[------0] Texture : Unload #13	..\GFX\Maps\gimp_maps.bmp
+[------1] Texture : Unload #12	..\GFX\Maps\tile_maps2.bmp
+[------0] Texture : Unload #11	*Font_Comic Sans MS_1*
+[------0] Texture : Unload #10	BoolPath.ASD
+[------0] Texture : Unload #9	..\GFX\GUI\Level Walking.tga
+[------0] Texture : Unload #8	..\GFX\GUI\Light.tga
+[------0] Texture : Unload #7	..\GFX\GUI\Cell.bmp
+[------0] Texture : Unload #6	..\GFX\GUI\Logo.tga
+[------0] Texture : Unload #5	..\GFX\GUI\Cursor.tga
+[------0] Texture : Unload #4	..\GFX\Effects\flame.tga
+[------0] Texture : Unload #3	..\GFX\Effects\Smoke.tga
+[-----68] Window  : Destroy main window
+[------0] "eXgine 0.80" log close
