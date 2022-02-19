@@ -1,0 +1,15 @@
+*.vs
+*.iobj
+*.ipdb
+*.pdb
+*.exe
+Debug/*
+*.lnk
+*.ilk
+*.zip
+EmptyProg/Debug
+EmptyProg/Release
+EmptyProg/log.txt
+Release/*.gz
+Release/*.log
+Release/log.txt

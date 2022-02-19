@@ -1,0 +1,12 @@
+[--------] "ENG_NAME log start
+[--------] HINT: WinMain => App.version : 326/826
+[-------3] SYSTEM: QapSys::WindowMode => FullScreen(1920x1200 32bpp 60hz)
+[--------] HINT: QapSys::Restore => Restore
+[-------2] HINT: QapSys::Show => Normalized
+[------29] SYSTEM: QapSys::InitD3D => Adapter Driver : igdumdim64.dll
+[--------] SYSTEM: QapSys::InitD3D => Adapter Description : Intel(R) HD Graphics 620
+[--------] SYSTEM: QapSys::InitD3D => Adapter VendorId : 0x8086
+[--------] SYSTEM: QapSys::InitD3D => Adapter DeviceId : 0x5916
+[-----350] HINT: QapDX::RegTex => Init #0 "Font_Arial_512.Clone"
+[-------7] HINT: QapDX::RegTex => Init #1 "Font_Arial_512"
+[--------] WARNING: QapDX::LoadTexture => Error Loading "GFX\ranged_inp.png"
