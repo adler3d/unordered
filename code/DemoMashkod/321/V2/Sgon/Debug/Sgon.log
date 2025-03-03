@@ -1,0 +1,26 @@
+﻿Построение начато 30.06.2016 11:39:21.
+     1>Проект "C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Sgon\Sgon.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Sgon.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\Sgon.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp /bigobj /Zm180 
+         StdAfx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Sgon.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp main_2016_03_29.cpp MsgBox.cpp /bigobj /Zm180 
+         MsgBox.cpp
+         main_2016_03_29.cpp
+         main.cpp
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Debug\Sgon.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libc.lib /NODEFAULTLIB:MSVCRT.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Debug\Sgon.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Debug\Sgon.lib" /MACHINE:X86 Debug\main.obj
+         Debug\main_2016_03_29.obj
+         Debug\MsgBox.obj
+         Debug\StdAfx.obj
+         Sgon.vcxproj -> C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Debug\Sgon.exe
+       FinalizeBuildStatus:
+         Файл "Debug\Sgon.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Sgon.lastbuildstate".
+     1>Построение проекта "C:\Users\Adler\Desktop\Demos\DemoMashkod\321\V2\Sgon\Sgon.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:02:01.72

@@ -1,0 +1,616 @@
+какой-то текст.
+{
+	так. боты у меня отличаютсья сильно.
+	но они ещё не готовы к машкоду.
+	надо чтобы они умели копироваться.
+	как это сделать?
+	я никак не могу сделать копирование ботов?
+	всё что надо придумать условие пораждения бота.
+	ну например если бот собрал 20 еды то тогда добавить в его арсенал возможность порождать бота.
+	когда появляеться возможность я определил.
+	теперь надо определить где он появиться.
+	если он появиться далеко от оригинало, то это будет неприятно для наблюдателя.
+	т.к трудновато отслеживать.
+	поэтому пусть он делиться попалам.
+	добавить спецальный костыльный код который будет магически разрешать ботам находиться в одной ячейке пространства?
+	кстати а что у меня с столкновениями? полный провал?
+	их нет.
+	боты не сталкиваються.
+	я могу сдела расталкивание.
+	или смерь при столкновении с выделением еды.
+	похоже на правду.
+	или поедание худого жирным.
+	проблемма в том, что боты это такой же костыль как и еда.
+	правильное решение - это сделать их артефактами пространства.
+	тоесть группа ячеек пространста должна выглядить как существао. а другая как еда.
+	и при сблежении они должны превращаться в одно большое существо.
+	тогда процесс столкновения будет приятно наблюдять на любом масштабе.
+	ну разве что на масштабе ячеек пространста будут ведны костыли и грубость мира.
+	а если делать физически не делимыми, то тогда грубость будет видна уже на уровне ботов.
+	
+
+	неопределённое поведение.
+	я боюсь что поведение игрового мира будет определено не мной, а реализаций fpu.
+	я хочу чтобы в игровом мире всё было определено мной. вся игровая механика.
+	из-за этого я боюсь fpu и стороннего кода.
+
+	ещё охота придумать такую игровую механику в которой не будет тупика.
+	это я сейчас про клеточный автомат.
+	тоесть чтобы можно было из клеток собрать любой механизм.
+	я еделал клеточный автомат, но там я такого реализовать не смог.
+	не придумал правило.
+	надо как-то использовать принцып камень ножницы бумага.
+	тоесть три материяла должны работать по такому принципу:
+	AB=C
+	BC=A
+	CA=B
+	тоесть напрмиер:
+	XA.=.XA
+	XB.=.XB
+	XC.=.XC
+	это три подвижных предмета.
+	теперь надо определить столкновения.
+	XA.AX=XA.AX
+	XA..XA=.XAAX.
+	XABX=.XCX.
+	XA.
+	  B
+	  X
+	.XC
+	..X
+	не понятно что тогда делать с X.
+	его тоже надо как-то убирать.
+	XCX
+	 C
+	 X
+	
+	но тут не работает закон сохранения...
+	я бы мог генерировать случайные правила.
+	но надо их проверять.
+	как понять, что я нашёл те самые правила которые мне нужны?
+	ну вот есть XA
+	есть XC
+	если эти два куска двигаясь по пространству создату XB - значит есть правило трансформации.
+	и чё?
+	а мне чё надо?
+	мне надо чтобы вот взял я такую фигню:
+	AAAAAAAAA
+	AAAAAAAAA
+	AAAAAAAAA
+	и чтобы после появлилась такая фигня где-то рядом.
+	AAACCCAAA
+	BBBBBBCCC
+	CCCAAABBB
+
+	или ещё проще:
+	AAA
+
+	а на выходе:
+	ABC
+
+	короче если признать что кол-во ABC всегда постоянно, и что ABC могут без проблемм превращаться друг в друга.
+	то тогда всё нормально с законом сохранения.
+	AB=BB
+	BC=CC
+	CA=AA
+	вот это больше похоже на камень ножницы бумага.
+
+	ещё можно разрешить в одной ячейке пространства находиться сразу нескольким движущимся объектам.
+	тоесть они не будут между собой взаимодействовать.
+	но будут взаимодейстовать с другими движущимися объектами.
+
+	блин. охота чтобы движущиеся объекты двигались в большом кол-ве направлений.
+	всё. меня опять занесло не туда.
+}
+
+что-то структурированое.
+{
+	генерируеться набор иснтрукций.
+	генерируеться машкод использующий этот набор инструкций.
+	машкод выполняеться.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Сделать:
+{
+	Добавить существ.//vector<t_entity>
+	Добавить еду.//vector<t_food>
+	Добавить камеру.
+	Добавить автоподбор еды.
+}
+
+
+
+label("set_r_in_encolor");
+//encolor.r = eax%256
+mod(eax,eax,256);
+shl(eax,eax,16);
+bwand(edx,encolor,int(0xff00ffff));
+add(encolor,eax,edx);
+ret();
+
+
+        push        ebp  
+        mov         ebp,esp  
+        sub         esp,204h  
+
+        our_code
+
+        mov         esp,ebp  
+        pop         ebp  
+        ret  
+
+
+old:
+mov(eax,0);
+jmp(raw("vecbody"));
+label("vecloop");
+inc(eax);
+label("vecbody");
+less(edx,eax,ptr[ecx]);
+jz(raw("end"),edx);
+call(raw("f"))
+jmp(raw("vecloop"));
+label("end")
+
+
+
+labal("body2id")
+// input:
+// mem[ebx] = size of string
+// mem[ebx+i] = content of string
+// mem[ecx] = size of vector<string>
+// mem[ecx+i] = content of vector<string>
+// out:
+// eax = id of cmd
+#define FOR(prefix,i,from,to,inc,flag,body_f)\
+mov(i,from);				                 \
+jmp(raw(#prefix"::body"));	                 \
+label(#prefix"::loop");		                 \
+inc;						                 \
+label(#prefix"::body");		                 \
+less(flag,i,to);			                 \
+jz(raw(#prefix"::end"),flag);                \
+call(raw(#body_f))			                 \
+jmp(raw(#prefix"::loop"));	                 \
+label(#prefix"::end")		                 
+
+
+FOR("vec",eax,0,ptr[ecx],inc(eax),edx,f)
+
+label("f")
+// eax - id
+push(eax);
+push(ecx);
+add(eax,eax,ecx);
+inc(eax);
+eq(edx,ptr[ebx],ptr[eax]);
+jz(raw("fail"),edx);
+jnz(raw("f_cmp"),edx);
+label("f_cmp");
+//FOR("f_cmp_loop",n=ptr[ebx],ptr[ebx+i],ptr[eax+i]);
+label("fail");
+mov(edx,-1);
+label("f_ret");
+pop(ecx);
+pop(eax);
+ret();
+короче делаю код который будет получать на вход в регистр ebx адрес строки в памяти, а на выходе в регистр eax будет помещать номер команды соотвествующий этой строке.
+
+теперь мне надо получить все строки.
+
+и записать их в память вычислителя.
+
+for(int i=0;i<arr.size();i++){
+  if(arr[i]==s)return i;
+}
+return -1;
+
+s=sadd*4;
+n=ptr[arraddr];
+p=arraddr+1;
+p*=4;
+for(int i=0;i<n;i++){
+  if(streq(s,p))return i;
+  p+=get_int(p);
+}
+return -1;
+
+get_byte(p)
+{
+  id=m/4;
+  m=p%4;
+  m*=8;
+  m=255<<m;
+  return m&ptr[id];
+}
+
+get_int(p)
+{
+  out=0;
+  for(int i=0;i<4;i++)out+=get_byte(p+i)<<8*i;
+}
+
+streq(a,b)
+{
+  n=get_int(ptr[a])+4;
+  for(int i=0;i<n;i++)if(get_byte(a+i)!=get_byte(b+i))return 0;
+  return 1;
+}
+
+
+jz(reg[dest],reg[src])
+jz(reg[dest],mem[src])
+jz(reg[dest],raw[src])
+jz(mem[dest],reg[src])
+jz(mem[dest],mem[src])
+jz(mem[dest],raw[src])
+jz(raw[dest],reg[src])
+jz(raw[dest],mem[src])
+jz(raw[dest],raw[src])
+jnz(reg[dest],reg[src])
+jnz(reg[dest],mem[src])
+jnz(reg[dest],raw[src])
+jnz(mem[dest],reg[src])
+jnz(mem[dest],mem[src])
+jnz(mem[dest],raw[src])
+jnz(raw[dest],reg[src])
+jnz(raw[dest],mem[src])
+jnz(raw[dest],raw[src])
+mov(reg[dest],reg[src])
+mov(reg[dest],mem[src])
+mov(reg[dest],raw[src])
+mov(mem[dest],reg[src])
+mov(mem[dest],mem[src])
+mov(mem[dest],raw[src])
+mov(raw[dest],reg[src])
+mov(raw[dest],mem[src])
+mov(raw[dest],raw[src])
+not(reg[dest],reg[src])
+not(reg[dest],mem[src])
+not(reg[dest],raw[src])
+not(mem[dest],reg[src])
+not(mem[dest],mem[src])
+not(mem[dest],raw[src])
+not(raw[dest],reg[src])
+not(raw[dest],mem[src])
+not(raw[dest],raw[src])
+inv(reg[dest],reg[src])
+inv(reg[dest],mem[src])
+inv(reg[dest],raw[src])
+inv(mem[dest],reg[src])
+inv(mem[dest],mem[src])
+inv(mem[dest],raw[src])
+inv(raw[dest],reg[src])
+inv(raw[dest],mem[src])
+inv(raw[dest],raw[src])
+add(reg[dest],reg[a],reg[b])
+add(reg[dest],reg[a],mem[b])
+add(reg[dest],reg[a],raw[b])
+add(reg[dest],mem[a],reg[b])
+add(reg[dest],mem[a],mem[b])
+add(reg[dest],mem[a],raw[b])
+add(reg[dest],raw[a],reg[b])
+add(reg[dest],raw[a],mem[b])
+add(reg[dest],raw[a],raw[b])
+add(mem[dest],reg[a],reg[b])
+add(mem[dest],reg[a],mem[b])
+add(mem[dest],reg[a],raw[b])
+add(mem[dest],mem[a],reg[b])
+add(mem[dest],mem[a],mem[b])
+add(mem[dest],mem[a],raw[b])
+add(mem[dest],raw[a],reg[b])
+add(mem[dest],raw[a],mem[b])
+add(mem[dest],raw[a],raw[b])
+sub(reg[dest],reg[a],reg[b])
+sub(reg[dest],reg[a],mem[b])
+sub(reg[dest],reg[a],raw[b])
+sub(reg[dest],mem[a],reg[b])
+sub(reg[dest],mem[a],mem[b])
+sub(reg[dest],mem[a],raw[b])
+sub(reg[dest],raw[a],reg[b])
+sub(reg[dest],raw[a],mem[b])
+sub(reg[dest],raw[a],raw[b])
+sub(mem[dest],reg[a],reg[b])
+sub(mem[dest],reg[a],mem[b])
+sub(mem[dest],reg[a],raw[b])
+sub(mem[dest],mem[a],reg[b])
+sub(mem[dest],mem[a],mem[b])
+sub(mem[dest],mem[a],raw[b])
+sub(mem[dest],raw[a],reg[b])
+sub(mem[dest],raw[a],mem[b])
+sub(mem[dest],raw[a],raw[b])
+mul(reg[dest],reg[a],reg[b])
+mul(reg[dest],reg[a],mem[b])
+mul(reg[dest],reg[a],raw[b])
+mul(reg[dest],mem[a],reg[b])
+mul(reg[dest],mem[a],mem[b])
+mul(reg[dest],mem[a],raw[b])
+mul(reg[dest],raw[a],reg[b])
+mul(reg[dest],raw[a],mem[b])
+mul(reg[dest],raw[a],raw[b])
+mul(mem[dest],reg[a],reg[b])
+mul(mem[dest],reg[a],mem[b])
+mul(mem[dest],reg[a],raw[b])
+mul(mem[dest],mem[a],reg[b])
+mul(mem[dest],mem[a],mem[b])
+mul(mem[dest],mem[a],raw[b])
+mul(mem[dest],raw[a],reg[b])
+mul(mem[dest],raw[a],mem[b])
+mul(mem[dest],raw[a],raw[b])
+div(reg[dest],reg[a],reg[b])
+div(reg[dest],reg[a],mem[b])
+div(reg[dest],reg[a],raw[b])
+div(reg[dest],mem[a],reg[b])
+div(reg[dest],mem[a],mem[b])
+div(reg[dest],mem[a],raw[b])
+div(reg[dest],raw[a],reg[b])
+div(reg[dest],raw[a],mem[b])
+div(reg[dest],raw[a],raw[b])
+div(mem[dest],reg[a],reg[b])
+div(mem[dest],reg[a],mem[b])
+div(mem[dest],reg[a],raw[b])
+div(mem[dest],mem[a],reg[b])
+div(mem[dest],mem[a],mem[b])
+div(mem[dest],mem[a],raw[b])
+div(mem[dest],raw[a],reg[b])
+div(mem[dest],raw[a],mem[b])
+div(mem[dest],raw[a],raw[b])
+mod(reg[dest],reg[a],reg[b])
+mod(reg[dest],reg[a],mem[b])
+mod(reg[dest],reg[a],raw[b])
+mod(reg[dest],mem[a],reg[b])
+mod(reg[dest],mem[a],mem[b])
+mod(reg[dest],mem[a],raw[b])
+mod(reg[dest],raw[a],reg[b])
+mod(reg[dest],raw[a],mem[b])
+mod(reg[dest],raw[a],raw[b])
+mod(mem[dest],reg[a],reg[b])
+mod(mem[dest],reg[a],mem[b])
+mod(mem[dest],reg[a],raw[b])
+mod(mem[dest],mem[a],reg[b])
+mod(mem[dest],mem[a],mem[b])
+mod(mem[dest],mem[a],raw[b])
+mod(mem[dest],raw[a],reg[b])
+mod(mem[dest],raw[a],mem[b])
+mod(mem[dest],raw[a],raw[b])
+eq(reg[dest],reg[a],reg[b])
+eq(reg[dest],reg[a],mem[b])
+eq(reg[dest],reg[a],raw[b])
+eq(reg[dest],mem[a],reg[b])
+eq(reg[dest],mem[a],mem[b])
+eq(reg[dest],mem[a],raw[b])
+eq(reg[dest],raw[a],reg[b])
+eq(reg[dest],raw[a],mem[b])
+eq(reg[dest],raw[a],raw[b])
+eq(mem[dest],reg[a],reg[b])
+eq(mem[dest],reg[a],mem[b])
+eq(mem[dest],reg[a],raw[b])
+eq(mem[dest],mem[a],reg[b])
+eq(mem[dest],mem[a],mem[b])
+eq(mem[dest],mem[a],raw[b])
+eq(mem[dest],raw[a],reg[b])
+eq(mem[dest],raw[a],mem[b])
+eq(mem[dest],raw[a],raw[b])
+neq(reg[dest],reg[a],reg[b])
+neq(reg[dest],reg[a],mem[b])
+neq(reg[dest],reg[a],raw[b])
+neq(reg[dest],mem[a],reg[b])
+neq(reg[dest],mem[a],mem[b])
+neq(reg[dest],mem[a],raw[b])
+neq(reg[dest],raw[a],reg[b])
+neq(reg[dest],raw[a],mem[b])
+neq(reg[dest],raw[a],raw[b])
+neq(mem[dest],reg[a],reg[b])
+neq(mem[dest],reg[a],mem[b])
+neq(mem[dest],reg[a],raw[b])
+neq(mem[dest],mem[a],reg[b])
+neq(mem[dest],mem[a],mem[b])
+neq(mem[dest],mem[a],raw[b])
+neq(mem[dest],raw[a],reg[b])
+neq(mem[dest],raw[a],mem[b])
+neq(mem[dest],raw[a],raw[b])
+less(reg[dest],reg[a],reg[b])
+less(reg[dest],reg[a],mem[b])
+less(reg[dest],reg[a],raw[b])
+less(reg[dest],mem[a],reg[b])
+less(reg[dest],mem[a],mem[b])
+less(reg[dest],mem[a],raw[b])
+less(reg[dest],raw[a],reg[b])
+less(reg[dest],raw[a],mem[b])
+less(reg[dest],raw[a],raw[b])
+less(mem[dest],reg[a],reg[b])
+less(mem[dest],reg[a],mem[b])
+less(mem[dest],reg[a],raw[b])
+less(mem[dest],mem[a],reg[b])
+less(mem[dest],mem[a],mem[b])
+less(mem[dest],mem[a],raw[b])
+less(mem[dest],raw[a],reg[b])
+less(mem[dest],raw[a],mem[b])
+less(mem[dest],raw[a],raw[b])
+more(reg[dest],reg[a],reg[b])
+more(reg[dest],reg[a],mem[b])
+more(reg[dest],reg[a],raw[b])
+more(reg[dest],mem[a],reg[b])
+more(reg[dest],mem[a],mem[b])
+more(reg[dest],mem[a],raw[b])
+more(reg[dest],raw[a],reg[b])
+more(reg[dest],raw[a],mem[b])
+more(reg[dest],raw[a],raw[b])
+more(mem[dest],reg[a],reg[b])
+more(mem[dest],reg[a],mem[b])
+more(mem[dest],reg[a],raw[b])
+more(mem[dest],mem[a],reg[b])
+more(mem[dest],mem[a],mem[b])
+more(mem[dest],mem[a],raw[b])
+more(mem[dest],raw[a],reg[b])
+more(mem[dest],raw[a],mem[b])
+more(mem[dest],raw[a],raw[b])
+or(reg[dest],reg[a],reg[b])
+or(reg[dest],reg[a],mem[b])
+or(reg[dest],reg[a],raw[b])
+or(reg[dest],mem[a],reg[b])
+or(reg[dest],mem[a],mem[b])
+or(reg[dest],mem[a],raw[b])
+or(reg[dest],raw[a],reg[b])
+or(reg[dest],raw[a],mem[b])
+or(reg[dest],raw[a],raw[b])
+or(mem[dest],reg[a],reg[b])
+or(mem[dest],reg[a],mem[b])
+or(mem[dest],reg[a],raw[b])
+or(mem[dest],mem[a],reg[b])
+or(mem[dest],mem[a],mem[b])
+or(mem[dest],mem[a],raw[b])
+or(mem[dest],raw[a],reg[b])
+or(mem[dest],raw[a],mem[b])
+or(mem[dest],raw[a],raw[b])
+and(reg[dest],reg[a],reg[b])
+and(reg[dest],reg[a],mem[b])
+and(reg[dest],reg[a],raw[b])
+and(reg[dest],mem[a],reg[b])
+and(reg[dest],mem[a],mem[b])
+and(reg[dest],mem[a],raw[b])
+and(reg[dest],raw[a],reg[b])
+and(reg[dest],raw[a],mem[b])
+and(reg[dest],raw[a],raw[b])
+and(mem[dest],reg[a],reg[b])
+and(mem[dest],reg[a],mem[b])
+and(mem[dest],reg[a],raw[b])
+and(mem[dest],mem[a],reg[b])
+and(mem[dest],mem[a],mem[b])
+and(mem[dest],mem[a],raw[b])
+and(mem[dest],raw[a],reg[b])
+and(mem[dest],raw[a],mem[b])
+and(mem[dest],raw[a],raw[b])
+bwxor(reg[dest],reg[a],reg[b])
+bwxor(reg[dest],reg[a],mem[b])
+bwxor(reg[dest],reg[a],raw[b])
+bwxor(reg[dest],mem[a],reg[b])
+bwxor(reg[dest],mem[a],mem[b])
+bwxor(reg[dest],mem[a],raw[b])
+bwxor(reg[dest],raw[a],reg[b])
+bwxor(reg[dest],raw[a],mem[b])
+bwxor(reg[dest],raw[a],raw[b])
+bwxor(mem[dest],reg[a],reg[b])
+bwxor(mem[dest],reg[a],mem[b])
+bwxor(mem[dest],reg[a],raw[b])
+bwxor(mem[dest],mem[a],reg[b])
+bwxor(mem[dest],mem[a],mem[b])
+bwxor(mem[dest],mem[a],raw[b])
+bwxor(mem[dest],raw[a],reg[b])
+bwxor(mem[dest],raw[a],mem[b])
+bwxor(mem[dest],raw[a],raw[b])
+bwor(reg[dest],reg[a],reg[b])
+bwor(reg[dest],reg[a],mem[b])
+bwor(reg[dest],reg[a],raw[b])
+bwor(reg[dest],mem[a],reg[b])
+bwor(reg[dest],mem[a],mem[b])
+bwor(reg[dest],mem[a],raw[b])
+bwor(reg[dest],raw[a],reg[b])
+bwor(reg[dest],raw[a],mem[b])
+bwor(reg[dest],raw[a],raw[b])
+bwor(mem[dest],reg[a],reg[b])
+bwor(mem[dest],reg[a],mem[b])
+bwor(mem[dest],reg[a],raw[b])
+bwor(mem[dest],mem[a],reg[b])
+bwor(mem[dest],mem[a],mem[b])
+bwor(mem[dest],mem[a],raw[b])
+bwor(mem[dest],raw[a],reg[b])
+bwor(mem[dest],raw[a],mem[b])
+bwor(mem[dest],raw[a],raw[b])
+bwand(reg[dest],reg[a],reg[b])
+bwand(reg[dest],reg[a],mem[b])
+bwand(reg[dest],reg[a],raw[b])
+bwand(reg[dest],mem[a],reg[b])
+bwand(reg[dest],mem[a],mem[b])
+bwand(reg[dest],mem[a],raw[b])
+bwand(reg[dest],raw[a],reg[b])
+bwand(reg[dest],raw[a],mem[b])
+bwand(reg[dest],raw[a],raw[b])
+bwand(mem[dest],reg[a],reg[b])
+bwand(mem[dest],reg[a],mem[b])
+bwand(mem[dest],reg[a],raw[b])
+bwand(mem[dest],mem[a],reg[b])
+bwand(mem[dest],mem[a],mem[b])
+bwand(mem[dest],mem[a],raw[b])
+bwand(mem[dest],raw[a],reg[b])
+bwand(mem[dest],raw[a],mem[b])
+bwand(mem[dest],raw[a],raw[b])
+shr(reg[dest],reg[a],reg[b])
+shr(reg[dest],reg[a],mem[b])
+shr(reg[dest],reg[a],raw[b])
+shr(reg[dest],mem[a],reg[b])
+shr(reg[dest],mem[a],mem[b])
+shr(reg[dest],mem[a],raw[b])
+shr(reg[dest],raw[a],reg[b])
+shr(reg[dest],raw[a],mem[b])
+shr(reg[dest],raw[a],raw[b])
+shr(mem[dest],reg[a],reg[b])
+shr(mem[dest],reg[a],mem[b])
+shr(mem[dest],reg[a],raw[b])
+shr(mem[dest],mem[a],reg[b])
+shr(mem[dest],mem[a],mem[b])
+shr(mem[dest],mem[a],raw[b])
+shr(mem[dest],raw[a],reg[b])
+shr(mem[dest],raw[a],mem[b])
+shr(mem[dest],raw[a],raw[b])
+shl(reg[dest],reg[a],reg[b])
+shl(reg[dest],reg[a],mem[b])
+shl(reg[dest],reg[a],raw[b])
+shl(reg[dest],mem[a],reg[b])
+shl(reg[dest],mem[a],mem[b])
+shl(reg[dest],mem[a],raw[b])
+shl(reg[dest],raw[a],reg[b])
+shl(reg[dest],raw[a],mem[b])
+shl(reg[dest],raw[a],raw[b])
+shl(mem[dest],reg[a],reg[b])
+shl(mem[dest],reg[a],mem[b])
+shl(mem[dest],reg[a],raw[b])
+shl(mem[dest],mem[a],reg[b])
+shl(mem[dest],mem[a],mem[b])
+shl(mem[dest],mem[a],raw[b])
+shl(mem[dest],raw[a],reg[b])
+shl(mem[dest],raw[a],mem[b])
+shl(mem[dest],raw[a],raw[b])
+jmp(reg[dest])
+jmp(mem[dest])
+jmp(raw[dest])
+call(reg[dest])
+call(mem[dest])
+call(raw[dest])
+push(reg[dest])
+push(mem[dest])
+push(raw[dest])
+pop(reg[dest])
+pop(mem[dest])
+inc(reg[dest])
+inc(mem[dest])
+dec(reg[dest])
+dec(mem[dest])
+ret()
+nop()
+label()
+mov(ptr(dest),reg[src])
+mov(ptr(dest),mem[src])
+mov(ptr(dest),raw[src])
+mov(reg[dest],ptr(src))
+mov(mem[dest],ptr(src))

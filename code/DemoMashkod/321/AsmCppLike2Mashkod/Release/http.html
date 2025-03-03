@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>chat on cpp</title>
+<style type="text/css">
+  table{border-collapse:collapse;font-size:10pt;}
+  thead{background:#ccc;text-align:center;font-weight:bold;}
+  td,thead{border:1px solid #800;padding:4px;}
+  textarea[readonly="readonly"]{background-color:#e8e8e8;}
+</style>
+<script language="JavaScript">
+  function getXmlHttp()
+  {
+    var xmlhttp;
+    try{xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");}
+    catch(e){
+      try{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+      catch(E){xmlhttp=false;}
+    }
+    if(!xmlhttp&&typeof XMLHttpRequest!='undefined'){xmlhttp=new XMLHttpRequest();}
+    return xmlhttp;
+  }
+  function escapeHtml(text)
+  {
+    if("string" != (typeof text)){return text;}
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+  }
+  function prepare(s){return escapeHtml(s);}
+  function PrintMyTable(table)
+  {
+    function skip_field(field){
+      var ignore=[];//["user_agent","request_uri","referrer"];
+      for(var key in ignore)if(ignore[key]==field){return true;}
+      return false;
+    };
+    var def_table=[{'id':1,'nick':'Owen'},{'id':2,'nick':'Kyle'}];
+    if(!table.length){return 'table is empty';}
+    if(!Object.keys(table[0]).length){return 'table is empty';}
+    var arr=Object.keys(table[0]);
+    var out="";var head="";
+    for(var i in arr)
+    {
+      if(skip_field(arr[i]))continue;
+      out+='<td>'+prepare(arr[i])+'</td>';
+    }
+    var head='<thead><tr>'+out+'</tr></thead>';
+    out="";
+    for(var i=0;i<table.length;i++)
+    {
+      var tmp="";
+      //var tmp_arr=table[table.length-i-1];
+      var tmp_arr=table[i];
+      for(var key in tmp_arr){
+        if(skip_field(key))continue;
+        tmp+='<td>'+prepare(tmp_arr[key])+'</td>';
+      }
+      out+='<tr>'+tmp+'</tr>';
+    }
+    out='<table>'+head+'<tbody>'+out+'</tbody></table>';
+    return out;
+  }
+  function draw_chat(response)
+  {
+    document.getElementById('chat').innerHTML=escapeHtml(response);//return;
+    if(!response.length){document.getElementById('chat').innerHTML="empty response.";return;}
+    var table_object=JSON.parse(response);
+    var table=PrintMyTable(table_object);
+    var chat=document.getElementById('chat');
+    chat.innerHTML=table;
+  }
+  function OnResponse(response)
+  {
+    draw_chat(response);
+  }
+  function main()
+  {
+    var xmlhttp = getXmlHttp()
+    xmlhttp.open('POST','/eval',true);
+    xmlhttp.onreadystatechange=function(){
+      if(xmlhttp.readyState==4){
+        if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+      }
+    };
+    var code="return \"Hi!\";";
+    var data="nothing";
+    xmlhttp.send("code="+encodeURIComponent(code)+"&data="+encodeURIComponent(data));
+  }
+  function doSend()
+  {
+    var xmlhttp = getXmlHttp()
+    xmlhttp.open('POST','/eval',true);
+    xmlhttp.onreadystatechange=function(){
+      if(xmlhttp.readyState==4){
+        if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+      }
+    };
+    var code=document.getElementById('code').value;
+    var data=document.getElementById('data').value;
+    document.getElementById('buffer').value=data;
+    document.getElementById('data').value="";
+    xmlhttp.send("code="+encodeURIComponent(data)+"&data="+encodeURIComponent(""));
+  }
+</script>
+</head>
+<body>
+  <p><b>chat:</b></p>
+  <pre id="chat">loading...</pre>
+  <!--<form id="postform" action="/eval" method="post">-->
+  <p><b>buffer:</b></p>
+  <textarea id="buffer" rows="10" cols="90" readonly="readonly"></textarea>
+  <p><b>msg:</b></p>
+  <p><textarea id="data" rows="10" cols="90" name="data" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p>
+  <p style="display:none">
+<textarea id="code" name="code" >#include &lt;stdio.h&gt;
+int main()
+{
+  for(int i=0;i&lt;10;i++)printf("%i\n",i);
+}
+</textarea></p>
+    <p><button id="send" onclick="doSend();">send</button></p>
+  <!--</form>-->
+  <h2>version 1.1</h2>
+  <script language="JavaScript">main();</script>
+  <p style="display:none"><textarea id="raw"></textarea><button onclick="load_raw();">load</button></p>
+</body>
+</html>

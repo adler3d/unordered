@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>chat?eval on Cpp</title>
+<style type="text/css">
+  table{border-collapse:collapse;font-size:10pt;}
+  thead{background:#ccc;text-align:center;font-weight:bold;}
+  td,thead{border:1px solid #800;padding:4px;}
+  textarea[readonly="readonly"]{background-color:#e8e8e8;}
+</style>
+<script language="JavaScript">
+  function getXmlHttp()
+  {
+    var xmlhttp;
+    try{xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");}
+    catch(e){
+      try{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+      catch(E){xmlhttp=false;}
+    }
+    if(!xmlhttp&&typeof XMLHttpRequest!='undefined'){xmlhttp=new XMLHttpRequest();}
+    return xmlhttp;
+  }
+  function escapeHtml(text)
+  {
+    if("string" != (typeof text)){return text;}
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+  }
+  function prepare(s){return escapeHtml(s);}
+  function PrintMyTable(table)
+  {
+    function skip_field(field){
+      var ignore=[];//["user_agent","request_uri","referrer"];
+      for(var key in ignore)if(ignore[key]==field){return true;}
+      return false;
+    };
+    var def_table=[{'id':1,'nick':'Owen'},{'id':2,'nick':'Kyle'}];
+    if(!table.length){return 'table is empty';}
+    if(!Object.keys(table[0]).length){return 'table is empty';}
+    var arr=Object.keys(table[0]);
+    var out="";var head="";
+    for(var i in arr)
+    {
+      if(skip_field(arr[i]))continue;
+      out+='<td>'+prepare(arr[i])+'</td>';
+    }
+    var head='<thead><tr>'+out+'</tr></thead>';
+    out="";
+    for(var i=0;i<table.length;i++)
+    {
+      var tmp="";
+      //var tmp_arr=table[table.length-i-1];
+      var tmp_arr=table[i];
+      for(var key in tmp_arr){
+        if(skip_field(key))continue;
+        tmp+='<td>'+prepare(tmp_arr[key])+'</td>';
+      }
+      out+='<tr>'+tmp+'</tr>';
+    }
+    out='<table>'+head+'<tbody>'+out+'</tbody></table>';
+    return out;
+  }
+  function draw_chat(response)
+  {
+    if(!response.length){document.getElementById('chat').innerHTML="empty response.";return;}
+    var table_object=JSON.parse(response);
+    var table=PrintMyTable(table_object);
+    var chat=document.getElementById('chat');
+    chat.innerHTML=table;
+  }
+  function OnResponse(response)
+  {
+    draw_chat(response);
+  }
+  function main()
+  {
+    var xmlhttp = getXmlHttp()
+    xmlhttp.open('POST','/chat?eval',true);
+    xmlhttp.onreadystatechange=function(){
+      if(xmlhttp.readyState==4){
+        if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+      }
+    };
+    var code="return JSON.stringify(g_root['chat'].slice(-25));";
+    var data="nothing";
+    xmlhttp.send("code="+encodeURIComponent(code)+"&data="+encodeURIComponent(data));
+  }
+  function doSend()
+  {
+    var xmlhttp = getXmlHttp()
+    xmlhttp.open('POST','/chat?eval',true);
+    xmlhttp.onreadystatechange=function(){
+      if(xmlhttp.readyState==4){
+        if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+      }
+    };
+    var code=document.getElementById('code').value;
+    var data=document.getElementById('data').value;
+    document.getElementById('buffer').value=data;
+    document.getElementById('data').value="";
+    xmlhttp.send("code="+encodeURIComponent(code)+"&data="+encodeURIComponent(data));
+  }
+  function group(arr,field)
+  {
+    var buff=[];var out=[];
+    for(var i in arr)
+    {
+      var row=arr[i];
+      var v=row[field];
+      if(!(v in buff))buff[v]=0;
+      buff[v]++;
+    }
+    for(var key in buff)
+    {
+      var v=buff[key];
+      if(field=='time')if(v<=2){continue;}
+      if(field=='ip')if(v<=10){continue;}
+      if(v<=2)continue;
+      out.push({value:key,count:v});
+    }
+    return out;
+  }
+  function CMD_Stats(table)
+  {
+    var arr=Object.keys(table[0]);
+    var out="";
+    for(var key in arr)
+    {
+      var group_table=group(table,arr[key]);
+      group_table=group_table.length?group_table:[{table:null}];
+      var group_table_out=PrintMyTable(group_table);
+      out+="<b>"+arr[key]+"</b>\n"+group_table_out+"\n";
+    }
+    document.getElementById('chat').innerHTML=out;
+  }
+  function load_raw()
+  {
+    var value=document.getElementById("raw").value;
+    CMD_Stats(JSON.parse(value));//draw_chat(value);
+  }
+  function go_page(index)
+  {
+    
+  }
+  function get_pages()
+  {
+    return "not implemented";
+    var out=[];
+    for(var i=1;i<5;i++)out.push("<a href=\"#\" onclick='go_page("+i+")'>"+i+"</a>");
+    return out.join(" ")+"..."+out.join(" ");
+  }
+</script>
+</head>
+<body>
+  <pre><b>pages: </b><span id="bef_pages"></span></pre><script>document.getElementById("bef_pages").innerHTML=get_pages();</script>
+  <p><b>chat:</b></p>
+  <pre id="chat">loading...</pre>
+  <pre><b>pages: </b><span id="aft_pages"></span></pre><script>document.getElementById("aft_pages").innerHTML=get_pages();</script>
+  <!--<form id="postform" action="/eval" method="post">-->
+  <p><b>buffer:</b></p>
+  <textarea id="buffer" rows="10" cols="90" readonly="readonly"></textarea>
+  <p><b>msg:</b></p>
+  <p><textarea id="data" rows="10" cols="90" name="data" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p>
+  <p style="display:none">
+<textarea id="code" name="code" >var chat=get_arr_ex(g_root,'chat')[1];
+chat.push({time:cur_date_str(),'message':POST['data']});
+return JSON.stringify(chat.slice(-25));
+</textarea></p>
+    <p><button id="send" onclick="doSend();">send</button></p>
+  <!--</form>-->
+  <h2>version 1.1</h2>
+  <script language="JavaScript">main();</script>
+  <p style="display:none"><textarea id="raw"></textarea><button onclick="load_raw();">load</button></p>
+</body>
+</html>

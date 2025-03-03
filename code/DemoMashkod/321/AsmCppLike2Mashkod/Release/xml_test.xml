@@ -1,0 +1,891 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9">
+    <meta name="msapplication-config" content="none">
+    <meta name="viewport" content="width=1040">
+    <link rel="shortcut icon" href="/s/yw/img/favicon.ico">
+    <link href="/s/yw/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/s/yw/css/tablesorter.css" rel="stylesheet">
+    <link href="/s/yw/css/realmeye.css" rel="stylesheet">
+<script src="/s/yw/js/jquery-1.8.2.min.js"></script>
+<script src="/s/yw/js/bs.min.js"></script>
+<script src="/s/yw/js/jquery.timeago.js"></script>
+<script src="/s/yw/js/jquery.timeago.en-short.js"></script>
+<script src="/s/yw/js/definition.js"></script>
+<script src="/s/yw/js/jquery.tablesorter.js"></script>
+<script src="/s/yw/js/realmeye.js"></script>
+    <title>Members of the RotMG guild UniqueTeam | RealmEye.com
+    </title>
+    <meta name="keywords" content="free online mmo rpg game, realm of the mad god, rotmg, statistics, stats, rankings, ranks, UniqueTeam, guild">
+    <meta name="description" content="The current members of the UniqueTeam guild in Realm of the Mad God - the free online mmo rpg game.">
+    <link rel="canonical" href="/guild/UniqueTeam">
+  </head>
+  <body>
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">
+            <img class="realm-eye" src="/s/yw/img/eye.png">
+            <span style="color: #333">Realm
+            </span>
+            <span style="color: #08C">Eye
+            </span></a>
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guilds
+                <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                <a href="/top-guilds-by-fame">Top Guilds by Fame</a>
+            </li>
+            <li>
+            <a href="/top-guilds-by-exp">Top Guilds by Exp</a>
+            </li>
+            <li>
+            <a href="/servers-by-active-guilds">Servers by active Guilds</a>
+            </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Top Players</a>
+                <ul class="dropdown-menu">
+                  <li>
+                  <a href="/top-players-by-fame">by Fame</a>
+              </li>
+              <li>
+              <a href="/top-players-by-exp">by Exp</a>
+          </li>
+          <li>
+          <a href="/top-players-by-account-fame">by Account Fame</a>
+          </li>
+          <li>
+          <a href="/top-graveyards-by/oryx-kills">by Graveyard</a>
+          </li>
+          <li>
+          <a href="/top-players-with-no-guild">with no Guild</a>
+          </li>
+          </ul>
+          </li>
+          <li>
+          <a href="/top-oldest-active-players">Top Oldest Active Players</a>
+          </li>
+          <li>
+          <a href="/recently-seen-unnamed-players">Recently seen Unnamed Players</a>
+          </li>
+          <li>
+          <a href="/number-of-players-by-rank">Number of Players by Rank</a>
+          </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Characters
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+              <a href="/top-characters">Top Characters</a>
+          </li>
+          <li>
+          <a href="/top-archers">Top Characters by Class</a>
+          </li>
+          <li>
+          <a href="/top-characters-with-outfit">Top Characters with Outfit</a>
+          </li>
+          <li>
+          <a href="/top-dead-characters-by/oryx-kills">Top Dead Characters</a>
+          </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pets
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+              <a href="/top-pets">Top Pets</a>
+          </li>
+          <li>
+          <a href="/top-pets-by-ability-heal">Top Pets by Ability</a>
+          </li>
+          <li>
+          <a href="/feed-power-of-items">Feed Power of Items</a>
+          </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+              <a href="/items/keys">Keys</a>
+          </li>
+          <li>
+          <a href="/items/weapons">Equipment</a>
+          </li>
+          <li>
+          <a href="/items/accessory-dyes">Cloths &amp; Dyes</a>
+          </li>
+          <li>
+          <a href="/items/pets">Pet Eggs</a>
+          </li>
+          <li>
+          <a href="/items/pet-food">Pet Food</a>
+          </li>
+          <li>
+          <a href="/items/misc">Misc</a>
+          </li>
+          <li>
+          <a href="/items/dye-statistics">Dye statistics</a>
+          </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trading
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+              <a href="/current-offers">Current offers</a>
+          </li>
+          <li>
+          <a href="/recent-offers">Recent offers</a>
+          </li>
+          <li>
+          <a href="/trading-help">Help</a>
+          </li>
+          </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+              <a href="/q-and-a">Q &amp; A</a>
+          </li>
+          <li>
+          <a href="/recent-changes">Recent changes</a>
+          </li>
+          <li>
+          <a href="/mreyeball">Mr. Eyeball</a>
+          </li>
+          <li>
+          <a href="/user-help">For Users</a>
+          </li>
+          <li>
+          <a href="/signature-help">User Signatures</a>
+          </li>
+          <li>
+          <a href="/donators">Donators</a>
+          </li>
+          <li>
+          <a href="/feedback">Feedback</a>
+          </li>
+          <li>
+          <a href="/privacy-policy">Privacy policy</a>
+          </li>
+          </ul>
+          </li>
+          <li>
+          <a href="/wiki/realm-of-the-mad-god" title="RotMG Wiki">Wiki</a>
+          </li>
+          </ul>
+          <div class="nav navbar-form navbar-right-side">
+            <span class="player-search pull-left" id="i013B00UC">
+              <input type="text" class="span2" placeholder="Search">
+              <div class="player-guild-toggle-panel">
+                <div class="btn-group" data-toggle="buttons-radio">
+                  <button class="btn active">Player
+                  </button>
+                  <button class="btn">Guild
+                  </button>
+                </div>
+              </div>
+            </span>
+            <span class="auth-panel pull-right">
+              <div>
+                <a id="i023B00UC" href="https://www.realmeye.com/log-in" class="btn">Log In</a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <noscript>
+        <div class="alert">It seems like you have disabled javascript. The site uses it extensively, so expect a much degraded experience!
+        </div>
+      </noscript>
+      <div class="row">
+        <div class="span12"><h1>
+            <span class="entity-name">UniqueTeam
+            </span></h1>
+          <div class="row">
+            <div class="span5">
+              <table class="summary">
+                <tr><td>Members</td><td>50</td>
+                </tr>
+                <tr><td>Characters</td><td>71</td>
+                </tr>
+                <tr><td>Fame</td><td>
+                    <span class="numeric">1915
+                    </span> (1840<sup>th</sup>)</td>
+                </tr>
+                <tr><td>Exp</td><td>
+                    <span class="numeric">531484
+                    </span> (3758<sup>th</sup>)</td>
+                </tr>
+                <tr><td>Most active on</td><td>
+                    <a href="/top-guilds-on-server/EUWest">EUWest</a> (93<sup>rd</sup>)</td>
+                </tr>
+              </table>
+            </div>
+            <div class="span7">
+              <div class="well description" id="i033B00UC">
+                <div class="help">If you are the founder or a leader of this guild, then you can add some description here, when you are logged in to RealmEye.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin: auto; width: 730px">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-0854318594344150";
+/* Top Leaderboard */
+google_ad_slot = "7520543336";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+          </div>
+          <ul class="nav nav-tabs player-tabs">
+            <li class="active">
+              <a href="/guild/UniqueTeam">Members</a>
+            </li>
+            <li>
+            <a href="/top-characters-of-guild/UniqueTeam">Top Characters</a>
+            </li>
+            <li>
+            <a href="/top-pets-of-guild/UniqueTeam">Top Pets</a>
+            </li>
+            <li>
+            <a href="/fame-history-of-guild/UniqueTeam">Fame History</a>
+            </li>
+            <li>
+            <a href="/former-members-of-guild/UniqueTeam">Former Members</a>
+            </li>
+            <li>
+            <a href="/server-activity-of-guild/UniqueTeam">Server Activity</a>
+            </li>
+          </ul>
+          <p>Current members of the guild UniqueTeam  in RotMG.
+          </p>
+          <table id="i043B00UC" class="table table-striped tablesorter">
+            <thead>
+              <tr>
+                <th>Name
+                </th>
+                <th>Guild Rank
+                </th>
+                <th>Fame
+                </th>
+                <th>Exp
+                </th>
+                <th>
+                  <abbr title="Rank">R</abbr>
+                </th>
+                <th>
+                  <abbr title="Chars">C</abbr>
+                </th>
+                <th>Last seen
+                </th>
+                <th>
+                  <abbr title="Server">Srv.</abbr>
+                </th>
+                <th>
+                  <abbr title="Avg. Fame / Char">AF/C</abbr>
+                </th>
+                <th>
+                  <abbr title="Avg. Exp / Char">AE/C</abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>  <td>
+                  <div class="star-container">
+                    <a href="/player/UniquePtr">UniquePtr</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td>  <td>Founder</td>  <td>
+                  <a href="/fame-history-of-player/UniquePtr">2</a></td><td>2</td><td>7</td><td>1</td>  <td>
+                  <span class="timeago" title="2014-05-07T08:46:47Z">2014-05-07 08:46:47
+                  </span></td>  <td>
+                  <abbr title="EUWest">EUW</abbr></td>  <td>2</td>  <td>2</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Barbariac">Barbariac</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Barbariac">290</a></td><td>196374</td><td>2</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-04T12:33:26Z">2014-05-04 12:33:26
+                  </span></td><td>
+                  <abbr title="EUNorth">EUN</abbr></td><td>290</td><td>196374</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Ozanilekr">Ozanilekr</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Ozanilekr">207</a></td><td>71792</td><td>2</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-04T16:58:57Z">2014-05-04 16:58:57
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>207</td><td>71792</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/DeeLicious">DeeLicious</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/DeeLicious">151</a></td><td>47222</td><td>8</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-04T17:56:45Z">2014-05-04 17:56:45
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>151</td><td>47222</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Ukillar">Ukillar</a>
+                    <div class="star star-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Ukillar">143</a></td><td>48047</td><td>19</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-07T00:01:06Z">2014-05-07 00:01:06
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>143</td><td>48047</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Duartedudu">Duartedudu</a>
+                    <div class="star star-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Duartedudu">143</a></td><td>47163</td><td>15</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-07T08:08:29Z">2014-05-07 08:08:29
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>143</td><td>47163</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Krydex">Krydex</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Krydex">133</a></td><td>44815</td><td>5</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T16:56:33Z">2014-05-06 16:56:33
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>133</td><td>44815</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Catafish">Catafish</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Catafish">88</a></td><td>1234</td><td>5</td><td>4</td><td>
+                  <span class="timeago" title="2014-05-07T01:05:20Z">2014-05-07 01:05:20
+                  </span></td><td>
+                  <abbr title="USWest">USW</abbr></td><td>22</td><td>308</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Voree">Voree</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Voree">86</a></td><td>2099</td><td>9</td><td>4</td><td>
+                  <span class="timeago" title="2014-05-04T04:18:08Z">2014-05-04 04:18:08
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>21</td><td>524</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Revoring">Revoring</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Revoring">73</a></td><td>11523</td><td>6</td><td>3</td><td>
+                  <span class="timeago" title="2014-05-06T19:35:16Z">2014-05-06 19:35:16
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>24</td><td>3841</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Imfamus">Imfamus</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Imfamus">71</a></td><td>22901</td><td>8</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T14:57:46Z">2014-05-06 14:57:46
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>71</td><td>22901</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Swesebbe">Swesebbe</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Swesebbe">69</a></td><td>2556</td><td>4</td><td>3</td><td>
+                  <span class="timeago" title="2014-05-04T08:02:55Z">2014-05-04 08:02:55
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>23</td><td>852</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Ichtyornis">Ichtyornis</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Ichtyornis">67</a></td><td>4698</td><td>4</td><td>3</td><td>
+                  <span class="timeago" title="2014-05-05T18:17:46Z">2014-05-05 18:17:46
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>22</td><td>1566</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Amerone">Amerone</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Amerone">42</a></td><td>7380</td><td>11</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-04T15:45:01Z">2014-05-04 15:45:01
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>42</td><td>7380</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/MartianSla">MartianSla</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/MartianSla">40</a></td><td>1564</td><td>2</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-05T12:15:31Z">2014-05-05 12:15:31
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>20</td><td>782</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Gareiis">Gareiis</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Gareiis">35</a></td><td>7485</td><td>5</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T21:20:43Z">2014-05-06 21:20:43
+                  </span></td><td>
+                  <abbr title="USWest">USW</abbr></td><td>35</td><td>7485</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Ellon">Ellon</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Ellon">33</a></td><td>1374</td><td>2</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-03T15:45:38Z">2014-05-03 15:45:38
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>16</td><td>687</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Darcom">Darcom</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Darcom">30</a></td><td>72</td><td>5</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-04T13:21:08Z">2014-05-04 13:21:08
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>15</td><td>36</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Expiiredo">Expiiredo</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Expiiredo">27</a></td><td>84</td><td>3</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-07T04:50:36Z">2014-05-07 04:50:36
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>13</td><td>42</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/ValutShop">ValutShop</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/ValutShop">25</a></td><td>3292</td><td>3</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T11:01:10Z">2014-05-03 11:01:10
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>25</td><td>3292</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Gamechanjk">Gamechanjk</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Gamechanjk">21</a></td><td>976</td><td>3</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T17:22:46Z">2014-05-06 17:22:46
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>21</td><td>976</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Sierono">Sierono</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Sierono">18</a></td><td>1012</td><td>5</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T19:17:39Z">2014-05-06 19:17:39
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>18</td><td>1012</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Dezastor">Dezastor</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Dezastor">17</a></td><td>1255</td><td>6</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-04T13:27:19Z">2014-05-04 13:27:19
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>17</td><td>1255</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Frero">Frero</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Frero">16</a></td><td>925</td><td>4</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T15:55:30Z">2014-05-05 15:55:30
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>16</td><td>925</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Hirtobpk">Hirtobpk</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Hirtobpk">16</a></td><td>1215</td><td>1</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T17:33:32Z">2014-05-05 17:33:32
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>16</td><td>1215</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/PopeyeTrue">PopeyeTrue</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/PopeyeTrue">16</a></td><td>1309</td><td>3</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T16:19:48Z">2014-05-05 16:19:48
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>16</td><td>1309</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/IchduJa">IchduJa</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/IchduJa">13</a></td><td>77</td><td>8</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T17:38:28Z">2014-05-06 17:38:28
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>13</td><td>77</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/ZooPalm">ZooPalm</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/ZooPalm">11</a></td><td>865</td><td>5</td><td>3</td><td>
+                  <span class="timeago" title="2014-05-05T11:56:33Z">2014-05-05 11:56:33
+                  </span></td><td>
+                  <abbr title="EUEast">EUE</abbr></td><td>3</td><td>288</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Ouadjysan">Ouadjysan</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Ouadjysan">10</a></td><td>975</td><td>6</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T12:45:50Z">2014-05-03 12:45:50
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>10</td><td>975</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/TrollageBT">TrollageBT</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/TrollageBT">10</a></td><td>27</td><td>2</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-06T19:03:02Z">2014-05-06 19:03:02
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>5</td><td>13</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/MrFriXion">MrFriXion</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/MrFriXion">3</a></td><td>59</td><td>1</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T18:51:58Z">2014-05-06 18:51:58
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>3</td><td>59</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Drussian">Drussian</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Drussian">3</a></td><td>210</td><td>1</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-03T14:57:49Z">2014-05-03 14:57:49
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>1</td><td>105</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Rumblyss">Rumblyss</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Rumblyss">2</a></td><td>354</td><td>6</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-07T00:35:19Z">2014-05-07 00:35:19
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>2</td><td>354</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Djanfshe">Djanfshe</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Djanfshe">2</a></td><td>85</td><td>2</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T16:01:23Z">2014-05-05 16:01:23
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>2</td><td>85</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/KillerKatD">KillerKatD</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/KillerKatD">1</a></td><td>158</td><td>8</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T17:39:44Z">2014-05-06 17:39:44
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>1</td><td>158</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Taunidd">Taunidd</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Taunidd">1</a></td><td>138</td><td>1</td><td>2</td><td>
+                  <span class="timeago" title="2014-05-03T14:46:37Z">2014-05-03 14:46:37
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>69</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Dimanikis">Dimanikis</a>
+                    <div class="star star-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Dimanikis">0</a></td><td>0</td><td>14</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T14:06:06Z">2014-05-05 14:06:06
+                  </span></td><td>
+                  <abbr title="EUSouthWest">EUSW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/TerrorTamz">TerrorTamz</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/TerrorTamz">0</a></td><td>0</td><td>6</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T15:10:52Z">2014-05-05 15:10:52
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/XeilonX">XeilonX</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/XeilonX">0</a></td><td>0</td><td>6</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T19:07:06Z">2014-05-06 19:07:06
+                  </span></td><td>
+                  <abbr title="USWest">USW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/OwnerTemp">OwnerTemp</a>
+                    <div class="star star-red">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/OwnerTemp">0</a></td><td>0</td><td>28</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T16:50:36Z">2014-05-03 16:50:36
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/LilaTomate">LilaTomate</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/LilaTomate">0</a></td><td>0</td><td>2</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T15:23:26Z">2014-05-05 15:23:26
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/THEBigGG">THEBigGG</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/THEBigGG">0</a></td><td>0</td><td>1</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T14:53:20Z">2014-05-03 14:53:20
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/TheWoody">TheWoody</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/TheWoody">0</a></td><td>0</td><td>4</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T14:40:48Z">2014-05-03 14:40:48
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/SmokeyPiff">SmokeyPiff</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/SmokeyPiff">0</a></td><td>131</td><td>1</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T14:29:38Z">2014-05-03 14:29:38
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>131</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/EasyVince">EasyVince</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/EasyVince">0</a></td><td>0</td><td>4</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T17:30:48Z">2014-05-05 17:30:48
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Dexteror">Dexteror</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Dexteror">0</a></td><td>0</td><td>2</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T21:00:18Z">2014-05-05 21:00:18
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/PolskiBart">PolskiBart</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/PolskiBart">0</a></td><td>0</td><td>1</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-03T12:15:47Z">2014-05-03 12:15:47
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/Zargonius">Zargonius</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/Zargonius">0</a></td><td>0</td><td>11</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-06T07:10:11Z">2014-05-06 07:10:11
+                  </span></td><td>
+                  <abbr title="AsiaSouthEast">ASE</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/WaZZupOo">WaZZupOo</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/WaZZupOo">0</a></td><td>0</td><td>3</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T19:52:46Z">2014-05-05 19:52:46
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>0</td>
+              </tr>
+              <tr><td>
+                  <div class="star-container">
+                    <a href="/player/BazBarFoo">BazBarFoo</a>
+                    <div class="star star-light-blue">
+                    </div>
+                  </div></td><td>Leader</td><td>
+                  <a href="/fame-history-of-player/BazBarFoo">0</a></td><td>36</td><td>3</td><td>1</td><td>
+                  <span class="timeago" title="2014-05-05T22:35:41Z">2014-05-05 22:35:41
+                  </span></td><td>
+                  <abbr title="EUWest">EUW</abbr></td><td>0</td><td>36</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="span2">
+        </div>
+      </div>
+      <div class="cookie-directive-alert" id="i053B00UC">We have placed cookies on your computer to help make this website better. You may delete and block cookies from this site via your web browser, but parts of the website will not work.
+        <button class="close" title="Click here to hide this message permanently">×
+        </button>
+      </div>
+<script type="text/javascript">$(function(){initializeSearch("i013B00UC");});initializeLoginButton("i023B00UC");addAnchorsInDescription("i033B00UC",null);makeSortable("i043B00UC",{0:{"sorter":"text"},1:{"sorter":"guildRank"},2:{"sorter":"digit"},3:{"sorter":"digit"},4:{"sorter":"digit"},5:{"sorter":"digit"},6:{"sorter":"text"},7:{"sorter":"text"},8:{"sorter":"digit"},9:{"sorter":"digit"}});renderNumeric("i043B00UC",3);renderNumeric("i043B00UC",4);renderNumeric("i043B00UC",5);renderNumeric("i043B00UC",6);renderNumeric("i043B00UC",9);renderNumeric("i043B00UC",10);bookmarkGuild("UniqueTeam");initializeHideCookieBanner("i053B00UC");</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-36039145-1"]);
+  _gaq.push(["_setSiteSpeedSampleRate", 10]);
+  _gaq.push(["_setSampleRate", "80"]);
+  _gaq.push(["_trackPageview"]);
+  (function() {
+    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <title>eval on Cpp[request.html]</title>
+<style type="text/css">
+  table{border-collapse:collapse;font-size:10pt;}
+  thead{background:#ccc;text-align:center;font-weight:bold;}
+  td,thead{border:1px solid #800;padding:4px;}
+  textarea[readonly="readonly"]{background-color:#e8e8e8;}
+</style>
+<script>
+function getXmlHttp()
+{
+  var xmlhttp;
+  try{xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");}
+  catch(e){
+    try{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+    catch(E){xmlhttp=false;}
+  }
+  if(!xmlhttp&&typeof XMLHttpRequest!='undefined'){xmlhttp=new XMLHttpRequest();}
+  return xmlhttp;
+}
+function escapeHtml(text)
+{
+  if("string" != (typeof text)){return text;}
+  return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}
+function prepare(s){return escapeHtml(s);}
+function PrintMyTable(table)
+{
+  function skip_field(field){
+    var ignore=[];//["user_agent","request_uri","referrer"];
+    for(var key in ignore)if(ignore[key]==field){return true;}
+    return false;
+  };
+  var def_table=[{'id':1,'nick':'Owen'},{'id':2,'nick':'Kyle'}];
+  if(!table.length){return 'table is empty';}
+  if(!Object.keys(table[0]).length){return 'table is empty';}
+  var arr=Object.keys(table[0]);
+  var out="";var head="";
+  for(var i in arr)
+  {
+    if(skip_field(arr[i]))continue;
+    out+='<td>'+prepare(arr[i])+'</td>';
+  }
+  var head='<thead><tr>'+out+'</tr></thead>';
+  out="";
+  for(var i=0;i<table.length;i++)
+  {
+    var tmp="";
+    //var tmp_arr=table[table.length-i-1];
+    var tmp_arr=table[i];
+    for(var key in tmp_arr){
+      if(skip_field(key))continue;
+      tmp+='<td>'+prepare(tmp_arr[key])+'</td>';
+    }
+    out+='<tr>'+tmp+'</tr>';
+  }
+  out='<table>'+head+'<tbody>'+out+'</tbody></table>';
+  return out;
+}
+function doDraw(){
+  document.getElementById('view').innerHTML=PrintMyTable(JSON.parse(document.getElementById('out').value));
+}
+function OnResponse(response)
+{
+  var all=get_all();
+  if(response.length%2)alert("OnResponse - :( ");
+  var out="";
+  for(var i=0;i<response.length;i+=2){
+    var code=parseInt(response.substr(i,2),16);
+    if(code>=all.length)alert(code+" <- :( ");
+    out+=all[code];
+  }
+  document.getElementById('out').value=out;
+}
+function gen_dip(a,z){
+  var out="";
+  var f=function(e){return e.charCodeAt(0);}
+  for(var i=f(a);i<=f(z);i++)out+=String.fromCharCode(i);
+  return out;
+}
+function gen_dips(list){
+  var out="";
+  for(var i=0;i<list.length;i+=2)out+=gen_dip(list[i+0],list[i+1]);
+  return out;
+}
+//build_list();
+function list_to_arr(arr){
+  var out=[];
+  for(var i=0;i<arr.length;i++){
+    out+=String.fromCharCode(arr[i]);
+  }
+  return out;
+}
+function get_all(){
+  var out="";
+  out+=gen_dips("azAZ09");
+  out+="~|&=<>!:?;,.+-*/%^"+"[]{}()"+"\"\'"+"\t\f\b\r\n\\"+"_$@"+" `#";
+  out+=gen_dips(list_to_arr([0x0430,0x044F,0x0410,0x042F]))+list_to_arr([0x0451,0x0401,0x2116]);
+  return out;
+}
+function gen_map(s){
+  var out={};
+  var f=function(e){return e.charCodeAt(0);}
+  for(var i=0;i<s.length;i++){
+    var code=f(s[i]);
+    if(code in out){
+      alert("bad news.");
+    }
+    out[code]=i;
+  }
+  return out;
+}
+function CToH_raw(c){
+  var hex=c.toString(16);
+  return "00".substr(0,2-hex.length)+hex;
+}
+function utf8_to_ug_urlencode(s){
+  var out="";
+  var all=get_all();
+  var m=gen_map(all);
+  var f=function(e){return e.charCodeAt(0);}
+  for(var i=0;i<s.length;i++){
+    var code=f(s[i]);
+    if(!(code in m)){
+      alert(code+" - :(");return "";
+    }
+    var num=m[code];
+    var hex=CToH_raw(num);
+    out+=hex;
+  }
+  return out;
+}
+function doSend()
+{
+  var xmlhttp = getXmlHttp()
+  xmlhttp.open('POST','/sh?eval',true);
+  xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=utf-8');
+  xmlhttp.onreadystatechange=function(){
+    if(xmlhttp.readyState==4){
+      if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+    }
+  };
+  var code=document.getElementById('code').value;
+  var data=document.getElementById('data').value;
+  code=code.split("\r").join("");
+  data=data.split("\r").join("");
+  //document.getElementById('buffer').value=data;
+  //document.getElementById('data').value="";
+  xmlhttp.send("code="+utf8_to_ug_urlencode(code)+"&data="+utf8_to_ug_urlencode(data));
+}
+</script>
+</head>
+<body>
+    <span style="display:none"><p><b>code:</b></p>
+    <p><textarea rows="15" cols="120" name="code" id="code" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p></span>
+    <p><b>data:</b></p>
+    <p><textarea rows="10" cols="120" name="data" id="data" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p>
+    <p><button onclick="doSend();">Go</button>&nbsp;<button onclick="doDraw();">Draw</button></p>
+    <p><b>out:</b></p>
+    <p><textarea rows="10" cols="120" name="out" id="out"></textarea></p>
+    <pre>[view]:<div id="view"></div></pre>
+  <h2>version 1.0</h2>
+</body></html>
+<!--
+mkpath /x
+addmsg /x "рст"
+cat /x
+-->

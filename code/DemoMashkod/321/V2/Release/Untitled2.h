@@ -1,0 +1,22 @@
+{
+  {STRUCT("vec2i"){
+    FIELD("int","x");
+    FIELD("int","y");
+  }}
+  
+  {proc("func_g_ptr_addr()"){
+    PARAM_RESULT("int");
+    {
+      {
+        mov(eax,64);
+        add(eax,7);
+      }
+      mov(ebx,1024);
+      mul(ebx,eax);
+      copy(result,ebx);
+      ret();
+      VAR("t_out_dev",var_tmp);
+      mov(var_tmp["color"],ebx);
+    }
+  }}
+}

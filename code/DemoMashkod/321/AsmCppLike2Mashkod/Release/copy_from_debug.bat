@@ -1,0 +1,1 @@
+copy ..\Debug\Sgon.exe ..\Release\Sgon(debug).exe

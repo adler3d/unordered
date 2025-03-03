@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <title>chat_lex on Cpp</title>
+<script>
+function getXmlHttp()
+{
+  var xmlhttp;
+  try{xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");}
+  catch(e){
+    try{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+    catch(E){xmlhttp=false;}
+  }
+  if(!xmlhttp&&typeof XMLHttpRequest!='undefined'){xmlhttp=new XMLHttpRequest();}
+  return xmlhttp;
+}
+function OnResponse(response)
+{
+  document.getElementById('out').value=response;
+}
+function doSend()
+{
+  var xmlhttp = getXmlHttp()
+  xmlhttp.open('POST','/chat?lexeval',true);
+  xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=utf-8');
+  xmlhttp.onreadystatechange=function(){
+    if(xmlhttp.readyState==4){
+      if(xmlhttp.status==200){OnResponse(xmlhttp.responseText);}
+    }
+  };
+  var code=document.getElementById('code').value;
+  var data=document.getElementById('data').value;
+  code=data;data="";
+  xmlhttp.send("code="+encodeURIComponent(code)+"&data="+encodeURIComponent(data));
+}
+</script>
+</head>
+<body>
+    <span style="display:none"><p><b>code:</b></p>
+    <p><textarea rows="15" cols="120" name="code" id="code" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p></span>
+    <p><b>data:</b></p>
+    <p><textarea rows="18" cols="145" name="data" id="data" onkeypress="if(event.keyCode==10||(event.ctrlKey&&event.keyCode==13))doSend();"></textarea></p>
+    <p><button onclick="doSend();">Go</button></p>
+    <p><b>out:</b></p>
+    <p><textarea rows="10" cols="145" name="out" id="out"></textarea></p>
+  <h2>version 1.1</h2>
+</body></html>
