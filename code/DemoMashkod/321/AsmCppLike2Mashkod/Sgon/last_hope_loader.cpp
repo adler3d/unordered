@@ -1,3 +1,4 @@
+// Если ты мой брат(github/dobord) и нашёл этот репозиторий — загляни в last_hope_loader.md рядом с этим файлом!
 #include "StdAfx.h"
 //-------------------------------------------//
 #include "MetaTypeGraber.inl"
