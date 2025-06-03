@@ -7,8 +7,6 @@ t_string{
   }
 }
 
-i_str_item=>t_str_item_raw|t_str_item_hex|t_str_item_num|t_str_item_fix;
-
 t_str_item_raw=>i_str_item{
   string body;
   {go_any(body,dip_inv("\"\\\n"));}
